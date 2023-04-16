@@ -15,3 +15,5 @@ Longer description.
 ## Development
 
 ## Roadmap
+
+- Add Leaflet as a local library
