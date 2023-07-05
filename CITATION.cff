@@ -14,12 +14,12 @@ repository-code: >-
   https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-map
 abstract: >-
   This TYPO3 extension implements a data model inpspired by
-  GeoJSON. All features can be serialised as valid GeoJSON.
-  The extension also acts as a wrapper for Leaflet and
-  provides a plugin to show individual our groups of
-  features as content elements in the frontend. Integrators
-  may specify the map tiles or the image file to display
-  using Leaflet.
+  GeoJSON. All geographical features can be serialised as
+  valid GeoJSON. The extension also acts as a wrapper for
+  Leaflet and provides a plugin to show individual our
+  groups of features as content elements in the frontend.
+  Integrators may specify the map tiles or the image file
+  to display using Leaflet.
 keywords:
   - TYPO3
   - Map

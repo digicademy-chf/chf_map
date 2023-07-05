@@ -6,7 +6,7 @@
 - License: GPL 3
 - Version: 0.0.2
 
-This TYPO3 extension implements a data model inpspired by [GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946). All features can be serialised as valid GeoJSON. The extension also acts as a wrapper for [Leaflet](https://leafletjs.com/) and provides a plugin to show individual our groups of features as content elements in the frontend. Integrators may specify the map tiles or the image file to display using Leaflet.
+This TYPO3 extension implements a data model inpspired by [GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946). All geographical features can be serialised as valid GeoJSON. The extension also acts as a wrapper for [Leaflet](https://leafletjs.com/) and provides a plugin to show individual our groups of features as content elements in the frontend. Integrators may specify the map tiles or the image file to display using Leaflet.
 
 ## Setup
 
