@@ -23,7 +23,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'tag',
+        'default_sortby'           => 'tag ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Tag.svg',
         'origUid'                  => 't3_origuid',

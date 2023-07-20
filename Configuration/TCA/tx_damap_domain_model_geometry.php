@@ -22,7 +22,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'tag',
+        'default_sortby'           => 'type ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Geometry.svg',
         'origUid'                  => 't3_origuid',

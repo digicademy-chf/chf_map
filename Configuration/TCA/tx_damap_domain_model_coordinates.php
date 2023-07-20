@@ -23,7 +23,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'longitude',
+        'default_sortby'           => 'longitude ASC,latitude ASC,altitude ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Coordinates.svg',
         'origUid'                  => 't3_origuid',

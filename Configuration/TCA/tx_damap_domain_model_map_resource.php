@@ -24,7 +24,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'title',
+        'default_sortby'           => 'title ASC,uri ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/MapResource.svg',
         'origUid'                  => 't3_origuid',

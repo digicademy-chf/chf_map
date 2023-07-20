@@ -24,7 +24,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'title',
+        'default_sortby'           => 'title ASC,uuid ASC,type ASC,weight ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Feature.svg',
         'origUid'                  => 't3_origuid',
@@ -133,8 +133,9 @@ return [
             'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.uuid',
             'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.uuid.description',
             'config'      => [
-                'type' => 'uuid',
-                'size' => 40,
+                'type'     => 'uuid',
+                'size'     => 40,
+                'required' => true,
             ],
         ],
         'type' => [

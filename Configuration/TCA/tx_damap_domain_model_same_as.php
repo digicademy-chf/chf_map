@@ -22,7 +22,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'uri',
+        'default_sortby'           => 'uri ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/SameAs.svg',
         'origUid'                  => 't3_origuid',
