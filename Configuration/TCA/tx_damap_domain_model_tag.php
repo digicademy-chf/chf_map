@@ -58,11 +58,11 @@ return [
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.fe_group',
             'config' => [
-                'type' => 'select',
+                'type'       => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'size' => 5,
-                'maxitems' => 20,
-                'items' => [
+                'size'       => 5,
+                'maxitems'   => 20,
+                'items'      => [
                     [
                         'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hide_at_login',
                         'value' => -1,
@@ -100,8 +100,7 @@ return [
                     ],
                 ],
                 'foreign_table'       => 'tx_damap_domain_model_tag',
-                'foreign_table_where' =>
-                    'AND {#tx_damap_domain_model_tag}.{#pid}=###CURRENT_PID###'
+                'foreign_table_where' => 'AND {#tx_damap_domain_model_tag}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_damap_domain_model_tag}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],

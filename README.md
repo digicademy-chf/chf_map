@@ -31,8 +31,23 @@ All records of a single `MapResource` are held together by using the same page I
 
 ## Roadmap
 
-- Implement tables and MVC
-- Add Leaflet as a local library
-- Implement a basic plugin to display features
-- Add the GeoJSON template for features
-- Test and expand ways to ingest data
+**Version 0.7.0**
+
+- TCA and model work as expected
+- Working frontend plugin
+
+**Version 0.8.0**
+
+- Import of DFD data
+- Serialisation(s) of DFD data
+- Consider adding a generic search config
+
+**Version 0.9.0**
+
+- Make import generic
+- Make serialisation(s) generic
+
+**Version 1.0.0**
+
+- Add testing
+- Finish documentation
