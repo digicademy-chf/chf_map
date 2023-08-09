@@ -10,8 +10,9 @@ authors:
     email: jonatan.steller@adwmainz.de
     affiliation: Academy of Sciences and Literature Mainz
     orcid: 'https://orcid.org/0000-0002-5101-5275'
+  - name: "DA Map contributors"
 repository-code: >-
-  https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-map
+  https://github.com/digicademy/da-map
 abstract: >-
   This TYPO3 extension implements a data model inpspired by
   GeoJSON. All geographical features can be serialised as
@@ -30,5 +31,5 @@ keywords:
   - Academia
   - Academic
 license: GPL 3
-version: 0.0.2
-date-released: '2023-06-21'
+version: 0.5.0
+date-released: '2023-08-09'

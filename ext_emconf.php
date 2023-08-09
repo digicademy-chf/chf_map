@@ -2,13 +2,13 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title'          => 'DA Map',
-    'description'    => 'Provide mapping for research data in TYPO3',
+    'description'    => 'Simple mapping for research data in TYPO3',
     'category'       => 'misc',
     'author'         => 'Jonatan Jalle Steller',
     'author_email'   => 'jonatan.steller@adwmainz.de',
     'author_company' => 'Academy of Sciences and Literature Mainz',
-    'state'          => 'alpha',
-    'version'        => '0.0.1',
+    'state'          => 'beta',
+    'version'        => '0.5.0',
     'constraints'    => [
         'depends'   => [
             'typo3' => '12.0.0-12.4.99',

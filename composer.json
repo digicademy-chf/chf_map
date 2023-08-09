@@ -1,21 +1,24 @@
 {
     "name": "digicademy/da-map",
     "type": "typo3-cms-extension",
-    "description": "Provide mapping for research data in TYPO3",
+    "description": "Simple mapping for research data in TYPO3",
     "authors": [
         {
             "name": "Jonatan Jalle Steller",
             "email": "jonatan.steller@adwmainz.de",
             "role": "Developer",
             "homepage": "https://www.adwmainz.de"
+        },
+        {
+            "name": "DA Map contributors"
         }
     ],
     "license": "GPL-2.0-or-later",
-    "homepage": "https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-map",
+    "homepage": "https://extensions.typo3.org/extension/da-map",
     "support": {
-        "issues": "https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-map/-/issues",
-        "source": "https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-map",
-        "docs": "https://adwmainz.pages.gitlab.rlp.net/digicademy/t3xdev/da-map"
+        "issues": "https://github.com/digicademy/da-map/issues",
+        "source": "https://github.com/digicademy/da-map",
+        "docs": "https://docs.typo3.org/p/da-map/main/en-us"
     },
     "keywords": [
         "TYPO3",
