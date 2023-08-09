@@ -24,7 +24,6 @@ class FeatureRepository extends Repository
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,
         'title'   => QueryInterface::ORDER_ASCENDING,
-        'uuid'    => QueryInterface::ORDER_ASCENDING,
         'type'    => QueryInterface::ORDER_ASCENDING,
         'weight'  => QueryInterface::ORDER_ASCENDING,
     ];

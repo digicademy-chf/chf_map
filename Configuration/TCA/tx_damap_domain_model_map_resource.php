@@ -154,12 +154,31 @@ return [
                 ],
             ],
         ],
+        'sameAs' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.sameAs',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.sameAs.description',
+            'config'      => [
+                'type'                => 'inline',
+                'foreign_table'       => 'tx_damap_domain_model_same_as',
+                'foreign_field'       => 'parent_id',
+                'foreign_table_field' => 'parent_table',
+                'appearance'          => [
+                    'collapseAll'                     => true,
+                    'expandSingle'                    => true,
+                    'newRecordLinkAddTitle'           => true,
+                    'levelLinksPosition'              => 'top',
+                    'useSortable'                     => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink'         => true,
+                    'showSynchronizationLink'         => true,
+                ],
+            ],
+        ],
         'mapFile' => [
             'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.mapFile',
             'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.mapFile.description',
             'config' => [
                 'type'     => 'file',
-                'maxitems' => 1,
                 'allowed'  => 'common-image-types'
             ],
         ],
@@ -183,12 +202,32 @@ return [
                 ],
             ],
         ],
-        'sameAs' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.sameAs',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.sameAs.description',
+        'feature' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.feature',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.feature.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_same_as',
+                'foreign_table'       => 'tx_damap_domain_model_feature',
+                'foreign_field'       => 'parent_id',
+                'foreign_table_field' => 'parent_table',
+                'appearance'          => [
+                    'collapseAll'                     => true,
+                    'expandSingle'                    => true,
+                    'newRecordLinkAddTitle'           => true,
+                    'levelLinksPosition'              => 'top',
+                    'useSortable'                     => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink'         => true,
+                    'showSynchronizationLink'         => true,
+                ],
+            ],
+        ],
+        'tag' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.tag',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.tag.description',
+            'config'      => [
+                'type'                => 'inline',
+                'foreign_table'       => 'tx_damap_domain_model_tag',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -211,7 +250,8 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => 'hidden,title,description,uri,mapFileMapTiles,sameAs,',
+            'showitem' => 'hidden,title,description,uri,sameAs,
+            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.content,mapFileMapTiles,feature,tag,',
         ],
     ],
 ];

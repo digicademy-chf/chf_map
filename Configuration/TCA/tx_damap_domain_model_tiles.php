@@ -116,37 +116,52 @@ return [
                 'default' => '',
             ],
         ],
+        'parent_id' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.parent_id',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.parent_id.description',
+            'config'      => [
+                'type'                => 'select',
+                'renderType'          => 'selectSingle',
+                'foreign_table'       => 'tx_dalex_domain_model_map_resource',
+                'foreign_table_where' => 'AND {#tx_dabib_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
+                'maxitems'            => 1,
+                'required'            => true,
+            ],
+        ],
         'title' => [
             'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.title',
             'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.title.description',
             'config'      => [
-                'type' => 'input',
-                'size' => 40,
-                'max'  => 255,
-                'eval' => 'trim',
+                'type'     => 'input',
+                'size'     => 40,
+                'max'      => 255,
+                'eval'     => 'trim',
                 'required' => true,
             ],
         ],
-        'description' => [
+        'uri' => [
             'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.uri',
             'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.uri.description',
             'config'      => [
-                'type' => 'input',
-                'size' => 40,
-                'max'  => 255,
-                'eval' => 'trim',
+                'type'     => 'input',
+                'size'     => 40,
+                'max'      => 255,
+                'eval'     => 'trim',
                 'required' => true,
             ],
         ],
     ],
     'palettes' => [
+        'hiddenParentId' => [
+            'showitem' => 'hidden,parent_id,',
+        ],
         'titleUri' => [
             'showitem' => 'title,uri,',
         ],
     ],
     'types' => [
         '0' => [
-            'showitem' => 'hidden,titleUri,',
+            'showitem' => 'hiddenParentId,titleUri,',
         ],
     ],
 ];

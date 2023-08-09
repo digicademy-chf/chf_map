@@ -7,6 +7,9 @@
             <trans-unit id="database.mapResource" resname="database.mapResource">
                 <source>Map</source>
             </trans-unit>
+            <trans-unit id="database.mapResource.content" resname="database.mapResource.content">
+                <source>Content</source>
+            </trans-unit>
             <trans-unit id="database.mapResource.title" resname="database.mapResource.title">
                 <source>Title</source>
             </trans-unit>
@@ -18,18 +21,6 @@
             </trans-unit>
             <trans-unit id="database.mapResource.description.description" resname="database.mapResource.description.description">
                 <source>Brief information about the map</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapFile" resname="database.mapResource.mapFile">
-                <source>Map file</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapFile.description" resname="database.mapResource.mapFile.description">
-                <source>File to display as the base map</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapTiles" resname="database.mapResource.mapTiles">
-                <source>Map tiles</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapTiles.description" resname="database.mapResource.mapTiles.description">
-                <source>Tile layers to use instead of a file</source>
             </trans-unit>
             <trans-unit id="database.mapResource.uri" resname="database.mapResource.uri">
                 <source>URI</source>
@@ -43,9 +34,42 @@
             <trans-unit id="database.mapResource.sameAs.description" resname="database.mapResource.sameAs.description">
                 <source>External web address to identify the map across the web</source>
             </trans-unit>
+            <trans-unit id="database.mapResource.mapFile" resname="database.mapResource.mapFile">
+                <source>Map file</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.mapFile.description" resname="database.mapResource.mapFile.description">
+                <source>File to display as the base map</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.mapTiles" resname="database.mapResource.mapTiles">
+                <source>Map tiles</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.mapTiles.description" resname="database.mapResource.mapTiles.description">
+                <source>Tile layers to use instead of a file</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.feature" resname="database.mapResource.feature">
+                <source>Feature</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.feature.description" resname="database.mapResource.feature.description">
+                <source>List of all features in this resource</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.tag" resname="database.mapResource.tag">
+                <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="database.mapResource.tag.description" resname="database.mapResource.tag.description">
+                <source>List of all tags in this resource</source>
+            </trans-unit>
             <!-- Database: Tag -->
             <trans-unit id="database.tag" resname="database.tag">
                 <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="database.tag.usage" resname="database.tag.usage">
+                <source>Usage</source>
+            </trans-unit>
+            <trans-unit id="database.tag.parent_id" resname="database.tag.parent_id">
+                <source>Map</source>
+            </trans-unit>
+            <trans-unit id="database.tag.parent_id.description" resname="database.tag.parent_id.description">
+                <source>Resource that this tag is attached to</source>
             </trans-unit>
             <trans-unit id="database.tag.tag" resname="database.tag.tag">
                 <source>Name</source>
@@ -58,6 +82,12 @@
             </trans-unit>
             <trans-unit id="database.tag.sameAs.description" resname="database.tag.sameAs.description">
                 <source>External web address to identify the tag across the web</source>
+            </trans-unit>
+            <trans-unit id="database.tag.asLabelOfFeature" resname="database.tag.asLabelOfFeature">
+                <source>As label of feature</source>
+            </trans-unit>
+            <trans-unit id="database.tag.asLabelOfFeature.description" resname="database.tag.asLabelOfFeature.description">
+                <source>List of features with this label</source>
             </trans-unit>
             <!-- Database: SameAs -->
             <trans-unit id="database.sameAs" resname="database.sameAs">
@@ -72,6 +102,12 @@
             <!-- Database: Tiles -->
             <trans-unit id="database.tiles" resname="database.tiles">
                 <source>Tile layer</source>
+            </trans-unit>
+            <trans-unit id="database.tiles.parent_id" resname="database.tiles.parent_id">
+                <source>Map</source>
+            </trans-unit>
+            <trans-unit id="database.tiles.parent_id.description" resname="database.tiles.parent_id.description">
+                <source>Resource that this tile layer is attached to</source>
             </trans-unit>
             <trans-unit id="database.tiles.title" resname="database.tiles.title">
                 <source>Title</source>
@@ -176,17 +212,26 @@
             <trans-unit id="database.feature" resname="database.feature">
                 <source>Feature</source>
             </trans-unit>
-            <trans-unit id="database.feature.title" resname="database.feature.title">
-                <source>Title</source>
+            <trans-unit id="database.feature.details" resname="database.feature.details">
+                <source>Details</source>
             </trans-unit>
-            <trans-unit id="database.feature.title.description" resname="database.feature.title.description">
-                <source>Name of the feature</source>
+            <trans-unit id="database.feature.parent_id" resname="database.feature.parent_id">
+                <source>Map</source>
+            </trans-unit>
+            <trans-unit id="database.feature.parent_id.description" resname="database.feature.parent_id.description">
+                <source>Resource that this feature is attached to</source>
             </trans-unit>
             <trans-unit id="database.feature.uuid" resname="database.feature.uuid">
                 <source>UUID</source>
             </trans-unit>
             <trans-unit id="database.feature.uuid.description" resname="database.feature.uuid.description">
                 <source>Unique feature identifier</source>
+            </trans-unit>
+            <trans-unit id="database.feature.title" resname="database.feature.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="database.feature.title.description" resname="database.feature.title.description">
+                <source>Name of the feature</source>
             </trans-unit>
             <trans-unit id="database.feature.type" resname="database.feature.type">
                 <source>Type</source>
@@ -200,35 +245,11 @@
             <trans-unit id="database.feature.type.featureCollection" resname="database.feature.type.Collection">
                 <source>Group of features</source>
             </trans-unit>
-            <trans-unit id="database.feature.weight" resname="database.feature.weight">
-                <source>Weight</source>
-            </trans-unit>
-            <trans-unit id="database.feature.weight.description" resname="database.feature.weight.description">
-                <source>Number used as the size of the feature, if possible</source>
-            </trans-unit>
             <trans-unit id="database.feature.description" resname="database.feature.description">
                 <source>Description</source>
             </trans-unit>
             <trans-unit id="database.feature.description.description" resname="database.feature.description.description">
                 <source>Brief information about the feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.feature" resname="database.feature.feature">
-                <source>Feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.feature.description" resname="database.feature.feature.description">
-                <source>List of features</source>
-            </trans-unit>
-            <trans-unit id="database.feature.geometry" resname="database.feature.geometry">
-                <source>Geometry</source>
-            </trans-unit>
-            <trans-unit id="database.feature.geometry.description" resname="database.feature.geometry.description">
-                <source>List of geometries in this feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.boundingBox" resname="database.feature.boundingBox">
-                <source>Bounding box</source>
-            </trans-unit>
-            <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description">
-                <source>Two coordinates to produce a bounding box</source>
             </trans-unit>
             <trans-unit id="database.feature.label" resname="database.feature.label">
                 <source>Label</source>
@@ -241,6 +262,42 @@
             </trans-unit>
             <trans-unit id="database.feature.sameAs.description" resname="database.feature.sameAs.description">
                 <source>External web address to identify the feature across the web</source>
+            </trans-unit>
+            <trans-unit id="database.feature.feature" resname="database.feature.feature">
+                <source>Feature</source>
+            </trans-unit>
+            <trans-unit id="database.feature.feature.description" resname="database.feature.feature.description">
+                <source>List of features</source>
+            </trans-unit>
+            <trans-unit id="database.feature.weight" resname="database.feature.weight">
+                <source>Weight</source>
+            </trans-unit>
+            <trans-unit id="database.feature.weight.description" resname="database.feature.weight.description">
+                <source>Number used as the size of the feature, if possible</source>
+            </trans-unit>
+            <trans-unit id="database.feature.projection" resname="database.feature.projection">
+                <source>Projection</source>
+            </trans-unit>
+            <trans-unit id="database.feature.projection.description" resname="database.feature.projection.description">
+                <source>Type of projection used for geometries in this feature</source>
+            </trans-unit>
+            <trans-unit id="database.feature.projection.worldGeodeticSystem" resname="database.feature.projection.worldGeodeticSystem">
+                <source>World Geodetic System (WGS 84/EPSG 4326)</source>
+            </trans-unit>
+            <trans-unit id="database.feature.projection.pixels" resname="database.feature.projection.pixels">
+                <source>Pixels</source>
+            </trans-unit>
+            <trans-unit id="database.feature.geometry" resname="database.feature.geometry">
+                <source>Geometry</source>
+            </trans-unit>
+            <trans-unit id="database.feature.geometry.description" resname="database.feature.geometry.description">
+                <source>List of geometries in this feature</source>
+            </trans-unit>
+            <trans-unit id="database.feature.boundingBox" resname="database.feature.boundingBox">
+                <source>Bounding box</source>
+            </trans-unit>
+            <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description">
+                <source>Two coordinates to produce a bounding box</source>
             </trans-unit>
         </body>
     </file>

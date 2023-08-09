@@ -18,13 +18,13 @@ return [
     'ctrl' => [
         'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature',
         'label'                    => 'title',
-        'label_alt'                => 'uuid,type,weight',
+        'label_alt'                => 'type,weight',
         'descriptionColumn'        => 'description',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'title ASC,uuid ASC,type ASC,weight ASC',
+        'default_sortby'           => 'title ASC,type ASC,weight ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Feature.svg',
         'origUid'                  => 't3_origuid',
@@ -34,7 +34,7 @@ return [
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
         'type'                     => 'type',
-        'searchFields'             => 'title,uuid,type,weight,description',
+        'searchFields'             => 'uuid,title,type,description,weight,projection',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'fe_group' => 'fe_group',
@@ -118,14 +118,16 @@ return [
                 'default' => '',
             ],
         ],
-        'title' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.title',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.title.description',
+        'parent_id' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.parent_id',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.parent_id.description',
             'config'      => [
-                'type' => 'input',
-                'size' => 40,
-                'max'  => 255,
-                'eval' => 'trim',
+                'type'                => 'select',
+                'renderType'          => 'selectSingle',
+                'foreign_table'       => 'tx_dalex_domain_model_map_resource',
+                'foreign_table_where' => 'AND {#tx_dabib_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
+                'maxitems'            => 1,
+                'required'            => true,
             ],
         ],
         'uuid' => [
@@ -135,6 +137,16 @@ return [
                 'type'     => 'uuid',
                 'size'     => 40,
                 'required' => true,
+            ],
+        ],
+        'title' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.title',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.title.description',
+            'config'      => [
+                'type' => 'input',
+                'size' => 40,
+                'max'  => 255,
+                'eval' => 'trim',
             ],
         ],
         'type' => [
@@ -156,13 +168,6 @@ return [
                 'required'   => true,
             ],
         ],
-        'weight' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.weight',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.weight.description',
-            'config'      => [
-                'type' => 'number'
-            ],
-        ],
         'description' => [
             'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.description',
             'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.description.description',
@@ -172,67 +177,6 @@ return [
                 'rows' => 5,
                 'max'  => 2000,
                 'eval' => 'trim',
-            ],
-        ],
-        'feature' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.feature',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.feature.description',
-            'config'      => [
-                'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_feature',
-                'foreign_field'       => 'parent_id',
-                'foreign_table_field' => 'parent_table',
-                'appearance'          => [
-                    'collapseAll'                     => true,
-                    'expandSingle'                    => true,
-                    'newRecordLinkAddTitle'           => true,
-                    'levelLinksPosition'              => 'top',
-                    'useSortable'                     => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink'         => true,
-                    'showSynchronizationLink'         => true,
-                ],
-            ],
-        ],
-        'geometry' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.geometry',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.geometry.description',
-            'config'      => [
-                'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_geometry',
-                'foreign_field'       => 'parent_id',
-                'foreign_table_field' => 'parent_table',
-                'appearance'          => [
-                    'collapseAll'                     => true,
-                    'expandSingle'                    => true,
-                    'newRecordLinkAddTitle'           => true,
-                    'levelLinksPosition'              => 'top',
-                    'useSortable'                     => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink'         => true,
-                    'showSynchronizationLink'         => true,
-                ],
-            ],
-        ],
-        'boundingBox' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox.description',
-            'config'      => [
-                'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_coordinates',
-                'foreign_field'       => 'parent_id',
-                'foreign_table_field' => 'parent_table',
-                'appearance'          => [
-                    'collapseAll'                     => true,
-                    'expandSingle'                    => true,
-                    'newRecordLinkAddTitle'           => true,
-                    'levelLinksPosition'              => 'top',
-                    'useSortable'                     => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink'         => true,
-                    'showSynchronizationLink'         => true,
-                ],
-                'maxitems'            => 2,
             ],
         ],
         'label' => [
@@ -281,21 +225,110 @@ return [
                 ],
             ],
         ],
+        'feature' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.feature',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.feature.description',
+            'config'      => [
+                'type'                => 'inline',
+                'foreign_table'       => 'tx_damap_domain_model_feature',
+                'foreign_field'       => 'parent_id',
+                'foreign_table_field' => 'parent_table',
+                'appearance'          => [
+                    'collapseAll'                     => true,
+                    'expandSingle'                    => true,
+                    'newRecordLinkAddTitle'           => true,
+                    'levelLinksPosition'              => 'top',
+                    'useSortable'                     => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink'         => true,
+                    'showSynchronizationLink'         => true,
+                ],
+            ],
+        ],
+        'weight' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.weight',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.weight.description',
+            'config'      => [
+                'type' => 'number'
+            ],
+        ],
+        'projection' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection.description',
+            'config'      => [
+                'type'       => 'select',
+                'renderType' => 'selectSingle',
+                'items'      => [
+                    [
+                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection.worldGeodeticSystem',
+                        'value' => 'worldGeodeticSystem',
+                    ],
+                    [
+                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection.pixels',
+                        'value' => 'pixels',
+                    ],
+                ],
+                'required'   => true,
+            ],
+        ],
+        'geometry' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.geometry',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.geometry.description',
+            'config'      => [
+                'type'                => 'inline',
+                'foreign_table'       => 'tx_damap_domain_model_geometry',
+                'foreign_field'       => 'parent_id',
+                'foreign_table_field' => 'parent_table',
+                'appearance'          => [
+                    'collapseAll'                     => true,
+                    'expandSingle'                    => true,
+                    'newRecordLinkAddTitle'           => true,
+                    'levelLinksPosition'              => 'top',
+                    'useSortable'                     => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink'         => true,
+                    'showSynchronizationLink'         => true,
+                ],
+            ],
+        ],
+        'boundingBox' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox.description',
+            'config'      => [
+                'type'                => 'inline',
+                'foreign_table'       => 'tx_damap_domain_model_coordinates',
+                'foreign_field'       => 'parent_id',
+                'foreign_table_field' => 'parent_table',
+                'appearance'          => [
+                    'collapseAll'                     => true,
+                    'expandSingle'                    => true,
+                    'newRecordLinkAddTitle'           => true,
+                    'levelLinksPosition'              => 'top',
+                    'useSortable'                     => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink'         => true,
+                    'showSynchronizationLink'         => true,
+                ],
+                'maxitems'            => 2,
+            ],
+        ],
     ],
     'palettes' => [
-        'titleUuid' => [
-            'showitem' => 'title,uuid,',
+        'hiddenParentId' => [
+            'showitem' => 'hidden,parent_id,',
         ],
-        'typeWeight' => [
-            'showitem' => 'type,weight,',
+        'uuidTitle' => [
+            'showitem' => 'uuid,title,',
         ],
     ],
     'types' => [
         'Feature' => [
-            'showitem' => 'hidden,titleUuid,typeWeight,description,geometry,boundingBox,label,sameAs,',
+            'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
+            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,weight,projection,geometry,boundingBox,',
         ],
         'FeatureCollection' => [
-            'showitem' => 'hidden,titleUuid,type,description,feature,boundingBox,label,sameAs,',
+            'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
+            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,feature,boundingBox,',
         ],
     ],
 ];

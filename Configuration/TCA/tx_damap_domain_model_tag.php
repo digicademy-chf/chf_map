@@ -17,13 +17,13 @@
 return [
     'ctrl' => [
         'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag',
-        'label'                    => 'tag',
+        'label'                    => 'text',
         'descriptionColumn'        => 'description',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'tag ASC',
+        'default_sortby'           => 'text ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Tag.svg',
         'origUid'                  => 't3_origuid',
@@ -32,7 +32,7 @@ return [
         'transOrigPointerField'    => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
-        'searchFields'             => 'tag,description',
+        'searchFields'             => 'uuid,text,description',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'fe_group' => 'fe_group',
@@ -116,14 +116,35 @@ return [
                 'default' => '',
             ],
         ],
-        'tag' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.tag',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.tag.description',
+        'parent_id' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.parent_id',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.parent_id.description',
             'config'      => [
-                'type' => 'input',
-                'size' => 40,
-                'max'  => 255,
-                'eval' => 'trim',
+                'type'                => 'select',
+                'renderType'          => 'selectSingle',
+                'foreign_table'       => 'tx_dalex_domain_model_map_resource',
+                'foreign_table_where' => 'AND {#tx_dabib_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
+                'maxitems'            => 1,
+                'required'            => true,
+            ],
+        ],
+        'uuid' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.uuid',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.uuid.description',
+            'config'      => [
+                'type'     => 'uuid',
+                'size'     => 40,
+                'required' => true,
+            ],
+        ],
+        'text' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.text',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.text.description',
+            'config'      => [
+                'type'     => 'input',
+                'size'     => 40,
+                'max'      => 255,
+                'eval'     => 'trim',
                 'required' => true,
             ],
         ],
@@ -158,11 +179,44 @@ return [
                 ],
             ],
         ],
+        'asLabelOfFeature' => [
+            'label'       => 'LLL:EXT:da_lex/Resources/Private/Language/locallang.xlf:database.tag.asLabelOfFeature',
+            'description' => 'LLL:EXT:da_lex/Resources/Private/Language/locallang.xlf:database.tag.asLabelOfFeature.description',
+            'config'      => [
+                'type'                => 'select',
+                'renderType'          => 'selectMultipleSideBySide',
+                'foreign_table'       => 'tx_dalex_domain_model_feature',
+                'foreign_table_where' => 'AND {#tx_dalex_domain_model_feature}.{#pid}=###CURRENT_PID###',
+                'MM'                  => 'tx_dalex_domain_model_feature_tag_label_mm',
+                'MM_opposite_field'   => 'label',
+                'size'                => 5,
+                'autoSizeMax'         => 10,
+                'fieldControl'        => [
+                    'editPopup'  => [
+                        'disabled' => false,
+                    ],
+                    'addRecord'  => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => false,
+                    ],
+                ],
+            ],
+        ],
     ],
-    'palettes' => [],
+    'palettes' => [
+        'hiddenParentId' => [
+            'showitem' => 'hidden,parent_id,',
+        ],
+        'uuidText' => [
+            'showitem' => 'uuid,text,',
+        ],
+    ],
     'types' => [
         '0' => [
-            'showitem' => 'hidden,tag,description,sameAs,',
+            'showitem' => 'hiddenParentId,uuidText,description,sameAs,
+            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.usage,asLabelOfFeature',
         ],
     ],
 ];
