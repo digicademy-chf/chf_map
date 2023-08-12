@@ -18,6 +18,7 @@ return [
     'ctrl' => [
         'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag',
         'label'                    => 'text',
+        'label_alt'                => 'type',
         'descriptionColumn'        => 'description',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
@@ -32,7 +33,7 @@ return [
         'transOrigPointerField'    => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
-        'searchFields'             => 'uuid,text,description',
+        'searchFields'             => 'uuid,text,type,description',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'fe_group' => 'fe_group',
@@ -148,6 +149,21 @@ return [
                 'required' => true,
             ],
         ],
+        'type' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.type',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.type.description',
+            'config'      => [
+                'type'       => 'select',
+                'renderType' => 'selectSingle',
+                'items'      => [
+                    [
+                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.type.label',
+                        'value' => 'label',
+                    ],
+                ],
+                'required'   => true,
+            ],
+        ],
         'description' => [
             'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.description',
             'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tag.description.description',
@@ -215,7 +231,7 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => 'hiddenParentId,uuidText,description,sameAs,
+            'showitem' => 'hiddenParentId,uuidText,type,description,sameAs,
             --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.mapResource.usage,asLabelOfFeature',
         ],
     ],

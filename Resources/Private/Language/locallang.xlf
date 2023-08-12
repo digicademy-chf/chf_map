@@ -71,11 +71,32 @@
             <trans-unit id="database.tag.parent_id.description" resname="database.tag.parent_id.description">
                 <source>Resource that this tag is attached to</source>
             </trans-unit>
-            <trans-unit id="database.tag.tag" resname="database.tag.tag">
-                <source>Name</source>
+            <trans-unit id="database.tag.uuid" resname="database.tag.uuid">
+                <source>UUID</source>
             </trans-unit>
-            <trans-unit id="database.tag.tag.description" resname="database.tag.tag.description">
+            <trans-unit id="database.tag.uuid.description" resname="database.tag.uuid.description">
+                <source>Unique identifier of the tag</source>
+            </trans-unit>
+            <trans-unit id="database.tag.text" resname="database.tag.text">
+                <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="database.tag.text.description" resname="database.tag.text.description">
                 <source>Name of the tag</source>
+            </trans-unit>
+            <trans-unit id="database.tag.type" resname="database.tag.type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="database.tag.type.description" resname="database.tag.type.description">
+                <source>Type of tag</source>
+            </trans-unit>
+            <trans-unit id="database.tag.type.label" resname="database.tag.type.label">
+                <source>Label</source>
+            </trans-unit>
+            <trans-unit id="database.tag.description" resname="database.tag.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="database.tag.description.description" resname="database.tag.description.description">
+                <source>Brief information about the tag</source>
             </trans-unit>
             <trans-unit id="database.tag.sameAs" resname="database.tag.sameAs">
                 <source>Reference URI</source>
@@ -190,10 +211,10 @@
             <trans-unit id="database.geometry.coordinates.description" resname="database.geometry.coordinates.description">
                 <source>List of coordinates in this geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates" resname="database.geometry.coordinates">
+            <trans-unit id="database.geometry.coordinateGroup" resname="database.geometry.coordinateGroup">
                 <source>Coordinate group</source>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates.description" resname="database.geometry.coordinates.description">
+            <trans-unit id="database.geometry.coordinateGroup.description" resname="database.geometry.coordinateGroup.description">
                 <source>List of coordinate groups in this geometry</source>
             </trans-unit>
             <trans-unit id="database.geometry.geometry" resname="database.geometry.geometry">
@@ -225,7 +246,7 @@
                 <source>UUID</source>
             </trans-unit>
             <trans-unit id="database.feature.uuid.description" resname="database.feature.uuid.description">
-                <source>Unique feature identifier</source>
+                <source>Unique identifier of the feature</source>
             </trans-unit>
             <trans-unit id="database.feature.title" resname="database.feature.title">
                 <source>Title</source>
@@ -298,6 +319,20 @@
             </trans-unit>
             <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description">
                 <source>Two coordinates to produce a bounding box</source>
+            </trans-unit>
+            <!-- Validator: StringOptionsValidator -->
+            <trans-unit id="validator.stringOptions.allowedStringInvalid" resname="validator.stringOptions.allowedStringInvalid">
+                <source>One of the allowed options is not a string in the StringOptionsValidator.</source>
+            </trans-unit>
+            <trans-unit id="validator.stringOptions.invalidString" resname="validator.stringOptions.invalidString">
+                <source>The given value was not a valid string.</source>
+            </trans-unit>
+            <trans-unit id="validator.stringOptions.notAllowedValue" resname="validator.stringOptions.notAllowedValue">
+                <source>The given value was not in the list of allowed values.</source>
+            </trans-unit>
+            <!-- Validator: RegularExpressionValidator -->
+            <trans-unit id="validator.regularExpression.noUuid" resname="validator.regularExpression.noUuid">
+                <source>The given value was not a UUID.</source>
             </trans-unit>
         </body>
     </file>

@@ -175,9 +175,9 @@ return [
                 ],
             ],
         ],
-        'coordinateGroups' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroups',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroups.description',
+        'coordinateGroup' => [
+            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroup',
+            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroup.description',
             'config'      => [
                 'type'                => 'inline',
                 'foreign_table'       => 'tx_damap_domain_model_coordinate_group',

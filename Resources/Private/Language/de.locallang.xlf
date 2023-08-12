@@ -93,13 +93,41 @@
                 <source>Resource that this tag is attached to</source>
                 <target>Ressource, zu der dieses Schlagwort gehört</target>
             </trans-unit>
-            <trans-unit id="database.tag.tag" resname="database.tag.tag" approved="yes">
+            <trans-unit id="database.tag.uuid" resname="database.tag.uuid" approved="yes">
+                <source>UUID</source>
+                <target>UUID</target>
+            </trans-unit>
+            <trans-unit id="database.tag.uuid.description" resname="database.tag.uuid.description" approved="yes">
+                <source>Unique identifier of the tag</source>
+                <target>Einzigartiger Identifikator des Schlagworts</target>
+            </trans-unit>
+            <trans-unit id="database.tag.text" resname="database.tag.text" approved="yes">
                 <source>Tag</source>
                 <target>Schlagwort</target>
             </trans-unit>
-            <trans-unit id="database.tag.tag.description" resname="database.tag.tag.description" approved="yes">
+            <trans-unit id="database.tag.text.description" resname="database.tag.text.description" approved="yes">
                 <source>Name of the tag</source>
                 <target>Bezeichnung des Schlagworts</target>
+            </trans-unit>
+            <trans-unit id="database.tag.type" resname="database.tag.type" approved="yes">
+                <source>Type</source>
+                <target>Art</target>
+            </trans-unit>
+            <trans-unit id="database.tag.type.description" resname="database.tag.type.description" approved="yes">
+                <source>Type of tag</source>
+                <target>Art des Schlagworts</target>
+            </trans-unit>
+            <trans-unit id="database.tag.type.label" resname="database.tag.type.label" approved="yes">
+                <source>Label</source>
+                <target>Label</target>
+            </trans-unit>
+            <trans-unit id="database.tag.description" resname="database.tag.description" approved="yes">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="database.tag.description.description" resname="database.tag.description.description" approved="yes">
+                <source>Brief information about the tag</source>
+                <target>Kurze Erläuterung des Schlagworts</target>
             </trans-unit>
             <trans-unit id="database.tag.sameAs" resname="database.tag.sameAs" approved="yes">
                 <source>Reference URI</source>
@@ -250,11 +278,11 @@
                 <source>List of coordinates in this geometry</source>
                 <target>Liste von Koordinaten in dieser Geometrie</target>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates" resname="database.geometry.coordinates" approved="yes">
+            <trans-unit id="database.geometry.coordinateGroup" resname="database.geometry.coordinateGroup" approved="yes">
                 <source>Coordinate group</source>
                 <target>Koordinatengruppe</target>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates.description" resname="database.geometry.coordinates.description" approved="yes">
+            <trans-unit id="database.geometry.coordinateGroup.description" resname="database.geometry.coordinateGroup.description" approved="yes">
                 <source>List of coordinate groups in this geometry</source>
                 <target>Liste von Koordinatengruppen in dieser Geometrie</target>
             </trans-unit>
@@ -296,7 +324,7 @@
                 <target>UUID</target>
             </trans-unit>
             <trans-unit id="database.feature.uuid.description" resname="database.feature.uuid.description" approved="yes">
-                <source>Unique feature identifier</source>
+                <source>Unique identifier of the feature</source>
                 <target>Einzigartiger Identifikator des Merkmals</target>
             </trans-unit>
             <trans-unit id="database.feature.title" resname="database.feature.title" approved="yes">
@@ -394,6 +422,24 @@
             <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description" approved="yes">
                 <source>Two coordinates to produce a bounding box</source>
                 <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
+            </trans-unit>
+            <!-- Validator: StringOptionsValidator -->
+            <trans-unit id="validator.stringOptions.validator.stringOptions.allowedStringInvalid" resname="validator.stringOptions.allowedStringInvalid" approved="yes">
+                <source>One of the allowed options is not a string in the StringOptionsValidator.</source>
+                <target>Eine der erlaubten Optionen im StringOptionsValidator ist kein String.</target>
+            </trans-unit>
+            <trans-unit id="validator.stringOptions.invalidString" resname="validator.stringOptions.invalidString" approved="yes">
+                <source>The given value was not a valid string.</source>
+                <target>Der Wert war kein richtiger String.</target>
+            </trans-unit>
+            <trans-unit id="validator.stringOptions.notAllowedValue" resname="validator.stringOptions.notAllowedValue" approved="yes">
+                <source>The given value was not in the list of allowed values.</source>
+                <target>Der Wert war nicht in der Liste erlaubter Werte.</target>
+            </trans-unit>
+            <!-- Validator: RegularExpressionValidator -->
+            <trans-unit id="validator.regularExpression.noUuid" resname="validator.regularExpression.noUuid" approved="yes">
+                <source>The given value was not a UUID.</source>
+                <target>Der Wert war keine UUID.</target>
             </trans-unit>
         </body>
     </file>
