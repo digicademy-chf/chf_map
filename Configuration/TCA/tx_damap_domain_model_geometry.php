@@ -243,19 +243,19 @@ return [
             'showitem' => 'hidden,type,coordinates,boundingBox,',
         ],
         'MultiPoint' => [
-            'showitem' => 'hidden,type,coordinateGroups,boundingBox,',
+            'showitem' => 'hidden,type,coordinateGroup,boundingBox,',
         ],
         'LineString' => [
             'showitem' => 'hidden,type,coordinates,boundingBox,',
         ],
         'MultiLineString' => [
-            'showitem' => 'hidden,type,coordinateGroups,boundingBox,',
+            'showitem' => 'hidden,type,coordinateGroup,boundingBox,',
         ],
         'Polygon' => [
             'showitem' => 'hidden,type,coordinates,boundingBox,',
         ],
         'MultiPolygon' => [
-            'showitem' => 'hidden,type,coordinateGroups,boundingBox,',
+            'showitem' => 'hidden,type,coordinateGroup,boundingBox,',
         ],
         'GeometryCollection' => [
             'showitem' => 'hidden,type,geometry,boundingBox,',

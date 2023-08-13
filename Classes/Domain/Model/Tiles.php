@@ -12,6 +12,7 @@ namespace Digicademy\DAMap\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 
 /**
  * Model for tiles
@@ -21,9 +22,10 @@ class Tiles extends AbstractEntity
     /**
      * Resource that this tile layer is attached to
      * 
-     * @var MapResource
+     * @var LazyLoadingProxy|MapResource
      */
-    protected MapResource $parent_id;
+    #[Lazy()]
+    protected LazyLoadingProxy|MapResource $parent_id;
 
     /**
      * Name of the tile layer
@@ -50,7 +52,7 @@ class Tiles extends AbstractEntity
     protected string $uri = '';
 
     /**
-     * Initialize object
+     * Construct object
      *
      * @param MapResource $parent_id
      * @param string $title
@@ -71,6 +73,9 @@ class Tiles extends AbstractEntity
      */
     public function getParentId(): MapResource
     {
+        if ($this->parent_id instanceof LazyLoadingProxy) {
+            $this->parent_id->_loadRealInstance();
+        }
         return $this->parent_id;
     }
 

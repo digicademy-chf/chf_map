@@ -14,25 +14,25 @@ use Digicademy\DAMap\Domain\Validator\StringOptionsValidator;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * Model for tags
+ * Model for features
  */
-class Tag extends AbstractEntity
+class AbstractFeature extends AbstractEntity
 {
     /**
-     * Resource that this tag is attached to
+     * Resource that this feature is attached to
      * 
-     * @var LazyLoadingProxy|MapResource
+     * @var LazyLoadingProxy|MapResource|Feature
      */
     #[Lazy()]
-    protected LazyLoadingProxy|MapResource $parent_id;
+    protected LazyLoadingProxy|MapResource|Feature $parent_id;
 
     /**
-     * Unique identifier of the tag
+     * Unique identifier of the feature
      * 
      * @var string
      */
@@ -46,21 +46,20 @@ class Tag extends AbstractEntity
     protected string $uuid = '';
 
     /**
-     * Name of the tag
+     * Name of the feature
      * 
      * @var string
      */
     #[Validate([
         'validator' => 'StringLength',
         'options'   => [
-            'minimum' => 1,
             'maximum' => 255,
         ],
     ])]
-    protected string $text = '';
+    protected string $title = '';
 
     /**
-     * Type of tag
+     * Type of feature
      * 
      * @var string
      */
@@ -68,14 +67,15 @@ class Tag extends AbstractEntity
         'validator' => StringOptionsValidator::class,
         'options'   => [
             'allowed' => [
-                'label',
+                'Feature',
+                'FeatureCollection',
             ],
         ],
     ])]
     protected string $type = '';
 
     /**
-     * Brief information about the tag
+     * Brief information about the feature
      * 
      * @var string
      */
@@ -88,7 +88,15 @@ class Tag extends AbstractEntity
     protected string $description = '';
 
     /**
-     * External web address to identify the tag across the web
+     * Label to group the feature into
+     * 
+     * @var ObjectStorage<Tag>
+     */
+    #[Lazy()]
+    protected ObjectStorage $label;
+
+    /**
+     * External web address to identify the feature across the web
      * 
      * @var ObjectStorage<SameAs>
      */
@@ -99,29 +107,30 @@ class Tag extends AbstractEntity
     protected ObjectStorage $sameAs;
 
     /**
-     * List of features with this label
+     * Two coordinates to produce a bounding box
      * 
-     * @var ObjectStorage<Feature>
+     * @var ObjectStorage<Coordinates>
      */
     #[Lazy()]
-    protected ObjectStorage $asLabelOfFeature;
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected ObjectStorage $boundingBox;
 
     /**
      * Construct object
      *
      * @param MapResource $parent_id
      * @param string $uuid
-     * @param string $text
      * @param string $type
-     * @return Tag
+     * @return AbstractFeature
      */
-    public function __construct(MapResource $parent_id, string $uuid, string $text, string $type)
+    public function __construct(MapResource $parent_id, string $uuid, string $type)
     {
         $this->initializeObject();
 
         $this->setParentId($parent_id);
         $this->setUuid($uuid);
-        $this->setText($text);
         $this->setType($type);
     }
 
@@ -130,16 +139,17 @@ class Tag extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->sameAs           = new ObjectStorage();
-        $this->asLabelOfFeature = new ObjectStorage();
+        $this->label       = new ObjectStorage();
+        $this->sameAs      = new ObjectStorage();
+        $this->boundingBox = new ObjectStorage();
     }
 
     /**
      * Get parent ID
      * 
-     * @return MapResource
+     * @return MapResource|Feature
      */
-    public function getParentId(): MapResource
+    public function getParentId(): MapResource|Feature
     {
         if ($this->parent_id instanceof LazyLoadingProxy) {
             $this->parent_id->_loadRealInstance();
@@ -150,9 +160,9 @@ class Tag extends AbstractEntity
     /**
      * Set parent ID
      * 
-     * @param MapResource $parent_id
+     * @param MapResource|Feature $parent_id
      */
-    public function setParentId(MapResource $parent_id): void
+    public function setParentId(MapResource|Feature $parent_id): void
     {
         $this->parent_id = $parent_id;
     }
@@ -178,23 +188,23 @@ class Tag extends AbstractEntity
     }
 
     /**
-     * Get text
+     * Get title
      *
      * @return string
      */
-    public function getText(): string
+    public function getTitle(): string
     {
-        return $this->text;
+        return $this->title;
     }
 
     /**
-     * Set text
+     * Set title
      *
-     * @param string $text
+     * @param string $title
      */
-    public function setText(string $text): void
+    public function setTitle(string $title): void
     {
-        $this->text = $text;
+        $this->title = $title;
     }
 
     /**
@@ -236,7 +246,56 @@ class Tag extends AbstractEntity
     {
         $this->description = $description;
     }
-    
+
+    /**
+     * Get label
+     *
+     * @return ObjectStorage<Tag>
+     */
+    public function getLabel(): ObjectStorage
+    {
+        return $this->label;
+    }
+
+    /**
+     * Set label
+     *
+     * @param ObjectStorage<Tag> $label
+     */
+    public function setLabel(ObjectStorage $label): void
+    {
+        $this->label = $label;
+    }
+
+    /**
+     * Add label
+     *
+     * @param Tag $label
+     */
+    public function addLabel(Tag $label): void
+    {
+        $this->label->attach($label);
+    }
+
+    /**
+     * Remove label
+     *
+     * @param Tag $label
+     */
+    public function removeLabel(Tag $label): void
+    {
+        $this->label->detach($label);
+    }
+
+    /**
+     * Remove all labels
+     */
+    public function removeAllLabels(): void
+    {
+        $label = clone $this->label;
+        $this->label->removeAll($label);
+    }
+
     /**
      * Get same as
      *
@@ -287,52 +346,52 @@ class Tag extends AbstractEntity
     }
 
     /**
-     * Get as label of feature
+     * Get bounding box
      *
-     * @return ObjectStorage<Feature>
+     * @return ObjectStorage<Geometry>
      */
-    public function getAsLabelOfFeature(): ObjectStorage
+    public function getBoundingBox(): ObjectStorage
     {
-        return $this->asLabelOfFeature;
+        return $this->boundingBox;
     }
 
     /**
-     * Set as label of feature
+     * Set bounding box
      *
-     * @param ObjectStorage<Feature> $asLabelOfFeature
+     * @param ObjectStorage<Geometry> $boundingBox
      */
-    public function setAsLabelOfFeature(ObjectStorage $asLabelOfFeature): void
+    public function setBoundingBox(ObjectStorage $boundingBox): void
     {
-        $this->asLabelOfFeature = $asLabelOfFeature;
+        $this->boundingBox = $boundingBox;
     }
 
     /**
-     * Add as label of feature
+     * Add bounding box
      *
-     * @param Feature $asLabelOfFeature
+     * @param Geometry $boundingBox
      */
-    public function addAsLabelOfFeature(Feature $asLabelOfFeature): void
+    public function addBoundingBox(Geometry $boundingBox): void
     {
-        $this->asLabelOfFeature->attach($asLabelOfFeature);
+        $this->boundingBox->attach($boundingBox);
     }
 
     /**
-     * Remove as label of feature
+     * Remove bounding box
      *
-     * @param Feature $asLabelOfFeature
+     * @param Geometry $boundingBox
      */
-    public function removeAsLabelOfFeature(Feature $asLabelOfFeature): void
+    public function removeBoundingBox(Geometry $boundingBox): void
     {
-        $this->asLabelOfFeature->detach($asLabelOfFeature);
+        $this->boundingBox->detach($boundingBox);
     }
 
     /**
-     * Remove all as label of features
+     * Remove all bounding boxes
      */
-    public function removeAllAsLabelOfFeatures(): void
+    public function removeAllBoundingBoxes(): void
     {
-        $asLabelOfFeature = clone $this->asLabelOfFeature;
-        $this->asLabelOfFeature->removeAll($asLabelOfFeature);
+        $boundingBox = clone $this->boundingBox;
+        $this->boundingBox->removeAll($boundingBox);
     }
 }
 

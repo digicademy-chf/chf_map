@@ -110,11 +110,19 @@ class MapResource extends AbstractEntity
     protected ObjectStorage $tag;
 
     /**
-     * Initialize object
+     * Construct object
      *
      * @return MapResource
      */
     public function __construct()
+    {
+        $this->initializeObject();
+    }
+
+    /**
+     * Initialize object
+     */
+    public function initializeObject(): void
     {
         $this->sameAs   = new ObjectStorage();
         $this->mapFile  = new ObjectStorage();

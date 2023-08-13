@@ -10,18 +10,17 @@ declare(strict_types=1);
 
 namespace Digicademy\DAMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * Model for coordinate groups
+ * Model for single geometries
  */
-class CoordinateGroup extends AbstractEntity
+class AbstractSingleGeometry extends AbstractGeometry
 {
     /**
-     * List of coordinates in this group
+     * List of coordinates in this geometry
      * 
      * @var ObjectStorage<Coordinates>
      */
@@ -34,11 +33,14 @@ class CoordinateGroup extends AbstractEntity
     /**
      * Construct object
      *
-     * @return CoordinateGroup
+     * @param string $type
+     * @return AbstractSingleGeometry
      */
-    public function __construct()
+    public function __construct(string $type)
     {
         $this->initializeObject();
+
+        $this->setType($type);
     }
 
     /**
@@ -46,6 +48,8 @@ class CoordinateGroup extends AbstractEntity
      */
     public function initializeObject(): void
     {
+        parent::initializeObject();
+
         $this->coordinates = new ObjectStorage();
     }
 

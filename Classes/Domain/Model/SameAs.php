@@ -29,10 +29,10 @@ class SameAs extends AbstractEntity
     protected string $uri = '';
 
     /**
-     * Initialize object
+     * Construct object
      *
      * @param string $uri
-     * @return Tag
+     * @return SameAs
      */
     public function __construct(string $uri)
     {

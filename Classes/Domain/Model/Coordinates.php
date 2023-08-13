@@ -49,11 +49,11 @@ class Coordinates extends AbstractEntity
     protected string $altitude = '';
 
     /**
-     * Initialize object
+     * Construct object
      *
      * @param string $longitude
      * @param string $latitude
-     * @return Tag
+     * @return Coordinates
      */
     public function __construct(string $longitude, string $latitude)
     {
