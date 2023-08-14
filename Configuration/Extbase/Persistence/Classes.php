@@ -16,7 +16,7 @@ declare(strict_types=1);
  * Simpler objects based on tables that do not have multiple types
  * do not need to be listed here since Extbase maps them automatically.
  * For more information on the persistence of Extbase models see
- * https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/Extbase/Reference/Domain/Persistence.html#extbase-persistence.
+ * https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/Extbase/Reference/Domain/Persistence.html.
  */
 return [
     Digicademy\DAMap\Domain\Model\AbstractFeature::class => [

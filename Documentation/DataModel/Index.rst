@@ -37,3 +37,12 @@ Graphical overview
     :class: with-shadow
 
     Overview of the extension's data model. Check the :ref:`api-reference` for further details.
+
+This overview simplifies several object variants into a single item since they populate the same database table. The following image shows the actual objects.
+
+..  figure:: /DataModel/DataModelVariants.png
+    :alt: Variants implied in the data model overview
+    :target: /DataModel/DataModelVariants.png
+    :class: with-shadow
+
+    Variants of ``Geometry`` and ``Feature`` in the data model. Check the :ref:`api-reference` for further details.
