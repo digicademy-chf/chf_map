@@ -10,20 +10,22 @@ declare(strict_types=1);
 
 namespace Digicademy\DAMap\Domain\Repository;
 
-use Digicademy\DAMap\Domain\Model\Geometry;
+use Digicademy\DAMap\Domain\Model\AbstractFeature;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * Repository for geometries
+ * Repository for features
  * 
- * @extends Repository<Geometry>
+ * @extends Repository<AbstractFeature>
  */
-class GeometryRepository extends Repository
+class AbstractFeatureRepository extends Repository
 {
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,
+        'title'   => QueryInterface::ORDER_ASCENDING,
         'type'    => QueryInterface::ORDER_ASCENDING,
+        'weight'  => QueryInterface::ORDER_ASCENDING,
     ];
 }
 

@@ -15,7 +15,7 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * Model for features
+ * Model for feature collections
  */
 class FeatureCollection extends AbstractFeature
 {

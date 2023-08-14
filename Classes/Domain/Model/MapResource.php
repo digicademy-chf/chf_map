@@ -90,7 +90,7 @@ class MapResource extends AbstractEntity
     /**
      * List of all features in this resource
      * 
-     * @var ObjectStorage<Feature>
+     * @var ObjectStorage<Feature|FeatureCollection>
      */
     #[Lazy()]
     #[Cascade([
@@ -341,7 +341,7 @@ class MapResource extends AbstractEntity
     /**
      * Get feature
      *
-     * @return ObjectStorage<Feature>
+     * @return ObjectStorage<Feature|FeatureCollection>
      */
     public function getFeature(): ObjectStorage
     {
@@ -351,7 +351,7 @@ class MapResource extends AbstractEntity
     /**
      * Set feature
      *
-     * @param ObjectStorage<Feature> $feature
+     * @param ObjectStorage<Feature|FeatureCollection> $feature
      */
     public function setFeature(ObjectStorage $feature): void
     {
@@ -361,9 +361,9 @@ class MapResource extends AbstractEntity
     /**
      * Add feature
      *
-     * @param Feature $feature
+     * @param Feature|FeatureCollection $feature
      */
-    public function addFeature(Feature $feature): void
+    public function addFeature(Feature|FeatureCollection $feature): void
     {
         $this->feature->attach($feature);
     }
@@ -371,9 +371,9 @@ class MapResource extends AbstractEntity
     /**
      * Remove feature
      *
-     * @param Feature $feature
+     * @param Feature|FeatureCollection $feature
      */
-    public function removeFeature(Feature $feature): void
+    public function removeFeature(Feature|FeatureCollection $feature): void
     {
         $this->feature->detach($feature);
     }

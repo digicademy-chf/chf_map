@@ -243,6 +243,20 @@ return [
                     'showAllLocalizationLink'         => true,
                     'showSynchronizationLink'         => true,
                 ],
+                'overrideChildTca' => [
+                    'columns' => [
+                        'type' => [
+                            'config' => [
+                                'items' => [
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.type.feature',
+                                        'value' => 'Feature',
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
             ],
         ],
         'weight' => [
@@ -322,6 +336,10 @@ return [
         ],
     ],
     'types' => [
+        'AbstractFeature' => [
+            'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
+            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,boundingBox,',
+        ],
         'Feature' => [
             'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
             --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,weight,projection,geometry,boundingBox,',

@@ -17,7 +17,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /**
  * Model for single geometries
  */
-class AbstractSingleGeometry extends AbstractGeometry
+class SingleGeometry extends AbstractGeometry
 {
     /**
      * List of coordinates in this geometry
@@ -34,7 +34,7 @@ class AbstractSingleGeometry extends AbstractGeometry
      * Construct object
      *
      * @param string $type
-     * @return AbstractSingleGeometry
+     * @return SingleGeometry
      */
     public function __construct(string $type)
     {

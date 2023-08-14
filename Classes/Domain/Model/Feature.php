@@ -50,7 +50,7 @@ class Feature extends AbstractFeature
     /**
      * List of geometries in this feature
      * 
-     * @var ObjectStorage<Geometry>
+     * @var ObjectStorage<SingleGeometry|MultiGeometry|GeometryCollection>
      */
     #[Lazy()]
     #[Cascade([
@@ -129,7 +129,7 @@ class Feature extends AbstractFeature
     /**
      * Get geometry
      *
-     * @return ObjectStorage<Geometry>
+     * @return ObjectStorage<SingleGeometry|MultiGeometry|GeometryCollection>
      */
     public function getGeometry(): ObjectStorage
     {
@@ -139,7 +139,7 @@ class Feature extends AbstractFeature
     /**
      * Set geometry
      *
-     * @param ObjectStorage<Geometry> $geometry
+     * @param ObjectStorage<SingleGeometry|MultiGeometry|GeometryCollection> $geometry
      */
     public function setGeometry(ObjectStorage $geometry): void
     {
@@ -149,9 +149,9 @@ class Feature extends AbstractFeature
     /**
      * Add geometry
      *
-     * @param Geometry $geometry
+     * @param SingleGeometry|MultiGeometry|GeometryCollection $geometry
      */
-    public function addGeometry(Geometry $geometry): void
+    public function addGeometry(SingleGeometry|MultiGeometry|GeometryCollection $geometry): void
     {
         $this->geometry->attach($geometry);
     }
@@ -159,9 +159,9 @@ class Feature extends AbstractFeature
     /**
      * Remove geometry
      *
-     * @param Geometry $geometry
+     * @param SingleGeometry|MultiGeometry|GeometryCollection $geometry
      */
-    public function removeGeometry(Geometry $geometry): void
+    public function removeGeometry(SingleGeometry|MultiGeometry|GeometryCollection $geometry): void
     {
         $this->geometry->detach($geometry);
     }

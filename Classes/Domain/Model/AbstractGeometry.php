@@ -18,7 +18,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * Model for geometries
+ * Abstract model for geometries
  */
 class AbstractGeometry extends AbstractEntity
 {

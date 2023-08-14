@@ -17,7 +17,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /**
  * Model for multi geometries
  */
-class AbstractMultiGeometry extends AbstractGeometry
+class MultiGeometry extends AbstractGeometry
 {
     /**
      * List of coordinate groups in this geometry
@@ -34,7 +34,7 @@ class AbstractMultiGeometry extends AbstractGeometry
      * Construct object
      *
      * @param string $type
-     * @return AbstractMultiGeometry
+     * @return MultiGeometry
      */
     public function __construct(string $type)
     {

@@ -19,7 +19,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * Model for features
+ * Abstract model for features
  */
 class AbstractFeature extends AbstractEntity
 {

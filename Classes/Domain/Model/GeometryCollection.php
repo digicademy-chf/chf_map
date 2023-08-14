@@ -22,7 +22,7 @@ class GeometryCollection extends AbstractGeometry
     /**
      * List of geometries in this geometry
      * 
-     * @var ObjectStorage<Geometry>
+     * @var ObjectStorage<SingleGeometry|MultiGeometry>
      */
     #[Lazy()]
     #[Cascade([
@@ -55,7 +55,7 @@ class GeometryCollection extends AbstractGeometry
     /**
      * Get geometry
      *
-     * @return ObjectStorage<Geometry>
+     * @return ObjectStorage<SingleGeometry|MultiGeometry>
      */
     public function getGeometry(): ObjectStorage
     {
@@ -65,7 +65,7 @@ class GeometryCollection extends AbstractGeometry
     /**
      * Set geometry
      *
-     * @param ObjectStorage<Geometry> $geometry
+     * @param ObjectStorage<SingleGeometry|MultiGeometry> $geometry
      */
     public function setGeometry(ObjectStorage $geometry): void
     {
@@ -75,9 +75,9 @@ class GeometryCollection extends AbstractGeometry
     /**
      * Add geometry
      *
-     * @param Geometry $geometry
+     * @param SingleGeometry|MultiGeometry $geometry
      */
-    public function addGeometry(Geometry $geometry): void
+    public function addGeometry(SingleGeometry|MultiGeometry $geometry): void
     {
         $this->geometry->attach($geometry);
     }
@@ -85,9 +85,9 @@ class GeometryCollection extends AbstractGeometry
     /**
      * Remove geometry
      *
-     * @param Geometry $geometry
+     * @param SingleGeometry|MultiGeometry $geometry
      */
-    public function removeGeometry(Geometry $geometry): void
+    public function removeGeometry(SingleGeometry|MultiGeometry $geometry): void
     {
         $this->geometry->detach($geometry);
     }

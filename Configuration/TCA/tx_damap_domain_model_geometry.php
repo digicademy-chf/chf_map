@@ -213,6 +213,40 @@ return [
                     'showAllLocalizationLink'         => true,
                     'showSynchronizationLink'         => true,
                 ],
+                'overrideChildTca' => [
+                    'columns' => [
+                        'type' => [
+                            'config' => [
+                                'items' => [
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.point',
+                                        'value' => 'Point',
+                                    ],
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPoint',
+                                        'value' => 'MultiPoint',
+                                    ],
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.lineString',
+                                        'value' => 'LineString',
+                                    ],
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiLineString',
+                                        'value' => 'MultiLineString',
+                                    ],
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.polygon',
+                                        'value' => 'Polygon',
+                                    ],
+                                    [
+                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPolygon',
+                                        'value' => 'MultiPolygon',
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
             ],
         ],
         'boundingBox' => [
@@ -239,6 +273,9 @@ return [
     ],
     'palettes' => [],
     'types' => [
+        'AbstractGeometry' => [
+            'showitem' => 'hidden,type,boundingBox,',
+        ],
         'Point' => [
             'showitem' => 'hidden,type,coordinates,boundingBox,',
         ],
