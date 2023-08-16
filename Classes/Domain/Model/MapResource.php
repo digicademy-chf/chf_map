@@ -74,6 +74,9 @@ class MapResource extends AbstractEntity
      * @var ObjectStorage<FileReference>
      */
     #[Lazy()]
+    #[Cascade([
+        'value' => 'remove',
+    ])]
     protected ObjectStorage $mapFile;
 
     /**
