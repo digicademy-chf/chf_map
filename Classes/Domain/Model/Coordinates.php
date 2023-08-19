@@ -19,6 +19,16 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Coordinates extends AbstractEntity
 {
     /**
+     * Whether the record should be visisible or not
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $hidden = false;
+
+    /**
      * Decimal notation of the longitude with a decimal period (if necessary)
      * 
      * @var string
@@ -59,6 +69,26 @@ class Coordinates extends AbstractEntity
     {
         $this->setLongitude($longitude);
         $this->setLatitude($latitude);
+    }
+
+    /**
+     * Get hidden
+     *
+     * @return bool
+     */
+    public function getHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Set hidden
+     *
+     * @param bool $hidden
+     */
+    public function setHidden(bool $hidden): void
+    {
+        $this->hidden = $hidden;
     }
 
     /**

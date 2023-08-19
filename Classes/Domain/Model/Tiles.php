@@ -20,6 +20,16 @@ use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 class Tiles extends AbstractEntity
 {
     /**
+     * Whether the record should be visisible or not
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $hidden = false;
+
+    /**
      * Resource that this tile layer is attached to
      * 
      * @var LazyLoadingProxy|MapResource
@@ -64,6 +74,26 @@ class Tiles extends AbstractEntity
         $this->setParentId($parent_id);
         $this->setTitle($title);
         $this->setUri($uri);
+    }
+
+    /**
+     * Get hidden
+     *
+     * @return bool
+     */
+    public function getHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Set hidden
+     *
+     * @param bool $hidden
+     */
+    public function setHidden(bool $hidden): void
+    {
+        $this->hidden = $hidden;
     }
 
     /**

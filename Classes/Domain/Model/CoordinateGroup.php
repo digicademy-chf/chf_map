@@ -12,6 +12,7 @@ namespace Digicademy\DAMap\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
+use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -20,6 +21,16 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class CoordinateGroup extends AbstractEntity
 {
+    /**
+     * Whether the record should be visisible or not
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $hidden = false;
+
     /**
      * List of coordinates in this group
      * 
@@ -47,6 +58,26 @@ class CoordinateGroup extends AbstractEntity
     public function initializeObject(): void
     {
         $this->coordinates = new ObjectStorage();
+    }
+
+    /**
+     * Get hidden
+     *
+     * @return bool
+     */
+    public function getHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Set hidden
+     *
+     * @param bool $hidden
+     */
+    public function setHidden(bool $hidden): void
+    {
+        $this->hidden = $hidden;
     }
 
     /**

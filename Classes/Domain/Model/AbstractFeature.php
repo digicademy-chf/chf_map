@@ -24,6 +24,16 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class AbstractFeature extends AbstractEntity
 {
     /**
+     * Whether the record should be visisible or not
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $hidden = false;
+
+    /**
      * Resource that this feature is attached to
      * 
      * @var LazyLoadingProxy|MapResource|Feature
@@ -142,6 +152,26 @@ class AbstractFeature extends AbstractEntity
         $this->label       = new ObjectStorage();
         $this->sameAs      = new ObjectStorage();
         $this->boundingBox = new ObjectStorage();
+    }
+
+    /**
+     * Get hidden
+     *
+     * @return bool
+     */
+    public function getHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Set hidden
+     *
+     * @param bool $hidden
+     */
+    public function setHidden(bool $hidden): void
+    {
+        $this->hidden = $hidden;
     }
 
     /**

@@ -22,6 +22,16 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class MapResource extends AbstractEntity
 {
     /**
+     * Whether the record should be visisible or not
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $hidden = false;
+
+    /**
      * Name of the map
      * 
      * @var string
@@ -132,6 +142,26 @@ class MapResource extends AbstractEntity
         $this->mapTiles = new ObjectStorage();
         $this->feature  = new ObjectStorage();
         $this->tag      = new ObjectStorage();
+    }
+
+    /**
+     * Get hidden
+     *
+     * @return bool
+     */
+    public function getHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Set hidden
+     *
+     * @param bool $hidden
+     */
+    public function setHidden(bool $hidden): void
+    {
+        $this->hidden = $hidden;
     }
 
     /**
