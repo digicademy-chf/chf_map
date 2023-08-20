@@ -53,6 +53,7 @@ specify the map tiles or the image file to display using Leaflet.
     Templates/Index
     DataModel/Index
     ApiReference/Index
+    Maintenance/Index
 
 ..  Meta Menu
 
