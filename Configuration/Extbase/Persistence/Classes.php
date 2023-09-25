@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
@@ -19,25 +19,25 @@ declare(strict_types=1);
  * https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/Extbase/Reference/Domain/Persistence.html.
  */
 return [
-    Digicademy\DAMap\Domain\Model\AbstractFeature::class => [
-        'tableName'  => 'tx_damap_domain_model_feature',
+    Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
+        'tableName'  => 'tx_chfmap_domain_model_feature',
         'recordType' => 'AbstractFeature',
         'subclasses' => [
-            'Feature'           => Digicademy\DAMap\Domain\Model\Feature::class,
-            'FeatureCollection' => Digicademy\DAMap\Domain\Model\FeatureCollection::class,
+            'Feature'           => Digicademy\CHFMap\Domain\Model\Feature::class,
+            'FeatureCollection' => Digicademy\CHFMap\Domain\Model\FeatureCollection::class,
         ]
     ],
-    Digicademy\DAMap\Domain\Model\AbstractGeometry::class => [
-        'tableName'  => 'tx_damap_domain_model_geometry',
+    Digicademy\CHFMap\Domain\Model\AbstractGeometry::class => [
+        'tableName'  => 'tx_chfmap_domain_model_geometry',
         'recordType' => 'AbstractGeometry',
         'subclasses' => [
-            'Point'              => Digicademy\DAMap\Domain\Model\SingleGeometry::class,
-            'MultiPoint'         => Digicademy\DAMap\Domain\Model\MultiGeometry::class,
-            'LineString'         => Digicademy\DAMap\Domain\Model\SingleGeometry::class,
-            'MultiLineString'    => Digicademy\DAMap\Domain\Model\MultiGeometry::class,
-            'Polygon'            => Digicademy\DAMap\Domain\Model\SingleGeometry::class,
-            'MultiPolygon'       => Digicademy\DAMap\Domain\Model\MultiGeometry::class,
-            'GeometryCollection' => Digicademy\DAMap\Domain\Model\GeometryCollection::class,
+            'Point'              => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
+            'MultiPoint'         => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
+            'LineString'         => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
+            'MultiLineString'    => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
+            'Polygon'            => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
+            'MultiPolygon'       => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
+            'GeometryCollection' => Digicademy\CHFMap\Domain\Model\GeometryCollection::class,
         ]
     ],
 ];

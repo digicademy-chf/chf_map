@@ -1,6 +1,6 @@
 <?php
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
@@ -16,7 +16,7 @@
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry',
         'label'                    => 'type',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
@@ -24,7 +24,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'type ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Geometry.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/Geometry.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
@@ -99,9 +99,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_damap_domain_model_geometry',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_geometry}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_damap_domain_model_geometry}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table'       => 'tx_chfmap_domain_model_geometry',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_geometry}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_geometry}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],
         ],
@@ -117,38 +117,38 @@ return [
             ],
         ],
         'type' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.description',
             'config'      => [
                 'type'       => 'select',
                 'renderType' => 'selectSingle',
                 'items'      => [
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.point',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.point',
                         'value' => 'Point',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPoint',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPoint',
                         'value' => 'MultiPoint',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.lineString',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.lineString',
                         'value' => 'LineString',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiLineString',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiLineString',
                         'value' => 'MultiLineString',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.polygon',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.polygon',
                         'value' => 'Polygon',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPolygon',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPolygon',
                         'value' => 'MultiPolygon',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.geometryCollection',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.geometryCollection',
                         'value' => 'GeometryCollection',
                     ],
                 ],
@@ -156,11 +156,11 @@ return [
             ],
         ],
         'coordinates' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinates',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinates.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinates',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinates.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_coordinates',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinates',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -176,11 +176,11 @@ return [
             ],
         ],
         'coordinateGroup' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroup',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroup.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroup',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.coordinateGroup.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_coordinate_group',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinate_group',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -196,11 +196,11 @@ return [
             ],
         ],
         'geometry' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.geometry',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.geometry.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.geometry',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.geometry.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_geometry',
+                'foreign_table'       => 'tx_chfmap_domain_model_geometry',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -219,27 +219,27 @@ return [
                             'config' => [
                                 'items' => [
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.point',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.point',
                                         'value' => 'Point',
                                     ],
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPoint',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPoint',
                                         'value' => 'MultiPoint',
                                     ],
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.lineString',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.lineString',
                                         'value' => 'LineString',
                                     ],
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiLineString',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiLineString',
                                         'value' => 'MultiLineString',
                                     ],
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.polygon',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.polygon',
                                         'value' => 'Polygon',
                                     ],
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPolygon',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.type.multiPolygon',
                                         'value' => 'MultiPolygon',
                                     ],
                                 ],
@@ -250,11 +250,11 @@ return [
             ],
         ],
         'boundingBox' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.boundingBox',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.geometry.boundingBox.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.boundingBox',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.geometry.boundingBox.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_coordinates',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinates',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [

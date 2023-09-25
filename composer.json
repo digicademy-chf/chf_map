@@ -1,7 +1,7 @@
 {
-    "name": "digicademy/da-map",
+    "name": "digicademy/chf_map",
     "type": "typo3-cms-extension",
-    "description": "Simple mapping for research data in TYPO3",
+    "description": "Geodata and image maps for research data in TYPO3 as part of the CHF",
     "authors": [
         {
             "name": "Jonatan Jalle Steller",
@@ -10,19 +10,21 @@
             "homepage": "https://www.adwmainz.de"
         },
         {
-            "name": "DA Map contributors"
+            "name": "CHF Map contributors"
         }
     ],
     "license": "GPL-2.0-or-later",
-    "homepage": "https://extensions.typo3.org/extension/da-map",
+    "homepage": "https://extensions.typo3.org/extension/chf_map",
     "support": {
-        "issues": "https://github.com/digicademy/da-map/issues",
-        "source": "https://github.com/digicademy/da-map",
-        "docs": "https://docs.typo3.org/p/da-map/main/en-us"
+        "issues": "https://github.com/digicademy-chf/chf_map/issues",
+        "source": "https://github.com/digicademy-chf/chf_map",
+        "docs": "https://digicademy-chf.github.io/chf_lex"
     },
     "keywords": [
         "TYPO3",
         "Map",
+        "Geodata",
+        "Image map",
         "Location",
         "Leaflet",
         "Data",
@@ -35,12 +37,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Digicademy\\DAMap\\": "Classes/"
+            "Digicademy\\CHFMap\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "da_map"
+            "extension-key": "chf_map"
         }
     }
 }

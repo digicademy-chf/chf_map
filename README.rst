@@ -10,20 +10,22 @@
     :alt: License: GPL v3
     :target: https://www.gnu.org/licenses/gpl-3.0
 
-======
-DA Map
-======
+=======
+CHF Map
+=======
 
 This TYPO3 extension implements a data model inpspired by `GeoJSON
-<https://datatracker.ietf.org/doc/html/rfc7946>`__. All geographical features
-can be serialised as valid GeoJSON. The extension also acts as a wrapper for
-`Leaflet <https://leafletjs.com>`__` and provides a plugin to show individual
-our groups of features as content elements in the frontend. Integrators may
-specify the map tiles or the image file to display using Leaflet.
+<https://datatracker.ietf.org/doc/html/rfc7946>`__, as part of the Cultural
+Heritage Framework (CHF). All geographical features can be serialised as valid
+GeoJSON. The extension also acts as a wrapper for `Leaflet
+<https://leafletjs.com>`__ and provides a plugin to show individual or
+groups of features as content elements in the frontend. Integrators may
+further specify the map tiles or the image files they want to display as a
+base map.
 
-:Repository:  https://github.com/digicademy/da-map
-:Read online: https://docs.typo3.org/p/da-map/main/en-us
-:TER:         https://extensions.typo3.org/extension/da-map
+:Repository:  https://github.com/digicademy-chf/chf_map
+:Read online: https://digicademy-chf.github.io/chf_map
+:TER:         https://extensions.typo3.org/extension/chf_map
 
 Roadmap
 =======

@@ -34,9 +34,3 @@ the label function built into the extension. You can add a ``Tag`` of type
 :guilabel:`Label` to your data folder and then select it in the features you
 want it to apply to. You can then select the label in the plugin to display
 only those features.
-
-..  attention::
-
-    The extension does not currently include a generic frontend template.
-
-    TBD

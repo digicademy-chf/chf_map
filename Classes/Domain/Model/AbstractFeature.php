@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
 
 
-namespace Digicademy\DAMap\Domain\Model;
+namespace Digicademy\CHFMap\Domain\Model;
 
-use Digicademy\DAMap\Domain\Validator\StringOptionsValidator;
+use Digicademy\CHFMap\Domain\Validator\StringOptionsValidator;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
@@ -50,7 +50,7 @@ class AbstractFeature extends AbstractEntity
         'validator' => 'RegularExpression',
         'options'   => [
             'regularExpression' => '^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$',
-            'errorMessage'      => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:validator.regularExpression.noUuid',
+            'errorMessage'      => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:validator.regularExpression.noUuid',
         ],
     ])]
     protected string $uuid = '';

@@ -1,6 +1,6 @@
 <?php
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
@@ -16,7 +16,7 @@
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates',
         'label'                    => 'longitude',
         'label_alt'                => 'latitude,altitude',
         'tstamp'                   => 'tstamp',
@@ -25,7 +25,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'longitude ASC,latitude ASC,altitude ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Coordinates.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/Coordinates.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
@@ -99,9 +99,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_damap_domain_model_coordinates',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_coordinates}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_damap_domain_model_coordinates}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinates',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_coordinates}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_coordinates}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],
         ],
@@ -117,8 +117,8 @@ return [
             ],
         ],
         'longitude' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates.longitude',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates.longitude.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates.longitude',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates.longitude.description',
             'config'      => [
                 'type'     => 'input',
                 'size'     => 40,
@@ -128,8 +128,8 @@ return [
             ],
         ],
         'latitude' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates.latitude',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates.latitude.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates.latitude',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates.latitude.description',
             'config'      => [
                 'type'     => 'input',
                 'size'     => 40,
@@ -139,8 +139,8 @@ return [
             ],
         ],
         'altitude' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates.altitude',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinates.altitude.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates.altitude',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinates.altitude.description',
             'config'      => [
                 'type' => 'input',
                 'size' => 40,

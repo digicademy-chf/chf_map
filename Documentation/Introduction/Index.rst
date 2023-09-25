@@ -16,13 +16,14 @@ instead of the default ``World Geodetic System (WGS 84/EPSG 4326)``. The
 extension uses Leaflet to display maps on the web, which automatically
 translates geographic coordinates to a Pseudo-Mercator projection (EPSG 3857).
 Map resources can also be made available as GeoJSON as the extension's data
-model is based on this standard.
+model is based on this standard. The extension is part of the Cultural
+Heritage Framework (CHF), which provides additional functionality such as
+glossary entries, bibliographic references, and various additional data models.
 
 ..  attention::
 
-    The extension does not currently include a generic frontend template. To
-    use it, you may thus need (someone with) knowledge of how templating works
-    in TYPO3.
+    The extension is not final yet. A lot of things may still change over the
+    coming months.
 
 ..  _screenshots:
 

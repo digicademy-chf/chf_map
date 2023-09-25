@@ -1,13 +1,13 @@
 <?php
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
 
 
 /**
- * SameAs and its properties
+ * Tiles and its properties
  * 
  * Configuration of a database table and its editing interface in the
  * TYPO3 backend. This also serves as the basis for the Extbase
@@ -16,22 +16,23 @@
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.sameAs',
-        'label'                    => 'uri',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles',
+        'label'                    => 'title',
+        'descriptionColumn'        => 'uri',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'uri ASC',
+        'default_sortby'           => 'title ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/SameAs.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/Tiles.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
         'transOrigPointerField'    => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
-        'searchFields'             => 'uri',
+        'searchFields'             => 'title,uri',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'fe_group' => 'fe_group',
@@ -98,9 +99,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_damap_domain_model_same_as',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_same_as}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_damap_domain_model_same_as}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table'       => 'tx_chfmap_domain_model_tiles',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_tiles}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_tiles}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],
         ],
@@ -115,28 +116,52 @@ return [
                 'default' => '',
             ],
         ],
+        'parent_id' => [
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles.parent_id',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles.parent_id.description',
+            'config'      => [
+                'type'                => 'select',
+                'renderType'          => 'selectSingle',
+                'foreign_table'       => 'tx_chfmap_domain_model_map_resource',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
+                'maxitems'            => 1,
+                'required'            => true,
+            ],
+        ],
+        'title' => [
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles.title',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles.title.description',
+            'config'      => [
+                'type'     => 'input',
+                'size'     => 40,
+                'max'      => 255,
+                'eval'     => 'trim',
+                'required' => true,
+            ],
+        ],
         'uri' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.sameAs.uri',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.sameAs.uri.description',
-            'config' => [
-                'type'           => 'link',
-                'allowedTypes'   => ['url'],
-                'allowedOptions' => [],
-                'mode'           => 'prepend',
-                'valuePicker'    => [
-                   'items' => [
-                      ['HTTPS', 'https://'],
-                      ['HTTP', 'http://'],
-                   ],
-                ],
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles.uri',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.tiles.uri.description',
+            'config'      => [
+                'type'     => 'input',
+                'size'     => 40,
+                'max'      => 255,
+                'eval'     => 'trim',
                 'required' => true,
             ],
         ],
     ],
-    'palettes' => [],
+    'palettes' => [
+        'hiddenParentId' => [
+            'showitem' => 'hidden,parent_id,',
+        ],
+        'titleUri' => [
+            'showitem' => 'title,uri,',
+        ],
+    ],
     'types' => [
         '0' => [
-            'showitem' => 'hidden,uri,',
+            'showitem' => 'hiddenParentId,titleUri,',
         ],
     ],
 ];

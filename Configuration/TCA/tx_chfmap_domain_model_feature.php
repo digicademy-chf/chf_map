@@ -1,6 +1,6 @@
 <?php
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
@@ -16,7 +16,7 @@
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature',
         'label'                    => 'title',
         'label_alt'                => 'type,weight',
         'descriptionColumn'        => 'description',
@@ -26,7 +26,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'title ASC,type ASC,weight ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Feature.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/Feature.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
@@ -101,9 +101,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_damap_domain_model_feature',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_feature}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_damap_domain_model_feature}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table'       => 'tx_chfmap_domain_model_feature',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_feature}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],
         ],
@@ -119,20 +119,20 @@ return [
             ],
         ],
         'parent_id' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.parent_id',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.parent_id.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.parent_id',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.parent_id.description',
             'config'      => [
                 'type'                => 'select',
                 'renderType'          => 'selectSingle',
-                'foreign_table'       => 'tx_dalex_domain_model_map_resource',
-                'foreign_table_where' => 'AND {#tx_dabib_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
+                'foreign_table'       => 'tx_chfmap_domain_model_map_resource',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
                 'maxitems'            => 1,
                 'required'            => true,
             ],
         ],
         'uuid' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.uuid',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.uuid.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.uuid',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.uuid.description',
             'config'      => [
                 'type'     => 'uuid',
                 'size'     => 40,
@@ -140,8 +140,8 @@ return [
             ],
         ],
         'title' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.title',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.title.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.title',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.title.description',
             'config'      => [
                 'type' => 'input',
                 'size' => 40,
@@ -150,18 +150,18 @@ return [
             ],
         ],
         'type' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.type',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.type.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.type',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.type.description',
             'config'      => [
                 'type'       => 'select',
                 'renderType' => 'selectSingle',
                 'items'      => [
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.type.feature',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.type.feature',
                         'value' => 'Feature',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.type.featureCollection',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.type.featureCollection',
                         'value' => 'FeatureCollection',
                     ],
                 ],
@@ -169,8 +169,8 @@ return [
             ],
         ],
         'description' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.description',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.description.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.description',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.description.description',
             'config'      => [
                 'type' => 'text',
                 'cols' => 40,
@@ -180,16 +180,16 @@ return [
             ],
         ],
         'label' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.label',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.label.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.label',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.label.description',
             'config'      => [
                 'type'                => 'select',
                 'renderType'          => 'selectMultipleSideBySide',
-                'foreign_table'       => 'tx_damap_domain_model_tag',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_tag}.{#pid}=###CURRENT_PID###'
-                . ' AND {#tx_damap_domain_model_tag}.{#type}=\'label\''
+                'foreign_table'       => 'tx_chfmap_domain_model_tag',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_tag}.{#pid}=###CURRENT_PID###'
+                . ' AND {#tx_chfmap_domain_model_tag}.{#type}=\'label\''
                 . ' ORDER BY tag',
-                'MM'                  => 'tx_damap_domain_model_feature_label_mm',
+                'MM'                  => 'tx_chfmap_domain_model_feature_label_mm',
                 'size'                => 5,
                 'autoSizeMax'         => 10,
                 'fieldControl'        => [
@@ -206,11 +206,11 @@ return [
             ],
         ],
         'sameAs' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.sameAs',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.sameAs.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.sameAs',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.sameAs.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_same_as',
+                'foreign_table'       => 'tx_chfmap_domain_model_same_as',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -226,11 +226,11 @@ return [
             ],
         ],
         'feature' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.feature',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.feature.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.feature',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.feature.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_feature',
+                'foreign_table'       => 'tx_chfmap_domain_model_feature',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -249,7 +249,7 @@ return [
                             'config' => [
                                 'items' => [
                                     [
-                                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.type.feature',
+                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.type.feature',
                                         'value' => 'Feature',
                                     ],
                                 ],
@@ -260,25 +260,25 @@ return [
             ],
         ],
         'weight' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.weight',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.weight.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.weight',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.weight.description',
             'config'      => [
                 'type' => 'number'
             ],
         ],
         'projection' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.projection',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.projection.description',
             'config'      => [
                 'type'       => 'select',
                 'renderType' => 'selectSingle',
                 'items'      => [
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection.worldGeodeticSystem',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.projection.worldGeodeticSystem',
                         'value' => 'worldGeodeticSystem',
                     ],
                     [
-                        'label' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.projection.pixels',
+                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.projection.pixels',
                         'value' => 'pixels',
                     ],
                 ],
@@ -286,11 +286,11 @@ return [
             ],
         ],
         'geometry' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.geometry',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.geometry.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.geometry',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.geometry.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_geometry',
+                'foreign_table'       => 'tx_chfmap_domain_model_geometry',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -306,11 +306,11 @@ return [
             ],
         ],
         'boundingBox' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox.description',
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.boundingBox.description',
             'config'      => [
                 'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_coordinates',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinates',
                 'foreign_field'       => 'parent_id',
                 'foreign_table_field' => 'parent_table',
                 'appearance'          => [
@@ -338,15 +338,15 @@ return [
     'types' => [
         'AbstractFeature' => [
             'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
-            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,boundingBox,',
+            --div--;LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.details,boundingBox,',
         ],
         'Feature' => [
             'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
-            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,weight,projection,geometry,boundingBox,',
+            --div--;LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.details,weight,projection,geometry,boundingBox,',
         ],
         'FeatureCollection' => [
             'showitem' => 'hiddenParentId,uuidTitle,type,description,label,sameAs,
-            --div--;LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.feature.details,feature,boundingBox,',
+            --div--;LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.feature.details,feature,boundingBox,',
         ],
     ],
 ];

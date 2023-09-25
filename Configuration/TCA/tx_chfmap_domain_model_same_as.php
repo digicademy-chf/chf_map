@@ -1,13 +1,13 @@
 <?php
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
 
 
 /**
- * CoordinateGroup and its properties
+ * SameAs and its properties
  * 
  * Configuration of a database table and its editing interface in the
  * TYPO3 backend. This also serves as the basis for the Extbase
@@ -16,22 +16,22 @@
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup',
-        'label'                    => 'coordinates',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.sameAs',
+        'label'                    => 'uri',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'coordinates ASC',
+        'default_sortby'           => 'uri ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/CoordinateGroup.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/SameAs.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
         'transOrigPointerField'    => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
-        'searchFields'             => 'coordinates',
+        'searchFields'             => 'uri',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'fe_group' => 'fe_group',
@@ -98,9 +98,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_damap_domain_model_coordinate_group',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_coordinate_group}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_damap_domain_model_coordinate_group}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table'       => 'tx_chfmap_domain_model_same_as',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_same_as}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_same_as}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],
         ],
@@ -115,31 +115,28 @@ return [
                 'default' => '',
             ],
         ],
-        'coordinates' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup.coordinates',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup.coordinates.description',
-            'config'      => [
-                'type'                => 'inline',
-                'foreign_table'       => 'tx_damap_domain_model_coordinates',
-                'foreign_field'       => 'parent_id',
-                'foreign_table_field' => 'parent_table',
-                'appearance'          => [
-                    'collapseAll'                     => true,
-                    'expandSingle'                    => true,
-                    'newRecordLinkAddTitle'           => true,
-                    'levelLinksPosition'              => 'top',
-                    'useSortable'                     => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink'         => true,
-                    'showSynchronizationLink'         => true,
+        'uri' => [
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.sameAs.uri',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.sameAs.uri.description',
+            'config' => [
+                'type'           => 'link',
+                'allowedTypes'   => ['url'],
+                'allowedOptions' => [],
+                'mode'           => 'prepend',
+                'valuePicker'    => [
+                   'items' => [
+                      ['HTTPS', 'https://'],
+                      ['HTTP', 'http://'],
+                   ],
                 ],
+                'required' => true,
             ],
         ],
     ],
     'palettes' => [],
     'types' => [
         '0' => [
-            'showitem' => 'hidden,coordinates,',
+            'showitem' => 'hidden,uri,',
         ],
     ],
 ];

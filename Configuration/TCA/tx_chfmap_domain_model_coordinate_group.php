@@ -1,13 +1,13 @@
 <?php
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
 
 
 /**
- * Tiles and its properties
+ * CoordinateGroup and its properties
  * 
  * Configuration of a database table and its editing interface in the
  * TYPO3 backend. This also serves as the basis for the Extbase
@@ -16,23 +16,22 @@
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles',
-        'label'                    => 'title',
-        'descriptionColumn'        => 'uri',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup',
+        'label'                    => 'coordinates',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'title ASC',
+        'default_sortby'           => 'coordinates ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:da_map/Resources/Public/Icons/Tiles.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/CoordinateGroup.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
         'transOrigPointerField'    => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
-        'searchFields'             => 'title,uri',
+        'searchFields'             => 'coordinates',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'fe_group' => 'fe_group',
@@ -99,9 +98,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_damap_domain_model_tiles',
-                'foreign_table_where' => 'AND {#tx_damap_domain_model_tiles}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_damap_domain_model_tiles}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinate_group',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_coordinate_group}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_coordinate_group}.{#sys_language_uid} IN (-1,0)',
                 'default'             => 0,
             ],
         ],
@@ -116,52 +115,31 @@ return [
                 'default' => '',
             ],
         ],
-        'parent_id' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.parent_id',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.parent_id.description',
+        'coordinates' => [
+            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup.coordinates',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup.coordinates.description',
             'config'      => [
-                'type'                => 'select',
-                'renderType'          => 'selectSingle',
-                'foreign_table'       => 'tx_dalex_domain_model_map_resource',
-                'foreign_table_where' => 'AND {#tx_dabib_domain_model_map_resource}.{#pid}=###CURRENT_PID###',
-                'maxitems'            => 1,
-                'required'            => true,
-            ],
-        ],
-        'title' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.title',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.title.description',
-            'config'      => [
-                'type'     => 'input',
-                'size'     => 40,
-                'max'      => 255,
-                'eval'     => 'trim',
-                'required' => true,
-            ],
-        ],
-        'uri' => [
-            'label'       => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.uri',
-            'description' => 'LLL:EXT:da_map/Resources/Private/Language/locallang.xlf:database.tiles.uri.description',
-            'config'      => [
-                'type'     => 'input',
-                'size'     => 40,
-                'max'      => 255,
-                'eval'     => 'trim',
-                'required' => true,
+                'type'                => 'inline',
+                'foreign_table'       => 'tx_chfmap_domain_model_coordinates',
+                'foreign_field'       => 'parent_id',
+                'foreign_table_field' => 'parent_table',
+                'appearance'          => [
+                    'collapseAll'                     => true,
+                    'expandSingle'                    => true,
+                    'newRecordLinkAddTitle'           => true,
+                    'levelLinksPosition'              => 'top',
+                    'useSortable'                     => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink'         => true,
+                    'showSynchronizationLink'         => true,
+                ],
             ],
         ],
     ],
-    'palettes' => [
-        'hiddenParentId' => [
-            'showitem' => 'hidden,parent_id,',
-        ],
-        'titleUri' => [
-            'showitem' => 'title,uri,',
-        ],
-    ],
+    'palettes' => [],
     'types' => [
         '0' => [
-            'showitem' => 'hiddenParentId,titleUri,',
+            'showitem' => 'hidden,coordinates,',
         ],
     ],
 ];

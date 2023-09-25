@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-# This file is part of the extension DA Map for TYPO3.
+# This file is part of the extension CHF Map for TYPO3.
 #
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
 
 
-namespace Digicademy\DAMap\Domain\Repository;
+namespace Digicademy\CHFMap\Domain\Repository;
 
-use Digicademy\DAMap\Domain\Model\AbstractFeature;
+use Digicademy\CHFMap\Domain\Model\AbstractFeature;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 

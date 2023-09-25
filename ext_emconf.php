@@ -1,8 +1,8 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title'          => 'DA Map',
-    'description'    => 'Simple mapping for research data in TYPO3',
+    'title'          => 'CHF Map',
+    'description'    => 'Geodata and image maps for research data in TYPO3 as part of the CHF',
     'category'       => 'misc',
     'author'         => 'Jonatan Jalle Steller',
     'author_email'   => 'jonatan.steller@adwmainz.de',
@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload'       => [
         'psr-4' => [
-           'Digicademy\\DAMap\\' => 'Classes/'
+           'Digicademy\\CHFMap\\' => 'Classes/'
         ]
      ]
 ];
