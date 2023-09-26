@@ -33,7 +33,8 @@
         "Academic"
     ],
     "require": {
-        "typo3/cms-core": "^12"
+        "typo3/cms-core": "^12",
+        "digicademy/chf_base": "dev-main"
     },
     "autoload": {
         "psr-4": {
