@@ -10,20 +10,20 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Repository;
 
-use Digicademy\CHFMap\Domain\Model\Tag;
+use Digicademy\CHFMap\Domain\Model\Tile;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * Repository for tags
+ * Repository for Tile
  * 
- * @extends Repository<Tag>
+ * @extends Repository<Tile>
  */
-class TagRepository extends Repository
+class TileRepository extends Repository
 {
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,
-        'text'    => QueryInterface::ORDER_ASCENDING,
+        'title'   => QueryInterface::ORDER_ASCENDING,
     ];
 }
 

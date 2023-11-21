@@ -11,31 +11,31 @@ declare(strict_types=1);
 namespace Digicademy\CHFMap\Controller;
 
 use Psr\Http\Message\ResponseInterface;
-use Digicademy\CHFMap\Domain\Model\Tag;
-use Digicademy\CHFMap\Domain\Repository\TagRepository;
+use Digicademy\CHFMap\Domain\Model\Tile;
+use Digicademy\CHFMap\Domain\Repository\TileRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * Controller for tags
+ * Controller for Tile
  */
-class TagController extends ActionController
+class TileController extends ActionController
 {
-    private TagRepository $tagRepository;
+    private TileRepository $tileRepository;
 
-    public function injectTagRepository(TagRepository $tagRepository): void
+    public function injectTileRepository(TileRepository $tileRepository): void
     {
-        $this->tagRepository = $tagRepository;
+        $this->tileRepository = $tileRepository;
     }
 
     public function indexAction(): ResponseInterface
     {
-        $this->view->assign('tags', $this->tagRepository->findAll());
+        $this->view->assign('tiles', $this->tileRepository->findAll());
         return $this->htmlResponse();
     }
 
-    public function showAction(Tag $tag): ResponseInterface
+    public function showAction(Tile $tile): ResponseInterface
     {
-        $this->view->assign('tag', $tag);
+        $this->view->assign('tile', $tile);
         return $this->htmlResponse();
     }
 }

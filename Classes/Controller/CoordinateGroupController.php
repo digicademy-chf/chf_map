@@ -16,7 +16,7 @@ use Digicademy\CHFMap\Domain\Repository\CoordinateGroupRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * Controller for coordinate groups
+ * Controller for CoordinateGroup
  */
 class CoordinateGroupController extends ActionController
 {

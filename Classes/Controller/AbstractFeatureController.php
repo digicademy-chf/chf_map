@@ -16,7 +16,7 @@ use Digicademy\CHFMap\Domain\Repository\AbstractFeatureRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * Controller for features
+ * Controller for AbstractFeature
  */
 class AbstractFeatureController extends ActionController
 {

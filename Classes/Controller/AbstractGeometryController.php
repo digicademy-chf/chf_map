@@ -16,7 +16,7 @@ use Digicademy\CHFMap\Domain\Repository\AbstractGeometryRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * Controller for geometries
+ * Controller for AbstractGeometry
  */
 class AbstractGeometryController extends ActionController
 {

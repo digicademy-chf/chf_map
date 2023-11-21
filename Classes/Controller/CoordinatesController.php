@@ -16,7 +16,7 @@ use Digicademy\CHFMap\Domain\Repository\CoordinatesRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * Controller for coordinates
+ * Controller for Coordinates
  */
 class CoordinatesController extends ActionController
 {
