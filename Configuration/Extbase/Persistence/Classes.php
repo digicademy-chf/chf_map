@@ -19,24 +19,29 @@ declare(strict_types=1);
  * https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/Extbase/Reference/Domain/Persistence.html.
  */
 return [
+    Digicademy\CHFBase\Domain\Model\AbstractResource::class => [
+        'subclasses' => [
+            'mapResource' => Digicademy\CHFMap\Domain\Model\MapResource::class,
+        ]
+    ],
     Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
         'tableName'  => 'tx_chfmap_domain_model_feature',
-        'recordType' => 'AbstractFeature',
+        'recordType' => '0',
         'subclasses' => [
-            'Feature'           => Digicademy\CHFMap\Domain\Model\Feature::class,
-            'FeatureCollection' => Digicademy\CHFMap\Domain\Model\FeatureCollection::class,
+            'feature' => Digicademy\CHFMap\Domain\Model\Feature::class,
+            'featureCollection' => Digicademy\CHFMap\Domain\Model\FeatureCollection::class,
         ]
     ],
     Digicademy\CHFMap\Domain\Model\AbstractGeometry::class => [
         'tableName'  => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'AbstractGeometry',
+        'recordType' => '0',
         'subclasses' => [
-            'Point'              => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
-            'MultiPoint'         => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
-            'LineString'         => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
-            'MultiLineString'    => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
-            'Polygon'            => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
-            'MultiPolygon'       => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
+            'Point' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
+            'MultiPoint' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
+            'LineString' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
+            'MultiLineString' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
+            'Polygon' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
+            'MultiPolygon' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
             'GeometryCollection' => Digicademy\CHFMap\Domain\Model\GeometryCollection::class,
         ]
     ],

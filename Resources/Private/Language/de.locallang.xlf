@@ -3,79 +3,28 @@
     <file source-language="en" target-language="de" datatype="plaintext" original="EXT:chf_map/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_map">
         <header/>
         <body>
-            <!-- Database: BibliographicResource -->
-            <trans-unit id="database.mapResource" resname="database.mapResource" approved="yes">
+            <!-- Object: MapResource -->
+            <trans-unit id="object.mapResource.type.mapResource" resname="object.mapResource.type.mapResource" approved="yes">
                 <source>Map</source>
                 <target>Karte</target>
             </trans-unit>
-            <trans-unit id="database.mapResource.content" resname="database.mapResource.content" approved="yes">
-                <source>Content</source>
-                <target>Inhalt</target>
+            <trans-unit id="object.mapResource.allTiles" resname="object.mapResource.allTiles" approved="yes">
+                <source>All tiles</source>
+                <target>Alle Kacheln</target>
             </trans-unit>
-            <trans-unit id="database.mapResource.title" resname="database.mapResource.title" approved="yes">
-                <source>Title</source>
-                <target>Titel</target>
+            <trans-unit id="object.mapResource.allTiles.description" resname="object.mapResource.allTiles.description" approved="yes">
+                <source>List of all tiles compiled in this resource</source>
+                <target>Liste aller Kacheln, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
-            <trans-unit id="database.mapResource.title.description" resname="database.mapResource.title.description" approved="yes">
-                <source>Name of the map</source>
-                <target>Name der Karte</target>
+            <trans-unit id="object.mapResource.allFeatures" resname="object.mapResource.allFeatures" approved="yes">
+                <source>All features</source>
+                <target>Alle Merkmale</target>
             </trans-unit>
-            <trans-unit id="database.mapResource.description" resname="database.mapResource.description" approved="yes">
-                <source>Description</source>
-                <target>Beschreibung</target>
+            <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description" approved="yes">
+                <source>List of all features compiled in this resource</source>
+                <target>Liste aller Merkmale, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
-            <trans-unit id="database.mapResource.description.description" resname="database.mapResource.description.description" approved="yes">
-                <source>Brief information about the map</source>
-                <target>Kurze Erläuterung der Karte</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.uri" resname="database.mapResource.uri" approved="yes">
-                <source>URI</source>
-                <target>URI</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.uri.description" resname="database.mapResource.uri.description" approved="yes">
-                <source>Web address of the map</source>
-                <target>Webadresse der Karte</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.sameAs" resname="database.mapResource.sameAs" approved="yes">
-                <source>Reference URI</source>
-                <target>Referenz-URI</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.sameAs.description" resname="database.mapResource.sameAs.description" approved="yes">
-                <source>External web address to identify the map across the web</source>
-                <target>Externe Webadresse zur Identifikation der Karte im Internet</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapFile" resname="database.mapResource.mapFile" approved="yes">
-                <source>Map file</source>
-                <target>Kartendatei</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapFile.description" resname="database.mapResource.mapFile.description" approved="yes">
-                <source>File to display as the base map</source>
-                <target>Datei zur Anzeige als Basiskarte</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapTiles" resname="database.mapResource.mapTiles" approved="yes">
-                <source>Map tiles</source>
-                <target>Kachelebenen</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapTiles.description" resname="database.mapResource.mapTiles.description" approved="yes">
-                <source>Tile layers to use instead of a file</source>
-                <target>Kachelebenen zur Anzeige anstelle einer Datei</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.feature" resname="database.mapResource.feature" approved="yes">
-                <source>Feature</source>
-                <target>Merkmal</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.feature.description" resname="database.mapResource.feature.description" approved="yes">
-                <source>List of all features in this resource</source>
-                <target>Liste aller Merkmale in dieser Ressource</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.tag" resname="database.mapResource.tag" approved="yes">
-                <source>Tag</source>
-                <target>Schlagwort</target>
-            </trans-unit>
-            <trans-unit id="database.mapResource.tag.description" resname="database.mapResource.tag.description" approved="yes">
-                <source>List of all tags in this resource</source>
-                <target>Liste aller Schlagworte in dieser Ressource</target>
-            </trans-unit>
+
             <!-- Database: Tag -->
             <trans-unit id="database.tag" resname="database.tag" approved="yes">
                 <source>Tag</source>
