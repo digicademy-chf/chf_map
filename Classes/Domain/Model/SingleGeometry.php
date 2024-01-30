@@ -1,5 +1,5 @@
 <?php
-
+defined('TYPO3') or die();
 declare(strict_types=1);
 
 # This file is part of the extension CHF Map for TYPO3.
@@ -102,5 +102,3 @@ class SingleGeometry extends AbstractGeometry
         $this->coordinates->removeAll($coordinates);
     }
 }
-
-?>
