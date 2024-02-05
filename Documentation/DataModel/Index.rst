@@ -13,16 +13,16 @@ collections of features have a dependent class that provides recurring types
 of information: ``Geometry`` can have various types ("Point", "Line string",
 "Polygon", "Multi points", "Multi line strings", "Multi polygons", "Geometry
 collection") and contains lists of either ``Coordinates`` or
-``CoordinateGroup``s.
+``CoordinateGroup`` objects.
 
-Each ``MapResource`` may specify a number of ``Tile``s it wants to map its data
-onto. The data model itself does not check whether the tiles are available
-and whether you are allowed to use them. Some providers limit the number of
-requests per day or month, for example. In addition, please note that the
-tiles added here may require you to add a notice to your website's privacy
+Each ``MapResource`` may specify a number of ``Tile`` objects it wants to map
+its data onto. The data model itself does not check whether the tiles are
+available and whether you are allowed to use them. Some providers limit the
+number of requests per day or month, for example. In addition, please note that
+the tiles added here may require you to add a notice to your website's privacy
 policy about requests being made to external servers.
 
-In addition, the model knows flexible ``LabelTag``s and ``SameAs`` classes,
+In addition, the model knows flexible ``LabelTag`` and ``SameAs`` classes,
 which can be used to group features via labels and to connect entities to
 authority files.
 
@@ -33,7 +33,7 @@ Graphical overview
 
 ..  figure:: /DataModel/DataModel.png
     :alt: Data model of the extension
-    :target: /DataModel/DataModel.png
+    :target: ../_images/DataModel.png
     :class: with-shadow
 
     Overview of the extension's data model. Check the :ref:`api-reference`
