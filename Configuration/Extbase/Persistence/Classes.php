@@ -1,5 +1,4 @@
 <?php
-defined('TYPO3') or die();
 declare(strict_types=1);
 
 # This file is part of the extension CHF Map for TYPO3.
@@ -7,6 +6,8 @@ declare(strict_types=1);
 # For the full copyright and license information, please read the
 # LICENSE.txt file that was distributed with this source code.
 
+
+defined('TYPO3') or die();
 
 /**
  * Rules to map object inheritance to TCA tables
@@ -22,7 +23,7 @@ return [
     Digicademy\CHFBase\Domain\Model\AbstractResource::class => [
         'subclasses' => [
             'mapResource' => Digicademy\CHFMap\Domain\Model\MapResource::class,
-        ]
+        ],
     ],
     Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
         'tableName'  => 'tx_chfmap_domain_model_feature',
@@ -30,7 +31,7 @@ return [
         'subclasses' => [
             'feature' => Digicademy\CHFMap\Domain\Model\Feature::class,
             'featureCollection' => Digicademy\CHFMap\Domain\Model\FeatureCollection::class,
-        ]
+        ],
     ],
     Digicademy\CHFMap\Domain\Model\AbstractGeometry::class => [
         'tableName'  => 'tx_chfmap_domain_model_geometry',
@@ -43,6 +44,6 @@ return [
             'Polygon' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
             'MultiPolygon' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
             'GeometryCollection' => Digicademy\CHFMap\Domain\Model\GeometryCollection::class,
-        ]
+        ],
     ],
 ];
