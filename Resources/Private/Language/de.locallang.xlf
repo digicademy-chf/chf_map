@@ -83,96 +83,101 @@
                 <target>Dezimalangabe der Höhe in Metern mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
             <!-- Object: CoordinateGroup -->
-            <trans-unit id="database.coordinateGroup" resname="database.coordinateGroup" approved="yes">
+            <trans-unit id="object.coordinateGroup" resname="object.coordinateGroup" approved="yes">
                 <source>Coordinate group</source>
                 <target>Koordinatengruppe</target>
             </trans-unit>
-            <trans-unit id="database.coordinateGroup.coordinates" resname="database.coordinateGroup.coordinates" approved="yes">
+            <trans-unit id="object.coordinateGroup.coordinates" resname="object.coordinateGroup.coordinates" approved="yes">
                 <source>Coordinates</source>
                 <target>Koordinaten</target>
             </trans-unit>
-            <trans-unit id="database.coordinateGroup.coordinates.description" resname="database.coordinateGroup.coordinates.description" approved="yes">
+            <trans-unit id="object.coordinateGroup.coordinates.description" resname="object.coordinateGroup.coordinates.description" approved="yes">
                 <source>List of coordinates in this group</source>
                 <target>Liste von Koordinaten in dieser Gruppe</target>
             </trans-unit>
-
-
-
-
-
-            <!-- Database: Geometry -->
-            <trans-unit id="database.geometry" resname="database.geometry" approved="yes">
+            <!-- Object: AbstractGeometry -->
+            <trans-unit id="object.abstractGeometry" resname="object.abstractGeometry" approved="yes">
                 <source>Geometry</source>
                 <target>Geometrie</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type" resname="database.geometry.type" approved="yes">
+            <trans-unit id="object.abstractGeometry.type" resname="object.abstractGeometry.type" approved="yes">
                 <source>Type</source>
                 <target>Art</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.description" resname="database.geometry.type.description" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.description" resname="object.abstractGeometry.type.description" approved="yes">
                 <source>Type of geometry</source>
                 <target>Art der Geometrie</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.point" resname="database.geometry.type.point" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.point" resname="object.abstractGeometry.type.point" approved="yes">
                 <source>Point</source>
                 <target>Punkt</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.multiPoint" resname="database.geometry.type.multiPoint" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.multiPoint" resname="object.abstractGeometry.type.multiPoint" approved="yes">
                 <source>Group of points</source>
                 <target>Gruppe von Punkten</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.lineString" resname="database.geometry.type.lineString" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.lineString" resname="object.abstractGeometry.type.lineString" approved="yes">
                 <source>Line string</source>
                 <target>Linienkette</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.multiLineString" resname="database.geometry.type.multiLineString" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.multiLineString" resname="object.abstractGeometry.type.multiLineString" approved="yes">
                 <source>Group of line strings</source>
                 <target>Gruppe von Linienketten</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.polygon" resname="database.geometry.type.polygon" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.polygon" resname="object.abstractGeometry.type.polygon" approved="yes">
                 <source>Polygon</source>
                 <target>Polygon</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.multiPolygon" resname="database.geometry.type.multiPolygon" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.multiPolygon" resname="object.abstractGeometry.type.multiPolygon" approved="yes">
                 <source>Group of polygons</source>
                 <target>Gruppe von Polygonen</target>
             </trans-unit>
-            <trans-unit id="database.geometry.type.geometryCollection" resname="database.geometry.type.geometryCollection" approved="yes">
+            <trans-unit id="object.abstractGeometry.type.geometryCollection" resname="object.abstractGeometry.type.geometryCollection" approved="yes">
                 <source>Geometry collection</source>
                 <target>Geometriesammlung</target>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates" resname="database.geometry.coordinates" approved="yes">
-                <source>Coordinates</source>
-                <target>Koordinaten</target>
-            </trans-unit>
-            <trans-unit id="database.geometry.coordinates.description" resname="database.geometry.coordinates.description" approved="yes">
-                <source>List of coordinates in this geometry</source>
-                <target>Liste von Koordinaten in dieser Geometrie</target>
-            </trans-unit>
-            <trans-unit id="database.geometry.coordinateGroup" resname="database.geometry.coordinateGroup" approved="yes">
-                <source>Coordinate group</source>
-                <target>Koordinatengruppe</target>
-            </trans-unit>
-            <trans-unit id="database.geometry.coordinateGroup.description" resname="database.geometry.coordinateGroup.description" approved="yes">
-                <source>List of coordinate groups in this geometry</source>
-                <target>Liste von Koordinatengruppen in dieser Geometrie</target>
-            </trans-unit>
-            <trans-unit id="database.geometry.geometry" resname="database.geometry.geometry" approved="yes">
-                <source>Geometry</source>
-                <target>Geometrie</target>
-            </trans-unit>
-            <trans-unit id="database.geometry.geometry.description" resname="database.geometry.geometry.description" approved="yes">
-                <source>List of geometries in this geometry</source>
-                <target>Liste von Geometrien in dieser Geometrie</target>
-            </trans-unit>
-            <trans-unit id="database.geometry.boundingBox" resname="database.geometry.boundingBox" approved="yes">
+            <trans-unit id="object.abstractGeometry.boundingBox" resname="object.abstractGeometry.boundingBox" approved="yes">
                 <source>Bounding box</source>
                 <target>Rahmen</target>
             </trans-unit>
-            <trans-unit id="database.geometry.boundingBox.description" resname="database.geometry.boundingBox.description" approved="yes">
-                <source>Two coordinates to produce a bounding box</source>
-                <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
+            <trans-unit id="object.abstractGeometry.boundingBox.description" resname="object.abstractGeometry.boundingBox.description" approved="yes">
+                <source>Two sets of coordinates to produce a bounding box</source>
+                <target>Zwei Sätze Koordinaten, die einen aufgespannten Rahmen markieren</target>
             </trans-unit>
+            <!-- Object: SingleGeometry -->
+            <trans-unit id="object.singleGeometry.coordinates" resname="object.singleGeometry.coordinates" approved="yes">
+                <source>Coordinates</source>
+                <target>Koordinaten</target>
+            </trans-unit>
+            <trans-unit id="object.singleGeometry.coordinates.description" resname="object.singleGeometry.coordinates.description" approved="yes">
+                <source>List of coordinates in this geometry</source>
+                <target>Liste von Koordinaten in dieser Geometrie</target>
+            </trans-unit>
+            <!-- Object: MultiGeometry -->
+            <trans-unit id="object.multiGeometry.coordinateGroup" resname="object.multiGeometry.coordinateGroup" approved="yes">
+                <source>Coordinate group</source>
+                <target>Koordinatengruppe</target>
+            </trans-unit>
+            <trans-unit id="object.multiGeometry.coordinateGroup.description" resname="object.multiGeometry.coordinateGroup.description" approved="yes">
+                <source>List of coordinate groups in this geometry</source>
+                <target>Liste von Koordinatengruppen in dieser Geometrie</target>
+            </trans-unit>
+            <!-- Object: GeometryCollection -->
+            <trans-unit id="object.geometryCollection.geometry" resname="object.geometryCollection.geometry" approved="yes">
+                <source>Geometry</source>
+                <target>Geometrie</target>
+            </trans-unit>
+            <trans-unit id="object.geometryCollection.geometry.description" resname="object.geometryCollection.geometry.description" approved="yes">
+                <source>List of geometries in this geometry</source>
+                <target>Liste von Geometrien in dieser Geometrie</target>
+            </trans-unit>
+
+
+
+
+
+
+
             <!-- Database: Feature -->
             <trans-unit id="database.feature" resname="database.feature" approved="yes">
                 <source>Feature</source>
