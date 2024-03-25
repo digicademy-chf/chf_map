@@ -24,5 +24,6 @@ class TileRepository extends Repository
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,
         'title'   => QueryInterface::ORDER_ASCENDING,
+        'uri'     => QueryInterface::ORDER_ASCENDING,
     ];
 }

@@ -24,7 +24,38 @@
                 <source>List of all features compiled in this resource</source>
                 <target>Liste aller Merkmale, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
+            <!-- Object: Tile -->
+            <trans-unit id="object.tile" resname="object.tile" approved="yes">
+                <source>Tile</source>
+                <target>Kachel</target>
+            </trans-unit>
+            <trans-unit id="object.tile.title" resname="object.tile.title" approved="yes">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="object.tile.title.description" resname="object.tile.title.description" approved="yes">
+                <source>Name of the tile layer</source>
+                <target>Name der Kachelebene</target>
+            </trans-unit>
+            <trans-unit id="object.tile.uri" resname="object.tile.uri" approved="yes">
+                <source>URI</source>
+                <target>URI</target>
+            </trans-unit>
+            <trans-unit id="object.tile.uri.description" resname="object.tile.uri.description" approved="yes">
+                <source>External web address of the tile layer, including wildcards for coordinates and zoom</source>
+                <target>Externe Webadresse der Kachelebene, inklusive Platzhaltern für Koordinaten und Zoom</target>
+            </trans-unit>
+            <trans-unit id="object.tile.image" resname="object.tile.image" approved="yes">
+                <source>Image file</source>
+                <target>Bilddatei</target>
+            </trans-unit>
+            <trans-unit id="object.tile.image.description" resname="object.tile.image.description" approved="yes">
+                <source>Internal image file to use as the tile layer</source>
+                <target>Interne Bilddatei, die als Kachelebene genutzt werden soll</target>
+            </trans-unit>
 
+
+            
             <!-- Database: Tag -->
             <trans-unit id="database.tag" resname="database.tag" approved="yes">
                 <source>Tag</source>
@@ -106,35 +137,6 @@
             <trans-unit id="database.sameAs.uri.description" resname="database.sameAs.uri.description" approved="yes">
                 <source>External web address to identify an entity across the web</source>
                 <target>Externe Webadresse zur Identifikation einer Entität im Internet</target>
-            </trans-unit>
-            <!-- Database: Tiles -->
-            <trans-unit id="database.tiles" resname="database.tiles" approved="yes">
-                <source>Tile layer</source>
-                <target>Kachelebene</target>
-            </trans-unit>
-            <trans-unit id="database.tiles.parent_id" resname="database.tiles.parent_id" approved="yes">
-                <source>Map</source>
-                <target>Karte</target>
-            </trans-unit>
-            <trans-unit id="database.tiles.parent_id.description" resname="database.tiles.parent_id.description" approved="yes">
-                <source>Resource that this tile layer is attached to</source>
-                <target>Ressource, zu der diese Kachelebene gehört</target>
-            </trans-unit>
-            <trans-unit id="database.tiles.title" resname="database.tiles.title" approved="yes">
-                <source>Title</source>
-                <target>Titel</target>
-            </trans-unit>
-            <trans-unit id="database.tiles.title.description" resname="database.tiles.title.description" approved="yes">
-                <source>Name of the tile layer</source>
-                <target>Name der Kachelebene</target>
-            </trans-unit>
-            <trans-unit id="database.tiles.uri" resname="database.tiles.uri" approved="yes">
-                <source>URI</source>
-                <target>URI</target>
-            </trans-unit>
-            <trans-unit id="database.tiles.uri.description" resname="database.tiles.uri.description" approved="yes">
-                <source>External web address of the tile layer to use, including wildcards for coordinates and zoom</source>
-                <target>Externe Webadresse der zu verwendenden Kachelebene, inklusive Platzhaltern für Koordinaten und Zoom</target>
             </trans-unit>
             <!-- Database: Coordinates -->
             <trans-unit id="database.coordinates" resname="database.coordinates" approved="yes">
