@@ -22,9 +22,10 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 class AbstractFeatureRepository extends Repository
 {
     protected $defaultOrderings = [
-        'sorting' => QueryInterface::ORDER_ASCENDING,
-        'title'   => QueryInterface::ORDER_ASCENDING,
-        'type'    => QueryInterface::ORDER_ASCENDING,
-        'weight'  => QueryInterface::ORDER_ASCENDING,
+        'sorting'     => QueryInterface::ORDER_ASCENDING,
+        'isHighlight' => QueryInterface::ORDER_ASCENDING,
+        'title'       => QueryInterface::ORDER_ASCENDING,
+        'type'        => QueryInterface::ORDER_ASCENDING,
+        'weight'      => QueryInterface::ORDER_ASCENDING,
     ];
 }

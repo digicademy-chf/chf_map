@@ -171,133 +171,133 @@
                 <source>List of geometries in this geometry</source>
                 <target>Liste von Geometrien in dieser Geometrie</target>
             </trans-unit>
-
-
-
-
-
-
-
-            <!-- Database: Feature -->
-            <trans-unit id="database.feature" resname="database.feature" approved="yes">
+            <!-- Object: AbstractFeature -->
+            <trans-unit id="object.abstractFeature" resname="object.abstractFeature" approved="yes">
                 <source>Feature</source>
                 <target>Merkmal</target>
             </trans-unit>
-            <trans-unit id="database.feature.details" resname="database.feature.details" approved="yes">
-                <source>Details</source>
-                <target>Details</target>
-            </trans-unit>
-            <trans-unit id="database.feature.parent_id" resname="database.feature.parent_id" approved="yes">
-                <source>Map</source>
-                <target>Karte</target>
-            </trans-unit>
-            <trans-unit id="database.feature.parent_id.description" resname="database.feature.parent_id.description" approved="yes">
-                <source>Resource that this feature is attached to</source>
-                <target>Ressource, zu der dieses Merkmal gehört</target>
-            </trans-unit>
-            <trans-unit id="database.feature.uuid" resname="database.feature.uuid" approved="yes">
-                <source>UUID</source>
-                <target>UUID</target>
-            </trans-unit>
-            <trans-unit id="database.feature.uuid.description" resname="database.feature.uuid.description" approved="yes">
-                <source>Unique identifier of the feature</source>
-                <target>Einzigartiger Identifikator des Merkmals</target>
-            </trans-unit>
-            <trans-unit id="database.feature.title" resname="database.feature.title" approved="yes">
-                <source>Title</source>
-                <target>Titel</target>
-            </trans-unit>
-            <trans-unit id="database.feature.title.description" resname="database.feature.title.description" approved="yes">
-                <source>Name of the feature</source>
-                <target>Name des Merkmals</target>
-            </trans-unit>
-            <trans-unit id="database.feature.type" resname="database.feature.type" approved="yes">
+            <trans-unit id="object.abstractFeature.type" resname="object.abstractFeature.type" approved="yes">
                 <source>Type</source>
                 <target>Art</target>
             </trans-unit>
-            <trans-unit id="database.feature.type.description" resname="database.feature.type.description" approved="yes">
+            <trans-unit id="object.abstractFeature.type.description" resname="object.abstractFeature.type.description" approved="yes">
                 <source>Type of feature</source>
                 <target>Art des Merkmals</target>
             </trans-unit>
-            <trans-unit id="database.feature.type.feature" resname="database.feature.type.feature" approved="yes">
+            <trans-unit id="object.abstractFeature.type.feature" resname="object.abstractFeature.type.feature" approved="yes">
                 <source>Feature</source>
                 <target>Merkmal</target>
             </trans-unit>
-            <trans-unit id="database.feature.type.featureCollection" resname="database.feature.type.Collection" approved="yes">
+            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.Collection" approved="yes">
                 <source>Group of features</source>
                 <target>Gruppe von Merkmalen</target>
             </trans-unit>
-            <trans-unit id="database.feature.description" resname="database.feature.description" approved="yes">
+            <trans-unit id="object.abstractFeature.title" resname="object.abstractFeature.title" approved="yes">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.title.description" resname="object.abstractFeature.title.description" approved="yes">
+                <source>Name of the feature</source>
+                <target>Name des Merkmals</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.description" resname="object.abstractFeature.description" approved="yes">
                 <source>Description</source>
                 <target>Beschreibung</target>
             </trans-unit>
-            <trans-unit id="database.feature.description.description" resname="database.feature.description.description" approved="yes">
+            <trans-unit id="object.abstractFeature.description.description" resname="object.abstractFeature.description.description" approved="yes">
                 <source>Brief information about the feature</source>
                 <target>Kurze Erläuterung des Merkmals</target>
             </trans-unit>
-            <trans-unit id="database.feature.label" resname="database.feature.label" approved="yes">
-                <source>Label</source>
-                <target>Label</target>
-            </trans-unit>
-            <trans-unit id="database.feature.label.description" resname="database.feature.label.description" approved="yes">
-                <source>Label to group the feature into</source>
-                <target>Label zum Gliedern von Merkmalen</target>
-            </trans-unit>
-            <trans-unit id="database.feature.sameAs" resname="database.feature.sameAs" approved="yes">
-                <source>Reference URI</source>
-                <target>Referenz-URI</target>
-            </trans-unit>
-            <trans-unit id="database.feature.sameAs.description" resname="database.feature.sameAs.description" approved="yes">
-                <source>External web address to identify the feature across the web</source>
-                <target>Externe Webadresse zur Identifikation des Merkmals im Internet</target>
-            </trans-unit>
-            <trans-unit id="database.feature.feature" resname="database.feature.feature" approved="yes">
-                <source>Feature</source>
-                <target>Merkmal</target>
-            </trans-unit>
-            <trans-unit id="database.feature.feature.description" resname="database.feature.feature.description" approved="yes">
-                <source>List of features</source>
-                <target>Liste der Merkmale</target>
-            </trans-unit>
-            <trans-unit id="database.feature.weight" resname="database.feature.weight" approved="yes">
-                <source>Weight</source>
-                <target>Gewichtung</target>
-            </trans-unit>
-            <trans-unit id="database.feature.weight.description" resname="database.feature.weight.description" approved="yes">
-                <source>Number used as the size of the feature, if possible</source>
-                <target>Falls möglich als Größe des Merkmals dargestellte Zahl</target>
-            </trans-unit>
-            <trans-unit id="database.feature.projection" resname="database.feature.projection" approved="yes">
-                <source>Projection</source>
-                <target>Projektion</target>
-            </trans-unit>
-            <trans-unit id="database.feature.projection.description" resname="database.feature.projection.description" approved="yes">
-                <source>Type of projection used for geometries in this feature</source>
-                <target>Art der Projektion der Geometrien in diesem Merkmal</target>
-            </trans-unit>
-            <trans-unit id="database.feature.projection.worldGeodeticSystem" resname="database.feature.projection.worldGeodeticSystem" approved="yes">
-                <source>World Geodetic System (WGS 84/EPSG 4326)</source>
-                <target>World Geodetic System (WGS 84/EPSG 4326)</target>
-            </trans-unit>
-            <trans-unit id="database.feature.projection.pixels" resname="database.feature.projection.pixels" approved="yes">
-                <source>Pixels</source>
-                <target>Pixel</target>
-            </trans-unit>
-            <trans-unit id="database.feature.geometry" resname="database.feature.geometry" approved="yes">
-                <source>Geometry</source>
-                <target>Geometrie</target>
-            </trans-unit>
-            <trans-unit id="database.feature.geometry.description" resname="database.feature.geometry.description" approved="yes">
-                <source>List of geometries in this feature</source>
-                <target>Liste von Geometrien in diesem Merkmal</target>
-            </trans-unit>
-            <trans-unit id="database.feature.boundingBox" resname="database.feature.boundingBox" approved="yes">
+            <trans-unit id="object.abstractFeature.boundingBox" resname="object.abstractFeature.boundingBox" approved="yes">
                 <source>Bounding box</source>
                 <target>Rahmen</target>
             </trans-unit>
-            <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description" approved="yes">
-                <source>Two coordinates to produce a bounding box</source>
-                <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
+            <trans-unit id="object.abstractFeature.boundingBox.description" resname="object.abstractFeature.boundingBox.description" approved="yes">
+                <source>Two sets of coordinates to produce a bounding box</source>
+                <target>Zwei Sätze Koordinaten, die einen aufgespannten Rahmen markieren</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfLocation" resname="object.abstractFeature.asGeodataOfLocation" approved="yes">
+                <source>Usage as geodata of a location</source>
+                <target>Verwendung als Geodaten eines Ortes</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfLocation.description" resname="object.abstractFeature.asGeodataOfLocation.description" approved="yes">
+                <source>List of locations that use this feature as geodata</source>
+                <target>Liste der Orte, die dieses Merkmal als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfFrequency" resname="object.abstractFeature.asGeodataOfFrequency" approved="yes">
+                <source>Usage as geodata of a frequency</source>
+                <target>Verwendung als Geodaten einer Häufigkeit</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfFrequency.description" resname="object.abstractFeature.asGeodataOfFrequency.description" approved="yes">
+                <source>List of frequencies that use this feature as geodata</source>
+                <target>Liste der Häufigkeiten, die dieses Merkmal als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfSingleObject" resname="object.abstractFeature.asGeodataOfSingleObject" approved="yes">
+                <source>Usage as geodata of a single object</source>
+                <target>Verwendung als Geodaten eines Einzelobjekts</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfSingleObject.description" resname="object.abstractFeature.asGeodataOfSingleObject.description" approved="yes">
+                <source>List of single objects that use this feature as geodata</source>
+                <target>Liste der Einzelobjekte, die dieses Merkmal als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup" resname="object.abstractFeature.asGeodataOfObjectGroup" approved="yes">
+                <source>Usage as geodata of an object group</source>
+                <target>Verwendung als Geodaten einer Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup.description" resname="object.abstractFeature.asGeodataOfObjectGroup.description" approved="yes">
+                <source>List of object groups that use this feature as geodata</source>
+                <target>Liste der Objektgruppen, die dieses Merkmal als Geodaten verwenden</target>
+            </trans-unit>
+            <!-- Object: Feature -->
+            <trans-unit id="object.feature.weight" resname="object.feature.weight" approved="yes">
+                <source>Weight</source>
+                <target>Gewichtung</target>
+            </trans-unit>
+            <trans-unit id="object.feature.weight.description" resname="object.feature.weight.description" approved="yes">
+                <source>Number used as the size of the feature, if possible</source>
+                <target>Falls möglich als Größe des Merkmals dargestellte Zahl</target>
+            </trans-unit>
+            <trans-unit id="object.feature.projection" resname="object.feature.projection" approved="yes">
+                <source>Projection</source>
+                <target>Projektion</target>
+            </trans-unit>
+            <trans-unit id="object.feature.projection.description" resname="object.feature.projection.description" approved="yes">
+                <source>Type of projection used for geometries in this feature</source>
+                <target>Art der Projektion der Geometrien in diesem Merkmal</target>
+            </trans-unit>
+            <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem" approved="yes">
+                <source>World Geodetic System (WGS 84/EPSG 4326)</source>
+                <target>World Geodetic System (WGS 84/EPSG 4326)</target>
+            </trans-unit>
+            <trans-unit id="object.feature.projection.pixels" resname="object.feature.projection.pixels" approved="yes">
+                <source>Pixels</source>
+                <target>Pixel</target>
+            </trans-unit>
+            <trans-unit id="object.feature.geometry" resname="object.feature.geometry" approved="yes">
+                <source>Geometry</source>
+                <target>Geometrie</target>
+            </trans-unit>
+            <trans-unit id="object.feature.geometry.description" resname="object.feature.geometry.description" approved="yes">
+                <source>List of geometries in this feature</source>
+                <target>Liste von Geometrien in diesem Merkmal</target>
+            </trans-unit>
+            <!-- Object: FeatureCollection -->
+            <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature" approved="yes">
+                <source>Feature</source>
+                <target>Merkmal</target>
+            </trans-unit>
+            <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description" approved="yes">
+                <source>List of features</source>
+                <target>Liste der Merkmale</target>
+            </trans-unit>
+            <!-- Object: LabelTag -->
+            <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">
+                <source>Usage as label of a feature</source>
+                <target>Verwendung als Label eines Merkmals</target>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description" approved="yes">
+                <source>List of features that use this tag as a label</source>
+                <target>Liste der Merkmale, die dieses Schlagwort als Label verwenden</target>
             </trans-unit>
         </body>
     </file>
