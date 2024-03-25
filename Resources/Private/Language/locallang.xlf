@@ -3,326 +3,230 @@
     <file source-language="en" datatype="plaintext" original="EXT:chf_map/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_map">
         <header/>
         <body>
-            <!-- Database: BibliographicResource -->
-            <trans-unit id="database.mapResource" resname="database.mapResource">
+            <!-- Object: MapResource -->
+            <trans-unit id="object.mapResource.type.mapResource" resname="object.mapResource.type.mapResource">
                 <source>Map</source>
             </trans-unit>
-            <trans-unit id="database.mapResource.content" resname="database.mapResource.content">
-                <source>Content</source>
+            <trans-unit id="object.mapResource.allTiles" resname="object.mapResource.allTiles">
+                <source>All tiles</source>
             </trans-unit>
-            <trans-unit id="database.mapResource.title" resname="database.mapResource.title">
+            <trans-unit id="object.mapResource.allTiles.description" resname="object.mapResource.allTiles.description">
+                <source>List of all tiles compiled in this resource</source>
+            </trans-unit>
+            <trans-unit id="object.mapResource.allFeatures" resname="object.mapResource.allFeatures">
+                <source>All features</source>
+            </trans-unit>
+            <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description">
+                <source>List of all features compiled in this resource</source>
+            </trans-unit>
+            <!-- Object: Tile -->
+            <trans-unit id="object.tile" resname="object.tile">
+                <source>Tile</source>
+            </trans-unit>
+            <trans-unit id="object.tile.title" resname="object.tile.title">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="database.mapResource.title.description" resname="database.mapResource.title.description">
-                <source>Name of the map</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.description" resname="database.mapResource.description">
-                <source>Description</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.description.description" resname="database.mapResource.description.description">
-                <source>Brief information about the map</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.uri" resname="database.mapResource.uri">
-                <source>URI</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.uri.description" resname="database.mapResource.uri.description">
-                <source>Web address of the map</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.sameAs" resname="database.mapResource.sameAs">
-                <source>Reference URI</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.sameAs.description" resname="database.mapResource.sameAs.description">
-                <source>External web address to identify the map across the web</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapFile" resname="database.mapResource.mapFile">
-                <source>Map file</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapFile.description" resname="database.mapResource.mapFile.description">
-                <source>File to display as the base map</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapTiles" resname="database.mapResource.mapTiles">
-                <source>Map tiles</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.mapTiles.description" resname="database.mapResource.mapTiles.description">
-                <source>Tile layers to use instead of a file</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.feature" resname="database.mapResource.feature">
-                <source>Feature</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.feature.description" resname="database.mapResource.feature.description">
-                <source>List of all features in this resource</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.tag" resname="database.mapResource.tag">
-                <source>Tag</source>
-            </trans-unit>
-            <trans-unit id="database.mapResource.tag.description" resname="database.mapResource.tag.description">
-                <source>List of all tags in this resource</source>
-            </trans-unit>
-            <!-- Database: Tag -->
-            <trans-unit id="database.tag" resname="database.tag">
-                <source>Tag</source>
-            </trans-unit>
-            <trans-unit id="database.tag.usage" resname="database.tag.usage">
-                <source>Usage</source>
-            </trans-unit>
-            <trans-unit id="database.tag.parent_id" resname="database.tag.parent_id">
-                <source>Map</source>
-            </trans-unit>
-            <trans-unit id="database.tag.parent_id.description" resname="database.tag.parent_id.description">
-                <source>Resource that this tag is attached to</source>
-            </trans-unit>
-            <trans-unit id="database.tag.uuid" resname="database.tag.uuid">
-                <source>UUID</source>
-            </trans-unit>
-            <trans-unit id="database.tag.uuid.description" resname="database.tag.uuid.description">
-                <source>Unique identifier of the tag</source>
-            </trans-unit>
-            <trans-unit id="database.tag.text" resname="database.tag.text">
-                <source>Tag</source>
-            </trans-unit>
-            <trans-unit id="database.tag.text.description" resname="database.tag.text.description">
-                <source>Name of the tag</source>
-            </trans-unit>
-            <trans-unit id="database.tag.type" resname="database.tag.type">
-                <source>Type</source>
-            </trans-unit>
-            <trans-unit id="database.tag.type.description" resname="database.tag.type.description">
-                <source>Type of tag</source>
-            </trans-unit>
-            <trans-unit id="database.tag.type.label" resname="database.tag.type.label">
-                <source>Label</source>
-            </trans-unit>
-            <trans-unit id="database.tag.description" resname="database.tag.description">
-                <source>Description</source>
-            </trans-unit>
-            <trans-unit id="database.tag.description.description" resname="database.tag.description.description">
-                <source>Brief information about the tag</source>
-            </trans-unit>
-            <trans-unit id="database.tag.sameAs" resname="database.tag.sameAs">
-                <source>Reference URI</source>
-            </trans-unit>
-            <trans-unit id="database.tag.sameAs.description" resname="database.tag.sameAs.description">
-                <source>External web address to identify the tag across the web</source>
-            </trans-unit>
-            <trans-unit id="database.tag.asLabelOfFeature" resname="database.tag.asLabelOfFeature">
-                <source>As label of feature</source>
-            </trans-unit>
-            <trans-unit id="database.tag.asLabelOfFeature.description" resname="database.tag.asLabelOfFeature.description">
-                <source>List of features with this label</source>
-            </trans-unit>
-            <!-- Database: SameAs -->
-            <trans-unit id="database.sameAs" resname="database.sameAs">
-                <source>Reference URI</source>
-            </trans-unit>
-            <trans-unit id="database.sameAs.uri" resname="database.sameAs.uri">
-                <source>URI</source>
-            </trans-unit>
-            <trans-unit id="database.sameAs.uri.description" resname="database.sameAs.uri.description">
-                <source>External web address to identify an entity across the web</source>
-            </trans-unit>
-            <!-- Database: Tiles -->
-            <trans-unit id="database.tiles" resname="database.tiles">
-                <source>Tile layer</source>
-            </trans-unit>
-            <trans-unit id="database.tiles.parent_id" resname="database.tiles.parent_id">
-                <source>Map</source>
-            </trans-unit>
-            <trans-unit id="database.tiles.parent_id.description" resname="database.tiles.parent_id.description">
-                <source>Resource that this tile layer is attached to</source>
-            </trans-unit>
-            <trans-unit id="database.tiles.title" resname="database.tiles.title">
-                <source>Title</source>
-            </trans-unit>
-            <trans-unit id="database.tiles.title.description" resname="database.tiles.title.description">
+            <trans-unit id="object.tile.title.description" resname="object.tile.title.description">
                 <source>Name of the tile layer</source>
             </trans-unit>
-            <trans-unit id="database.tiles.uri" resname="database.tiles.uri">
+            <trans-unit id="object.tile.uri" resname="object.tile.uri">
                 <source>URI</source>
             </trans-unit>
-            <trans-unit id="database.tiles.uri.description" resname="database.tiles.uri.description">
-                <source>External web address of the tile layer to use, including wildcards for coordinates and size</source>
+            <trans-unit id="object.tile.uri.description" resname="object.tile.uri.description">
+                <source>External web address of the tile layer, including wildcards for coordinates and zoom</source>
             </trans-unit>
-            <!-- Database: Coordinates -->
-            <trans-unit id="database.coordinates" resname="database.coordinates">
+            <trans-unit id="object.tile.image" resname="object.tile.image">
+                <source>Image file</source>
+            </trans-unit>
+            <trans-unit id="object.tile.image.description" resname="object.tile.image.description">
+                <source>Internal image file to use as the tile layer</source>
+            </trans-unit>
+            <!-- Object: Coordinates -->
+            <trans-unit id="object.coordinates" resname="object.coordinates">
                 <source>Coordinates</source>
             </trans-unit>
-            <trans-unit id="database.coordinates.longitude" resname="database.coordinates.longitude">
+            <trans-unit id="object.coordinates.longitude" resname="object.coordinates.longitude">
                 <source>Longitude</source>
             </trans-unit>
-            <trans-unit id="database.coordinates.longitude.description" resname="database.coordinates.longitude.description">
+            <trans-unit id="object.coordinates.longitude.description" resname="object.coordinates.longitude.description">
                 <source>Decimal notation of the longitude with a decimal period (if necessary)</source>
             </trans-unit>
-            <trans-unit id="database.coordinates.latitude" resname="database.coordinates.latitude">
+            <trans-unit id="object.coordinates.latitude" resname="object.coordinates.latitude">
                 <source>Latitude</source>
             </trans-unit>
-            <trans-unit id="database.coordinates.latitude.description" resname="database.coordinates.latitude.description">
+            <trans-unit id="object.coordinates.latitude.description" resname="object.coordinates.latitude.description">
                 <source>Decimal notation of the latitude with a decimal period (if necessary)</source>
             </trans-unit>
-            <trans-unit id="database.coordinates.altitude" resname="database.coordinates.altitude">
+            <trans-unit id="object.coordinates.altitude" resname="object.coordinates.altitude">
                 <source>Altitude</source>
             </trans-unit>
-            <trans-unit id="database.coordinates.altitude.description" resname="database.coordinates.altitude.description">
+            <trans-unit id="object.coordinates.altitude.description" resname="object.coordinates.altitude.description">
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
             </trans-unit>
-            <!-- Database: CoordinateGroup -->
-            <trans-unit id="database.coordinateGroup" resname="database.coordinateGroup">
+            <!-- Object: CoordinateGroup -->
+            <trans-unit id="object.coordinateGroup" resname="object.coordinateGroup">
                 <source>Coordinate group</source>
             </trans-unit>
-            <trans-unit id="database.coordinateGroup.coordinates" resname="database.coordinateGroup.coordinates">
+            <trans-unit id="object.coordinateGroup.coordinates" resname="object.coordinateGroup.coordinates">
                 <source>Coordinates</source>
             </trans-unit>
-            <trans-unit id="database.coordinateGroup.coordinates.description" resname="database.coordinateGroup.coordinates.description">
+            <trans-unit id="object.coordinateGroup.coordinates.description" resname="object.coordinateGroup.coordinates.description">
                 <source>List of coordinates in this group</source>
             </trans-unit>
-            <!-- Database: Geometry -->
-            <trans-unit id="database.geometry" resname="database.geometry">
+            <!-- Object: AbstractGeometry -->
+            <trans-unit id="object.abstractGeometry" resname="object.abstractGeometry">
                 <source>Geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type" resname="database.geometry.type">
+            <trans-unit id="object.abstractGeometry.type" resname="object.abstractGeometry.type">
                 <source>Type</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.description" resname="database.geometry.type.description">
+            <trans-unit id="object.abstractGeometry.type.description" resname="object.abstractGeometry.type.description">
                 <source>Type of geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.point" resname="database.geometry.type.point">
+            <trans-unit id="object.abstractGeometry.type.point" resname="object.abstractGeometry.type.point">
                 <source>Point</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.multiPoint" resname="database.geometry.type.multiPoint">
+            <trans-unit id="object.abstractGeometry.type.multiPoint" resname="object.abstractGeometry.type.multiPoint">
                 <source>Group of points</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.lineString" resname="database.geometry.type.lineString">
+            <trans-unit id="object.abstractGeometry.type.lineString" resname="object.abstractGeometry.type.lineString">
                 <source>Line string</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.multiLineString" resname="database.geometry.type.multiLineString">
+            <trans-unit id="object.abstractGeometry.type.multiLineString" resname="object.abstractGeometry.type.multiLineString">
                 <source>Group of line strings</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.polygon" resname="database.geometry.type.polygon">
+            <trans-unit id="object.abstractGeometry.type.polygon" resname="object.abstractGeometry.type.polygon">
                 <source>Polygon</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.multiPolygon" resname="database.geometry.type.multiPolygon">
+            <trans-unit id="object.abstractGeometry.type.multiPolygon" resname="object.abstractGeometry.type.multiPolygon">
                 <source>Group of polygons</source>
             </trans-unit>
-            <trans-unit id="database.geometry.type.geometryCollection" resname="database.geometry.type.geometryCollection">
+            <trans-unit id="object.abstractGeometry.type.geometryCollection" resname="object.abstractGeometry.type.geometryCollection">
                 <source>Geometry collection</source>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates" resname="database.geometry.coordinates">
+            <trans-unit id="object.abstractGeometry.boundingBox" resname="object.abstractGeometry.boundingBox">
+                <source>Bounding box</source>
+            </trans-unit>
+            <trans-unit id="object.abstractGeometry.boundingBox.description" resname="object.abstractGeometry.boundingBox.description">
+                <source>Two sets of coordinates to produce a bounding box</source>
+            </trans-unit>
+            <!-- Object: SingleGeometry -->
+            <trans-unit id="object.singleGeometry.coordinates" resname="object.singleGeometry.coordinates">
                 <source>Coordinates</source>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinates.description" resname="database.geometry.coordinates.description">
+            <trans-unit id="object.singleGeometry.coordinates.description" resname="object.singleGeometry.coordinates.description">
                 <source>List of coordinates in this geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinateGroup" resname="database.geometry.coordinateGroup">
+            <!-- Object: MultiGeometry -->
+            <trans-unit id="object.multiGeometry.coordinateGroup" resname="object.multiGeometry.coordinateGroup">
                 <source>Coordinate group</source>
             </trans-unit>
-            <trans-unit id="database.geometry.coordinateGroup.description" resname="database.geometry.coordinateGroup.description">
+            <trans-unit id="object.multiGeometry.coordinateGroup.description" resname="object.multiGeometry.coordinateGroup.description">
                 <source>List of coordinate groups in this geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.geometry" resname="database.geometry.geometry">
+            <!-- Object: GeometryCollection -->
+            <trans-unit id="object.geometryCollection.geometry" resname="object.geometryCollection.geometry">
                 <source>Geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.geometry.description" resname="database.geometry.geometry.description">
+            <trans-unit id="object.geometryCollection.geometry.description" resname="object.geometryCollection.geometry.description">
                 <source>List of geometries in this geometry</source>
             </trans-unit>
-            <trans-unit id="database.geometry.boundingBox" resname="database.geometry.boundingBox">
-                <source>Bounding box</source>
-            </trans-unit>
-            <trans-unit id="database.geometry.boundingBox.description" resname="database.geometry.boundingBox.description">
-                <source>Two coordinates to produce a bounding box</source>
-            </trans-unit>
-            <!-- Database: Feature -->
-            <trans-unit id="database.feature" resname="database.feature">
+            <!-- Object: AbstractFeature -->
+            <trans-unit id="object.abstractFeature" resname="object.abstractFeature">
                 <source>Feature</source>
             </trans-unit>
-            <trans-unit id="database.feature.details" resname="database.feature.details">
-                <source>Details</source>
-            </trans-unit>
-            <trans-unit id="database.feature.parent_id" resname="database.feature.parent_id">
-                <source>Map</source>
-            </trans-unit>
-            <trans-unit id="database.feature.parent_id.description" resname="database.feature.parent_id.description">
-                <source>Resource that this feature is attached to</source>
-            </trans-unit>
-            <trans-unit id="database.feature.uuid" resname="database.feature.uuid">
-                <source>UUID</source>
-            </trans-unit>
-            <trans-unit id="database.feature.uuid.description" resname="database.feature.uuid.description">
-                <source>Unique identifier of the feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.title" resname="database.feature.title">
-                <source>Title</source>
-            </trans-unit>
-            <trans-unit id="database.feature.title.description" resname="database.feature.title.description">
-                <source>Name of the feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.type" resname="database.feature.type">
+            <trans-unit id="object.abstractFeature.type" resname="object.abstractFeature.type">
                 <source>Type</source>
             </trans-unit>
-            <trans-unit id="database.feature.type.description" resname="database.feature.type.description">
+            <trans-unit id="object.abstractFeature.type.description" resname="object.abstractFeature.type.description">
                 <source>Type of feature</source>
             </trans-unit>
-            <trans-unit id="database.feature.type.feature" resname="database.feature.type.feature">
+            <trans-unit id="object.abstractFeature.type.feature" resname="object.abstractFeature.type.feature">
                 <source>Feature</source>
             </trans-unit>
-            <trans-unit id="database.feature.type.featureCollection" resname="database.feature.type.Collection">
+            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.Collection">
                 <source>Group of features</source>
             </trans-unit>
-            <trans-unit id="database.feature.description" resname="database.feature.description">
+            <trans-unit id="object.abstractFeature.title" resname="object.abstractFeature.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.title.description" resname="object.abstractFeature.title.description">
+                <source>Name of the feature</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.description" resname="object.abstractFeature.description">
                 <source>Description</source>
             </trans-unit>
-            <trans-unit id="database.feature.description.description" resname="database.feature.description.description">
+            <trans-unit id="object.abstractFeature.description.description" resname="object.abstractFeature.description.description">
                 <source>Brief information about the feature</source>
             </trans-unit>
-            <trans-unit id="database.feature.label" resname="database.feature.label">
-                <source>Label</source>
-            </trans-unit>
-            <trans-unit id="database.feature.label.description" resname="database.feature.label.description">
-                <source>Label to group the feature into</source>
-            </trans-unit>
-            <trans-unit id="database.feature.sameAs" resname="database.feature.sameAs">
-                <source>Reference URI</source>
-            </trans-unit>
-            <trans-unit id="database.feature.sameAs.description" resname="database.feature.sameAs.description">
-                <source>External web address to identify the feature across the web</source>
-            </trans-unit>
-            <trans-unit id="database.feature.feature" resname="database.feature.feature">
-                <source>Feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.feature.description" resname="database.feature.feature.description">
-                <source>List of features</source>
-            </trans-unit>
-            <trans-unit id="database.feature.weight" resname="database.feature.weight">
-                <source>Weight</source>
-            </trans-unit>
-            <trans-unit id="database.feature.weight.description" resname="database.feature.weight.description">
-                <source>Number used as the size of the feature, if possible</source>
-            </trans-unit>
-            <trans-unit id="database.feature.projection" resname="database.feature.projection">
-                <source>Projection</source>
-            </trans-unit>
-            <trans-unit id="database.feature.projection.description" resname="database.feature.projection.description">
-                <source>Type of projection used for geometries in this feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.projection.worldGeodeticSystem" resname="database.feature.projection.worldGeodeticSystem">
-                <source>World Geodetic System (WGS 84/EPSG 4326)</source>
-            </trans-unit>
-            <trans-unit id="database.feature.projection.pixels" resname="database.feature.projection.pixels">
-                <source>Pixels</source>
-            </trans-unit>
-            <trans-unit id="database.feature.geometry" resname="database.feature.geometry">
-                <source>Geometry</source>
-            </trans-unit>
-            <trans-unit id="database.feature.geometry.description" resname="database.feature.geometry.description">
-                <source>List of geometries in this feature</source>
-            </trans-unit>
-            <trans-unit id="database.feature.boundingBox" resname="database.feature.boundingBox">
+            <trans-unit id="object.abstractFeature.boundingBox" resname="object.abstractFeature.boundingBox">
                 <source>Bounding box</source>
             </trans-unit>
-            <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description">
-                <source>Two coordinates to produce a bounding box</source>
+            <trans-unit id="object.abstractFeature.boundingBox.description" resname="object.abstractFeature.boundingBox.description">
+                <source>Two sets of coordinates to produce a bounding box</source>
             </trans-unit>
-            <!-- Validator: RegularExpressionValidator -->
-            <trans-unit id="validator.regularExpression.noUuid" resname="validator.regularExpression.noUuid">
-                <source>The given value was not a UUID.</source>
+            <trans-unit id="object.abstractFeature.asGeodataOfLocation" resname="object.abstractFeature.asGeodataOfLocation">
+                <source>Usage as geodata of a location</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfLocation.description" resname="object.abstractFeature.asGeodataOfLocation.description">
+                <source>List of locations that use this feature as geodata</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfFrequency" resname="object.abstractFeature.asGeodataOfFrequency">
+                <source>Usage as geodata of a frequency</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfFrequency.description" resname="object.abstractFeature.asGeodataOfFrequency.description">
+                <source>List of frequencies that use this feature as geodata</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfSingleObject" resname="object.abstractFeature.asGeodataOfSingleObject">
+                <source>Usage as geodata of a single object</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfSingleObject.description" resname="object.abstractFeature.asGeodataOfSingleObject.description">
+                <source>List of single objects that use this feature as geodata</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup" resname="object.abstractFeature.asGeodataOfObjectGroup">
+                <source>Usage as geodata of an object group</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup.description" resname="object.abstractFeature.asGeodataOfObjectGroup.description">
+                <source>List of object groups that use this feature as geodata</source>
+            </trans-unit>
+            <!-- Object: Feature -->
+            <trans-unit id="object.feature.weight" resname="object.feature.weight">
+                <source>Weight</source>
+            </trans-unit>
+            <trans-unit id="object.feature.weight.description" resname="object.feature.weight.description">
+                <source>Number used as the size of the feature, if possible</source>
+            </trans-unit>
+            <trans-unit id="object.feature.projection" resname="object.feature.projection">
+                <source>Projection</source>
+            </trans-unit>
+            <trans-unit id="object.feature.projection.description" resname="object.feature.projection.description">
+                <source>Type of projection used for geometries in this feature</source>
+            </trans-unit>
+            <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem">
+                <source>World Geodetic System (WGS 84/EPSG 4326)</source>
+            </trans-unit>
+            <trans-unit id="object.feature.projection.pixels" resname="object.feature.projection.pixels">
+                <source>Pixels</source>
+            </trans-unit>
+            <trans-unit id="object.feature.geometry" resname="object.feature.geometry">
+                <source>Geometry</source>
+            </trans-unit>
+            <trans-unit id="object.feature.geometry.description" resname="object.feature.geometry.description">
+                <source>List of geometries in this feature</source>
+            </trans-unit>
+            <!-- Object: FeatureCollection -->
+            <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature">
+                <source>Feature</source>
+            </trans-unit>
+            <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description">
+                <source>List of features</source>
+            </trans-unit>
+            <!-- Object: LabelTag -->
+            <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature">
+                <source>Usage as label of a feature</source>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description">
+                <source>List of features that use this tag as a label</source>
             </trans-unit>
         </body>
     </file>
