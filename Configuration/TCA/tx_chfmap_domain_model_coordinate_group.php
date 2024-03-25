@@ -19,7 +19,7 @@ defined('TYPO3') or die();
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.coordinateGroup',
         'label'                    => 'coordinates',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
@@ -41,30 +41,16 @@ return [
         ],
     ],
     'columns' => [
-        'hidden' => [
-            'exclude' => true,
-            'label'   => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled',
-            'config'  => [
-                'type'       => 'check',
-                'renderType' => 'checkboxToggle',
-                'items'      => [
-                    [
-                        'label' => '',
-                        'invertStateDisplay' => true,
-                    ]
-                ],
-            ]
-        ],
         'fe_group' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.fe_group',
             'config' => [
-                'type'       => 'select',
+                'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'size'       => 5,
-                'maxitems'   => 20,
-                'items'      => [
+                'size' => 5,
+                'maxitems' => 20,
+                'items' => [
                     [
                         'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hide_at_login',
                         'value' => -1,
@@ -84,27 +70,27 @@ return [
         ],
         'sys_language_uid' => [
             'exclude' => true,
-            'label'   => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-            'config'  => [
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
+            'config' => [
                 'type' => 'language',
             ],
         ],
         'l18n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'label'       => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-            'config'      => [
-                'type'       => 'select',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+            'config' => [
+                'type' => 'select',
                 'renderType' => 'selectSingle',
-                'items'      => [
+                'items' => [
                     [
                         'label' => '',
                         'value' => 0,
                     ],
                 ],
-                'foreign_table'       => 'tx_chfmap_domain_model_coordinate_group',
+                'foreign_table' => 'tx_chfmap_domain_model_coordinate_group',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_coordinate_group}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfmap_domain_model_coordinate_group}.{#sys_language_uid} IN (-1,0)',
-                'default'             => 0,
+                'default' => 0,
             ],
         ],
         'l10n_source' => [
@@ -114,30 +100,55 @@ return [
         ],
         'l18n_diffsource' => [
             'config' => [
-                'type'    => 'passthrough',
+                'type' => 'passthrough',
                 'default' => '',
             ],
         ],
-        'coordinates' => [
-            'label'       => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup.coordinates',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:database.coordinateGroup.coordinates.description',
-            'config'      => [
-                'type'                => 'inline',
-                'foreign_table'       => 'tx_chfmap_domain_model_coordinates',
-                'foreign_field'       => 'parent_id',
-                'foreign_table_field' => 'parent_table',
-                'behaviour'           => [
-                     'allowLanguageSynchronization' => true
+        'hidden' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled',
+            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.hidden.description',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        'label' => '',
+                        'invertStateDisplay' => true,
+                    ]
                 ],
-                'appearance'          => [
-                    'collapseAll'                     => true,
-                    'expandSingle'                    => true,
-                    'newRecordLinkAddTitle'           => true,
-                    'levelLinksPosition'              => 'top',
-                    'useSortable'                     => true,
+            ]
+        ],
+        'parentTable' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
+        'parent' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
+        'coordinates' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.coordinateGroup.coordinates',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.coordinateGroup.coordinates.description',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_chfmap_domain_model_coordinates',
+                'foreign_field' => 'parent',
+                'foreign_table_field' => 'parent_table',
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'top',
+                    'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink'         => true,
-                    'showSynchronizationLink'         => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],

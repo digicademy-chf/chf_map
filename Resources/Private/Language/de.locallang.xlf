@@ -53,121 +53,36 @@
                 <source>Internal image file to use as the tile layer</source>
                 <target>Interne Bilddatei, die als Kachelebene genutzt werden soll</target>
             </trans-unit>
-
-
-            
-            <!-- Database: Tag -->
-            <trans-unit id="database.tag" resname="database.tag" approved="yes">
-                <source>Tag</source>
-                <target>Schlagwort</target>
-            </trans-unit>
-            <trans-unit id="database.tag.usage" resname="database.tag.usage" approved="yes">
-                <source>Usage</source>
-                <target>Gebrauch</target>
-            </trans-unit>
-            <trans-unit id="database.tag.parent_id" resname="database.tag.parent_id" approved="yes">
-                <source>Map</source>
-                <target>Karte</target>
-            </trans-unit>
-            <trans-unit id="database.tag.parent_id.description" resname="database.tag.parent_id.description" approved="yes">
-                <source>Resource that this tag is attached to</source>
-                <target>Ressource, zu der dieses Schlagwort gehört</target>
-            </trans-unit>
-            <trans-unit id="database.tag.uuid" resname="database.tag.uuid" approved="yes">
-                <source>UUID</source>
-                <target>UUID</target>
-            </trans-unit>
-            <trans-unit id="database.tag.uuid.description" resname="database.tag.uuid.description" approved="yes">
-                <source>Unique identifier of the tag</source>
-                <target>Einzigartiger Identifikator des Schlagworts</target>
-            </trans-unit>
-            <trans-unit id="database.tag.text" resname="database.tag.text" approved="yes">
-                <source>Tag</source>
-                <target>Schlagwort</target>
-            </trans-unit>
-            <trans-unit id="database.tag.text.description" resname="database.tag.text.description" approved="yes">
-                <source>Name of the tag</source>
-                <target>Bezeichnung des Schlagworts</target>
-            </trans-unit>
-            <trans-unit id="database.tag.type" resname="database.tag.type" approved="yes">
-                <source>Type</source>
-                <target>Art</target>
-            </trans-unit>
-            <trans-unit id="database.tag.type.description" resname="database.tag.type.description" approved="yes">
-                <source>Type of tag</source>
-                <target>Art des Schlagworts</target>
-            </trans-unit>
-            <trans-unit id="database.tag.type.label" resname="database.tag.type.label" approved="yes">
-                <source>Label</source>
-                <target>Label</target>
-            </trans-unit>
-            <trans-unit id="database.tag.description" resname="database.tag.description" approved="yes">
-                <source>Description</source>
-                <target>Beschreibung</target>
-            </trans-unit>
-            <trans-unit id="database.tag.description.description" resname="database.tag.description.description" approved="yes">
-                <source>Brief information about the tag</source>
-                <target>Kurze Erläuterung des Schlagworts</target>
-            </trans-unit>
-            <trans-unit id="database.tag.sameAs" resname="database.tag.sameAs" approved="yes">
-                <source>Reference URI</source>
-                <target>Referenz-URI</target>
-            </trans-unit>
-            <trans-unit id="database.tag.sameAs.description" resname="database.tag.sameAs.description" approved="yes">
-                <source>External web address to identify the tag across the web</source>
-                <target>Externe Webadresse zur Identifikation des Schlagworts im Internet</target>
-            </trans-unit>
-            <trans-unit id="database.tag.asLabelOfFeature" resname="database.tag.asLabelOfFeature" approved="yes">
-                <source>As label of feature</source>
-                <target>Als Label für Merkmale</target>
-            </trans-unit>
-            <trans-unit id="database.tag.asLabelOfFeature.description" resname="database.tag.asLabelOfFeature.description" approved="yes">
-                <source>List of features with this label</source>
-                <target>Liste der Merkmale mit diesem Label</target>
-            </trans-unit>
-            <!-- Database: SameAs -->
-            <trans-unit id="database.sameAs" resname="database.sameAs" approved="yes">
-                <source>Reference URI</source>
-                <target>Referenz-URI</target>
-            </trans-unit>
-            <trans-unit id="database.sameAs.uri" resname="database.sameAs.uri" approved="yes">
-                <source>URI</source>
-                <target>URI</target>
-            </trans-unit>
-            <trans-unit id="database.sameAs.uri.description" resname="database.sameAs.uri.description" approved="yes">
-                <source>External web address to identify an entity across the web</source>
-                <target>Externe Webadresse zur Identifikation einer Entität im Internet</target>
-            </trans-unit>
-            <!-- Database: Coordinates -->
-            <trans-unit id="database.coordinates" resname="database.coordinates" approved="yes">
+            <!-- Object: Coordinates -->
+            <trans-unit id="object.coordinates" resname="object.coordinates" approved="yes">
                 <source>Coordinates</source>
                 <target>Koordinaten</target>
             </trans-unit>
-            <trans-unit id="database.coordinates.longitude" resname="database.coordinates.longitude" approved="yes">
+            <trans-unit id="object.coordinates.longitude" resname="object.coordinates.longitude" approved="yes">
                 <source>Longitude</source>
                 <target>Längengrad</target>
             </trans-unit>
-            <trans-unit id="database.coordinates.longitude.description" resname="database.coordinates.longitude.description" approved="yes">
+            <trans-unit id="object.coordinates.longitude.description" resname="object.coordinates.longitude.description" approved="yes">
                 <source>Decimal notation of the longitude with a decimal period (if necessary)</source>
                 <target>Dezimalangabe des Längengrads mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
-            <trans-unit id="database.coordinates.latitude" resname="database.coordinates.latitude" approved="yes">
+            <trans-unit id="object.coordinates.latitude" resname="object.coordinates.latitude" approved="yes">
                 <source>Latitude</source>
                 <target>Breitengrad</target>
             </trans-unit>
-            <trans-unit id="database.coordinates.latitude.description" resname="database.coordinates.latitude.description" approved="yes">
+            <trans-unit id="object.coordinates.latitude.description" resname="object.coordinates.latitude.description" approved="yes">
                 <source>Decimal notation of the latitude with a decimal period (if necessary)</source>
                 <target>Dezimalangabe des Breitengrads mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
-            <trans-unit id="database.coordinates.altitude" resname="database.coordinates.altitude" approved="yes">
+            <trans-unit id="object.coordinates.altitude" resname="object.coordinates.altitude" approved="yes">
                 <source>Altitude</source>
                 <target>Höhe</target>
             </trans-unit>
-            <trans-unit id="database.coordinates.altitude.description" resname="database.coordinates.altitude.description" approved="yes">
+            <trans-unit id="object.coordinates.altitude.description" resname="object.coordinates.altitude.description" approved="yes">
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
                 <target>Dezimalangabe der Höhe in Metern mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
-            <!-- Database: CoordinateGroup -->
+            <!-- Object: CoordinateGroup -->
             <trans-unit id="database.coordinateGroup" resname="database.coordinateGroup" approved="yes">
                 <source>Coordinate group</source>
                 <target>Koordinatengruppe</target>
@@ -180,6 +95,11 @@
                 <source>List of coordinates in this group</source>
                 <target>Liste von Koordinaten in dieser Gruppe</target>
             </trans-unit>
+
+
+
+
+
             <!-- Database: Geometry -->
             <trans-unit id="database.geometry" resname="database.geometry" approved="yes">
                 <source>Geometry</source>
@@ -373,11 +293,6 @@
             <trans-unit id="database.feature.boundingBox.description" resname="database.feature.boundingBox.description" approved="yes">
                 <source>Two coordinates to produce a bounding box</source>
                 <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
-            </trans-unit>
-            <!-- Validator: RegularExpressionValidator -->
-            <trans-unit id="validator.regularExpression.noUuid" resname="validator.regularExpression.noUuid" approved="yes">
-                <source>The given value was not a UUID.</source>
-                <target>Der Wert war keine UUID.</target>
             </trans-unit>
         </body>
     </file>
