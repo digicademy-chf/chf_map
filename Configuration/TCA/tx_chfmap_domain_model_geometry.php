@@ -34,6 +34,7 @@ return [
         'transOrigPointerField'    => 'l18n_parent',
         'transOrigDiffSourceField' => 'l18n_diffsource',
         'translationSource'        => 'l10n_source',
+        'type'                     => 'type',
         'searchFields'             => 'type',
         'enablecolumns'            => [
             'disabled' => 'hidden',
@@ -301,28 +302,28 @@ return [
         ],
     ],
     'types' => [
-        'AbstractGeometry' => [
+        'abstractGeometry' => [
             'showitem' => 'hiddenType,boundingBox,',
         ],
-        'Point' => [
+        'point' => [
             'showitem' => 'hiddenType,coordinates,boundingBox,',
         ],
-        'MultiPoint' => [
+        'multiPoint' => [
             'showitem' => 'hiddenType,coordinateGroup,boundingBox,',
         ],
-        'LineString' => [
+        'lineString' => [
             'showitem' => 'hiddenType,coordinates,boundingBox,',
         ],
-        'MultiLineString' => [
+        'multiLineString' => [
             'showitem' => 'hiddenType,coordinateGroup,boundingBox,',
         ],
-        'Polygon' => [
+        'polygon' => [
             'showitem' => 'hiddenType,coordinates,boundingBox,',
         ],
-        'MultiPolygon' => [
+        'multiPolygon' => [
             'showitem' => 'hiddenType,coordinateGroup,boundingBox,',
         ],
-        'GeometryCollection' => [
+        'geometryCollection' => [
             'showitem' => 'hiddenType,geometry,boundingBox,',
         ],
     ],
