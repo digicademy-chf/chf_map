@@ -302,7 +302,7 @@ return [
         ],
     ],
     'types' => [
-        'abstractGeometry' => [
+        '0' => [
             'showitem' => 'hiddenType,boundingBox,',
         ],
         'point' => [
