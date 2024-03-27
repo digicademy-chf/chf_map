@@ -234,6 +234,40 @@
             <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description">
                 <source>List of features that use this tag as a label</source>
             </trans-unit>
+            <!-- Object: Location -->
+            <trans-unit id="object.location.geodata" resname="object.location.geodata">
+                <source>Geodata</source>
+            </trans-unit>
+            <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description">
+                <source>Feature to use as geodata of this location</source>
+            </trans-unit>
+            <trans-unit id="object.location.locationPlan" resname="object.location.locationPlan">
+                <source>Location plan</source>
+            </trans-unit>
+            <trans-unit id="object.location.locationPlan.description" resname="object.location.locationPlan.description">
+                <source>Map depicting this location</source>
+            </trans-unit>
+            <!-- Object: Frequency -->
+            <trans-unit id="object.frequency.geodata" resname="object.frequency.geodata">
+                <source>Geodata</source>
+            </trans-unit>
+            <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description">
+                <source>Feature to use as geodata of this frequency</source>
+            </trans-unit>
+            <!-- Object: SingleObject -->
+            <trans-unit id="object.singleObject.geodata" resname="object.singleObject.geodata">
+                <source>Geodata</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.geodata.description" resname="object.singleObject.geodata.description">
+                <source>Feature to use as geodata of this single object</source>
+            </trans-unit>
+            <!-- Object: ObjectGroup -->
+            <trans-unit id="object.objectGroup.geodata" resname="object.objectGroup.geodata">
+                <source>Geodata</source>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description">
+                <source>Feature to use as geodata of this object group</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

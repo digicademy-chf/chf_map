@@ -308,6 +308,14 @@
                 <target>Liste der Merkmale, die dieses Schlagwort als Label verwenden</target>
             </trans-unit>
             <!-- Object: Location -->
+            <trans-unit id="object.location.geodata" resname="object.location.geodata" approved="yes">
+                <source>Geodata</source>
+                <target>Geodaten</target>
+            </trans-unit>
+            <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description" approved="yes">
+                <source>Feature to use as geodata of this location</source>
+                <target>Merkmal, das als Geodaten für diesen Ort genutzt werden soll</target>
+            </trans-unit>
             <trans-unit id="object.location.locationPlan" resname="object.location.locationPlan" approved="yes">
                 <source>Location plan</source>
                 <target>Ortsplan</target>
@@ -315,6 +323,33 @@
             <trans-unit id="object.location.locationPlan.description" resname="object.location.locationPlan.description" approved="yes">
                 <source>Map depicting this location</source>
                 <target>Kartenmaterial, das diesen Ort darstellt</target>
+            </trans-unit>
+            <!-- Object: Frequency -->
+            <trans-unit id="object.frequency.geodata" resname="object.frequency.geodata" approved="yes">
+                <source>Geodata</source>
+                <target>Geodaten</target>
+            </trans-unit>
+            <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description" approved="yes">
+                <source>Feature to use as geodata of this frequency</source>
+                <target>Merkmal, das als Geodaten für diese Häufigkeit genutzt werden soll</target>
+            </trans-unit>
+            <!-- Object: SingleObject -->
+            <trans-unit id="object.singleObject.geodata" resname="object.singleObject.geodata" approved="yes">
+                <source>Geodata</source>
+                <target>Geodaten</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.geodata.description" resname="object.singleObject.geodata.description" approved="yes">
+                <source>Feature to use as geodata of this single object</source>
+                <target>Merkmal, das als Geodaten für diese Einzelobjekt genutzt werden soll</target>
+            </trans-unit>
+            <!-- Object: ObjectGroup -->
+            <trans-unit id="object.objectGroup.geodata" resname="object.objectGroup.geodata" approved="yes">
+                <source>Geodata</source>
+                <target>Geodaten</target>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description" approved="yes">
+                <source>Feature to use as geodata of this object group</source>
+                <target>Merkmal, das als Geodaten für diese Objektgruppe genutzt werden soll</target>
             </trans-unit>
         </body>
     </file>

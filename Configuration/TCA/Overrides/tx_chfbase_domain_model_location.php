@@ -18,9 +18,25 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add column 'locationPlan'
+// Add columns 'geodata' and 'locationPlan'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_location',
     [
+        'geodata' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.geodata',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.geodata.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_chfmap_domain_model_feature',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfbase_domain_model_location_feature_geodata_mm',
+                'sortItems' => [
+                    'label' => 'asc',
+                ],
+            ],
+        ],
         'locationPlan' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
