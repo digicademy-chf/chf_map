@@ -135,6 +135,7 @@ return [
                 'sortItems' => [
                     'label' => 'asc',
                 ],
+                'required' => true,
             ],
         ],
         'title' => [
