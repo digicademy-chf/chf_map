@@ -24,6 +24,14 @@
                 <source>List of all features compiled in this resource</source>
                 <target>Liste aller Merkmale, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
+            <trans-unit id="object.mapResource.asLocationPlanOfLocation" resname="object.mapResource.asLocationPlanOfLocation" approved="yes">
+                <source>Usage as location plan of a location</source>
+                <target>Verwendung als Ortsplan eines Ortes</target>
+            </trans-unit>
+            <trans-unit id="object.mapResource.asLocationPlanOfLocation.description" resname="object.mapResource.asLocationPlanOfLocation.description" approved="yes">
+                <source>List of locations that use this map as a location plan</source>
+                <target>Liste der Orte, die diese Karte als Ortsplan verwenden</target>
+            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile" approved="yes">
                 <source>Tile</source>
@@ -298,6 +306,15 @@
             <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description" approved="yes">
                 <source>List of features that use this tag as a label</source>
                 <target>Liste der Merkmale, die dieses Schlagwort als Label verwenden</target>
+            </trans-unit>
+            <!-- Object: Location -->
+            <trans-unit id="object.location.locationPlan" resname="object.location.locationPlan" approved="yes">
+                <source>Location plan</source>
+                <target>Ortsplan</target>
+            </trans-unit>
+            <trans-unit id="object.location.locationPlan.description" resname="object.location.locationPlan.description" approved="yes">
+                <source>Map depicting this location</source>
+                <target>Kartenmaterial, das diesen Ort darstellt</target>
             </trans-unit>
         </body>
     </file>

@@ -73,6 +73,34 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
+        'asLocationPlanOfLocation' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asLocationPlanOfLocation',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asLocationPlanOfLocation.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_chfbase_domain_model_location',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfbase_domain_model_location_resource_locationplan_mm',
+                'MM_opposite_field' => 'locationPlan',
+                'size' => 5,
+                'autoSizeMax' => 10,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'readOnly' => true,
+            ],
+        ],
     ]
 );
 
@@ -82,6 +110,7 @@ defined('TYPO3') or die();
    'hiddenUuid,typeUri,titleLangCode,description,sameAs,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,publicationDateRevisionNumberRevisionDate,editorialNote,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,allAgents,allFileGroups,allLocations,allPeriods,allRelations,allTags,allTiles,allFeatures,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,importState,',
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,importState,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asLocationPlanOfLocation,',
    'mapResource'
 );

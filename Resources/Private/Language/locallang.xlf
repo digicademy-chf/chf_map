@@ -19,6 +19,12 @@
             <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description">
                 <source>List of all features compiled in this resource</source>
             </trans-unit>
+            <trans-unit id="object.mapResource.asLocationPlanOfLocation" resname="object.mapResource.asLocationPlanOfLocation">
+                <source>Usage as location plan of a location</source>
+            </trans-unit>
+            <trans-unit id="object.mapResource.asLocationPlanOfLocation.description" resname="object.mapResource.asLocationPlanOfLocation.description">
+                <source>List of locations that use this map as a location plan</source>
+            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile">
                 <source>Tile</source>
