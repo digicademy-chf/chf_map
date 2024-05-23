@@ -195,6 +195,12 @@
             <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup.description" resname="object.abstractFeature.asGeodataOfObjectGroup.description">
                 <source>List of object groups that use this feature as geodata</source>
             </trans-unit>
+            <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation" resname="object.abstractFeature.asFeatureOfVariantRelation">
+                <source>Usage as feature of a variant relation</source>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation.description" resname="object.abstractFeature.asFeatureOfVariantRelation.description">
+                <source>List of variant relations that this feature is part of</source>
+            </trans-unit>
             <!-- Object: Feature -->
             <trans-unit id="object.feature.weight" resname="object.feature.weight">
                 <source>Weight</source>
@@ -226,6 +232,16 @@
             </trans-unit>
             <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description">
                 <source>List of features</source>
+            </trans-unit>
+            <!-- Object: VariantRelation -->
+            <trans-unit id="object.variantRelation.type.variantRelation" resname="object.variantRelation.type.variantRelation">
+                <source>Variant relation</source>
+            </trans-unit>
+            <trans-unit id="object.variantRelation.feature" resname="object.variantRelation.feature">
+                <source>Feature</source>
+            </trans-unit>
+            <trans-unit id="object.variantRelation.feature.description" resname="object.variantRelation.feature.description">
+                <source>List of features that are variants of each other</source>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature">

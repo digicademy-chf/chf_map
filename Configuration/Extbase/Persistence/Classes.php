@@ -25,6 +25,11 @@ return [
             'mapResource' => Digicademy\CHFMap\Domain\Model\MapResource::class,
         ],
     ],
+    Digicademy\CHFBase\Domain\Model\AbstractRelation::class => [
+        'subclasses' => [
+            'variantRelation' => Digicademy\CHFMap\Domain\Model\VariantRelation::class,
+        ],
+    ],
     Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
         'tableName'  => 'tx_chfmap_domain_model_feature',
         'recordType' => '0',

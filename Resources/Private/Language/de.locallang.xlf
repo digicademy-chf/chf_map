@@ -256,6 +256,14 @@
                 <source>List of object groups that use this feature as geodata</source>
                 <target>Liste der Objektgruppen, die dieses Merkmal als Geodaten verwenden</target>
             </trans-unit>
+            <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation" resname="object.abstractFeature.asFeatureOfVariantRelation" approved="yes">
+                <source>Usage as feature of a variant relation</source>
+                <target>Verwendung als Merkmal einer Variantenrelation</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation.description" resname="object.abstractFeature.asFeatureOfVariantRelation.description" approved="yes">
+                <source>List of variant relations that this feature is part of</source>
+                <target>Liste der Variantenrelationen, zu denen dieses Merkmal gehört</target>
+            </trans-unit>
             <!-- Object: Feature -->
             <trans-unit id="object.feature.weight" resname="object.feature.weight" approved="yes">
                 <source>Weight</source>
@@ -297,6 +305,19 @@
             <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description" approved="yes">
                 <source>List of features</source>
                 <target>Liste der Merkmale</target>
+            </trans-unit>
+            <!-- Object: VariantRelation -->
+            <trans-unit id="object.variantRelation.type.variantRelation" resname="object.variantRelation.type.variantRelation" approved="yes">
+                <source>Variant relation</source>
+                <target>Variantenrelation</target>
+            </trans-unit>
+            <trans-unit id="object.variantRelation.feature" resname="object.variantRelation.feature" approved="yes">
+                <source>Feature</source>
+                <target>Merkmal</target>
+            </trans-unit>
+            <trans-unit id="object.variantRelation.feature.description" resname="object.variantRelation.feature.description" approved="yes">
+                <source>List of features that are variants of each other</source>
+                <target>Liste der zusammengehörigen Merkmalvarianten</target>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">

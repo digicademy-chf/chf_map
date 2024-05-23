@@ -655,6 +655,35 @@ return [
                 'readOnly' => true,
             ],
         ],
+        'asFeatureOfVariantRelation' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asFeatureOfVariantRelation',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asFeatureOfVariantRelation.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_chfbase_domain_model_relation',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'variantRelation\'',
+                'MM' => 'tx_chfmap_domain_model_relation_feature_feature_mm',
+                'MM_opposite_field' => 'feature',
+                'size' => 5,
+                'autoSizeMax' => 10,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'readOnly' => true,
+            ],
+        ],
     ],
     'palettes' => [
         'hiddenParentResource' => [
@@ -677,7 +706,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,boundingBox,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,asFeatureOfVariantRelation,',
         ],
         'feature' => [
             'showitem' => 'hiddenParentResource,uuidType,title,description,isHighlight,label,sameAs,
@@ -685,7 +714,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,weightProjection,geometry,boundingBox,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,asFeatureOfVariantRelation,',
         ],
         'featureCollection' => [
             'showitem' => 'hiddenParentResource,uuidType,title,description,isHighlight,label,sameAs,
@@ -693,7 +722,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,feature,boundingBox,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,asFeatureOfVariantRelation,',
         ],
     ],
 ];

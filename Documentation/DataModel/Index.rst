@@ -15,6 +15,11 @@ of information: ``Geometry`` can have various types ("Point", "Line string",
 collection") and contains lists of either ``Coordinates`` or
 ``CoordinateGroup`` objects.
 
+Variants of the same feature or feature collection can be bound together using
+a ``VariantRelation``. This can be useful when, for example, you want to store
+a fuzzy and an accurate representation of the same set of markers due to
+privacy concerns.
+
 Each ``MapResource`` may specify a number of ``Tile`` objects it wants to map
 its data onto. The data model itself does not check whether the tiles are
 available and whether you are allowed to use them. Some providers limit the
