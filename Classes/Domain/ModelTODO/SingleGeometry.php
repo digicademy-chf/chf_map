@@ -1,5 +1,4 @@
 <?php
-defined('TYPO3') or die();
 declare(strict_types=1);
 
 # This file is part of the extension CHF Map for TYPO3.
@@ -13,6 +12,8 @@ namespace Digicademy\CHFMap\Domain\Model;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+
+defined('TYPO3') or die();
 
 /**
  * Model for single geometries
