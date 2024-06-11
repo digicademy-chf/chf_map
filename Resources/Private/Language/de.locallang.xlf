@@ -196,7 +196,7 @@
                 <source>Feature</source>
                 <target>Merkmal</target>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.Collection" approved="yes">
+            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.featureCollection" approved="yes">
                 <source>Group of features</source>
                 <target>Gruppe von Merkmalen</target>
             </trans-unit>

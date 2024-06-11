@@ -150,7 +150,7 @@
             <trans-unit id="object.abstractFeature.type.feature" resname="object.abstractFeature.type.feature">
                 <source>Feature</source>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.Collection">
+            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.featureCollection">
                 <source>Group of features</source>
             </trans-unit>
             <trans-unit id="object.abstractFeature.title" resname="object.abstractFeature.title">
