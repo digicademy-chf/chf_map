@@ -47,7 +47,7 @@ defined('TYPO3') or die();
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_chfbase_domain_model_resource',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'glossaryResource\'',
+                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
                 'MM' => 'tx_chfbase_domain_model_location_resource_locationplan_mm',
                 'sortItems' => [
                     'label' => 'asc',

@@ -284,6 +284,12 @@
             <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description">
                 <source>Feature to use as geodata of this object group</source>
             </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupPlan" resname="object.objectGroup.objectGroupPlan">
+                <source>Object group plan</source>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupPlan.description" resname="object.objectGroup.objectGroupPlan.description">
+                <source>Map of this object group</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

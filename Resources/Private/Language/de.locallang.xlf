@@ -372,6 +372,14 @@
                 <source>Feature to use as geodata of this object group</source>
                 <target>Merkmal, das als Geodaten für diese Objektgruppe genutzt werden soll</target>
             </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupPlan" resname="object.objectGroup.objectGroupPlan" approved="yes">
+                <source>Object group plan</source>
+                <target>Objektgruppenplan</target>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupPlan.description" resname="object.objectGroup.objectGroupPlan.description" approved="yes">
+                <source>Map of this object group</source>
+                <target>Kartenmaterial dieser Objektgruppe</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

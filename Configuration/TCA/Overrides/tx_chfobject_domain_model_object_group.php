@@ -37,5 +37,22 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
+        'objectGroupPlan' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.objectGroupPlan',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.objectGroupPlan.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_chfbase_domain_model_resource',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
+                'MM' => 'tx_chfbase_domain_model_object_group_resource_objectgroupplan_mm',
+                'sortItems' => [
+                    'label' => 'asc',
+                ],
+            ],
+        ],
     ]
 );
