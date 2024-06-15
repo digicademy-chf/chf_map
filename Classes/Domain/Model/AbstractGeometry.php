@@ -9,29 +9,29 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
 
 defined('TYPO3') or die();
 
 /**
- * Abstract model for geometries
+ * Model for AbstractGeometry
  */
 class AbstractGeometry extends AbstractEntity
 {
     /**
-     * Whether the record should be visisible or not
+     * Whether the record should be visible or not
      * 
      * @var bool
      */
     #[Validate([
         'validator' => 'Boolean',
     ])]
-    protected bool $hidden = false;
+    protected bool $hidden = true;
 
     /**
      * Type of geometry
@@ -42,37 +42,40 @@ class AbstractGeometry extends AbstractEntity
         'validator' => StringOptionsValidator::class,
         'options'   => [
             'allowed' => [
-                'Point',
-                'MultiPoint',
-                'LineString',
-                'MultiLineString',
-                'Polygon',
-                'MultiPolygon',
-                'GeometryCollection',
+                'point',
+                'multiPoint',
+                'lineString',
+                'multiLineString',
+                'polygon',
+                'multiPolygon',
+                'geometryCollection',
             ],
         ],
     ])]
-    protected string $type = '';
+    protected string $type = 'point';
 
     /**
-     * Two coordinates to produce a bounding box
+     * Two sets of coordinates to produce a bounding box
      * 
-     * @var ObjectStorage<Geometry>
+     * @var ?ObjectStorage<Coordinates>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $boundingBox;
+    protected ?ObjectStorage $boundingBox = null;
 
     /**
      * Construct object
      *
+     * @param string $type
      * @return AbstractGeometry
      */
-    public function __construct()
+    public function __construct(string $type)
     {
         $this->initializeObject();
+    
+        $this->setType($type);
     }
 
     /**
@@ -80,7 +83,7 @@ class AbstractGeometry extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->boundingBox = new ObjectStorage();
+        $this->boundingBox ??= new ObjectStorage();
     }
 
     /**
@@ -126,9 +129,9 @@ class AbstractGeometry extends AbstractEntity
     /**
      * Get bounding box
      *
-     * @return ObjectStorage<Geometry>
+     * @return ObjectStorage<Coordinates>
      */
-    public function getBoundingBox(): ObjectStorage
+    public function getBoundingBox(): ?ObjectStorage
     {
         return $this->boundingBox;
     }
@@ -136,7 +139,7 @@ class AbstractGeometry extends AbstractEntity
     /**
      * Set bounding box
      *
-     * @param ObjectStorage<Geometry> $boundingBox
+     * @param ObjectStorage<Coordinates> $boundingBox
      */
     public function setBoundingBox(ObjectStorage $boundingBox): void
     {
@@ -146,27 +149,27 @@ class AbstractGeometry extends AbstractEntity
     /**
      * Add bounding box
      *
-     * @param Geometry $boundingBox
+     * @param Coordinates $boundingBox
      */
-    public function addBoundingBox(Geometry $boundingBox): void
+    public function addBoundingBox(Coordinates $boundingBox): void
     {
-        $this->boundingBox->attach($boundingBox);
+        $this->boundingBox?->attach($boundingBox);
     }
 
     /**
      * Remove bounding box
      *
-     * @param Geometry $boundingBox
+     * @param Coordinates $boundingBox
      */
-    public function removeBoundingBox(Geometry $boundingBox): void
+    public function removeBoundingBox(Coordinates $boundingBox): void
     {
-        $this->boundingBox->detach($boundingBox);
+        $this->boundingBox?->detach($boundingBox);
     }
 
     /**
      * Remove all bounding boxes
      */
-    public function removeAllBoundingBoxes(): void
+    public function removeAllBoundingBox(): void
     {
         $boundingBox = clone $this->boundingBox;
         $this->boundingBox->removeAll($boundingBox);

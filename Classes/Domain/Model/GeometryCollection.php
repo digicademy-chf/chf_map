@@ -9,38 +9,38 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 defined('TYPO3') or die();
 
 /**
- * Model for geometry collections
+ * Model for GeometryCollection
  */
 class GeometryCollection extends AbstractGeometry
 {
     /**
      * List of geometries in this geometry
      * 
-     * @var ObjectStorage<SingleGeometry|MultiGeometry>
+     * @var ?ObjectStorage<SingleGeometry|MultiGeometry>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $geometry;
+    protected ?ObjectStorage $geometry = null;
 
     /**
      * Construct object
      *
+     * @param string $type
      * @return GeometryCollection
      */
-    public function __construct()
+    public function __construct(string $type)
     {
+        parent::__construct($type);
         $this->initializeObject();
-
-        $this->setType('GeometryCollection');
     }
 
     /**
@@ -48,9 +48,7 @@ class GeometryCollection extends AbstractGeometry
      */
     public function initializeObject(): void
     {
-        parent::initializeObject();
-
-        $this->geometry = new ObjectStorage();
+        $this->geometry ??= new ObjectStorage();
     }
 
     /**
@@ -58,7 +56,7 @@ class GeometryCollection extends AbstractGeometry
      *
      * @return ObjectStorage<SingleGeometry|MultiGeometry>
      */
-    public function getGeometry(): ObjectStorage
+    public function getGeometry(): ?ObjectStorage
     {
         return $this->geometry;
     }
@@ -80,7 +78,7 @@ class GeometryCollection extends AbstractGeometry
      */
     public function addGeometry(SingleGeometry|MultiGeometry $geometry): void
     {
-        $this->geometry->attach($geometry);
+        $this->geometry?->attach($geometry);
     }
 
     /**
@@ -90,13 +88,13 @@ class GeometryCollection extends AbstractGeometry
      */
     public function removeGeometry(SingleGeometry|MultiGeometry $geometry): void
     {
-        $this->geometry->detach($geometry);
+        $this->geometry?->detach($geometry);
     }
 
     /**
      * Remove all geometries
      */
-    public function removeAllGeometries(): void
+    public function removeAllGeometry(): void
     {
         $geometry = clone $this->geometry;
         $this->geometry->removeAll($geometry);

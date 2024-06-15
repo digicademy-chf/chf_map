@@ -9,27 +9,27 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 defined('TYPO3') or die();
 
 /**
- * Model for single geometries
+ * Model for SingleGeometry
  */
 class SingleGeometry extends AbstractGeometry
 {
     /**
      * List of coordinates in this geometry
      * 
-     * @var ObjectStorage<Coordinates>
+     * @var ?ObjectStorage<Coordinates>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $coordinates;
+    protected ?ObjectStorage $coordinates = null;
 
     /**
      * Construct object
@@ -39,9 +39,8 @@ class SingleGeometry extends AbstractGeometry
      */
     public function __construct(string $type)
     {
+        parent::__construct($type);
         $this->initializeObject();
-
-        $this->setType($type);
     }
 
     /**
@@ -49,9 +48,7 @@ class SingleGeometry extends AbstractGeometry
      */
     public function initializeObject(): void
     {
-        parent::initializeObject();
-
-        $this->coordinates = new ObjectStorage();
+        $this->coordinates ??= new ObjectStorage();
     }
 
     /**
@@ -59,7 +56,7 @@ class SingleGeometry extends AbstractGeometry
      *
      * @return ObjectStorage<Coordinates>
      */
-    public function getCoordinates(): ObjectStorage
+    public function getCoordinates(): ?ObjectStorage
     {
         return $this->coordinates;
     }
@@ -81,7 +78,7 @@ class SingleGeometry extends AbstractGeometry
      */
     public function addCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates->attach($coordinates);
+        $this->coordinates?->attach($coordinates);
     }
 
     /**
@@ -91,7 +88,7 @@ class SingleGeometry extends AbstractGeometry
      */
     public function removeCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates->detach($coordinates);
+        $this->coordinates?->detach($coordinates);
     }
 
     /**

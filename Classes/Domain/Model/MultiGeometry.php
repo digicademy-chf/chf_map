@@ -9,27 +9,27 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 defined('TYPO3') or die();
 
 /**
- * Model for multi geometries
+ * Model for MultiGeometry
  */
 class MultiGeometry extends AbstractGeometry
 {
     /**
      * List of coordinate groups in this geometry
      * 
-     * @var ObjectStorage<CoordinateGroup>
+     * @var ?ObjectStorage<CoordinateGroup>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $coordinateGroup;
+    protected ?ObjectStorage $coordinateGroup = null;
 
     /**
      * Construct object
@@ -39,9 +39,8 @@ class MultiGeometry extends AbstractGeometry
      */
     public function __construct(string $type)
     {
+        parent::__construct($type);
         $this->initializeObject();
-
-        $this->setType($type);
     }
 
     /**
@@ -49,9 +48,7 @@ class MultiGeometry extends AbstractGeometry
      */
     public function initializeObject(): void
     {
-        parent::initializeObject();
-
-        $this->coordinateGroup = new ObjectStorage();
+        $this->coordinateGroup ??= new ObjectStorage();
     }
 
     /**
@@ -59,7 +56,7 @@ class MultiGeometry extends AbstractGeometry
      *
      * @return ObjectStorage<CoordinateGroup>
      */
-    public function getCoordinateGroup(): ObjectStorage
+    public function getCoordinateGroup(): ?ObjectStorage
     {
         return $this->coordinateGroup;
     }
@@ -81,7 +78,7 @@ class MultiGeometry extends AbstractGeometry
      */
     public function addCoordinateGroup(CoordinateGroup $coordinateGroup): void
     {
-        $this->coordinateGroup->attach($coordinateGroup);
+        $this->coordinateGroup?->attach($coordinateGroup);
     }
 
     /**
@@ -91,13 +88,13 @@ class MultiGeometry extends AbstractGeometry
      */
     public function removeCoordinateGroup(CoordinateGroup $coordinateGroup): void
     {
-        $this->coordinateGroup->detach($coordinateGroup);
+        $this->coordinateGroup?->detach($coordinateGroup);
     }
 
     /**
      * Remove all coordinate groups
      */
-    public function removeAllCoordinateGroups(): void
+    public function removeAllCoordinateGroup(): void
     {
         $coordinateGroup = clone $this->coordinateGroup;
         $this->coordinateGroup->removeAll($coordinateGroup);
