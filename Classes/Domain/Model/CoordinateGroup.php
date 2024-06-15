@@ -18,30 +18,30 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 defined('TYPO3') or die();
 
 /**
- * Model for coordinate groups
+ * Model for CoordinateGroup
  */
 class CoordinateGroup extends AbstractEntity
 {
     /**
-     * Whether the record should be visisible or not
+     * Whether the record should be visible or not
      * 
      * @var bool
      */
     #[Validate([
         'validator' => 'Boolean',
     ])]
-    protected bool $hidden = false;
+    protected bool $hidden = true;
 
     /**
      * List of coordinates in this group
      * 
-     * @var ObjectStorage<Coordinates>
+     * @var ?ObjectStorage<Coordinates>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $coordinates;
+    protected ?ObjectStorage $coordinates = null;
 
     /**
      * Construct object
@@ -58,7 +58,7 @@ class CoordinateGroup extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->coordinates = new ObjectStorage();
+        $this->coordinates ??= new ObjectStorage();
     }
 
     /**
@@ -86,7 +86,7 @@ class CoordinateGroup extends AbstractEntity
      *
      * @return ObjectStorage<Coordinates>
      */
-    public function getCoordinates(): ObjectStorage
+    public function getCoordinates(): ?ObjectStorage
     {
         return $this->coordinates;
     }
@@ -108,7 +108,7 @@ class CoordinateGroup extends AbstractEntity
      */
     public function addCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates->attach($coordinates);
+        $this->coordinates?->attach($coordinates);
     }
 
     /**
@@ -118,7 +118,7 @@ class CoordinateGroup extends AbstractEntity
      */
     public function removeCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates->detach($coordinates);
+        $this->coordinates?->detach($coordinates);
     }
 
     /**

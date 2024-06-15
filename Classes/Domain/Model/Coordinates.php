@@ -15,19 +15,19 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 defined('TYPO3') or die();
 
 /**
- * Model for coordinates
+ * Model for Coordinates
  */
 class Coordinates extends AbstractEntity
 {
     /**
-     * Whether the record should be visisible or not
+     * Whether the record should be visible or not
      * 
      * @var bool
      */
     #[Validate([
         'validator' => 'Boolean',
     ])]
-    protected bool $hidden = false;
+    protected bool $hidden = true;
 
     /**
      * Decimal notation of the longitude with a decimal period (if necessary)
@@ -69,7 +69,7 @@ class Coordinates extends AbstractEntity
     public function __construct(string $longitude, string $latitude)
     {
         $this->setLongitude($longitude);
-        $this->setLatitude($latitude);
+        $this->setLongitude($latitude);
     }
 
     /**
