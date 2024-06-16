@@ -25,7 +25,7 @@ class Feature extends AbstractFeature
     /**
      * Number used as the size of the feature, if possible
      * 
-     * @var int|null
+     * @var ?int
      */
     #[Validate([
         'validator' => 'Number',

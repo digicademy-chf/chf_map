@@ -68,13 +68,13 @@ class Tile extends AbstractEntity
     /**
      * Internal image file to use as the tile layer
      * 
-     * @var FileReference|LazyLoadingProxy
+     * @var FileReference|LazyLoadingProxy|null
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected FileReference|LazyLoadingProxy $image;
+    protected FileReference|LazyLoadingProxy|null $image = null;
 
     /**
      * Construct object
