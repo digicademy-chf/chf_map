@@ -16,35 +16,34 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 defined('TYPO3') or die();
 
 /**
- * Model for feature collections
+ * Model for FeatureCollection
  */
 class FeatureCollection extends AbstractFeature
 {
     /**
      * List of features
      * 
-     * @var ObjectStorage<Feature>
+     * @var ?ObjectStorage<Feature>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $feature;
+    protected ?ObjectStorage $feature = null;
 
     /**
      * Construct object
      *
-     * @param MapResource $parent_id
+     * @param object $parentResource
      * @param string $uuid
      * @return FeatureCollection
      */
-    public function __construct(MapResource $parent_id, string $uuid)
+    public function __construct(object $parentResource, string $uuid)
     {
+        parent::__construct($parentResource, $uuid);
         $this->initializeObject();
 
-        $this->setParentId($parent_id);
-        $this->setUuid($uuid);
-        $this->setType('FeatureCollection');
+        $this->setType('featureCollection');
     }
 
     /**
@@ -52,9 +51,7 @@ class FeatureCollection extends AbstractFeature
      */
     public function initializeObject(): void
     {
-        parent::initializeObject();
-
-        $this->feature = new ObjectStorage();
+        $this->feature ??= new ObjectStorage();
     }
 
     /**
@@ -62,7 +59,7 @@ class FeatureCollection extends AbstractFeature
      *
      * @return ObjectStorage<Feature>
      */
-    public function getFeature(): ObjectStorage
+    public function getFeature(): ?ObjectStorage
     {
         return $this->feature;
     }
@@ -84,7 +81,7 @@ class FeatureCollection extends AbstractFeature
      */
     public function addFeature(Feature $feature): void
     {
-        $this->feature->attach($feature);
+        $this->feature?->attach($feature);
     }
 
     /**
@@ -94,13 +91,13 @@ class FeatureCollection extends AbstractFeature
      */
     public function removeFeature(Feature $feature): void
     {
-        $this->feature->detach($feature);
+        $this->feature?->detach($feature);
     }
 
     /**
      * Remove all features
      */
-    public function removeAllFeatures(): void
+    public function removeAllFeature(): void
     {
         $feature = clone $this->feature;
         $this->feature->removeAll($feature);

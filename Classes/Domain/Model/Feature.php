@@ -9,16 +9,16 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
 
 defined('TYPO3') or die();
 
 /**
- * Model for features
+ * Model for Feature
  */
 class Feature extends AbstractFeature
 {
@@ -46,34 +46,33 @@ class Feature extends AbstractFeature
             ],
         ],
     ])]
-    protected string $projection = '';
+    protected string $projection = 'worldGeodeticSystem';
 
     /**
      * List of geometries in this feature
      * 
-     * @var ObjectStorage<SingleGeometry|MultiGeometry|GeometryCollection>
+     * @var ?ObjectStorage<GeometryCollection|SingleGeometry|MultiGeometry>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ObjectStorage $geometry;
+    protected ?ObjectStorage $geometry = null;
 
     /**
      * Construct object
      *
-     * @param MapResource $parent_id
+     * @param object $parentResource
      * @param string $uuid
      * @param string $projection
      * @return Feature
      */
-    public function __construct(MapResource $parent_id, string $uuid, string $projection)
+    public function __construct(object $parentResource, string $uuid, string $projection)
     {
+        parent::__construct($parentResource, $uuid);
         $this->initializeObject();
 
-        $this->setParentId($parent_id);
-        $this->setUuid($uuid);
-        $this->setType('Feature');
+        $this->setType('feature');
         $this->setProjection($projection);
     }
 
@@ -82,9 +81,7 @@ class Feature extends AbstractFeature
      */
     public function initializeObject(): void
     {
-        parent::initializeObject();
-
-        $this->geometry = new ObjectStorage();
+        $this->geometry ??= new ObjectStorage();
     }
 
     /**
@@ -130,9 +127,9 @@ class Feature extends AbstractFeature
     /**
      * Get geometry
      *
-     * @return ObjectStorage<SingleGeometry|MultiGeometry|GeometryCollection>
+     * @return ObjectStorage<GeometryCollection|SingleGeometry|MultiGeometry>
      */
-    public function getGeometry(): ObjectStorage
+    public function getGeometry(): ?ObjectStorage
     {
         return $this->geometry;
     }
@@ -140,7 +137,7 @@ class Feature extends AbstractFeature
     /**
      * Set geometry
      *
-     * @param ObjectStorage<SingleGeometry|MultiGeometry|GeometryCollection> $geometry
+     * @param ObjectStorage<GeometryCollection|SingleGeometry|MultiGeometry> $geometry
      */
     public function setGeometry(ObjectStorage $geometry): void
     {
@@ -150,27 +147,27 @@ class Feature extends AbstractFeature
     /**
      * Add geometry
      *
-     * @param SingleGeometry|MultiGeometry|GeometryCollection $geometry
+     * @param GeometryCollection|SingleGeometry|MultiGeometry $geometry
      */
-    public function addGeometry(SingleGeometry|MultiGeometry|GeometryCollection $geometry): void
+    public function addGeometry(GeometryCollection|SingleGeometry|MultiGeometry $geometry): void
     {
-        $this->geometry->attach($geometry);
+        $this->geometry?->attach($geometry);
     }
 
     /**
      * Remove geometry
      *
-     * @param SingleGeometry|MultiGeometry|GeometryCollection $geometry
+     * @param GeometryCollection|SingleGeometry|MultiGeometry $geometry
      */
-    public function removeGeometry(SingleGeometry|MultiGeometry|GeometryCollection $geometry): void
+    public function removeGeometry(GeometryCollection|SingleGeometry|MultiGeometry $geometry): void
     {
-        $this->geometry->detach($geometry);
+        $this->geometry?->detach($geometry);
     }
 
     /**
      * Remove all geometries
      */
-    public function removeAllGeometries(): void
+    public function removeAllGeometry(): void
     {
         $geometry = clone $this->geometry;
         $this->geometry->removeAll($geometry);
