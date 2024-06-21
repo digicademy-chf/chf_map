@@ -37,18 +37,18 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'objectGroupPlan' => [
+        'floorPlan' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.objectGroupPlan',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.objectGroupPlan.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.floorPlan',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.floorPlan.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_chfbase_domain_model_resource',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
-                'MM' => 'tx_chfobject_domain_model_object_group_resource_objectgroupplan_mm',
+                'MM' => 'tx_chfobject_domain_model_object_group_resource_floorplan_mm',
                 'sortItems' => [
                     'label' => 'asc',
                 ],

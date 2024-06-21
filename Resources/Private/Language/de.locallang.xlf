@@ -24,19 +24,19 @@
                 <source>List of all features compiled in this resource</source>
                 <target>Liste aller Merkmale, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
-            <trans-unit id="object.mapResource.asLocationPlanOfLocation" resname="object.mapResource.asLocationPlanOfLocation" approved="yes">
-                <source>Usage as location plan of a location</source>
-                <target>Verwendung als Ortsplan eines Ortes</target>
+            <trans-unit id="object.mapResource.asFloorPlanOfLocation" resname="object.mapResource.asFloorPlanOfLocation" approved="yes">
+                <source>Usage as floor plan of a location</source>
+                <target>Verwendung als Grundriss eines Ortes</target>
             </trans-unit>
-            <trans-unit id="object.mapResource.asLocationPlanOfLocation.description" resname="object.mapResource.asLocationPlanOfLocation.description" approved="yes">
-                <source>List of locations that use this map as a location plan</source>
-                <target>Liste der Orte, die diese Karte als Ortsplan verwenden</target>
+            <trans-unit id="object.mapResource.asFloorPlanOfLocation.description" resname="object.mapResource.asFloorPlanOfLocation.description" approved="yes">
+                <source>List of locations that use this map as a floor plan</source>
+                <target>Liste der Orte, die diese Karte als Grundriss verwenden</target>
             </trans-unit>
-            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup" resname="object.mapResource.asObjectGroupPlanOfObjectGroup" approved="yes">
+            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup" resname="object.mapResource.asFloorPlanOfObjectGroup" approved="yes">
                 <source>Usage as map of an object group</source>
                 <target>Verwendung als Kartenmaterial einer Objektgruppe</target>
             </trans-unit>
-            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup.description" resname="object.mapResource.asObjectGroupPlanOfObjectGroup.description" approved="yes">
+            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup.description" resname="object.mapResource.asFloorPlanOfObjectGroup.description" approved="yes">
                 <source>List of object groups that use this map</source>
                 <target>Liste der Objektgruppen, die dieses Kartenmaterial verwenden</target>
             </trans-unit>
@@ -345,11 +345,11 @@
                 <source>Feature to use as geodata of this location</source>
                 <target>Merkmal, das als Geodaten für diesen Ort genutzt werden soll</target>
             </trans-unit>
-            <trans-unit id="object.location.locationPlan" resname="object.location.locationPlan" approved="yes">
-                <source>Location plan</source>
-                <target>Ortsplan</target>
+            <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan" approved="yes">
+                <source>Floor plan</source>
+                <target>Grundriss</target>
             </trans-unit>
-            <trans-unit id="object.location.locationPlan.description" resname="object.location.locationPlan.description" approved="yes">
+            <trans-unit id="object.location.floorPlan.description" resname="object.location.floorPlan.description" approved="yes">
                 <source>Map depicting this location</source>
                 <target>Kartenmaterial, das diesen Ort darstellt</target>
             </trans-unit>
@@ -380,11 +380,11 @@
                 <source>Feature to use as geodata of this object group</source>
                 <target>Merkmal, das als Geodaten für diese Objektgruppe genutzt werden soll</target>
             </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupPlan" resname="object.objectGroup.objectGroupPlan" approved="yes">
-                <source>Object group plan</source>
-                <target>Objektgruppenplan</target>
+            <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan" approved="yes">
+                <source>Floor plan</source>
+                <target>Grundriss</target>
             </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupPlan.description" resname="object.objectGroup.objectGroupPlan.description" approved="yes">
+            <trans-unit id="object.objectGroup.floorPlan.description" resname="object.objectGroup.floorPlan.description" approved="yes">
                 <source>Map of this object group</source>
                 <target>Kartenmaterial dieser Objektgruppe</target>
             </trans-unit>

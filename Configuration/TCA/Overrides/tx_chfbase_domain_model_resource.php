@@ -73,20 +73,20 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'asLocationPlanOfLocation' => [
+        'asFloorPlanOfLocation' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asLocationPlanOfLocation',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asLocationPlanOfLocation.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfLocation',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfLocation.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_chfbase_domain_model_location',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfbase_domain_model_location_resource_locationplan_mm',
-                'MM_opposite_field' => 'locationPlan',
+                'MM' => 'tx_chfbase_domain_model_location_resource_floorplan_mm',
+                'MM_opposite_field' => 'floorPlan',
                 'MM_match_fields' => [
-                    'fieldname' => 'asLocationPlanOfLocation',
+                    'fieldname' => 'asFloorPlanOfLocation',
                     'tablename' => 'tx_chfbase_domain_model_resource',
                 ],
                 'size' => 5,
@@ -105,20 +105,20 @@ defined('TYPO3') or die();
                 'readOnly' => true,
             ],
         ],
-        'asObjectGroupPlanOfObjectGroup' => [
+        'asFloorPlanOfObjectGroup' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asObjectGroupPlanOfObjectGroup',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asObjectGroupPlanOfObjectGroup.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfObjectGroup',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfObjectGroup.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_chfobject_domain_model_object_group',
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfobject_domain_model_object_group_resource_objectgroupplan_mm',
-                'MM_opposite_field' => 'objectGroupPlan',
+                'MM' => 'tx_chfobject_domain_model_object_group_resource_floorplan_mm',
+                'MM_opposite_field' => 'floorPlan',
                 'MM_match_fields' => [
-                    'fieldname' => 'asObjectGroupPlanOfObjectGroup',
+                    'fieldname' => 'asFloorPlanOfObjectGroup',
                     'tablename' => 'tx_chfbase_domain_model_resource',
                 ],
                 'size' => 5,
@@ -147,6 +147,6 @@ defined('TYPO3') or die();
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,allAgents,allFileGroups,allLocations,allPeriods,allRelations,allTags,allTiles,allFeatures,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,importState,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asLocationPlanOfLocation,',
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asFloorPlanOfLocation,',
    'mapResource'
 );

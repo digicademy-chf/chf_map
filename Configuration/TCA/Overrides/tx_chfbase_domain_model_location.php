@@ -18,7 +18,7 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add columns 'geodata' and 'locationPlan'
+// Add columns 'geodata' and 'floorPlan'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_location',
     [
         'geodata' => [
@@ -37,18 +37,18 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'locationPlan' => [
+        'floorPlan' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.locationPlan',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.locationPlan.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.floorPlan',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.floorPlan.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_chfbase_domain_model_resource',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
-                'MM' => 'tx_chfbase_domain_model_location_resource_locationplan_mm',
+                'MM' => 'tx_chfbase_domain_model_location_resource_floorplan_mm',
                 'sortItems' => [
                     'label' => 'asc',
                 ],

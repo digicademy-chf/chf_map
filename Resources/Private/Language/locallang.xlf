@@ -19,16 +19,16 @@
             <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description">
                 <source>List of all features compiled in this resource</source>
             </trans-unit>
-            <trans-unit id="object.mapResource.asLocationPlanOfLocation" resname="object.mapResource.asLocationPlanOfLocation">
-                <source>Usage as location plan of a location</source>
+            <trans-unit id="object.mapResource.asFloorPlanOfLocation" resname="object.mapResource.asFloorPlanOfLocation">
+                <source>Usage as floor plan of a location</source>
             </trans-unit>
-            <trans-unit id="object.mapResource.asLocationPlanOfLocation.description" resname="object.mapResource.asLocationPlanOfLocation.description">
-                <source>List of locations that use this map as a location plan</source>
+            <trans-unit id="object.mapResource.asFloorPlanOfLocation.description" resname="object.mapResource.asFloorPlanOfLocation.description">
+                <source>List of locations that use this map as a floor plan</source>
             </trans-unit>
-            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup" resname="object.mapResource.asObjectGroupPlanOfObjectGroup">
+            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup" resname="object.mapResource.asFloorPlanOfObjectGroup">
                 <source>Usage as map of an object group</source>
             </trans-unit>
-            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup.description" resname="object.mapResource.asObjectGroupPlanOfObjectGroup.description">
+            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup.description" resname="object.mapResource.asFloorPlanOfObjectGroup.description">
                 <source>List of object groups that use this map</source>
             </trans-unit>
             <!-- Object: Tile -->
@@ -263,10 +263,10 @@
             <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description">
                 <source>Feature to use as geodata of this location</source>
             </trans-unit>
-            <trans-unit id="object.location.locationPlan" resname="object.location.locationPlan">
-                <source>Location plan</source>
+            <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan">
+                <source>Floor plan</source>
             </trans-unit>
-            <trans-unit id="object.location.locationPlan.description" resname="object.location.locationPlan.description">
+            <trans-unit id="object.location.floorPlan.description" resname="object.location.floorPlan.description">
                 <source>Map depicting this location</source>
             </trans-unit>
             <!-- Object: Frequency -->
@@ -290,10 +290,10 @@
             <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description">
                 <source>Feature to use as geodata of this object group</source>
             </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupPlan" resname="object.objectGroup.objectGroupPlan">
-                <source>Object group plan</source>
+            <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan">
+                <source>Floor plan</source>
             </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupPlan.description" resname="object.objectGroup.objectGroupPlan.description">
+            <trans-unit id="object.objectGroup.floorPlan.description" resname="object.objectGroup.floorPlan.description">
                 <source>Map of this object group</source>
             </trans-unit>
         </body>

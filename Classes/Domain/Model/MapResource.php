@@ -46,12 +46,12 @@ class MapResource extends AbstractResource
     protected ?ObjectStorage $allFeatures = null;
 
     /**
-     * List of locations that use this map as a location plan
+     * List of locations that use this map as a floor plan
      * 
      * @var ?ObjectStorage<Location>
      */
     #[Lazy()]
-    protected ?ObjectStorage $asLocationPlanOfLocation = null;
+    protected ?ObjectStorage $asFloorPlanOfLocation = null;
 
     /**
      * List of object groups that use this map
@@ -59,7 +59,7 @@ class MapResource extends AbstractResource
      * @var ?ObjectStorage<ObjectGroup>
      */
     #[Lazy()]
-    protected ?ObjectStorage $asObjectGroupPlanOfObjectGroup = null;
+    protected ?ObjectStorage $asFloorPlanOfObjectGroup = null;
 
     /**
      * Construct object
@@ -83,8 +83,8 @@ class MapResource extends AbstractResource
     {
         $this->allTiles ??= new ObjectStorage();
         $this->allFeatures ??= new ObjectStorage();
-        $this->asLocationPlanOfLocation ??= new ObjectStorage();
-        $this->asObjectGroupPlanOfObjectGroup ??= new ObjectStorage();
+        $this->asFloorPlanOfLocation ??= new ObjectStorage();
+        $this->asFloorPlanOfObjectGroup ??= new ObjectStorage();
     }
 
     /**
@@ -186,100 +186,100 @@ class MapResource extends AbstractResource
     }
 
     /**
-     * Get as location plan of location
+     * Get as floor plan of location
      *
      * @return ObjectStorage<Location>
      */
-    public function getAsLocationPlanOfLocation(): ?ObjectStorage
+    public function getAsFloorPlanOfLocation(): ?ObjectStorage
     {
-        return $this->asLocationPlanOfLocation;
+        return $this->asFloorPlanOfLocation;
     }
 
     /**
-     * Set as location plan of location
+     * Set as floor plan of location
      *
-     * @param ObjectStorage<Location> $asLocationPlanOfLocation
+     * @param ObjectStorage<Location> $asFloorPlanOfLocation
      */
-    public function setAsLocationPlanOfLocation(ObjectStorage $asLocationPlanOfLocation): void
+    public function setAsFloorPlanOfLocation(ObjectStorage $asFloorPlanOfLocation): void
     {
-        $this->asLocationPlanOfLocation = $asLocationPlanOfLocation;
+        $this->asFloorPlanOfLocation = $asFloorPlanOfLocation;
     }
 
     /**
-     * Add as location plan of location
+     * Add as floor plan of location
      *
-     * @param Location $asLocationPlanOfLocation
+     * @param Location $asFloorPlanOfLocation
      */
-    public function addAsLocationPlanOfLocation(Location $asLocationPlanOfLocation): void
+    public function addAsFloorPlanOfLocation(Location $asFloorPlanOfLocation): void
     {
-        $this->asLocationPlanOfLocation?->attach($asLocationPlanOfLocation);
+        $this->asFloorPlanOfLocation?->attach($asFloorPlanOfLocation);
     }
 
     /**
-     * Remove as location plan of location
+     * Remove as floor plan of location
      *
-     * @param Location $asLocationPlanOfLocation
+     * @param Location $asFloorPlanOfLocation
      */
-    public function removeAsLocationPlanOfLocation(Location $asLocationPlanOfLocation): void
+    public function removeAsFloorPlanOfLocation(Location $asFloorPlanOfLocation): void
     {
-        $this->asLocationPlanOfLocation?->detach($asLocationPlanOfLocation);
+        $this->asFloorPlanOfLocation?->detach($asFloorPlanOfLocation);
     }
 
     /**
-     * Remove all as location plan of locations
+     * Remove all as floor plan of locations
      */
-    public function removeAllAsLocationPlanOfLocation(): void
+    public function removeAllAsFloorPlanOfLocation(): void
     {
-        $asLocationPlanOfLocation = clone $this->asLocationPlanOfLocation;
-        $this->asLocationPlanOfLocation->removeAll($asLocationPlanOfLocation);
+        $asFloorPlanOfLocation = clone $this->asFloorPlanOfLocation;
+        $this->asFloorPlanOfLocation->removeAll($asFloorPlanOfLocation);
     }
 
     /**
-     * Get as object group plan of object group
+     * Get as floor plan of object group
      *
      * @return ObjectStorage<ObjectGroup>
      */
-    public function getAsObjectGroupPlanOfObjectGroup(): ?ObjectStorage
+    public function getAsFloorPlanOfObjectGroup(): ?ObjectStorage
     {
-        return $this->asObjectGroupPlanOfObjectGroup;
+        return $this->asFloorPlanOfObjectGroup;
     }
 
     /**
-     * Set as object group plan of object group
+     * Set as floor plan of object group
      *
-     * @param ObjectStorage<ObjectGroup> $asObjectGroupPlanOfObjectGroup
+     * @param ObjectStorage<ObjectGroup> $asFloorPlanOfObjectGroup
      */
-    public function setAsObjectGroupPlanOfObjectGroup(ObjectStorage $asObjectGroupPlanOfObjectGroup): void
+    public function setAsFloorPlanOfObjectGroup(ObjectStorage $asFloorPlanOfObjectGroup): void
     {
-        $this->asObjectGroupPlanOfObjectGroup = $asObjectGroupPlanOfObjectGroup;
+        $this->asFloorPlanOfObjectGroup = $asFloorPlanOfObjectGroup;
     }
 
     /**
-     * Add as object group plan of object group
+     * Add as floor plan of object group
      *
-     * @param ObjectGroup $asObjectGroupPlanOfObjectGroup
+     * @param ObjectGroup $asFloorPlanOfObjectGroup
      */
-    public function addAsObjectGroupPlanOfObjectGroup(ObjectGroup $asObjectGroupPlanOfObjectGroup): void
+    public function addAsFloorPlanOfObjectGroup(ObjectGroup $asFloorPlanOfObjectGroup): void
     {
-        $this->asObjectGroupPlanOfObjectGroup?->attach($asObjectGroupPlanOfObjectGroup);
+        $this->asFloorPlanOfObjectGroup?->attach($asFloorPlanOfObjectGroup);
     }
 
     /**
-     * Remove as object group plan of object group
+     * Remove as floor plan of object group
      *
-     * @param ObjectGroup $asObjectGroupPlanOfObjectGroup
+     * @param ObjectGroup $asFloorPlanOfObjectGroup
      */
-    public function removeAsObjectGroupPlanOfObjectGroup(ObjectGroup $asObjectGroupPlanOfObjectGroup): void
+    public function removeAsFloorPlanOfObjectGroup(ObjectGroup $asFloorPlanOfObjectGroup): void
     {
-        $this->asObjectGroupPlanOfObjectGroup?->detach($asObjectGroupPlanOfObjectGroup);
+        $this->asFloorPlanOfObjectGroup?->detach($asFloorPlanOfObjectGroup);
     }
 
     /**
-     * Remove all as object group plan of object groups
+     * Remove all as floor plan of object groups
      */
-    public function removeAllAsObjectGroupPlanOfObjectGroup(): void
+    public function removeAllAsFloorPlanOfObjectGroup(): void
     {
-        $asObjectGroupPlanOfObjectGroup = clone $this->asObjectGroupPlanOfObjectGroup;
-        $this->asObjectGroupPlanOfObjectGroup->removeAll($asObjectGroupPlanOfObjectGroup);
+        $asFloorPlanOfObjectGroup = clone $this->asFloorPlanOfObjectGroup;
+        $this->asFloorPlanOfObjectGroup->removeAll($asFloorPlanOfObjectGroup);
     }
 }
