@@ -33,6 +33,10 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfmap_domain_model_feature_tag_label_mm',
                 'MM_opposite_field' => 'label',
+                'MM_match_fields' => [
+                    'fieldname' => 'asLabelOfFeature',
+                    'tablename' => 'tx_chfbase_domain_model_tag',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [

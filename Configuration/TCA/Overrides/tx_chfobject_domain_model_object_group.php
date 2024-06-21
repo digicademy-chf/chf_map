@@ -31,7 +31,7 @@ defined('TYPO3') or die();
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfbase_domain_model_object_group_feature_geodata_mm',
+                'MM' => 'tx_chfobject_domain_model_object_group_feature_geodata_mm',
                 'sortItems' => [
                     'label' => 'asc',
                 ],
@@ -48,7 +48,7 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfbase_domain_model_resource',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
-                'MM' => 'tx_chfbase_domain_model_object_group_resource_objectgroupplan_mm',
+                'MM' => 'tx_chfobject_domain_model_object_group_resource_objectgroupplan_mm',
                 'sortItems' => [
                     'label' => 'asc',
                 ],

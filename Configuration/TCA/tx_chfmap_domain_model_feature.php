@@ -33,13 +33,15 @@ return [
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
-        'transOrigPointerField'    => 'l18n_parent',
-        'transOrigDiffSourceField' => 'l18n_diffsource',
+        'transOrigPointerField'    => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
         'translationSource'        => 'l10n_source',
         'type'                     => 'type',
         'searchFields'             => 'uuid,type,title,description,publicationDate,revisionNumber,revisionDate,editorialNote,weight,projection,importOrigin,import',
         'enablecolumns'            => [
             'disabled' => 'hidden',
+            'starttime' => 'starttime',
+            'endtime' => 'endtime',
             'fe_group' => 'fe_group',
         ],
     ],
@@ -69,6 +71,7 @@ return [
                 ],
                 'exclusiveKeys' => '-1,-2',
                 'foreign_table' => 'fe_groups',
+                'foreign_table_where' => 'ORDER BY fe_groups.title',
             ],
         ],
         'sys_language_uid' => [
@@ -78,9 +81,9 @@ return [
                 'type' => 'language',
             ],
         ],
-        'l18n_parent' => [
+        'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l10n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -101,7 +104,7 @@ return [
                 'type' => 'passthrough',
             ],
         ],
-        'l18n_diffsource' => [
+        'l10n_diffsource' => [
             'config' => [
                 'type' => 'passthrough',
                 'default' => '',
@@ -122,6 +125,33 @@ return [
                     ]
                 ],
             ]
+        ],
+        'starttime' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.starttime.description',
+            'config' => [
+                'type' => 'datetime',
+                'format' => 'datetime',
+                'eval' => 'int',
+                'default' => 0,
+            ],
+        ],
+        'endtime' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.endtime.description',
+            'config' => [
+                'type' => 'datetime',
+                'format' => 'datetime',
+                'eval' => 'int',
+                'default' => 0,
+                'range' => [
+                    'upper' => mktime(0, 0, 0, 1, 1, 2106),
+                ],
+            ],
         ],
         'parentTable' => [
             'config' => [
@@ -267,7 +297,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -288,6 +318,10 @@ return [
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'authorshipRelation\'',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_opposite_field' => 'record',
+                'MM_match_fields' => [
+                    'fieldname' => 'authorshipRelation',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -316,6 +350,10 @@ return [
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'licenceRelation\'',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_opposite_field' => 'record',
+                'MM_match_fields' => [
+                    'fieldname' => 'licenceRelation',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -350,6 +388,10 @@ return [
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.abstractBase.revisionNumber.description',
             'config' => [
                 'type' => 'number',
+                'size' => 13,
+                'range' => [
+                    'lower' => 1,
+                ],
             ],
         ],
         'revisionDate' => [
@@ -393,7 +435,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -409,6 +451,10 @@ return [
             'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.weight.description',
             'config' => [
                 'type' => 'number',
+                'size' => 13,
+                'range' => [
+                    'lower' => 1,
+                ],
             ],
         ],
         'projection' => [
@@ -446,7 +492,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -468,7 +514,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -503,6 +549,10 @@ return [
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'linkRelation\'',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_opposite_field' => 'record',
+                'MM_match_fields' => [
+                    'fieldname' => 'linkRelation',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -555,6 +605,10 @@ return [
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfbase_domain_model_location_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
+                'MM_match_fields' => [
+                    'fieldname' => 'asGeodataOfLocation',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -583,6 +637,10 @@ return [
                 'foreign_table_where' => 'AND {#tx_chflex_domain_model_frequency}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chflex_domain_model_frequency_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
+                'MM_match_fields' => [
+                    'fieldname' => 'asGeodataOfFrequency',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -611,6 +669,10 @@ return [
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_single_object}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_single_object_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
+                'MM_match_fields' => [
+                    'fieldname' => 'asGeodataOfSingleObject',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -639,6 +701,10 @@ return [
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_object_group_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
+                'MM_match_fields' => [
+                    'fieldname' => 'asGeodataOfObjectGroup',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -668,6 +734,10 @@ return [
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'variantRelation\'',
                 'MM' => 'tx_chfmap_domain_model_relation_feature_feature_mm',
                 'MM_opposite_field' => 'feature',
+                'MM_match_fields' => [
+                    'fieldname' => 'asFeatureOfVariantRelation',
+                    'tablename' => 'tx_chfmap_domain_model_feature',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -686,14 +756,11 @@ return [
         ],
     ],
     'palettes' => [
-        'hiddenParentResource' => [
-            'showitem' => 'hidden,parentResource,',
-        ],
         'uuidType' => [
             'showitem' => 'uuid,type,',
         ],
-        'publicationDateRevisionNumberRevisionDate' => [
-            'showitem' => 'publicationDate,revisionNumber,revisionDate,',
+        'publicationDateRevisionDateRevisionNumberEditorialNote' => [
+            'showitem' => 'publicationDate,revisionDate,revisionNumber,--linebreak--,editorialNote,',
         ],
         'weightProjection' => [
             'showitem' => 'weight,projection,',
@@ -701,24 +768,24 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => 'hiddenParentResource,uuidType,title,description,isHighlight,label,sameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,publicationDateRevisionNumberRevisionDate,editorialNote,
+            'showitem' => 'parentResource,--palette--;;uuidType,title,description,isHighlight,label,sameAs,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,boundingBox,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,asFeatureOfVariantRelation,',
         ],
         'feature' => [
-            'showitem' => 'hiddenParentResource,uuidType,title,description,isHighlight,label,sameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,publicationDateRevisionNumberRevisionDate,editorialNote,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,weightProjection,geometry,boundingBox,
+            'showitem' => 'parentResource,--palette--;;uuidType,title,description,isHighlight,label,sameAs,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,--palette--;;weightProjection,geometry,boundingBox,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asGeodataOfLocation,asGeodataOfFrequency,asGeodataOfSingleObject,asGeodataOfObjectGroup,asFeatureOfVariantRelation,',
         ],
         'featureCollection' => [
-            'showitem' => 'hiddenParentResource,uuidType,title,description,isHighlight,label,sameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,publicationDateRevisionNumberRevisionDate,editorialNote,
+            'showitem' => 'parentResource,--palette--;;uuidType,title,description,isHighlight,label,sameAs,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,feature,boundingBox,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,

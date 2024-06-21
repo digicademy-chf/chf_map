@@ -47,7 +47,6 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfmap_domain_model_relation_feature_feature_mm',
-                'MM_opposite_field' => 'asFeatureOfVariantRelation',
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -70,6 +69,6 @@ defined('TYPO3') or die();
 // Add type 'variantRelation' and its 'showitem' list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
    'tx_chfbase_domain_model_relation',
-   'hiddenParentResource,uuidType,feature,description,',
+   'parentResource,--palette--;;typeUuid,feature,description,',
    'variantRelation'
 );

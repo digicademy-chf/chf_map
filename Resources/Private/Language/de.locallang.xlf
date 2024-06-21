@@ -32,6 +32,14 @@
                 <source>List of locations that use this map as a location plan</source>
                 <target>Liste der Orte, die diese Karte als Ortsplan verwenden</target>
             </trans-unit>
+            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup" resname="object.mapResource.asObjectGroupPlanOfObjectGroup" approved="yes">
+                <source>Usage as map of an object group</source>
+                <target>Verwendung als Kartenmaterial einer Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup.description" resname="object.mapResource.asObjectGroupPlanOfObjectGroup.description" approved="yes">
+                <source>List of object groups that use this map</source>
+                <target>Liste der Objektgruppen, die dieses Kartenmaterial verwenden</target>
+            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile" approved="yes">
                 <source>Tile</source>

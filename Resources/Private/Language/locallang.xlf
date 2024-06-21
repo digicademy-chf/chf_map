@@ -25,6 +25,12 @@
             <trans-unit id="object.mapResource.asLocationPlanOfLocation.description" resname="object.mapResource.asLocationPlanOfLocation.description">
                 <source>List of locations that use this map as a location plan</source>
             </trans-unit>
+            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup" resname="object.mapResource.asObjectGroupPlanOfObjectGroup">
+                <source>Usage as map of an object group</source>
+            </trans-unit>
+            <trans-unit id="object.mapResource.asObjectGroupPlanOfObjectGroup.description" resname="object.mapResource.asObjectGroupPlanOfObjectGroup.description">
+                <source>List of object groups that use this map</source>
+            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile">
                 <source>Tile</source>

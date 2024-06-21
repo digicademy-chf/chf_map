@@ -31,7 +31,7 @@ defined('TYPO3') or die();
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfbase_domain_model_frequency_feature_geodata_mm',
+                'MM' => 'tx_chflex_domain_model_frequency_feature_geodata_mm',
                 'sortItems' => [
                     'label' => 'asc',
                 ],

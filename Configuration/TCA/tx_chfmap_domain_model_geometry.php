@@ -31,13 +31,15 @@ return [
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
-        'transOrigPointerField'    => 'l18n_parent',
-        'transOrigDiffSourceField' => 'l18n_diffsource',
+        'transOrigPointerField'    => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
         'translationSource'        => 'l10n_source',
         'type'                     => 'type',
         'searchFields'             => 'type',
         'enablecolumns'            => [
             'disabled' => 'hidden',
+            'starttime' => 'starttime',
+            'endtime' => 'endtime',
             'fe_group' => 'fe_group',
         ],
     ],
@@ -67,6 +69,7 @@ return [
                 ],
                 'exclusiveKeys' => '-1,-2',
                 'foreign_table' => 'fe_groups',
+                'foreign_table_where' => 'ORDER BY fe_groups.title',
             ],
         ],
         'sys_language_uid' => [
@@ -76,9 +79,9 @@ return [
                 'type' => 'language',
             ],
         ],
-        'l18n_parent' => [
+        'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l10n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -99,7 +102,7 @@ return [
                 'type' => 'passthrough',
             ],
         ],
-        'l18n_diffsource' => [
+        'l10n_diffsource' => [
             'config' => [
                 'type' => 'passthrough',
                 'default' => '',
@@ -120,6 +123,33 @@ return [
                     ]
                 ],
             ]
+        ],
+        'starttime' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.starttime.description',
+            'config' => [
+                'type' => 'datetime',
+                'format' => 'datetime',
+                'eval' => 'int',
+                'default' => 0,
+            ],
+        ],
+        'endtime' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.endtime.description',
+            'config' => [
+                'type' => 'datetime',
+                'format' => 'datetime',
+                'eval' => 'int',
+                'default' => 0,
+                'range' => [
+                    'upper' => mktime(0, 0, 0, 1, 1, 2106),
+                ],
+            ],
         ],
         'parentTable' => [
             'config' => [
@@ -186,7 +216,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -208,7 +238,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -230,7 +260,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -286,7 +316,7 @@ return [
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => true,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -296,35 +326,31 @@ return [
             ],
         ],
     ],
-    'palettes' => [
-        'hiddenType' => [
-            'showitem' => 'hidden,type,',
-        ],
-    ],
+    'palettes' => [],
     'types' => [
         '0' => [
-            'showitem' => 'hiddenType,boundingBox,',
+            'showitem' => 'type,boundingBox,',
         ],
         'point' => [
-            'showitem' => 'hiddenType,coordinates,boundingBox,',
+            'showitem' => 'type,coordinates,boundingBox,',
         ],
         'multiPoint' => [
-            'showitem' => 'hiddenType,coordinateGroup,boundingBox,',
+            'showitem' => 'type,coordinateGroup,boundingBox,',
         ],
         'lineString' => [
-            'showitem' => 'hiddenType,coordinates,boundingBox,',
+            'showitem' => 'type,coordinates,boundingBox,',
         ],
         'multiLineString' => [
-            'showitem' => 'hiddenType,coordinateGroup,boundingBox,',
+            'showitem' => 'type,coordinateGroup,boundingBox,',
         ],
         'polygon' => [
-            'showitem' => 'hiddenType,coordinates,boundingBox,',
+            'showitem' => 'type,coordinates,boundingBox,',
         ],
         'multiPolygon' => [
-            'showitem' => 'hiddenType,coordinateGroup,boundingBox,',
+            'showitem' => 'type,coordinateGroup,boundingBox,',
         ],
         'geometryCollection' => [
-            'showitem' => 'hiddenType,geometry,boundingBox,',
+            'showitem' => 'type,geometry,boundingBox,',
         ],
     ],
 ];

@@ -43,7 +43,7 @@ defined('TYPO3') or die();
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => false,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -65,7 +65,7 @@ defined('TYPO3') or die();
                     'collapseAll' => true,
                     'expandSingle' => true,
                     'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'top',
+                    'levelLinksPosition' => 'bottom',
                     'useSortable' => false,
                     'showPossibleLocalizationRecords' => true,
                     'showAllLocalizationLink' => true,
@@ -85,6 +85,42 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfbase_domain_model_location_resource_locationplan_mm',
                 'MM_opposite_field' => 'locationPlan',
+                'MM_match_fields' => [
+                    'fieldname' => 'asLocationPlanOfLocation',
+                    'tablename' => 'tx_chfbase_domain_model_resource',
+                ],
+                'size' => 5,
+                'autoSizeMax' => 10,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'readOnly' => true,
+            ],
+        ],
+        'asObjectGroupPlanOfObjectGroup' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asObjectGroupPlanOfObjectGroup',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asObjectGroupPlanOfObjectGroup.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_chfobject_domain_model_object_group',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfobject_domain_model_object_group_resource_objectgroupplan_mm',
+                'MM_opposite_field' => 'objectGroupPlan',
+                'MM_match_fields' => [
+                    'fieldname' => 'asObjectGroupPlanOfObjectGroup',
+                    'tablename' => 'tx_chfbase_domain_model_resource',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -107,8 +143,8 @@ defined('TYPO3') or die();
 // Add type 'mapResource' and its 'showitem' list
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
    'tx_chfbase_domain_model_resource',
-   'hidden,uuidType,titleLangCode,description,sameAs,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,publicationDateRevisionNumberRevisionDate,editorialNote,
+   '--palette--;;typeUuid,--palette--;;titleLangCodeDescription,sameAs,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,allAgents,allFileGroups,allLocations,allPeriods,allRelations,allTags,allTiles,allFeatures,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,importState,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asLocationPlanOfLocation,',
