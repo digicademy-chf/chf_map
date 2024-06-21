@@ -35,7 +35,6 @@ defined('TYPO3') or die();
                 'MM_opposite_field' => 'label',
                 'MM_match_fields' => [
                     'fieldname' => 'asLabelOfFeature',
-                    'tablename' => 'tx_chfbase_domain_model_tag',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,

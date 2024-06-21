@@ -320,7 +320,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'authorshipRelation',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -352,7 +351,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'licenceRelation',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -551,7 +549,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'linkRelation',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -607,7 +604,6 @@ return [
                 'MM_opposite_field' => 'geodata',
                 'MM_match_fields' => [
                     'fieldname' => 'asGeodataOfLocation',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -639,7 +635,6 @@ return [
                 'MM_opposite_field' => 'geodata',
                 'MM_match_fields' => [
                     'fieldname' => 'asGeodataOfFrequency',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -671,7 +666,6 @@ return [
                 'MM_opposite_field' => 'geodata',
                 'MM_match_fields' => [
                     'fieldname' => 'asGeodataOfSingleObject',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -703,7 +697,6 @@ return [
                 'MM_opposite_field' => 'geodata',
                 'MM_match_fields' => [
                     'fieldname' => 'asGeodataOfObjectGroup',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -736,7 +729,6 @@ return [
                 'MM_opposite_field' => 'feature',
                 'MM_match_fields' => [
                     'fieldname' => 'asFeatureOfVariantRelation',
-                    'tablename' => 'tx_chfmap_domain_model_feature',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
