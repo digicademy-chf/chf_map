@@ -58,8 +58,8 @@
                 <target>URI</target>
             </trans-unit>
             <trans-unit id="object.tile.uri.description" resname="object.tile.uri.description" approved="yes">
-                <source>External web address of the tile layer, including wildcards for coordinates and zoom</source>
-                <target>Externe Webadresse der Kachelebene, inklusive Platzhaltern für Koordinaten und Zoom</target>
+                <source>External web address of the tile layer, including wildcards</source>
+                <target>Externe Webadresse der Kachelebene, inklusive Platzhaltern</target>
             </trans-unit>
             <trans-unit id="object.tile.image" resname="object.tile.image" approved="yes">
                 <source>Image file</source>
@@ -130,15 +130,15 @@
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.multiPoint" resname="object.abstractGeometry.type.multiPoint" approved="yes">
                 <source>Group of points</source>
-                <target>Gruppe von Punkten</target>
+                <target>Punktegruppe</target>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.lineString" resname="object.abstractGeometry.type.lineString" approved="yes">
-                <source>Line string</source>
-                <target>Linienkette</target>
+                <source>Line</source>
+                <target>Linie</target>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.multiLineString" resname="object.abstractGeometry.type.multiLineString" approved="yes">
-                <source>Group of line strings</source>
-                <target>Gruppe von Linienketten</target>
+                <source>Group of lines</source>
+                <target>Liniengruppe</target>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.polygon" resname="object.abstractGeometry.type.polygon" approved="yes">
                 <source>Polygon</source>
@@ -146,7 +146,7 @@
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.multiPolygon" resname="object.abstractGeometry.type.multiPolygon" approved="yes">
                 <source>Group of polygons</source>
-                <target>Gruppe von Polygonen</target>
+                <target>Polygonegruppe</target>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.geometryCollection" resname="object.abstractGeometry.type.geometryCollection" approved="yes">
                 <source>Geometry collection</source>
@@ -333,8 +333,8 @@
                 <target>Verwendung als Label eines Merkmals</target>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description" approved="yes">
-                <source>List of features that use this tag as a label</source>
-                <target>Liste der Merkmale, die dieses Schlagwort als Label verwenden</target>
+                <source>List of features that use this label</source>
+                <target>Liste der Merkmale, die dieses Label verwenden</target>
             </trans-unit>
             <!-- Object: Location -->
             <trans-unit id="object.location.geodata" resname="object.location.geodata" approved="yes">
@@ -343,7 +343,7 @@
             </trans-unit>
             <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this location</source>
-                <target>Merkmal, das als Geodaten für diesen Ort genutzt werden soll</target>
+                <target>Merkmal als Geodaten für diesen Ort</target>
             </trans-unit>
             <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan" approved="yes">
                 <source>Floor plan</source>
@@ -360,7 +360,7 @@
             </trans-unit>
             <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this frequency</source>
-                <target>Merkmal, das als Geodaten für diese Häufigkeit genutzt werden soll</target>
+                <target>Merkmal als Geodaten für diese Häufigkeit</target>
             </trans-unit>
             <!-- Object: SingleObject -->
             <trans-unit id="object.singleObject.geodata" resname="object.singleObject.geodata" approved="yes">
@@ -369,7 +369,7 @@
             </trans-unit>
             <trans-unit id="object.singleObject.geodata.description" resname="object.singleObject.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this single object</source>
-                <target>Merkmal, das als Geodaten für diese Einzelobjekt genutzt werden soll</target>
+                <target>Merkmal als Geodaten für diese Einzelobjekt</target>
             </trans-unit>
             <!-- Object: ObjectGroup -->
             <trans-unit id="object.objectGroup.geodata" resname="object.objectGroup.geodata" approved="yes">
@@ -378,7 +378,7 @@
             </trans-unit>
             <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this object group</source>
-                <target>Merkmal, das als Geodaten für diese Objektgruppe genutzt werden soll</target>
+                <target>Merkmal als Geodaten für diese Objektgruppe</target>
             </trans-unit>
             <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan" approved="yes">
                 <source>Floor plan</source>

@@ -216,13 +216,13 @@ return [
         ],
     ],
     'palettes' => [
-        'uriImage' => [
-            'showitem' => 'uri,image,',
+        'titleUriImage' => [
+            'showitem' => 'title,uri,--linebreak--,image,',
         ],
     ],
     'types' => [
         '0' => [
-            'showitem' => 'parentResource,title,--palette--;;uriImage,',
+            'showitem' => '--palette--;;titleUriImage,parentResource,',
         ],
     ],
 ];

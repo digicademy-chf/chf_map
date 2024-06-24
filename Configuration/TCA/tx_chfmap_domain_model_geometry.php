@@ -326,31 +326,41 @@ return [
             ],
         ],
     ],
-    'palettes' => [],
+    'palettes' => [
+        'coordinatesBoundingBox' => [
+            'showitem' => 'coordinates,--linebreak--,boundingBox,',
+        ],
+        'coordinateGroupBoundingBox' => [
+            'showitem' => 'coordinateGroup,--linebreak--,boundingBox,',
+        ],
+        'geometryBoundingBox' => [
+            'showitem' => 'geometry,--linebreak--,boundingBox,',
+        ],
+    ],
     'types' => [
         '0' => [
             'showitem' => 'type,boundingBox,',
         ],
         'point' => [
-            'showitem' => 'type,coordinates,boundingBox,',
+            'showitem' => 'type,--palette--;;coordinatesBoundingBox,',
         ],
         'multiPoint' => [
-            'showitem' => 'type,coordinateGroup,boundingBox,',
+            'showitem' => 'type,--palette--;;coordinateGroupBoundingBox,',
         ],
         'lineString' => [
-            'showitem' => 'type,coordinates,boundingBox,',
+            'showitem' => 'type,--palette--;;coordinatesBoundingBox,',
         ],
         'multiLineString' => [
-            'showitem' => 'type,coordinateGroup,boundingBox,',
+            'showitem' => 'type,--palette--;;coordinateGroupBoundingBox,',
         ],
         'polygon' => [
-            'showitem' => 'type,coordinates,boundingBox,',
+            'showitem' => 'type,--palette--;;coordinatesBoundingBox,',
         ],
         'multiPolygon' => [
-            'showitem' => 'type,coordinateGroup,boundingBox,',
+            'showitem' => 'type,--palette--;;coordinateGroupBoundingBox,',
         ],
         'geometryCollection' => [
-            'showitem' => 'type,geometry,boundingBox,',
+            'showitem' => 'type,--palette--;;geometryBoundingBox,',
         ],
     ],
 ];

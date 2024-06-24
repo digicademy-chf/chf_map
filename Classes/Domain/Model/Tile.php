@@ -56,7 +56,7 @@ class Tile extends AbstractEntity
     protected string $title = '';
 
     /**
-     * External web address of the tile layer, including wildcards for coordinates and zoom
+     * External web address of the tile layer, including wildcards
      * 
      * @var string
      */

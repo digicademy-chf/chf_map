@@ -38,18 +38,6 @@ defined('TYPO3') or die();
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'readOnly' => true,
             ],
         ],
     ]

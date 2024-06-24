@@ -43,22 +43,12 @@ defined('TYPO3') or die();
             'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.variantRelation.feature.description',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'renderType' => 'selectSingleBox',
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfmap_domain_model_relation_feature_feature_mm',
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
+                'MM' => 'tx_chfbase_domain_model_relation_feature_feature_mm',
+                'sortItems' => [
+                    'label' => 'asc',
                 ],
                 'required' => true,
             ],
@@ -67,8 +57,6 @@ defined('TYPO3') or die();
 );
 
 // Add type 'variantRelation' and its 'showitem' list
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-   'tx_chfbase_domain_model_relation',
-   'parentResource,--palette--;;typeUuid,feature,description,',
-   'variantRelation'
-);
+$GLOBALS['TCA']['tx_chfbase_domain_model_relation']['types'] += ['variantRelation' => [
+    'showitem' => '--palette--;;typeUuid,feature,--palette--;;parentResourceDescription,',
+]];

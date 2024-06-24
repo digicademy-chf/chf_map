@@ -90,18 +90,6 @@ defined('TYPO3') or die();
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'readOnly' => true,
             ],
         ],
         'asFloorPlanOfObjectGroup' => [
@@ -121,30 +109,16 @@ defined('TYPO3') or die();
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'readOnly' => true,
             ],
         ],
     ]
 );
 
 // Add type 'mapResource' and its 'showitem' list
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-   'tx_chfbase_domain_model_resource',
-   '--palette--;;typeUuid,--palette--;;titleLangCodeDescription,sameAs,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
+$GLOBALS['TCA']['tx_chfbase_domain_model_resource']['types'] += ['mapResource' => [
+    'showitem' => '--palette--;;typeUuid,--palette--;;titleLangCodeDescription,sameAs,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;authorshipRelationLicenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,allAgents,allFileGroups,allLocations,allPeriods,allRelations,allTags,allTiles,allFeatures,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,importState,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImportState,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asFloorPlanOfLocation,',
-   'mapResource'
-);
+]];

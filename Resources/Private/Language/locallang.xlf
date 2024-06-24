@@ -45,7 +45,7 @@
                 <source>URI</source>
             </trans-unit>
             <trans-unit id="object.tile.uri.description" resname="object.tile.uri.description">
-                <source>External web address of the tile layer, including wildcards for coordinates and zoom</source>
+                <source>External web address of the tile layer, including wildcards</source>
             </trans-unit>
             <trans-unit id="object.tile.image" resname="object.tile.image">
                 <source>Image file</source>
@@ -102,10 +102,10 @@
                 <source>Group of points</source>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.lineString" resname="object.abstractGeometry.type.lineString">
-                <source>Line string</source>
+                <source>Line</source>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.multiLineString" resname="object.abstractGeometry.type.multiLineString">
-                <source>Group of line strings</source>
+                <source>Group of lines</source>
             </trans-unit>
             <trans-unit id="object.abstractGeometry.type.polygon" resname="object.abstractGeometry.type.polygon">
                 <source>Polygon</source>
@@ -254,7 +254,7 @@
                 <source>Usage as label of a feature</source>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description">
-                <source>List of features that use this tag as a label</source>
+                <source>List of features that use this label</source>
             </trans-unit>
             <!-- Object: Location -->
             <trans-unit id="object.location.geodata" resname="object.location.geodata">

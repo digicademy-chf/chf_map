@@ -202,7 +202,7 @@ return [
     ],
     'palettes' => [
         'longitudeLatitudeAltitude' => [
-            'showitem' => 'longitude,latitude,altitude,',
+            'showitem' => 'longitude,latitude,--linebreak--,altitude,',
         ],
     ],
     'types' => [
