@@ -38,6 +38,7 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_single_object_feature_geodata_mm',
+                'multiple' => 1,
                 'sortItems' => [
                     'label' => 'asc',
                 ],

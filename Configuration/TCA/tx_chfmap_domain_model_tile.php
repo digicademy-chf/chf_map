@@ -22,6 +22,7 @@ return [
         'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.tile',
         'label'                    => 'title',
         'label_alt'                => 'uri',
+        'label_alt_force'          => true,
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',

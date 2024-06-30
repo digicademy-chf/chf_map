@@ -38,6 +38,7 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_object_group_feature_geodata_mm',
+                'multiple' => 1,
                 'sortItems' => [
                     'label' => 'asc',
                 ],
@@ -61,6 +62,7 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
                 'MM' => 'tx_chfobject_domain_model_object_group_resource_floorplan_mm',
+                'multiple' => 1,
                 'sortItems' => [
                     'label' => 'asc',
                 ],

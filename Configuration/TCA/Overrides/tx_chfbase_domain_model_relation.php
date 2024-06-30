@@ -47,9 +47,7 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
                 'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfbase_domain_model_relation_feature_feature_mm',
-                'sortItems' => [
-                    'label' => 'asc',
-                ],
+                'multiple' => 1,
                 'required' => true,
             ],
         ],

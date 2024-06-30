@@ -22,6 +22,7 @@ return [
         'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.coordinates',
         'label'                    => 'longitude',
         'label_alt'                => 'latitude,altitude',
+        'label_alt_force'          => true,
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',

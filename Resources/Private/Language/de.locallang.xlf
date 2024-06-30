@@ -369,7 +369,7 @@
             </trans-unit>
             <trans-unit id="object.singleObject.geodata.description" resname="object.singleObject.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this single object</source>
-                <target>Merkmal als Geodaten für diese Einzelobjekt</target>
+                <target>Merkmal als Geodaten für dieses Einzelobjekt</target>
             </trans-unit>
             <!-- Object: ObjectGroup -->
             <trans-unit id="object.objectGroup.geodata" resname="object.objectGroup.geodata" approved="yes">

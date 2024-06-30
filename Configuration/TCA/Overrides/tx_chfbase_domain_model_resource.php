@@ -85,9 +85,7 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfbase_domain_model_location_resource_floorplan_mm',
                 'MM_opposite_field' => 'floorPlan',
-                'MM_match_fields' => [
-                    'fieldname' => 'asFloorPlanOfLocation',
-                ],
+                'multiple' => 1,
                 'size' => 5,
                 'autoSizeMax' => 10,
             ],
@@ -104,9 +102,7 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_object_group_resource_floorplan_mm',
                 'MM_opposite_field' => 'floorPlan',
-                'MM_match_fields' => [
-                    'fieldname' => 'asFloorPlanOfObjectGroup',
-                ],
+                'multiple' => 1,
                 'size' => 5,
                 'autoSizeMax' => 10,
             ],
@@ -118,7 +114,7 @@ defined('TYPO3') or die();
 $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['types'] += ['mapResource' => [
     'showitem' => '--palette--;;typeUuid,--palette--;;titleLangCodeDescription,sameAs,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;authorshipRelationLicenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,allAgents,allFileGroups,allLocations,allPeriods,allRelations,allTags,allTiles,allFeatures,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,allFeatures,allTiles,allAgents,allLocations,allPeriods,allTags,allRelations,allFileGroups,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImportState,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asFloorPlanOfLocation,',
 ]];
