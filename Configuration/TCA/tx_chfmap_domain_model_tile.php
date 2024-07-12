@@ -223,7 +223,8 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;titleUriImage,parentResource,',
+            'showitem' => '--palette--;;titleUriImage,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,parentResource,',
         ],
     ],
 ];

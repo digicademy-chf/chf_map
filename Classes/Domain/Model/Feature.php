@@ -28,7 +28,10 @@ class Feature extends AbstractFeature
      * @var ?int
      */
     #[Validate([
-        'validator' => 'Number',
+        'validator' => 'NumberRange',
+        'options' => [
+            'minimum' => 1,
+        ],
     ])]
     protected ?int $weight = null;
 

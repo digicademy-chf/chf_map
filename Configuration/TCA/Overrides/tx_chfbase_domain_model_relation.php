@@ -56,5 +56,6 @@ defined('TYPO3') or die();
 
 // Add type 'variantRelation' and its 'showitem' list
 $GLOBALS['TCA']['tx_chfbase_domain_model_relation']['types'] += ['variantRelation' => [
-    'showitem' => '--palette--;;typeUuid,feature,--palette--;;parentResourceDescription,',
+    'showitem' => 'type,feature,description,
+    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;iriUuid,parentResource,',
 ]];
