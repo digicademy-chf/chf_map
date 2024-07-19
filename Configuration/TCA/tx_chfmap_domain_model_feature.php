@@ -210,6 +210,7 @@ return [
                         'value' => 'featureCollection',
                     ],
                 ],
+                'default' => 'feature',
                 'required' => true,
             ],
         ],
@@ -332,6 +333,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'authorshipRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -368,6 +370,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'licenceRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -533,12 +536,8 @@ return [
                     'columns' => [
                         'type' => [
                             'config' => [
-                                'items' => [
-                                    [
-                                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.type.feature',
-                                        'value' => 'feature',
-                                    ],
-                                ],
+                                'default' => 'feature',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -575,6 +574,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'linkRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],

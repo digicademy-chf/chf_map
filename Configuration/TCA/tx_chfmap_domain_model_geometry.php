@@ -199,6 +199,7 @@ return [
                         'value' => 'geometryCollection',
                     ],
                 ],
+                'default' => 'point',
                 'required' => true,
             ],
         ],
