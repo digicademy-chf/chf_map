@@ -29,7 +29,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'longitude ASC,latitude ASC,altitude ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/Coordinates.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/TableCoordinates.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',

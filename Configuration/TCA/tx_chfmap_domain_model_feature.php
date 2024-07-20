@@ -30,7 +30,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'isHighlight ASC,title ASC,type ASC,weight ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/Feature.svg',
+        'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/TableFeature.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',

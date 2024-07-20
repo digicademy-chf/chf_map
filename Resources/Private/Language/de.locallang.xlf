@@ -388,6 +388,15 @@
                 <source>Map of this object group</source>
                 <target>Kartenmaterial dieser Objektgruppe</target>
             </trans-unit>
+            <!-- Plugin: MapView -->
+            <trans-unit id="plugin.mapView" resname="plugin.mapView" approved="yes">
+                <source>Map view</source>
+                <target>Kartenansicht</target>
+            </trans-unit>
+            <trans-unit id="plugin.mapView.description" resname="plugin.mapView.description" approved="yes">
+                <source>View map features</source>
+                <target>Anzeige von Kartenmerkmalen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

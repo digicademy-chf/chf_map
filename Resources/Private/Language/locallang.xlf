@@ -296,6 +296,13 @@
             <trans-unit id="object.objectGroup.floorPlan.description" resname="object.objectGroup.floorPlan.description">
                 <source>Map of this object group</source>
             </trans-unit>
+            <!-- Plugin: MapView -->
+            <trans-unit id="plugin.mapView" resname="plugin.mapView">
+                <source>Map view</source>
+            </trans-unit>
+            <trans-unit id="plugin.mapView.description" resname="plugin.mapView.description">
+                <source>View map features</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
