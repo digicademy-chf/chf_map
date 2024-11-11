@@ -290,11 +290,11 @@
             <trans-unit id="object.objectGroup.floorPlan.description" resname="object.objectGroup.floorPlan.description">
                 <source>Map of this object group</source>
             </trans-unit>
-            <!-- Plugin: MapView -->
-            <trans-unit id="plugin.mapView" resname="plugin.mapView">
-                <source>Map view</source>
+            <!-- Plugin: Map -->
+            <trans-unit id="plugin.map" resname="plugin.map">
+                <source>Map</source>
             </trans-unit>
-            <trans-unit id="plugin.mapView.description" resname="plugin.mapView.description">
+            <trans-unit id="plugin.map.description" resname="plugin.map.description">
                 <source>View map features</source>
             </trans-unit>
         </body>

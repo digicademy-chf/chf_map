@@ -380,12 +380,12 @@
                 <source>Map of this object group</source>
                 <target>Kartenmaterial dieser Objektgruppe</target>
             </trans-unit>
-            <!-- Plugin: MapView -->
-            <trans-unit id="plugin.mapView" resname="plugin.mapView" approved="yes">
-                <source>Map view</source>
-                <target>Kartenansicht</target>
+            <!-- Plugin: Map -->
+            <trans-unit id="plugin.map" resname="plugin.map" approved="yes">
+                <source>Map</source>
+                <target>Karte</target>
             </trans-unit>
-            <trans-unit id="plugin.mapView.description" resname="plugin.mapView.description" approved="yes">
+            <trans-unit id="plugin.map.description" resname="plugin.map.description" approved="yes">
                 <source>View map features</source>
                 <target>Anzeige von Geoobjekten</target>
             </trans-unit>

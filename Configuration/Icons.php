@@ -38,8 +38,8 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/TableTile.svg',
     ],
-    'tx-chfmap-plugin-map-view' => [
+    'tx-chfmap-plugin-map' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_map/Resources/Public/Icons/PluginMapView.svg',
+        'source' => 'EXT:chf_map/Resources/Public/Icons/PluginMap.svg',
     ],
 ];

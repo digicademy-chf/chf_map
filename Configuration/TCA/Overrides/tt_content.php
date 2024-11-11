@@ -20,12 +20,12 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add plugin 'MapView'
+// Add plugin 'Map'
 ExtensionUtility::registerPlugin(
     'CHFMap',
-    'MapView',
-    'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:plugin.mapView',
-    'tx-chfmap-plugin-map-view',
+    'Map',
+    'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:plugin.map',
+    'tx-chfmap-plugin-map',
     'heritage',
-    'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:plugin.mapView.description',
+    'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:plugin.map.description',
 );

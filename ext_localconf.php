@@ -12,10 +12,10 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
-// Register 'MapView' content element
+// Register 'Map' content element
 ExtensionUtility::configurePlugin(
     'CHFMap',
-    'MapView',
+    'Map',
     [
         AbstractResourceController::class => 'index',
         AbstractResourceController::class => 'show',
