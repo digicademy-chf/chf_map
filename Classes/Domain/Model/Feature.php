@@ -67,16 +67,14 @@ class Feature extends AbstractFeature
      *
      * @param object $parentResource
      * @param string $uuid
-     * @param string $projection
      * @return Feature
      */
-    public function __construct(object $parentResource, string $uuid, string $projection)
+    public function __construct(object $parentResource, string $uuid)
     {
         parent::__construct($parentResource, $uuid);
         $this->initializeObject();
 
         $this->setType('feature');
-        $this->setProjection($projection);
     }
 
     /**

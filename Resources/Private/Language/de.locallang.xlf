@@ -18,11 +18,11 @@
             </trans-unit>
             <trans-unit id="object.mapResource.allFeatures" resname="object.mapResource.allFeatures" approved="yes">
                 <source>All features</source>
-                <target>Alle Merkmale</target>
+                <target>Alle Geoobjekte</target>
             </trans-unit>
             <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description" approved="yes">
                 <source>List of all features compiled in this resource</source>
-                <target>Liste aller Merkmale, die in dieser Ressource verzeichnet sind</target>
+                <target>Liste aller Geoobjekte, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
             <trans-unit id="object.mapResource.asFloorPlanOfLocation" resname="object.mapResource.asFloorPlanOfLocation" approved="yes">
                 <source>Usage as floor plan of a location</source>
@@ -158,7 +158,7 @@
             </trans-unit>
             <trans-unit id="object.abstractGeometry.boundingBox.description" resname="object.abstractGeometry.boundingBox.description" approved="yes">
                 <source>Two sets of coordinates to produce a bounding box</source>
-                <target>Zwei Sätze Koordinaten, die einen aufgespannten Rahmen markieren</target>
+                <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
             </trans-unit>
             <!-- Object: SingleGeometry -->
             <trans-unit id="object.singleGeometry.coordinates" resname="object.singleGeometry.coordinates" approved="yes">
@@ -190,7 +190,7 @@
             <!-- Object: AbstractFeature -->
             <trans-unit id="object.abstractFeature" resname="object.abstractFeature" approved="yes">
                 <source>Feature</source>
-                <target>Merkmal</target>
+                <target>Geoobjekt</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.type" resname="object.abstractFeature.type" approved="yes">
                 <source>Type</source>
@@ -198,15 +198,15 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.type.description" resname="object.abstractFeature.type.description" approved="yes">
                 <source>Type of feature</source>
-                <target>Art des Merkmals</target>
+                <target>Art des Geoobjekts</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.type.feature" resname="object.abstractFeature.type.feature" approved="yes">
                 <source>Feature</source>
-                <target>Merkmal</target>
+                <target>Geoobjekt</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.featureCollection" approved="yes">
                 <source>Group of features</source>
-                <target>Gruppe von Merkmalen</target>
+                <target>Gruppe von Geoobjekten</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.title" resname="object.abstractFeature.title" approved="yes">
                 <source>Title</source>
@@ -214,7 +214,7 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.title.description" resname="object.abstractFeature.title.description" approved="yes">
                 <source>Name of the feature</source>
-                <target>Name des Merkmals</target>
+                <target>Name des Geoobjekts</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.description" resname="object.abstractFeature.description" approved="yes">
                 <source>Description</source>
@@ -222,7 +222,7 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.description.description" resname="object.abstractFeature.description.description" approved="yes">
                 <source>Brief information about the feature</source>
-                <target>Kurze Erläuterung des Merkmals</target>
+                <target>Kurze Erläuterung des Geoobjekts</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.boundingBox" resname="object.abstractFeature.boundingBox" approved="yes">
                 <source>Bounding box</source>
@@ -230,7 +230,7 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.boundingBox.description" resname="object.abstractFeature.boundingBox.description" approved="yes">
                 <source>Two sets of coordinates to produce a bounding box</source>
-                <target>Zwei Sätze Koordinaten, die einen aufgespannten Rahmen markieren</target>
+                <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfLocation" resname="object.abstractFeature.asGeodataOfLocation" approved="yes">
                 <source>Usage as geodata of a location</source>
@@ -238,7 +238,7 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfLocation.description" resname="object.abstractFeature.asGeodataOfLocation.description" approved="yes">
                 <source>List of locations that use this feature as geodata</source>
-                <target>Liste der Orte, die dieses Merkmal als Geodaten verwenden</target>
+                <target>Liste der Orte, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfFrequency" resname="object.abstractFeature.asGeodataOfFrequency" approved="yes">
                 <source>Usage as geodata of a frequency</source>
@@ -246,7 +246,7 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfFrequency.description" resname="object.abstractFeature.asGeodataOfFrequency.description" approved="yes">
                 <source>List of frequencies that use this feature as geodata</source>
-                <target>Liste der Häufigkeiten, die dieses Merkmal als Geodaten verwenden</target>
+                <target>Liste der Häufigkeiten, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfSingleObject" resname="object.abstractFeature.asGeodataOfSingleObject" approved="yes">
                 <source>Usage as geodata of a single object</source>
@@ -254,7 +254,7 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfSingleObject.description" resname="object.abstractFeature.asGeodataOfSingleObject.description" approved="yes">
                 <source>List of single objects that use this feature as geodata</source>
-                <target>Liste der Einzelobjekte, die dieses Merkmal als Geodaten verwenden</target>
+                <target>Liste der Einzelobjekte, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup" resname="object.abstractFeature.asGeodataOfObjectGroup" approved="yes">
                 <source>Usage as geodata of an object group</source>
@@ -262,15 +262,15 @@
             </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup.description" resname="object.abstractFeature.asGeodataOfObjectGroup.description" approved="yes">
                 <source>List of object groups that use this feature as geodata</source>
-                <target>Liste der Objektgruppen, die dieses Merkmal als Geodaten verwenden</target>
+                <target>Liste der Objektgruppen, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation" resname="object.abstractFeature.asFeatureOfVariantRelation" approved="yes">
-                <source>Usage as feature of a variant relation</source>
-                <target>Verwendung als Merkmal einer Variantenrelation</target>
+                <source>Usage as feature in a variant relation</source>
+                <target>Verwendung als Geoobjekt in einer Variantenrelation</target>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation.description" resname="object.abstractFeature.asFeatureOfVariantRelation.description" approved="yes">
                 <source>List of variant relations that this feature is part of</source>
-                <target>Liste der Variantenrelationen, zu denen dieses Merkmal gehört</target>
+                <target>Liste der Variantenrelationen, zu denen dieses Geoobjekt gehört</target>
             </trans-unit>
             <!-- Object: Feature -->
             <trans-unit id="object.feature.weight" resname="object.feature.weight" approved="yes">
@@ -279,7 +279,7 @@
             </trans-unit>
             <trans-unit id="object.feature.weight.description" resname="object.feature.weight.description" approved="yes">
                 <source>Number used as the size of the feature, if possible</source>
-                <target>Falls möglich als Größe des Merkmals dargestellte Zahl</target>
+                <target>Falls möglich als Größe des Geoobjekts dargestellte Zahl</target>
             </trans-unit>
             <trans-unit id="object.feature.projection" resname="object.feature.projection" approved="yes">
                 <source>Projection</source>
@@ -287,7 +287,7 @@
             </trans-unit>
             <trans-unit id="object.feature.projection.description" resname="object.feature.projection.description" approved="yes">
                 <source>Type of projection used for geometries in this feature</source>
-                <target>Art der Projektion der Geometrien in diesem Merkmal</target>
+                <target>Art der Projektion der Geometrien in diesem Geoobjekt</target>
             </trans-unit>
             <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem" approved="yes">
                 <source>World Geodetic System (WGS 84/EPSG 4326)</source>
@@ -303,16 +303,16 @@
             </trans-unit>
             <trans-unit id="object.feature.geometry.description" resname="object.feature.geometry.description" approved="yes">
                 <source>List of geometries in this feature</source>
-                <target>Liste von Geometrien in diesem Merkmal</target>
+                <target>Liste von Geometrien in diesem Geoobjekt</target>
             </trans-unit>
             <!-- Object: FeatureCollection -->
             <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature" approved="yes">
                 <source>Feature</source>
-                <target>Merkmal</target>
+                <target>Geoobjekt</target>
             </trans-unit>
             <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description" approved="yes">
                 <source>List of features</source>
-                <target>Liste der Merkmale</target>
+                <target>Liste der Geoobjekte</target>
             </trans-unit>
             <!-- Object: VariantRelation -->
             <trans-unit id="object.variantRelation.type.variantRelation" resname="object.variantRelation.type.variantRelation" approved="yes">
@@ -321,20 +321,20 @@
             </trans-unit>
             <trans-unit id="object.variantRelation.feature" resname="object.variantRelation.feature" approved="yes">
                 <source>Feature</source>
-                <target>Merkmal</target>
+                <target>Geoobjekt</target>
             </trans-unit>
             <trans-unit id="object.variantRelation.feature.description" resname="object.variantRelation.feature.description" approved="yes">
                 <source>List of features that are variants of each other</source>
-                <target>Liste der zusammengehörigen Merkmalvarianten</target>
+                <target>Liste der zusammengehörigen Geoobjektvarianten</target>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">
                 <source>Usage as label of a feature</source>
-                <target>Verwendung als Label eines Merkmals</target>
+                <target>Verwendung als Label eines Geoobjekts</target>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description" approved="yes">
                 <source>List of features that use this label</source>
-                <target>Liste der Merkmale, die dieses Label verwenden</target>
+                <target>Liste der Geoobjekte, die dieses Label verwenden</target>
             </trans-unit>
             <!-- Object: Location -->
             <trans-unit id="object.location.geodata" resname="object.location.geodata" approved="yes">
@@ -343,7 +343,7 @@
             </trans-unit>
             <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this location</source>
-                <target>Merkmal als Geodaten für diesen Ort</target>
+                <target>Geoobjekt als Geodaten für diesen Ort</target>
             </trans-unit>
             <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan" approved="yes">
                 <source>Floor plan</source>
@@ -360,26 +360,18 @@
             </trans-unit>
             <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this frequency</source>
-                <target>Merkmal als Geodaten für diese Häufigkeit</target>
+                <target>Geoobjekt als Geodaten für diese Häufigkeit</target>
             </trans-unit>
-            <!-- Object: SingleObject -->
-            <trans-unit id="object.singleObject.geodata" resname="object.singleObject.geodata" approved="yes">
+            <!-- Object: AbstractObject -->
+            <trans-unit id="object.abstractObject.geodata" resname="object.abstractObject.geodata" approved="yes">
                 <source>Geodata</source>
                 <target>Geodaten</target>
             </trans-unit>
-            <trans-unit id="object.singleObject.geodata.description" resname="object.singleObject.geodata.description" approved="yes">
-                <source>Feature to use as geodata of this single object</source>
-                <target>Merkmal als Geodaten für dieses Einzelobjekt</target>
+            <trans-unit id="object.abstractObject.geodata.description" resname="object.abstractObject.geodata.description" approved="yes">
+                <source>Feature to use as geodata of this object (group)</source>
+                <target>Geoobjekt als Geodaten für diese:s Objekt(gruppe)</target>
             </trans-unit>
             <!-- Object: ObjectGroup -->
-            <trans-unit id="object.objectGroup.geodata" resname="object.objectGroup.geodata" approved="yes">
-                <source>Geodata</source>
-                <target>Geodaten</target>
-            </trans-unit>
-            <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description" approved="yes">
-                <source>Feature to use as geodata of this object group</source>
-                <target>Merkmal als Geodaten für diese Objektgruppe</target>
-            </trans-unit>
             <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan" approved="yes">
                 <source>Floor plan</source>
                 <target>Grundriss</target>
@@ -395,7 +387,7 @@
             </trans-unit>
             <trans-unit id="plugin.mapView.description" resname="plugin.mapView.description" approved="yes">
                 <source>View map features</source>
-                <target>Anzeige von Kartenmerkmalen</target>
+                <target>Anzeige von Geoobjekten</target>
             </trans-unit>
         </body>
     </file>

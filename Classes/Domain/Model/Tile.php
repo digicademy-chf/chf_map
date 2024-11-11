@@ -25,7 +25,7 @@ defined('TYPO3') or die();
 class Tile extends AbstractEntity
 {
     /**
-     * Whether the record should be visible or not
+     * Record visible or not
      * 
      * @var bool
      */
@@ -33,14 +33,6 @@ class Tile extends AbstractEntity
         'validator' => 'Boolean',
     ])]
     protected bool $hidden = true;
-
-    /**
-     * Resource that this database record is part of
-     * 
-     * @var ?ObjectStorage<object>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $parentResource = null;
 
     /**
      * Name of the tile layer
@@ -77,18 +69,26 @@ class Tile extends AbstractEntity
     protected FileReference|LazyLoadingProxy|null $image = null;
 
     /**
+     * Resource that this database record is part of
+     * 
+     * @var ?ObjectStorage<object>
+     */
+    #[Lazy()]
+    protected ?ObjectStorage $parentResource = null;
+
+    /**
      * Construct object
      *
-     * @param MapResource $parentResource
      * @param string $title
+     * @param MapResource $parentResource
      * @return Tile
      */
-    public function __construct(MapResource $parentResource, string $title)
+    public function __construct(string $title, MapResource $parentResource)
     {
         $this->initializeObject();
-    
-        $this->addParentResource($parentResource);
+
         $this->setTitle($title);
+        $this->addParentResource($parentResource);
     }
 
     /**
@@ -117,55 +117,6 @@ class Tile extends AbstractEntity
     public function setHidden(bool $hidden): void
     {
         $this->hidden = $hidden;
-    }
-
-    /**
-     * Get parent resource
-     *
-     * @return ObjectStorage<object>
-     */
-    public function getParentResource(): ?ObjectStorage
-    {
-        return $this->parentResource;
-    }
-
-    /**
-     * Set parent resource
-     *
-     * @param ObjectStorage<object> $parentResource
-     */
-    public function setParentResource(ObjectStorage $parentResource): void
-    {
-        $this->parentResource = $parentResource;
-    }
-
-    /**
-     * Add parent resource
-     *
-     * @param object $parentResource
-     */
-    public function addParentResource(object $parentResource): void
-    {
-        $this->parentResource?->attach($parentResource);
-    }
-
-    /**
-     * Remove parent resource
-     *
-     * @param object $parentResource
-     */
-    public function removeParentResource(object $parentResource): void
-    {
-        $this->parentResource?->detach($parentResource);
-    }
-
-    /**
-     * Remove all parent resources
-     */
-    public function removeAllParentResource(): void
-    {
-        $parentResource = clone $this->parentResource;
-        $this->parentResource->removeAll($parentResource);
     }
 
     /**
@@ -229,5 +180,54 @@ class Tile extends AbstractEntity
     public function setImage(FileReference $image): void
     {
         $this->image = $image;
+    }
+
+    /**
+     * Get parent resource
+     *
+     * @return ObjectStorage<object>
+     */
+    public function getParentResource(): ?ObjectStorage
+    {
+        return $this->parentResource;
+    }
+
+    /**
+     * Set parent resource
+     *
+     * @param ObjectStorage<object> $parentResource
+     */
+    public function setParentResource(ObjectStorage $parentResource): void
+    {
+        $this->parentResource = $parentResource;
+    }
+
+    /**
+     * Add parent resource
+     *
+     * @param object $parentResource
+     */
+    public function addParentResource(object $parentResource): void
+    {
+        $this->parentResource?->attach($parentResource);
+    }
+
+    /**
+     * Remove parent resource
+     *
+     * @param object $parentResource
+     */
+    public function removeParentResource(object $parentResource): void
+    {
+        $this->parentResource?->detach($parentResource);
+    }
+
+    /**
+     * Remove all parent resources
+     */
+    public function removeAllParentResource(): void
+    {
+        $parentResource = clone $this->parentResource;
+        $this->parentResource->removeAll($parentResource);
     }
 }

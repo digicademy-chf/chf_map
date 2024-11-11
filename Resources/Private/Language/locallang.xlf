@@ -202,7 +202,7 @@
                 <source>List of object groups that use this feature as geodata</source>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation" resname="object.abstractFeature.asFeatureOfVariantRelation">
-                <source>Usage as feature of a variant relation</source>
+                <source>Usage as feature in a variant relation</source>
             </trans-unit>
             <trans-unit id="object.abstractFeature.asFeatureOfVariantRelation.description" resname="object.abstractFeature.asFeatureOfVariantRelation.description">
                 <source>List of variant relations that this feature is part of</source>
@@ -276,20 +276,14 @@
             <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description">
                 <source>Feature to use as geodata of this frequency</source>
             </trans-unit>
-            <!-- Object: SingleObject -->
-            <trans-unit id="object.singleObject.geodata" resname="object.singleObject.geodata">
+            <!-- Object: AbstractObject -->
+            <trans-unit id="object.abstractObject.geodata" resname="object.abstractObject.geodata">
                 <source>Geodata</source>
             </trans-unit>
-            <trans-unit id="object.singleObject.geodata.description" resname="object.singleObject.geodata.description">
-                <source>Feature to use as geodata of this single object</source>
+            <trans-unit id="object.abstractObject.geodata.description" resname="object.abstractObject.geodata.description">
+                <source>Feature to use as geodata of this object (group)</source>
             </trans-unit>
             <!-- Object: ObjectGroup -->
-            <trans-unit id="object.objectGroup.geodata" resname="object.objectGroup.geodata">
-                <source>Geodata</source>
-            </trans-unit>
-            <trans-unit id="object.objectGroup.geodata.description" resname="object.objectGroup.geodata.description">
-                <source>Feature to use as geodata of this object group</source>
-            </trans-unit>
             <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan">
                 <source>Floor plan</source>
             </trans-unit>

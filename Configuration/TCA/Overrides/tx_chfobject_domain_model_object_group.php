@@ -24,8 +24,8 @@ defined('TYPO3') or die();
         'geodata' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.geodata',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.geodata.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractObject.geodata',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractObject.geodata.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',

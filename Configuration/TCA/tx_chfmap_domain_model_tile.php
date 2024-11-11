@@ -152,23 +152,6 @@ return [
                 ],
             ],
         ],
-        'parentResource' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.parentResource',
-            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.parentResource.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingleBox',
-                'foreign_table' => 'tx_chfbase_domain_model_resource',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
-                'sortItems' => [
-                    'label' => 'asc',
-                ],
-                'required' => true,
-            ],
-        ],
         'title' => [
             'exclude' => true,
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.tile.title',
@@ -213,6 +196,23 @@ return [
             'config' => [
                 'type' => 'file',
                 'allowed' => 'common-image-types',
+            ],
+        ],
+        'parentResource' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.parentResource',
+            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.parentResource.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingleBox',
+                'foreign_table' => 'tx_chfbase_domain_model_resource',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
+                'sortItems' => [
+                    'label' => 'asc',
+                ],
+                'required' => true,
             ],
         ],
     ],

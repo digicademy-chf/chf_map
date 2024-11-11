@@ -152,16 +152,6 @@ return [
                 ],
             ],
         ],
-        'parentTable' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
-        'parent' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
         'longitude' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -198,6 +188,16 @@ return [
                 'size' => 40,
                 'max' => 255,
                 'eval' => 'trim',
+            ],
+        ],
+        'parentTable' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
+        'parent' => [
+            'config' => [
+                'type' => 'passthrough',
             ],
         ],
     ],

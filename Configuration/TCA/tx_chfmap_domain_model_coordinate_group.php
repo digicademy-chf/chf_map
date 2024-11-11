@@ -150,16 +150,6 @@ return [
                 ],
             ],
         ],
-        'parentTable' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
-        'parent' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
         'coordinates' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -180,6 +170,16 @@ return [
                     'showAllLocalizationLink' => true,
                     'showSynchronizationLink' => true,
                 ],
+            ],
+        ],
+        'parentTable' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
+        'parent' => [
+            'config' => [
+                'type' => 'passthrough',
             ],
         ],
     ],

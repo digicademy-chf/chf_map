@@ -32,14 +32,6 @@ defined('TYPO3') or die();
 class AbstractFeature extends AbstractBase
 {
     /**
-     * Resource that this database record is part of
-     * 
-     * @var ?ObjectStorage<object>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $parentResource = null;
-
-    /**
      * Type of feature
      * 
      * @var string
@@ -82,24 +74,6 @@ class AbstractFeature extends AbstractBase
     protected string $description = '';
 
     /**
-     * Makes this record available at the top of lists
-     * 
-     * @var bool
-     */
-    #[Validate([
-        'validator' => 'Boolean',
-    ])]
-    protected bool $isHighlight = false;
-
-    /**
-     * Label to group the database record into
-     * 
-     * @var ?ObjectStorage<LabelTag>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $label = null;
-
-    /**
      * Two sets of coordinates to produce a bounding box
      * 
      * @var ?ObjectStorage<Coordinates>
@@ -111,7 +85,26 @@ class AbstractFeature extends AbstractBase
     protected ?ObjectStorage $boundingBox = null;
 
     /**
-     * Links relevant to this database record described by a relation
+     * Label to group the database record into
+     * 
+     * @var ?ObjectStorage<LabelTag>
+     */
+    #[Lazy()]
+    protected ?ObjectStorage $label = null;
+
+    /**
+     * Sources of this database record
+     * 
+     * @var ?ObjectStorage<SourceRelation>
+     */
+    #[Lazy()]
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected ?ObjectStorage $sourceRelation = null;
+
+    /**
+     * Links relevant to this database record
      * 
      * @var ?ObjectStorage<LinkRelation>
      */
@@ -122,7 +115,7 @@ class AbstractFeature extends AbstractBase
     protected ?ObjectStorage $linkRelation = null;
 
     /**
-     * Publication of this database record described by a relation
+     * Relevant text publications in the database
      * 
      * @var ?ObjectStorage<PublicationRelation>
      */
@@ -133,15 +126,32 @@ class AbstractFeature extends AbstractBase
     protected ?ObjectStorage $publicationRelation = null;
 
     /**
-     * Source of this database record described by a relation
+     * Lists this record without its content
      * 
-     * @var ?ObjectStorage<SourceRelation>
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $isTeaser = false;
+
+    /**
+     * Makes this record available at the top of lists
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $isHighlight = false;
+
+    /**
+     * Resource that this database record is part of
+     * 
+     * @var ?ObjectStorage<object>
      */
     #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $sourceRelation = null;
+    protected ?ObjectStorage $parentResource = null;
 
     /**
      * Full import code that this record is based on
@@ -216,66 +226,17 @@ class AbstractFeature extends AbstractBase
      */
     public function initializeObject(): void
     {
-        $this->parentResource ??= new ObjectStorage();
-        $this->label ??= new ObjectStorage();
         $this->boundingBox ??= new ObjectStorage();
+        $this->label ??= new ObjectStorage();
+        $this->sourceRelation ??= new ObjectStorage();
         $this->linkRelation ??= new ObjectStorage();
         $this->publicationRelation ??= new ObjectStorage();
-        $this->sourceRelation ??= new ObjectStorage();
+        $this->parentResource ??= new ObjectStorage();
         $this->asGeodataOfLocation ??= new ObjectStorage();
         $this->asGeodataOfFrequency ??= new ObjectStorage();
         $this->asGeodataOfSingleObject ??= new ObjectStorage();
         $this->asGeodataOfObjectGroup ??= new ObjectStorage();
         $this->asFeatureOfVariantRelation ??= new ObjectStorage();
-    }
-
-    /**
-     * Get parent resource
-     *
-     * @return ObjectStorage<object>
-     */
-    public function getParentResource(): ?ObjectStorage
-    {
-        return $this->parentResource;
-    }
-
-    /**
-     * Set parent resource
-     *
-     * @param ObjectStorage<object> $parentResource
-     */
-    public function setParentResource(ObjectStorage $parentResource): void
-    {
-        $this->parentResource = $parentResource;
-    }
-
-    /**
-     * Add parent resource
-     *
-     * @param object $parentResource
-     */
-    public function addParentResource(object $parentResource): void
-    {
-        $this->parentResource?->attach($parentResource);
-    }
-
-    /**
-     * Remove parent resource
-     *
-     * @param object $parentResource
-     */
-    public function removeParentResource(object $parentResource): void
-    {
-        $this->parentResource?->detach($parentResource);
-    }
-
-    /**
-     * Remove all parent resources
-     */
-    public function removeAllParentResource(): void
-    {
-        $parentResource = clone $this->parentResource;
-        $this->parentResource->removeAll($parentResource);
     }
 
     /**
@@ -339,23 +300,52 @@ class AbstractFeature extends AbstractBase
     }
 
     /**
-     * Get is highlight
+     * Get bounding box
      *
-     * @return bool
+     * @return ObjectStorage<Coordinates>
      */
-    public function getIsHighlight(): bool
+    public function getBoundingBox(): ?ObjectStorage
     {
-        return $this->isHighlight;
+        return $this->boundingBox;
     }
 
     /**
-     * Set is highlight
+     * Set bounding box
      *
-     * @param bool $isHighlight
+     * @param ObjectStorage<Coordinates> $boundingBox
      */
-    public function setIsHighlight(bool $isHighlight): void
+    public function setBoundingBox(ObjectStorage $boundingBox): void
     {
-        $this->isHighlight = $isHighlight;
+        $this->boundingBox = $boundingBox;
+    }
+
+    /**
+     * Add bounding box
+     *
+     * @param Coordinates $boundingBox
+     */
+    public function addBoundingBox(Coordinates $boundingBox): void
+    {
+        $this->boundingBox?->attach($boundingBox);
+    }
+
+    /**
+     * Remove bounding box
+     *
+     * @param Coordinates $boundingBox
+     */
+    public function removeBoundingBox(Coordinates $boundingBox): void
+    {
+        $this->boundingBox?->detach($boundingBox);
+    }
+
+    /**
+     * Remove all bounding boxes
+     */
+    public function removeAllBoundingBox(): void
+    {
+        $boundingBox = clone $this->boundingBox;
+        $this->boundingBox->removeAll($boundingBox);
     }
 
     /**
@@ -408,52 +398,52 @@ class AbstractFeature extends AbstractBase
     }
 
     /**
-     * Get bounding box
+     * Get source relation
      *
-     * @return ObjectStorage<Coordinates>
+     * @return ObjectStorage<SourceRelation>
      */
-    public function getBoundingBox(): ?ObjectStorage
+    public function getSourceRelation(): ?ObjectStorage
     {
-        return $this->boundingBox;
+        return $this->sourceRelation;
     }
 
     /**
-     * Set bounding box
+     * Set source relation
      *
-     * @param ObjectStorage<Coordinates> $boundingBox
+     * @param ObjectStorage<SourceRelation> $sourceRelation
      */
-    public function setBoundingBox(ObjectStorage $boundingBox): void
+    public function setSourceRelation(ObjectStorage $sourceRelation): void
     {
-        $this->boundingBox = $boundingBox;
+        $this->sourceRelation = $sourceRelation;
     }
 
     /**
-     * Add bounding box
+     * Add source relation
      *
-     * @param Coordinates $boundingBox
+     * @param SourceRelation $sourceRelation
      */
-    public function addBoundingBox(Coordinates $boundingBox): void
+    public function addSourceRelation(SourceRelation $sourceRelation): void
     {
-        $this->boundingBox?->attach($boundingBox);
+        $this->sourceRelation?->attach($sourceRelation);
     }
 
     /**
-     * Remove bounding box
+     * Remove source relation
      *
-     * @param Coordinates $boundingBox
+     * @param SourceRelation $sourceRelation
      */
-    public function removeBoundingBox(Coordinates $boundingBox): void
+    public function removeSourceRelation(SourceRelation $sourceRelation): void
     {
-        $this->boundingBox?->detach($boundingBox);
+        $this->sourceRelation?->detach($sourceRelation);
     }
 
     /**
-     * Remove all bounding boxes
+     * Remove all source relations
      */
-    public function removeAllBoundingBox(): void
+    public function removeAllSourceRelation(): void
     {
-        $boundingBox = clone $this->boundingBox;
-        $this->boundingBox->removeAll($boundingBox);
+        $sourceRelation = clone $this->sourceRelation;
+        $this->sourceRelation->removeAll($sourceRelation);
     }
 
     /**
@@ -555,52 +545,92 @@ class AbstractFeature extends AbstractBase
     }
 
     /**
-     * Get source relation
+     * Get is teaser
      *
-     * @return ObjectStorage<SourceRelation>
+     * @return bool
      */
-    public function getSourceRelation(): ?ObjectStorage
+    public function getIsTeaser(): bool
     {
-        return $this->sourceRelation;
+        return $this->isTeaser;
     }
 
     /**
-     * Set source relation
+     * Set is teaser
      *
-     * @param ObjectStorage<SourceRelation> $sourceRelation
+     * @param bool $isTeaser
      */
-    public function setSourceRelation(ObjectStorage $sourceRelation): void
+    public function setIsTeaser(bool $isTeaser): void
     {
-        $this->sourceRelation = $sourceRelation;
+        $this->isTeaser = $isTeaser;
     }
 
     /**
-     * Add source relation
+     * Get is highlight
      *
-     * @param SourceRelation $sourceRelation
+     * @return bool
      */
-    public function addSourceRelation(SourceRelation $sourceRelation): void
+    public function getIsHighlight(): bool
     {
-        $this->sourceRelation?->attach($sourceRelation);
+        return $this->isHighlight;
     }
 
     /**
-     * Remove source relation
+     * Set is highlight
      *
-     * @param SourceRelation $sourceRelation
+     * @param bool $isHighlight
      */
-    public function removeSourceRelation(SourceRelation $sourceRelation): void
+    public function setIsHighlight(bool $isHighlight): void
     {
-        $this->sourceRelation?->detach($sourceRelation);
+        $this->isHighlight = $isHighlight;
     }
 
     /**
-     * Remove all source relations
+     * Get parent resource
+     *
+     * @return ObjectStorage<object>
      */
-    public function removeAllSourceRelation(): void
+    public function getParentResource(): ?ObjectStorage
     {
-        $sourceRelation = clone $this->sourceRelation;
-        $this->sourceRelation->removeAll($sourceRelation);
+        return $this->parentResource;
+    }
+
+    /**
+     * Set parent resource
+     *
+     * @param ObjectStorage<object> $parentResource
+     */
+    public function setParentResource(ObjectStorage $parentResource): void
+    {
+        $this->parentResource = $parentResource;
+    }
+
+    /**
+     * Add parent resource
+     *
+     * @param object $parentResource
+     */
+    public function addParentResource(object $parentResource): void
+    {
+        $this->parentResource?->attach($parentResource);
+    }
+
+    /**
+     * Remove parent resource
+     *
+     * @param object $parentResource
+     */
+    public function removeParentResource(object $parentResource): void
+    {
+        $this->parentResource?->detach($parentResource);
+    }
+
+    /**
+     * Remove all parent resources
+     */
+    public function removeAllParentResource(): void
+    {
+        $parentResource = clone $this->parentResource;
+        $this->parentResource->removeAll($parentResource);
     }
 
     /**

@@ -24,17 +24,6 @@ defined('TYPO3') or die();
 class MapResource extends AbstractResource
 {
     /**
-     * List of all tiles compiled in this resource
-     * 
-     * @var ?ObjectStorage<Tile>
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $allTiles = null;
-
-    /**
      * List of all features compiled in this resource
      * 
      * @var ?ObjectStorage<Feature|FeatureCollection>
@@ -44,6 +33,17 @@ class MapResource extends AbstractResource
         'value' => 'remove',
     ])]
     protected ?ObjectStorage $allFeatures = null;
+
+    /**
+     * List of all tiles compiled in this resource
+     * 
+     * @var ?ObjectStorage<Tile>
+     */
+    #[Lazy()]
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected ?ObjectStorage $allTiles = null;
 
     /**
      * List of locations that use this map as a floor plan
@@ -64,13 +64,13 @@ class MapResource extends AbstractResource
     /**
      * Construct object
      *
-     * @param string $uuid
      * @param string $langCode
+     * @param string $uuid
      * @return MapResource
      */
-    public function __construct(string $uuid, string $langCode)
+    public function __construct(string $langCode, string $uuid)
     {
-        parent::__construct($uuid, $langCode);
+        parent::__construct($langCode, $uuid);
         $this->initializeObject();
 
         $this->setType('mapResource');
@@ -81,59 +81,10 @@ class MapResource extends AbstractResource
      */
     public function initializeObject(): void
     {
-        $this->allTiles ??= new ObjectStorage();
         $this->allFeatures ??= new ObjectStorage();
+        $this->allTiles ??= new ObjectStorage();
         $this->asFloorPlanOfLocation ??= new ObjectStorage();
         $this->asFloorPlanOfObjectGroup ??= new ObjectStorage();
-    }
-
-    /**
-     * Get all tiles
-     *
-     * @return ObjectStorage<Tile>
-     */
-    public function getAllTiles(): ?ObjectStorage
-    {
-        return $this->allTiles;
-    }
-
-    /**
-     * Set all tiles
-     *
-     * @param ObjectStorage<Tile> $allTiles
-     */
-    public function setAllTiles(ObjectStorage $allTiles): void
-    {
-        $this->allTiles = $allTiles;
-    }
-
-    /**
-     * Add all tiles
-     *
-     * @param Tile $allTiles
-     */
-    public function addAllTiles(Tile $allTiles): void
-    {
-        $this->allTiles?->attach($allTiles);
-    }
-
-    /**
-     * Remove all tiles
-     *
-     * @param Tile $allTiles
-     */
-    public function removeAllTiles(Tile $allTiles): void
-    {
-        $this->allTiles?->detach($allTiles);
-    }
-
-    /**
-     * Remove all all tiles
-     */
-    public function removeAllAllTiles(): void
-    {
-        $allTiles = clone $this->allTiles;
-        $this->allTiles->removeAll($allTiles);
     }
 
     /**
@@ -183,6 +134,55 @@ class MapResource extends AbstractResource
     {
         $allFeatures = clone $this->allFeatures;
         $this->allFeatures->removeAll($allFeatures);
+    }
+
+    /**
+     * Get all tiles
+     *
+     * @return ObjectStorage<Tile>
+     */
+    public function getAllTiles(): ?ObjectStorage
+    {
+        return $this->allTiles;
+    }
+
+    /**
+     * Set all tiles
+     *
+     * @param ObjectStorage<Tile> $allTiles
+     */
+    public function setAllTiles(ObjectStorage $allTiles): void
+    {
+        $this->allTiles = $allTiles;
+    }
+
+    /**
+     * Add all tiles
+     *
+     * @param Tile $allTiles
+     */
+    public function addAllTiles(Tile $allTiles): void
+    {
+        $this->allTiles?->attach($allTiles);
+    }
+
+    /**
+     * Remove all tiles
+     *
+     * @param Tile $allTiles
+     */
+    public function removeAllTiles(Tile $allTiles): void
+    {
+        $this->allTiles?->detach($allTiles);
+    }
+
+    /**
+     * Remove all all tiles
+     */
+    public function removeAllAllTiles(): void
+    {
+        $allTiles = clone $this->allTiles;
+        $this->allTiles->removeAll($allTiles);
     }
 
     /**

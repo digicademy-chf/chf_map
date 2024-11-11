@@ -151,16 +151,6 @@ return [
                 ],
             ],
         ],
-        'parentTable' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
-        'parent' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
         'type' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -324,6 +314,16 @@ return [
                     'showSynchronizationLink' => true,
                 ],
                 'maxitems' => 2,
+            ],
+        ],
+        'parentTable' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
+        'parent' => [
+            'config' => [
+                'type' => 'passthrough',
             ],
         ],
     ],
