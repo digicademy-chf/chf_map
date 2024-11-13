@@ -172,7 +172,7 @@ return [
                 ],
             ],
         ],
-        'parentTable' => [
+        'parent_table' => [
             'config' => [
                 'type' => 'passthrough',
             ],

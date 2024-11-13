@@ -18,7 +18,7 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add columns 'geodata'
+// Add columns 'geodata' and 'floor_plan'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfobject_domain_model_object_group',
     [
         'geodata' => [
@@ -44,7 +44,7 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'floorPlan' => [
+        'floor_plan' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.objectGroup.floorPlan',

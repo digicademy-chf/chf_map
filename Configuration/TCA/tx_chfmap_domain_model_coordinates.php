@@ -190,7 +190,7 @@ return [
                 'eval' => 'trim',
             ],
         ],
-        'parentTable' => [
+        'parent_table' => [
             'config' => [
                 'type' => 'passthrough',
             ],

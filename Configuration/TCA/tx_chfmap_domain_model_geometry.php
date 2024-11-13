@@ -215,7 +215,7 @@ return [
                 ],
             ],
         ],
-        'coordinateGroup' => [
+        'coordinate_group' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.multiGeometry.coordinateGroup',
@@ -293,7 +293,7 @@ return [
                 ],
             ],
         ],
-        'boundingBox' => [
+        'bounding_box' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractGeometry.boundingBox',
@@ -316,7 +316,7 @@ return [
                 'maxitems' => 2,
             ],
         ],
-        'parentTable' => [
+        'parent_table' => [
             'config' => [
                 'type' => 'passthrough',
             ],
@@ -329,18 +329,18 @@ return [
     ],
     'palettes' => [
         'coordinatesBoundingBox' => [
-            'showitem' => 'coordinates,--linebreak--,boundingBox,',
+            'showitem' => 'coordinates,--linebreak--,bounding_box,',
         ],
         'coordinateGroupBoundingBox' => [
-            'showitem' => 'coordinateGroup,--linebreak--,boundingBox,',
+            'showitem' => 'coordinate_group,--linebreak--,bounding_box,',
         ],
         'geometryBoundingBox' => [
-            'showitem' => 'geometry,--linebreak--,boundingBox,',
+            'showitem' => 'geometry,--linebreak--,bounding_box,',
         ],
     ],
     'types' => [
         '0' => [
-            'showitem' => 'type,boundingBox,',
+            'showitem' => 'type,bounding_box,',
         ],
         'point' => [
             'showitem' => 'type,--palette--;;coordinatesBoundingBox,',

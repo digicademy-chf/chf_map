@@ -26,10 +26,10 @@ defined('TYPO3') or die();
     ]
 );
 
-// Add columns 'allTiles' and 'allFeatures'
+// Add columns 'all_features', 'all_tiles', 'as_floor_plan_of_location' and 'as_floor_plan_of_object_group'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_resource',
     [
-        'allFeatures' => [
+        'all_features' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.allFeatures',
@@ -37,7 +37,7 @@ defined('TYPO3') or die();
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_field' => 'parentResource',
+                'foreign_field' => 'parent_resource',
                 'foreign_sortby' => 'sorting',
                 'appearance' => [
                     'collapseAll' => true,
@@ -51,7 +51,7 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'allTiles' => [
+        'all_tiles' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.allTiles',
@@ -59,7 +59,7 @@ defined('TYPO3') or die();
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_chfmap_domain_model_tile',
-                'foreign_field' => 'parentResource',
+                'foreign_field' => 'parent_resource',
                 'foreign_sortby' => 'sorting',
                 'appearance' => [
                     'collapseAll' => true,
@@ -73,7 +73,7 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'asFloorPlanOfLocation' => [
+        'as_floor_plan_of_location' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfLocation',
@@ -84,13 +84,13 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfbase_domain_model_location',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfbase_domain_model_location_resource_floorplan_mm',
-                'MM_opposite_field' => 'floorPlan',
+                'MM_opposite_field' => 'floor_plan',
                 'multiple' => 1,
                 'size' => 5,
                 'autoSizeMax' => 10,
             ],
         ],
-        'asFloorPlanOfObjectGroup' => [
+        'as_floor_plan_of_object_group' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfObjectGroup',
@@ -101,7 +101,7 @@ defined('TYPO3') or die();
                 'foreign_table' => 'tx_chfobject_domain_model_object_group',
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_object_group_resource_floorplan_mm',
-                'MM_opposite_field' => 'floorPlan',
+                'MM_opposite_field' => 'floor_plan',
                 'multiple' => 1,
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -113,9 +113,9 @@ defined('TYPO3') or die();
 // Add type 'mapResource' and its 'showitem' list
 $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['types'] += ['mapResource' => [
    'showitem' => 'type,--palette--;;titleLangCodeDescription,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,allFeatures,allTiles,allAgents,allLocations,allPeriods,allTags,allKeywords,allRelations,allFileGroups,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,all_features,all_tiles,all_agents,all_locations,all_periods,all_tags,all_keywords,all_relations,all_file_groups,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;iriUuidSameAs,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImportState,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,asFloorPlanOfLocation,asFloorPlanOfObjectGroup,',
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_floor_plan_of_location,as_floor_plan_of_object_group,',
 ]];

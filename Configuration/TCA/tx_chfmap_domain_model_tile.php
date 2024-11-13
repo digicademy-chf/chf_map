@@ -198,7 +198,7 @@ return [
                 'allowed' => 'common-image-types',
             ],
         ],
-        'parentResource' => [
+        'parent_resource' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.parentResource',
@@ -224,7 +224,7 @@ return [
     'types' => [
         '0' => [
             'showitem' => '--palette--;;titleUriImage,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,parentResource,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,parent_resource,',
         ],
     ],
 ];
