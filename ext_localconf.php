@@ -17,7 +17,8 @@ ExtensionUtility::configurePlugin(
     'CHFMap',
     'Map',
     [
-        AbstractResourceController::class => 'index',
-        AbstractResourceController::class => 'show',
+        AbstractResourceController::class => 'index, show',
     ],
+    [], // None of the actions are non-cacheable
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
