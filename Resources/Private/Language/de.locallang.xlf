@@ -369,7 +369,7 @@
             </trans-unit>
             <trans-unit id="object.abstractObject.geodata.description" resname="object.abstractObject.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this object (group)</source>
-                <target>Geoobjekt als Geodaten für diese:s Objekt(gruppe)</target>
+                <target>Geoobjekt als Geodaten für dieses Objekt</target>
             </trans-unit>
             <!-- Object: ObjectGroup -->
             <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan" approved="yes">
