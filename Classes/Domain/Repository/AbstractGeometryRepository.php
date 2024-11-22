@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Repository;
 
+use Digicademy\CHFBase\Domain\Repository\Traits\StoragePageAgnosticTrait;
 use Digicademy\CHFMap\Domain\Model\AbstractGeometry;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
@@ -22,6 +23,8 @@ defined('TYPO3') or die();
  */
 class AbstractGeometryRepository extends Repository
 {
+    use StoragePageAgnosticTrait;
+
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,
         'type'    => QueryInterface::ORDER_ASCENDING,
