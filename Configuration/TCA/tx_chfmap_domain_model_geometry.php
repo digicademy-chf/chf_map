@@ -222,7 +222,7 @@ return [
             'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.multiGeometry.coordinateGroup.description',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_chfmap_domain_model_coordinate_group',
+                'foreign_table' => 'tx_chfmap_domain_model_coordinategroup',
                 'foreign_field' => 'parent',
                 'foreign_table_field' => 'parent_table',
                 'appearance' => [

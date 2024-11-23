@@ -148,7 +148,7 @@ class AbstractFeature extends AbstractBase
     /**
      * Resource that this database record is part of
      * 
-     * @var ?ObjectStorage<object>
+     * @var ?ObjectStorage<MapResource>
      */
     #[Lazy()]
     protected ?ObjectStorage $parentResource = null;
@@ -209,11 +209,11 @@ class AbstractFeature extends AbstractBase
     /**
      * Construct object
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      * @param string $uuid
      * @return AbstractFeature
      */
-    public function __construct(object $parentResource, string $uuid)
+    public function __construct(MapResource $parentResource, string $uuid)
     {
         parent::__construct($uuid);
         $this->initializeObject();
@@ -587,7 +587,7 @@ class AbstractFeature extends AbstractBase
     /**
      * Get parent resource
      *
-     * @return ObjectStorage<object>
+     * @return ObjectStorage<MapResource>
      */
     public function getParentResource(): ?ObjectStorage
     {
@@ -597,7 +597,7 @@ class AbstractFeature extends AbstractBase
     /**
      * Set parent resource
      *
-     * @param ObjectStorage<object> $parentResource
+     * @param ObjectStorage<MapResource> $parentResource
      */
     public function setParentResource(ObjectStorage $parentResource): void
     {
@@ -607,9 +607,9 @@ class AbstractFeature extends AbstractBase
     /**
      * Add parent resource
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      */
-    public function addParentResource(object $parentResource): void
+    public function addParentResource(MapResource $parentResource): void
     {
         $this->parentResource?->attach($parentResource);
     }
@@ -617,9 +617,9 @@ class AbstractFeature extends AbstractBase
     /**
      * Remove parent resource
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      */
-    public function removeParentResource(object $parentResource): void
+    public function removeParentResource(MapResource $parentResource): void
     {
         $this->parentResource?->detach($parentResource);
     }

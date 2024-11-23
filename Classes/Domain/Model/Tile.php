@@ -71,7 +71,7 @@ class Tile extends AbstractEntity
     /**
      * Resource that this database record is part of
      * 
-     * @var ?ObjectStorage<object>
+     * @var ?ObjectStorage<MapResource>
      */
     #[Lazy()]
     protected ?ObjectStorage $parentResource = null;
@@ -185,7 +185,7 @@ class Tile extends AbstractEntity
     /**
      * Get parent resource
      *
-     * @return ObjectStorage<object>
+     * @return ObjectStorage<MapResource>
      */
     public function getParentResource(): ?ObjectStorage
     {
@@ -195,7 +195,7 @@ class Tile extends AbstractEntity
     /**
      * Set parent resource
      *
-     * @param ObjectStorage<object> $parentResource
+     * @param ObjectStorage<MapResource> $parentResource
      */
     public function setParentResource(ObjectStorage $parentResource): void
     {
@@ -205,9 +205,9 @@ class Tile extends AbstractEntity
     /**
      * Add parent resource
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      */
-    public function addParentResource(object $parentResource): void
+    public function addParentResource(MapResource $parentResource): void
     {
         $this->parentResource?->attach($parentResource);
     }
@@ -215,9 +215,9 @@ class Tile extends AbstractEntity
     /**
      * Remove parent resource
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      */
-    public function removeParentResource(object $parentResource): void
+    public function removeParentResource(MapResource $parentResource): void
     {
         $this->parentResource?->detach($parentResource);
     }

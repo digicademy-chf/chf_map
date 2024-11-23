@@ -98,9 +98,9 @@ defined('TYPO3') or die();
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfobject_domain_model_object_group',
-                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfobject_domain_model_object_group_resource_floorplan_mm',
+                'foreign_table' => 'tx_chfobject_domain_model_objectgroup',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_objectgroup}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfobject_domain_model_objectgroup_resource_floorplan_mm',
                 'MM_opposite_field' => 'floor_plan',
                 'multiple' => 1,
                 'size' => 5,

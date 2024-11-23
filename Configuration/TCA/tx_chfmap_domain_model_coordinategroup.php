@@ -90,9 +90,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table' => 'tx_chfmap_domain_model_coordinate_group',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_coordinate_group}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfmap_domain_model_coordinate_group}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_chfmap_domain_model_coordinategroup',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_coordinategroup}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfmap_domain_model_coordinategroup}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
             ],
         ],

@@ -34,11 +34,11 @@ class FeatureCollection extends AbstractFeature
     /**
      * Construct object
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      * @param string $uuid
      * @return FeatureCollection
      */
-    public function __construct(object $parentResource, string $uuid)
+    public function __construct(MapResource $parentResource, string $uuid)
     {
         parent::__construct($parentResource, $uuid);
         $this->initializeObject();

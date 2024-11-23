@@ -454,7 +454,7 @@ return [
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.sameAs.description',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_chfbase_domain_model_same_as',
+                'foreign_table' => 'tx_chfbase_domain_model_sameas',
                 'foreign_field' => 'parent',
                 'foreign_table_field' => 'parent_table',
                 'appearance' => [
@@ -672,9 +672,9 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfobject_domain_model_single_object',
-                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_single_object}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfobject_domain_model_single_object_feature_geodata_mm',
+                'foreign_table' => 'tx_chfobject_domain_model_singleobject',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_singleobject}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfobject_domain_model_singleobject_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
                 'multiple' => 1,
                 'size' => 5,
@@ -689,9 +689,9 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfobject_domain_model_object_group',
-                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfobject_domain_model_object_group_feature_geodata_mm',
+                'foreign_table' => 'tx_chfobject_domain_model_objectgroup',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_objectgroup}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfobject_domain_model_objectgroup_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
                 'multiple' => 1,
                 'size' => 5,

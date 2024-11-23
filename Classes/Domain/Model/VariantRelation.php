@@ -31,12 +31,12 @@ class VariantRelation extends AbstractRelation
     /**
      * Construct object
      *
-     * @param object $parentResource
+     * @param MapResource $parentResource
      * @param string $uuid
      * @param Feature|FeatureCollection $feature
      * @return VariantRelation
      */
-    public function __construct(object $parentResource, string $uuid, Feature|FeatureCollection $feature)
+    public function __construct(MapResource $parentResource, string $uuid, Feature|FeatureCollection $feature)
     {
         parent::__construct($parentResource, $uuid);
         $this->initializeObject();

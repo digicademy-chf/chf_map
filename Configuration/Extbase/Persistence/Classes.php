@@ -25,21 +25,37 @@ return [
             'mapResource' => Digicademy\CHFMap\Domain\Model\MapResource::class,
         ],
     ],
+    Digicademy\CHFMap\Domain\Model\MapResource::class => [
+        'tableName' => 'tx_chfbase_domain_model_resource',
+        'recordType' => 'mapResource',
+    ],
     Digicademy\CHFBase\Domain\Model\AbstractRelation::class => [
         'subclasses' => [
             'variantRelation' => Digicademy\CHFMap\Domain\Model\VariantRelation::class,
         ],
     ],
+    Digicademy\CHFMap\Domain\Model\VariantRelation::class => [
+        'tableName' => 'tx_chfbase_domain_model_relation',
+        'recordType' => 'variantRelation',
+    ],
     Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
-        'tableName'  => 'tx_chfmap_domain_model_feature',
+        'tableName' => 'tx_chfmap_domain_model_feature',
         'recordType' => '0',
         'subclasses' => [
             'feature' => Digicademy\CHFMap\Domain\Model\Feature::class,
             'featureCollection' => Digicademy\CHFMap\Domain\Model\FeatureCollection::class,
         ],
     ],
+    Digicademy\CHFMap\Domain\Model\Feature::class => [
+        'tableName' => 'tx_chfmap_domain_model_feature',
+        'recordType' => 'feature',
+    ],
+    Digicademy\CHFMap\Domain\Model\FeatureCollection::class => [
+        'tableName' => 'tx_chfmap_domain_model_feature',
+        'recordType' => 'featureCollection',
+    ],
     Digicademy\CHFMap\Domain\Model\AbstractGeometry::class => [
-        'tableName'  => 'tx_chfmap_domain_model_geometry',
+        'tableName' => 'tx_chfmap_domain_model_geometry',
         'recordType' => '0',
         'subclasses' => [
             'point' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
@@ -50,5 +66,33 @@ return [
             'multiPolygon' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
             'geometryCollection' => Digicademy\CHFMap\Domain\Model\GeometryCollection::class,
         ],
+    ],
+    Digicademy\CHFMap\Domain\Model\SingleGeometry::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'point',
+    ],
+    Digicademy\CHFMap\Domain\Model\MultiGeometry::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'multiPoint',
+    ],
+    Digicademy\CHFMap\Domain\Model\SingleGeometry::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'lineString',
+    ],
+    Digicademy\CHFMap\Domain\Model\MultiGeometry::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'multiLineString',
+    ],
+    Digicademy\CHFMap\Domain\Model\SingleGeometry::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'polygon',
+    ],
+    Digicademy\CHFMap\Domain\Model\MultiGeometry::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'multiPolygon',
+    ],
+    Digicademy\CHFMap\Domain\Model\GeometryCollection::class => [
+        'tableName' => 'tx_chfmap_domain_model_geometry',
+        'recordType' => 'geometryCollection',
     ],
 ];
