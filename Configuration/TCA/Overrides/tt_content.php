@@ -7,6 +7,7 @@ declare(strict_types=1);
 # LICENSE.txt file that was distributed with this source code.
 
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
@@ -28,4 +29,19 @@ ExtensionUtility::registerPlugin(
     'tx-chfmap-plugin-map',
     'heritage',
     'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:plugin.map.description',
+);
+
+// Add data tab to plugin form
+ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    '--div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:plugin.generic.data,pi_flexform',
+    'chfmap_map',
+    'after:subheader',
+);
+
+// Add form for plugin 'Map'
+ExtensionManagementUtility::addPiFlexFormValue(
+    '*',
+    'FILE:EXT:chf_map/Configuration/FlexForms/PluginData.xml',
+    'chfmap_map',
 );
