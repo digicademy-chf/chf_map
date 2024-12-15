@@ -20,6 +20,7 @@ use Digicademy\CHFBase\Domain\Model\Location;
 use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
 use Digicademy\CHFBib\Domain\Model\SourceRelation;
 use Digicademy\CHFLex\Domain\Model\Frequency;
+use Digicademy\CHFMedia\Domain\Model\FileMetadata;
 use Digicademy\CHFObject\Domain\Model\SingleObject;
 use Digicademy\CHFObject\Domain\Model\ObjectGroup;
 use Digicademy\CHFPub\Domain\Model\PublicationRelation;
@@ -175,6 +176,14 @@ class AbstractFeature extends AbstractBase
     protected ?ObjectStorage $asGeodataOfLocation = null;
 
     /**
+     * List of files that use this feature as geodata
+     * 
+     * @var ?ObjectStorage<FileMetadata>
+     */
+    #[Lazy()]
+    protected ?ObjectStorage $asGeodataOfFileMetadata = null;
+
+    /**
      * List of frequencies that use this feature as geodata
      * 
      * @var ?ObjectStorage<Frequency>
@@ -233,6 +242,7 @@ class AbstractFeature extends AbstractBase
         $this->publicationRelation ??= new ObjectStorage();
         $this->parentResource ??= new ObjectStorage();
         $this->asGeodataOfLocation ??= new ObjectStorage();
+        $this->asGeodataOfFileMetadata ??= new ObjectStorage();
         $this->asGeodataOfFrequency ??= new ObjectStorage();
         $this->asGeodataOfSingleObject ??= new ObjectStorage();
         $this->asGeodataOfObjectGroup ??= new ObjectStorage();
@@ -700,6 +710,55 @@ class AbstractFeature extends AbstractBase
     {
         $asGeodataOfLocation = clone $this->asGeodataOfLocation;
         $this->asGeodataOfLocation->removeAll($asGeodataOfLocation);
+    }
+
+    /**
+     * Get as geodata of file metadata
+     *
+     * @return ObjectStorage<FileMetadata>
+     */
+    public function getAsGeodataOfFileMetadata(): ?ObjectStorage
+    {
+        return $this->asGeodataOfFileMetadata;
+    }
+
+    /**
+     * Set as geodata of file metadata
+     *
+     * @param ObjectStorage<FileMetadata> $asGeodataOfFileMetadata
+     */
+    public function setAsGeodataOfFileMetadata(ObjectStorage $asGeodataOfFileMetadata): void
+    {
+        $this->asGeodataOfFileMetadata = $asGeodataOfFileMetadata;
+    }
+
+    /**
+     * Add as geodata of file metadata
+     *
+     * @param FileMetadata $asGeodataOfFileMetadata
+     */
+    public function addAsGeodataOfFileMetadata(FileMetadata $asGeodataOfFileMetadata): void
+    {
+        $this->asGeodataOfFileMetadata?->attach($asGeodataOfFileMetadata);
+    }
+
+    /**
+     * Remove as geodata of file metadata
+     *
+     * @param FileMetadata $asGeodataOfFileMetadata
+     */
+    public function removeAsGeodataOfFileMetadata(FileMetadata $asGeodataOfFileMetadata): void
+    {
+        $this->asGeodataOfFileMetadata?->detach($asGeodataOfFileMetadata);
+    }
+
+    /**
+     * Remove all as geodata of file metadatas
+     */
+    public function removeAllAsGeodataOfFileMetadata(): void
+    {
+        $asGeodataOfFileMetadata = clone $this->asGeodataOfFileMetadata;
+        $this->asGeodataOfFileMetadata->removeAll($asGeodataOfFileMetadata);
     }
 
     /**

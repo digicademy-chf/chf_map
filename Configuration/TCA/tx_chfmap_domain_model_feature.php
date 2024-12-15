@@ -647,6 +647,23 @@ return [
                 'autoSizeMax' => 10,
             ],
         ],
+        'as_geodata_of_file_metadata' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfFileMetadata',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfFileMetadata.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_chfbase_domain_model_location',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfbase_domain_model_filemetadata_feature_geodata_mm',
+                'MM_opposite_field' => 'geodata',
+                'multiple' => 1,
+                'size' => 5,
+                'autoSizeMax' => 10,
+            ],
+        ],
         'as_geodata_of_frequency' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',

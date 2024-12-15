@@ -240,6 +240,14 @@
                 <source>List of locations that use this feature as geodata</source>
                 <target>Liste der Orte, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfFileMetadata" resname="object.abstractFeature.asGeodataOfFileMetadata" approved="yes">
+                <source>Usage as geodata of a file</source>
+                <target>Verwendung als Geodaten einer Datei</target>
+            </trans-unit>
+            <trans-unit id="object.abstractFeature.asGeodataOfFileMetadata.description" resname="object.abstractFeature.asGeodataOfFileMetadata.description" approved="yes">
+                <source>List of files that use this feature as geodata</source>
+                <target>Liste der Dateien, die dieses Geoobjekt als Geodaten verwenden</target>
+            </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfFrequency" resname="object.abstractFeature.asGeodataOfFrequency" approved="yes">
                 <source>Usage as geodata of a frequency</source>
                 <target>Verwendung als Geodaten einer Häufigkeit</target>
@@ -361,6 +369,15 @@
             <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description" approved="yes">
                 <source>Feature to use as geodata of this frequency</source>
                 <target>Geoobjekt als Geodaten für diese Häufigkeit</target>
+            </trans-unit>
+            <!-- Object: FileMetadata -->
+            <trans-unit id="object.fileMetadata.geodata" resname="object.fileMetadata.geodata" approved="yes">
+                <source>Geodata</source>
+                <target>Geodaten</target>
+            </trans-unit>
+            <trans-unit id="object.fileMetadata.geodata.description" resname="object.fileMetadata.geodata.description" approved="yes">
+                <source>Feature to use as geodata of this file</source>
+                <target>Geoobjekt als Geodaten für diese Datei</target>
             </trans-unit>
             <!-- Object: AbstractObject -->
             <trans-unit id="object.abstractObject.geodata" resname="object.abstractObject.geodata" approved="yes">
