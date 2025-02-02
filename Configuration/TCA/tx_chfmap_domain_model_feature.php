@@ -38,7 +38,7 @@ return [
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'translationSource'        => 'l10n_source',
         'type'                     => 'type',
-        'searchFields'             => 'type,title,description,projection,uuid,publication_date,revision_date,revision_number,editorial_note,import_origin,import',
+        'searchFields'             => 'type,title,projection,description,geo_json,uuid,publication_date,revision_date,revision_number,editorial_note,import_origin,import',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
@@ -168,21 +168,6 @@ return [
                 ],
             ],
         ],
-        'description' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.description',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.description.description',
-            'config' => [
-                'type' => 'text',
-                'cols' => 40,
-                'rows' => 5,
-                'max' => 2000,
-                'eval' => 'trim',
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true,
-                ],
-            ],
-        ],
         'projection' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -198,6 +183,35 @@ return [
                     ],
                 ],
                 'default' => 'worldGeodeticSystem',
+                'required' => true,
+            ],
+        ],
+        'description' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.description',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.description.description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 5,
+                'max' => 2000,
+                'eval' => 'trim',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
+            ],
+        ],
+        'geo_json' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.geoJson',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.geoJson.description',
+            'config' => [
+                'type' => 'json',
+                'cols' => 40,
+                'rows' => 10,
+                'default' => '{}',
+                'enableCodeEditor' => true,
                 'required' => true,
             ],
         ],
@@ -623,7 +637,7 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;titleProjectionDescription,label,
+            'showitem' => '--palette--;;titleProjectionDescription,geo_json,label,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,

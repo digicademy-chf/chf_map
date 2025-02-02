@@ -123,6 +123,14 @@
                 <source>Brief information about the feature</source>
                 <target>Kurze Erläuterung des Geoobjekts</target>
             </trans-unit>
+            <trans-unit id="object.feature.geoJson" resname="object.feature.geoJson" approved="yes">
+                <source>GeoJSON</source>
+                <target>GeoJSON</target>
+            </trans-unit>
+            <trans-unit id="object.feature.geoJson.description" resname="object.feature.geoJson.description" approved="yes">
+                <source>JSON data describing the feature</source>
+                <target>JSON-Daten zur Beschreibung des Geoobjekts</target>
+            </trans-unit>
             <trans-unit id="object.feature.asGeodataOfLocation" resname="object.feature.asGeodataOfLocation" approved="yes">
                 <source>Usage as geodata of a location</source>
                 <target>Verwendung als Geodaten eines Ortes</target>

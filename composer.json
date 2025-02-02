@@ -35,6 +35,7 @@
     "require": {
         "typo3/cms-core": "^13",
         "typo3/cms-fluid-styled-content": "^13",
+        "typo3/cms-backend": "^13",
         "digicademy/chf_base": "@dev"
     },
     "autoload": {

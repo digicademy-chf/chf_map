@@ -94,6 +94,12 @@
             <trans-unit id="object.feature.description.description" resname="object.feature.description.description">
                 <source>Brief information about the feature</source>
             </trans-unit>
+            <trans-unit id="object.feature.geoJson" resname="object.feature.geoJson">
+                <source>GeoJSON</source>
+            </trans-unit>
+            <trans-unit id="object.feature.geoJson.description" resname="object.feature.geoJson.description">
+                <source>JSON data describing the feature</source>
+            </trans-unit>
             <trans-unit id="object.feature.asGeodataOfLocation" resname="object.feature.asGeodataOfLocation">
                 <source>Usage as geodata of a location</source>
             </trans-unit>

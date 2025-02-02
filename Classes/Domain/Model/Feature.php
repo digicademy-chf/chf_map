@@ -74,6 +74,16 @@ class Feature extends AbstractBase
     protected string $description = '';
 
     /**
+     * JSON data describing the feature
+     * 
+     * @var string
+     */
+    #[Validate([
+        'validator' => 'NotEmpty',
+    ])]
+    protected string $geoJson = '{}';
+
+    /**
      * Label to group the database record into
      * 
      * @var ?ObjectStorage<LabelTag>
@@ -285,6 +295,26 @@ class Feature extends AbstractBase
     public function setDescription(string $description): void
     {
         $this->description = $description;
+    }
+
+    /**
+     * Get GeoJSON
+     *
+     * @return string
+     */
+    public function getGeoJson(): string
+    {
+        return $this->geoJson;
+    }
+
+    /**
+     * Set GeoJSON
+     *
+     * @param string $geoJson
+     */
+    public function setGeoJson(string $geoJson): void
+    {
+        $this->geoJson = $geoJson;
     }
 
     /**
