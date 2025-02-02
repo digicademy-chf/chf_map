@@ -10,18 +10,18 @@ declare(strict_types=1);
 namespace Digicademy\CHFMap\Domain\Repository;
 
 use Digicademy\CHFBase\Domain\Repository\Traits\StoragePageAgnosticTrait;
-use Digicademy\CHFMap\Domain\Model\AbstractFeature;
+use Digicademy\CHFMap\Domain\Model\Feature;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 defined('TYPO3') or die();
 
 /**
- * Repository for AbstractFeature
+ * Repository for Feature
  * 
- * @extends Repository<AbstractFeature>
+ * @extends Repository<Feature>
  */
-class AbstractFeatureRepository extends Repository
+class FeatureRepository extends Repository
 {
     use StoragePageAgnosticTrait;
 

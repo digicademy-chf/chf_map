@@ -29,20 +29,4 @@ return [
         'tableName' => 'tx_chfbase_domain_model_resource',
         'recordType' => 'mapResource',
     ],
-    Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
-        'tableName' => 'tx_chfmap_domain_model_feature',
-        'recordType' => '0',
-        'subclasses' => [
-            'feature' => Digicademy\CHFMap\Domain\Model\Feature::class,
-            'featureCollection' => Digicademy\CHFMap\Domain\Model\FeatureCollection::class,
-        ],
-    ],
-    Digicademy\CHFMap\Domain\Model\Feature::class => [
-        'tableName' => 'tx_chfmap_domain_model_feature',
-        'recordType' => 'feature',
-    ],
-    Digicademy\CHFMap\Domain\Model\FeatureCollection::class => [
-        'tableName' => 'tx_chfmap_domain_model_feature',
-        'recordType' => 'featureCollection',
-    ],
 ];

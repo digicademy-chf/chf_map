@@ -10,7 +10,7 @@ declare(strict_types=1);
 defined('TYPO3') or die();
 
 /**
- * AbstractFeature and its properties
+ * Feature and its properties
  * 
  * Configuration of a database table and its editing interface in the
  * TYPO3 backend. This also serves as the basis for the Extbase
@@ -19,7 +19,7 @@ defined('TYPO3') or die();
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature',
+        'title'                    => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature',
         'label'                    => 'title',
         'label_alt'                => 'type',
         'label_alt_force'          => true,
@@ -154,32 +154,10 @@ return [
                 ],
             ],
         ],
-        'type' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.type',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.type.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.type.feature',
-                        'value' => 'feature',
-                    ],
-                    [
-                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.type.featureCollection',
-                        'value' => 'featureCollection',
-                    ],
-                ],
-                'default' => 'feature',
-                'required' => true,
-            ],
-        ],
         'title' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.title',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.title.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.title',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.title.description',
             'config' => [
                 'type' => 'input',
                 'size' => 40,
@@ -192,8 +170,8 @@ return [
         ],
         'description' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.description',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.description.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.description',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.description.description',
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
@@ -537,8 +515,8 @@ return [
         'as_geodata_of_location' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfLocation',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfLocation.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfLocation',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfLocation.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
@@ -554,8 +532,8 @@ return [
         'as_geodata_of_file_metadata' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfFileMetadata',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfFileMetadata.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfFileMetadata',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfFileMetadata.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
@@ -571,8 +549,8 @@ return [
         'as_geodata_of_frequency' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfFrequency',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfFrequency.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfFrequency',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfFrequency.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
@@ -588,8 +566,8 @@ return [
         'as_geodata_of_single_object' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfSingleObject',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfSingleObject.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfSingleObject',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfSingleObject.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
@@ -605,8 +583,8 @@ return [
         'as_geodata_of_object_group' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfObjectGroup',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asGeodataOfObjectGroup.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfObjectGroup',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.asGeodataOfObjectGroup.description',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
@@ -621,8 +599,8 @@ return [
         ],
     ],
     'palettes' => [
-        'titleDescription' => [
-            'showitem' => 'title,--linebreak--,description,',
+        'titleProjectionDescription' => [
+            'showitem' => 'title,projection,--linebreak--,description,',
         ],
         'sourceRelationLinkRelation' => [
             'showitem' => 'source_relation,--linebreak--,link_relation,',
@@ -645,23 +623,7 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => 'type,--palette--;;titleDescription,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
-        ],
-        'feature' => [
-            'showitem' => 'type,--palette--;;titleDescription,projection,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
-        ],
-        'featureCollection' => [
-            'showitem' => 'type,--palette--;;titleDescription,label,
+            'showitem' => '--palette--;;titleProjectionDescription,label,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,

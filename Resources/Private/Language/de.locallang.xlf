@@ -90,84 +90,19 @@
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
                 <target>Dezimalangabe der Höhe in Metern mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
-            <!-- Object: AbstractFeature -->
-            <trans-unit id="object.abstractFeature" resname="object.abstractFeature" approved="yes">
+            <!-- Object: Feature -->
+            <trans-unit id="object.feature" resname="object.feature" approved="yes">
                 <source>Feature</source>
                 <target>Geoobjekt</target>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.type" resname="object.abstractFeature.type" approved="yes">
-                <source>Type</source>
-                <target>Art</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.type.description" resname="object.abstractFeature.type.description" approved="yes">
-                <source>Type of feature</source>
-                <target>Art des Geoobjekts</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.type.feature" resname="object.abstractFeature.type.feature" approved="yes">
-                <source>Feature</source>
-                <target>Geoobjekt</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.type.featureCollection" resname="object.abstractFeature.type.featureCollection" approved="yes">
-                <source>Group of features</source>
-                <target>Gruppe von Geoobjekten</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.title" resname="object.abstractFeature.title" approved="yes">
+            <trans-unit id="object.feature.title" resname="object.feature.title" approved="yes">
                 <source>Title</source>
                 <target>Titel</target>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.title.description" resname="object.abstractFeature.title.description" approved="yes">
+            <trans-unit id="object.feature.title.description" resname="object.feature.title.description" approved="yes">
                 <source>Name of the feature</source>
                 <target>Name des Geoobjekts</target>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.description" resname="object.abstractFeature.description" approved="yes">
-                <source>Description</source>
-                <target>Beschreibung</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.description.description" resname="object.abstractFeature.description.description" approved="yes">
-                <source>Brief information about the feature</source>
-                <target>Kurze Erläuterung des Geoobjekts</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfLocation" resname="object.abstractFeature.asGeodataOfLocation" approved="yes">
-                <source>Usage as geodata of a location</source>
-                <target>Verwendung als Geodaten eines Ortes</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfLocation.description" resname="object.abstractFeature.asGeodataOfLocation.description" approved="yes">
-                <source>List of locations that use this feature as geodata</source>
-                <target>Liste der Orte, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfFileMetadata" resname="object.abstractFeature.asGeodataOfFileMetadata" approved="yes">
-                <source>Usage as geodata of a file</source>
-                <target>Verwendung als Geodaten einer Datei</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfFileMetadata.description" resname="object.abstractFeature.asGeodataOfFileMetadata.description" approved="yes">
-                <source>List of files that use this feature as geodata</source>
-                <target>Liste der Dateien, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfFrequency" resname="object.abstractFeature.asGeodataOfFrequency" approved="yes">
-                <source>Usage as geodata of a frequency</source>
-                <target>Verwendung als Geodaten einer Häufigkeit</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfFrequency.description" resname="object.abstractFeature.asGeodataOfFrequency.description" approved="yes">
-                <source>List of frequencies that use this feature as geodata</source>
-                <target>Liste der Häufigkeiten, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfSingleObject" resname="object.abstractFeature.asGeodataOfSingleObject" approved="yes">
-                <source>Usage as geodata of a single object</source>
-                <target>Verwendung als Geodaten eines Einzelobjekts</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfSingleObject.description" resname="object.abstractFeature.asGeodataOfSingleObject.description" approved="yes">
-                <source>List of single objects that use this feature as geodata</source>
-                <target>Liste der Einzelobjekte, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup" resname="object.abstractFeature.asGeodataOfObjectGroup" approved="yes">
-                <source>Usage as geodata of an object group</source>
-                <target>Verwendung als Geodaten einer Objektgruppe</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.asGeodataOfObjectGroup.description" resname="object.abstractFeature.asGeodataOfObjectGroup.description" approved="yes">
-                <source>List of object groups that use this feature as geodata</source>
-                <target>Liste der Objektgruppen, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <!-- Object: Feature -->
             <trans-unit id="object.feature.projection" resname="object.feature.projection" approved="yes">
                 <source>Projection</source>
                 <target>Projektion</target>
@@ -179,6 +114,54 @@
             <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem" approved="yes">
                 <source>World Geodetic System (WGS 84/EPSG 4326)</source>
                 <target>World Geodetic System (WGS 84/EPSG 4326)</target>
+            </trans-unit>
+            <trans-unit id="object.feature.description" resname="object.feature.description" approved="yes">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="object.feature.description.description" resname="object.feature.description.description" approved="yes">
+                <source>Brief information about the feature</source>
+                <target>Kurze Erläuterung des Geoobjekts</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfLocation" resname="object.feature.asGeodataOfLocation" approved="yes">
+                <source>Usage as geodata of a location</source>
+                <target>Verwendung als Geodaten eines Ortes</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfLocation.description" resname="object.feature.asGeodataOfLocation.description" approved="yes">
+                <source>List of locations that use this feature as geodata</source>
+                <target>Liste der Orte, die dieses Geoobjekt als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfFileMetadata" resname="object.feature.asGeodataOfFileMetadata" approved="yes">
+                <source>Usage as geodata of a file</source>
+                <target>Verwendung als Geodaten einer Datei</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfFileMetadata.description" resname="object.feature.asGeodataOfFileMetadata.description" approved="yes">
+                <source>List of files that use this feature as geodata</source>
+                <target>Liste der Dateien, die dieses Geoobjekt als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfFrequency" resname="object.feature.asGeodataOfFrequency" approved="yes">
+                <source>Usage as geodata of a frequency</source>
+                <target>Verwendung als Geodaten einer Häufigkeit</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfFrequency.description" resname="object.feature.asGeodataOfFrequency.description" approved="yes">
+                <source>List of frequencies that use this feature as geodata</source>
+                <target>Liste der Häufigkeiten, die dieses Geoobjekt als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfSingleObject" resname="object.feature.asGeodataOfSingleObject" approved="yes">
+                <source>Usage as geodata of a single object</source>
+                <target>Verwendung als Geodaten eines Einzelobjekts</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfSingleObject.description" resname="object.feature.asGeodataOfSingleObject.description" approved="yes">
+                <source>List of single objects that use this feature as geodata</source>
+                <target>Liste der Einzelobjekte, die dieses Geoobjekt als Geodaten verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfObjectGroup" resname="object.feature.asGeodataOfObjectGroup" approved="yes">
+                <source>Usage as geodata of an object group</source>
+                <target>Verwendung als Geodaten einer Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.feature.asGeodataOfObjectGroup.description" resname="object.feature.asGeodataOfObjectGroup.description" approved="yes">
+                <source>List of object groups that use this feature as geodata</source>
+                <target>Liste der Objektgruppen, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">

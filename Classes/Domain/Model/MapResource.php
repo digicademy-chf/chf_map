@@ -26,7 +26,7 @@ class MapResource extends AbstractResource
     /**
      * List of all features compiled in this resource
      * 
-     * @var ?ObjectStorage<Feature|FeatureCollection>
+     * @var ?ObjectStorage<Feature>
      */
     #[Lazy()]
     #[Cascade([
@@ -90,7 +90,7 @@ class MapResource extends AbstractResource
     /**
      * Get all features
      *
-     * @return ObjectStorage<Feature|FeatureCollection>
+     * @return ObjectStorage<Feature>
      */
     public function getAllFeatures(): ?ObjectStorage
     {
@@ -100,7 +100,7 @@ class MapResource extends AbstractResource
     /**
      * Set all features
      *
-     * @param ObjectStorage<Feature|FeatureCollection> $allFeatures
+     * @param ObjectStorage<Feature> $allFeatures
      */
     public function setAllFeatures(ObjectStorage $allFeatures): void
     {
@@ -110,9 +110,9 @@ class MapResource extends AbstractResource
     /**
      * Add all features
      *
-     * @param Feature|FeatureCollection $allFeatures
+     * @param Feature $allFeatures
      */
-    public function addAllFeatures(Feature|FeatureCollection $allFeatures): void
+    public function addAllFeatures(Feature $allFeatures): void
     {
         $this->allFeatures?->attach($allFeatures);
     }
@@ -120,9 +120,9 @@ class MapResource extends AbstractResource
     /**
      * Remove all features
      *
-     * @param Feature|FeatureCollection $allFeatures
+     * @param Feature $allFeatures
      */
-    public function removeAllFeatures(Feature|FeatureCollection $allFeatures): void
+    public function removeAllFeatures(Feature $allFeatures): void
     {
         $this->allFeatures?->detach($allFeatures);
     }
