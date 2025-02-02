@@ -208,14 +208,6 @@ class AbstractFeature extends AbstractBase
     protected ?ObjectStorage $asGeodataOfObjectGroup = null;
 
     /**
-     * List of variant relations that this feature is part of
-     * 
-     * @var ?ObjectStorage<VariantRelation>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $asFeatureOfVariantRelation = null;
-
-    /**
      * Construct object
      *
      * @param MapResource $parentResource
@@ -246,7 +238,6 @@ class AbstractFeature extends AbstractBase
         $this->asGeodataOfFrequency ??= new ObjectStorage();
         $this->asGeodataOfSingleObject ??= new ObjectStorage();
         $this->asGeodataOfObjectGroup ??= new ObjectStorage();
-        $this->asFeatureOfVariantRelation ??= new ObjectStorage();
     }
 
     /**
@@ -906,54 +897,5 @@ class AbstractFeature extends AbstractBase
     {
         $asGeodataOfObjectGroup = clone $this->asGeodataOfObjectGroup;
         $this->asGeodataOfObjectGroup->removeAll($asGeodataOfObjectGroup);
-    }
-
-    /**
-     * Get as feature of variant relation
-     *
-     * @return ObjectStorage<VariantRelation>
-     */
-    public function getAsFeatureOfVariantRelation(): ?ObjectStorage
-    {
-        return $this->asFeatureOfVariantRelation;
-    }
-
-    /**
-     * Set as feature of variant relation
-     *
-     * @param ObjectStorage<VariantRelation> $asFeatureOfVariantRelation
-     */
-    public function setAsFeatureOfVariantRelation(ObjectStorage $asFeatureOfVariantRelation): void
-    {
-        $this->asFeatureOfVariantRelation = $asFeatureOfVariantRelation;
-    }
-
-    /**
-     * Add as feature of variant relation
-     *
-     * @param VariantRelation $asFeatureOfVariantRelation
-     */
-    public function addAsFeatureOfVariantRelation(VariantRelation $asFeatureOfVariantRelation): void
-    {
-        $this->asFeatureOfVariantRelation?->attach($asFeatureOfVariantRelation);
-    }
-
-    /**
-     * Remove as feature of variant relation
-     *
-     * @param VariantRelation $asFeatureOfVariantRelation
-     */
-    public function removeAsFeatureOfVariantRelation(VariantRelation $asFeatureOfVariantRelation): void
-    {
-        $this->asFeatureOfVariantRelation?->detach($asFeatureOfVariantRelation);
-    }
-
-    /**
-     * Remove all as feature of variant relations
-     */
-    public function removeAllAsFeatureOfVariantRelation(): void
-    {
-        $asFeatureOfVariantRelation = clone $this->asFeatureOfVariantRelation;
-        $this->asFeatureOfVariantRelation->removeAll($asFeatureOfVariantRelation);
     }
 }

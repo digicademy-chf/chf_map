@@ -29,15 +29,6 @@ return [
         'tableName' => 'tx_chfbase_domain_model_resource',
         'recordType' => 'mapResource',
     ],
-    Digicademy\CHFBase\Domain\Model\AbstractRelation::class => [
-        'subclasses' => [
-            'variantRelation' => Digicademy\CHFMap\Domain\Model\VariantRelation::class,
-        ],
-    ],
-    Digicademy\CHFMap\Domain\Model\VariantRelation::class => [
-        'tableName' => 'tx_chfbase_domain_model_relation',
-        'recordType' => 'variantRelation',
-    ],
     Digicademy\CHFMap\Domain\Model\AbstractFeature::class => [
         'tableName' => 'tx_chfmap_domain_model_feature',
         'recordType' => '0',

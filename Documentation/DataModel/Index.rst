@@ -8,17 +8,9 @@ Data model
 
 All records of a resource are held together by a single ``MapResource`` which
 holds the main classes ``Feature``, ``Tag``, and ``Tile``. The core class
-``Feature`` may have the types "Feature" or "Feature collection". Features or
-collections of features have a dependent class that provides recurring types
-of information: ``Geometry`` can have various types ("Point", "Line string",
-"Polygon", "Multi points", "Multi line strings", "Multi polygons", "Geometry
-collection") and contains lists of either ``Coordinates`` or
-``CoordinateGroup`` objects.
-
-Variants of the same feature or feature collection can be bound together using
-a ``VariantRelation``. This can be useful when, for example, you want to store
-a fuzzy and an accurate representation of the same set of markers due to
-privacy concerns.
+``Feature`` can hold GeoJSON information to describe various geometries such as
+points, line strings, polygons, multi points, multi line strings, multi
+polygons, or geometry collections.
 
 Each ``MapResource`` may specify a number of ``Tile`` objects it wants to map
 its data onto. The data model itself does not check whether the tiles are
@@ -26,6 +18,10 @@ available and whether you are allowed to use them. Some providers limit the
 number of requests per day or month, for example. In addition, please note that
 the tiles added here may require you to add a notice to your website's privacy
 policy about requests being made to external servers.
+
+``Coordinates`` and ``Distribution`` classes are available for other data
+models to easily describe exact locations and geographic token distributions,
+respectively.
 
 In addition, the model knows flexible ``LabelTag`` and ``SameAs`` classes,
 which can be used to group features via labels and to connect entities to

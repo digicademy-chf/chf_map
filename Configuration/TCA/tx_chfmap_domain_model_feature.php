@@ -715,24 +715,6 @@ return [
                 'autoSizeMax' => 10,
             ],
         ],
-        'as_feature_of_variant_relation' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asFeatureOfVariantRelation',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.asFeatureOfVariantRelation.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfbase_domain_model_relation',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'variantRelation\'',
-                'MM' => 'tx_chfbase_domain_model_relation_feature_feature_mm',
-                'MM_opposite_field' => 'feature',
-                'multiple' => 1,
-                'size' => 5,
-                'autoSizeMax' => 10,
-            ],
-        ],
     ],
     'palettes' => [
         'titleDescription' => [
@@ -770,7 +752,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,as_feature_of_variant_relation,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
         ],
         'feature' => [
             'showitem' => 'type,--palette--;;titleDescription,--palette--;;weightProjectionGeometryBoundingBox,label,
@@ -778,7 +760,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,as_feature_of_variant_relation,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
         ],
         'featureCollection' => [
             'showitem' => 'type,--palette--;;titleDescription,--palette--;;featureBoundingBox,label,
@@ -786,7 +768,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,as_feature_of_variant_relation,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
         ],
     ],
 ];
