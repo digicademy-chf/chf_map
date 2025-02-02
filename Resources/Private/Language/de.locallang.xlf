@@ -61,14 +61,6 @@
                 <source>External web address of the tile layer, including wildcards</source>
                 <target>Externe Webadresse der Kachelebene, inklusive Platzhaltern</target>
             </trans-unit>
-            <trans-unit id="object.tile.image" resname="object.tile.image" approved="yes">
-                <source>Image file</source>
-                <target>Bilddatei</target>
-            </trans-unit>
-            <trans-unit id="object.tile.image.description" resname="object.tile.image.description" approved="yes">
-                <source>Internal image file to use as the tile layer</source>
-                <target>Interne Bilddatei, die als Kachelebene genutzt werden soll</target>
-            </trans-unit>
             <!-- Object: Coordinates -->
             <trans-unit id="object.coordinates" resname="object.coordinates" approved="yes">
                 <source>Coordinates</source>

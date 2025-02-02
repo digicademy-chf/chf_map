@@ -188,16 +188,6 @@ return [
                 ],
             ],
         ],
-        'image' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.tile.image',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.tile.image.description',
-            'config' => [
-                'type' => 'file',
-                'allowed' => 'common-image-types',
-            ],
-        ],
         'parent_resource' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -217,13 +207,13 @@ return [
         ],
     ],
     'palettes' => [
-        'titleUriImage' => [
-            'showitem' => 'title,uri,--linebreak--,image,',
+        'titleUri' => [
+            'showitem' => 'title,uri,',
         ],
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;titleUriImage,
+            'showitem' => '--palette--;;titleUri,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,parent_resource,',
         ],
     ],

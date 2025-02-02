@@ -47,12 +47,6 @@
             <trans-unit id="object.tile.uri.description" resname="object.tile.uri.description">
                 <source>External web address of the tile layer, including wildcards</source>
             </trans-unit>
-            <trans-unit id="object.tile.image" resname="object.tile.image">
-                <source>Image file</source>
-            </trans-unit>
-            <trans-unit id="object.tile.image.description" resname="object.tile.image.description">
-                <source>Internal image file to use as the tile layer</source>
-            </trans-unit>
             <!-- Object: Coordinates -->
             <trans-unit id="object.coordinates" resname="object.coordinates">
                 <source>Coordinates</source>

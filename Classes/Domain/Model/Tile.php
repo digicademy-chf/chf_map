@@ -9,12 +9,9 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 defined('TYPO3') or die();
@@ -56,17 +53,6 @@ class Tile extends AbstractEntity
         'validator' => 'Url',
     ])]
     protected string $uri = '';
-
-    /**
-     * Internal image file to use as the tile layer
-     * 
-     * @var FileReference|LazyLoadingProxy|null
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected FileReference|LazyLoadingProxy|null $image = null;
 
     /**
      * Resource that this database record is part of
@@ -157,29 +143,6 @@ class Tile extends AbstractEntity
     public function setUri(string $uri): void
     {
         $this->uri = $uri;
-    }
-
-    /**
-     * Get image
-     * 
-     * @return FileReference
-     */
-    public function getImage(): FileReference
-    {
-        if ($this->image instanceof LazyLoadingProxy) {
-            $this->image->_loadRealInstance();
-        }
-        return $this->image;
-    }
-
-    /**
-     * Set image
-     * 
-     * @param FileReference
-     */
-    public function setImage(FileReference $image): void
-    {
-        $this->image = $image;
     }
 
     /**
