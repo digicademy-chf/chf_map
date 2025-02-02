@@ -26,10 +26,6 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/TableFeature.svg',
     ],
-    'tx-chfmap-table-geometry' => [
-        'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_map/Resources/Public/Icons/TableGeometry.svg',
-    ],
     'tx-chfmap-table-tile' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/TableTile.svg',

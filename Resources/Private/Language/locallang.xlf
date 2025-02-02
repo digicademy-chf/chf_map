@@ -69,57 +69,6 @@
             <trans-unit id="object.coordinates.altitude.description" resname="object.coordinates.altitude.description">
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
             </trans-unit>
-            <!-- Object: AbstractGeometry -->
-            <trans-unit id="object.abstractGeometry" resname="object.abstractGeometry">
-                <source>Geometry</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type" resname="object.abstractGeometry.type">
-                <source>Type</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.description" resname="object.abstractGeometry.type.description">
-                <source>Type of geometry</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.point" resname="object.abstractGeometry.type.point">
-                <source>Point</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.multiPoint" resname="object.abstractGeometry.type.multiPoint">
-                <source>Group of points</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.lineString" resname="object.abstractGeometry.type.lineString">
-                <source>Line</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.multiLineString" resname="object.abstractGeometry.type.multiLineString">
-                <source>Group of lines</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.polygon" resname="object.abstractGeometry.type.polygon">
-                <source>Polygon</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.multiPolygon" resname="object.abstractGeometry.type.multiPolygon">
-                <source>Group of polygons</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.geometryCollection" resname="object.abstractGeometry.type.geometryCollection">
-                <source>Geometry collection</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.boundingBox" resname="object.abstractGeometry.boundingBox">
-                <source>Bounding box</source>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.boundingBox.description" resname="object.abstractGeometry.boundingBox.description">
-                <source>Two sets of coordinates to produce a bounding box</source>
-            </trans-unit>
-            <!-- Object: SingleGeometry -->
-            <trans-unit id="object.singleGeometry.coordinates" resname="object.singleGeometry.coordinates">
-                <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.singleGeometry.coordinates.description" resname="object.singleGeometry.coordinates.description">
-                <source>List of coordinates in this geometry</source>
-            </trans-unit>
-            <!-- Object: GeometryCollection -->
-            <trans-unit id="object.geometryCollection.geometry" resname="object.geometryCollection.geometry">
-                <source>Geometry</source>
-            </trans-unit>
-            <trans-unit id="object.geometryCollection.geometry.description" resname="object.geometryCollection.geometry.description">
-                <source>List of geometries in this geometry</source>
-            </trans-unit>
             <!-- Object: AbstractFeature -->
             <trans-unit id="object.abstractFeature" resname="object.abstractFeature">
                 <source>Feature</source>
@@ -202,12 +151,6 @@
             </trans-unit>
             <trans-unit id="object.feature.projection.pixels" resname="object.feature.projection.pixels">
                 <source>Pixels</source>
-            </trans-unit>
-            <trans-unit id="object.feature.geometry" resname="object.feature.geometry">
-                <source>Geometry</source>
-            </trans-unit>
-            <trans-unit id="object.feature.geometry.description" resname="object.feature.geometry.description">
-                <source>List of geometries in this feature</source>
             </trans-unit>
             <!-- Object: FeatureCollection -->
             <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature">

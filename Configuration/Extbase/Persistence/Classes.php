@@ -45,45 +45,4 @@ return [
         'tableName' => 'tx_chfmap_domain_model_feature',
         'recordType' => 'featureCollection',
     ],
-    Digicademy\CHFMap\Domain\Model\AbstractGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => '0',
-        'subclasses' => [
-            'point' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
-            'multiPoint' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
-            'lineString' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
-            'multiLineString' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
-            'polygon' => Digicademy\CHFMap\Domain\Model\SingleGeometry::class,
-            'multiPolygon' => Digicademy\CHFMap\Domain\Model\MultiGeometry::class,
-            'geometryCollection' => Digicademy\CHFMap\Domain\Model\GeometryCollection::class,
-        ],
-    ],
-    Digicademy\CHFMap\Domain\Model\SingleGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'point',
-    ],
-    Digicademy\CHFMap\Domain\Model\MultiGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'multiPoint',
-    ],
-    Digicademy\CHFMap\Domain\Model\SingleGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'lineString',
-    ],
-    Digicademy\CHFMap\Domain\Model\MultiGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'multiLineString',
-    ],
-    Digicademy\CHFMap\Domain\Model\SingleGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'polygon',
-    ],
-    Digicademy\CHFMap\Domain\Model\MultiGeometry::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'multiPolygon',
-    ],
-    Digicademy\CHFMap\Domain\Model\GeometryCollection::class => [
-        'tableName' => 'tx_chfmap_domain_model_geometry',
-        'recordType' => 'geometryCollection',
-    ],
 ];

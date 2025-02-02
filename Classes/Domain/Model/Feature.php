@@ -52,17 +52,6 @@ class Feature extends AbstractFeature
     protected string $projection = 'worldGeodeticSystem';
 
     /**
-     * List of geometries in this feature
-     * 
-     * @var ?ObjectStorage<GeometryCollection|SingleGeometry|MultiGeometry>
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $geometry = null;
-
-    /**
      * Construct object
      *
      * @param MapResource $parentResource
@@ -72,17 +61,8 @@ class Feature extends AbstractFeature
     public function __construct(MapResource $parentResource, string $uuid)
     {
         parent::__construct($parentResource, $uuid);
-        $this->initializeObject();
 
         $this->setType('feature');
-    }
-
-    /**
-     * Initialize object
-     */
-    public function initializeObject(): void
-    {
-        $this->geometry ??= new ObjectStorage();
     }
 
     /**
@@ -123,54 +103,5 @@ class Feature extends AbstractFeature
     public function setProjection(string $projection): void
     {
         $this->projection = $projection;
-    }
-
-    /**
-     * Get geometry
-     *
-     * @return ObjectStorage<GeometryCollection|SingleGeometry|MultiGeometry>
-     */
-    public function getGeometry(): ?ObjectStorage
-    {
-        return $this->geometry;
-    }
-
-    /**
-     * Set geometry
-     *
-     * @param ObjectStorage<GeometryCollection|SingleGeometry|MultiGeometry> $geometry
-     */
-    public function setGeometry(ObjectStorage $geometry): void
-    {
-        $this->geometry = $geometry;
-    }
-
-    /**
-     * Add geometry
-     *
-     * @param GeometryCollection|SingleGeometry|MultiGeometry $geometry
-     */
-    public function addGeometry(GeometryCollection|SingleGeometry|MultiGeometry $geometry): void
-    {
-        $this->geometry?->attach($geometry);
-    }
-
-    /**
-     * Remove geometry
-     *
-     * @param GeometryCollection|SingleGeometry|MultiGeometry $geometry
-     */
-    public function removeGeometry(GeometryCollection|SingleGeometry|MultiGeometry $geometry): void
-    {
-        $this->geometry?->detach($geometry);
-    }
-
-    /**
-     * Remove all geometries
-     */
-    public function removeAllGeometry(): void
-    {
-        $geometry = clone $this->geometry;
-        $this->geometry->removeAll($geometry);
     }
 }

@@ -90,73 +90,6 @@
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
                 <target>Dezimalangabe der Höhe in Metern mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
-            <!-- Object: AbstractGeometry -->
-            <trans-unit id="object.abstractGeometry" resname="object.abstractGeometry" approved="yes">
-                <source>Geometry</source>
-                <target>Geometrie</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type" resname="object.abstractGeometry.type" approved="yes">
-                <source>Type</source>
-                <target>Art</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.description" resname="object.abstractGeometry.type.description" approved="yes">
-                <source>Type of geometry</source>
-                <target>Art der Geometrie</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.point" resname="object.abstractGeometry.type.point" approved="yes">
-                <source>Point</source>
-                <target>Punkt</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.multiPoint" resname="object.abstractGeometry.type.multiPoint" approved="yes">
-                <source>Group of points</source>
-                <target>Punktegruppe</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.lineString" resname="object.abstractGeometry.type.lineString" approved="yes">
-                <source>Line</source>
-                <target>Linie</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.multiLineString" resname="object.abstractGeometry.type.multiLineString" approved="yes">
-                <source>Group of lines</source>
-                <target>Liniengruppe</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.polygon" resname="object.abstractGeometry.type.polygon" approved="yes">
-                <source>Polygon</source>
-                <target>Polygon</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.multiPolygon" resname="object.abstractGeometry.type.multiPolygon" approved="yes">
-                <source>Group of polygons</source>
-                <target>Polygonegruppe</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.type.geometryCollection" resname="object.abstractGeometry.type.geometryCollection" approved="yes">
-                <source>Geometry collection</source>
-                <target>Geometriesammlung</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.boundingBox" resname="object.abstractGeometry.boundingBox" approved="yes">
-                <source>Bounding box</source>
-                <target>Rahmen</target>
-            </trans-unit>
-            <trans-unit id="object.abstractGeometry.boundingBox.description" resname="object.abstractGeometry.boundingBox.description" approved="yes">
-                <source>Two sets of coordinates to produce a bounding box</source>
-                <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
-            </trans-unit>
-            <!-- Object: SingleGeometry -->
-            <trans-unit id="object.singleGeometry.coordinates" resname="object.singleGeometry.coordinates" approved="yes">
-                <source>Coordinates</source>
-                <target>Koordinaten</target>
-            </trans-unit>
-            <trans-unit id="object.singleGeometry.coordinates.description" resname="object.singleGeometry.coordinates.description" approved="yes">
-                <source>List of coordinates in this geometry</source>
-                <target>Liste von Koordinaten in dieser Geometrie</target>
-            </trans-unit>
-            <!-- Object: GeometryCollection -->
-            <trans-unit id="object.geometryCollection.geometry" resname="object.geometryCollection.geometry" approved="yes">
-                <source>Geometry</source>
-                <target>Geometrie</target>
-            </trans-unit>
-            <trans-unit id="object.geometryCollection.geometry.description" resname="object.geometryCollection.geometry.description" approved="yes">
-                <source>List of geometries in this geometry</source>
-                <target>Liste von Geometrien in dieser Geometrie</target>
-            </trans-unit>
             <!-- Object: AbstractFeature -->
             <trans-unit id="object.abstractFeature" resname="object.abstractFeature" approved="yes">
                 <source>Feature</source>
@@ -266,14 +199,6 @@
             <trans-unit id="object.feature.projection.pixels" resname="object.feature.projection.pixels" approved="yes">
                 <source>Pixels</source>
                 <target>Pixel</target>
-            </trans-unit>
-            <trans-unit id="object.feature.geometry" resname="object.feature.geometry" approved="yes">
-                <source>Geometry</source>
-                <target>Geometrie</target>
-            </trans-unit>
-            <trans-unit id="object.feature.geometry.description" resname="object.feature.geometry.description" approved="yes">
-                <source>List of geometries in this feature</source>
-                <target>Liste von Geometrien in diesem Geoobjekt</target>
             </trans-unit>
             <!-- Object: FeatureCollection -->
             <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature" approved="yes">

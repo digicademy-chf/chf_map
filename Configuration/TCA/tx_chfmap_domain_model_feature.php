@@ -208,8 +208,8 @@ return [
         'bounding_box' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractGeometry.boundingBox',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractGeometry.boundingBox.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.boundingBox',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.boundingBox.description',
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_chfmap_domain_model_coordinates',
@@ -263,28 +263,6 @@ return [
                 ],
                 'default' => 'worldGeodeticSystem',
                 'required' => true,
-            ],
-        ],
-        'geometry' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.geometry',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.geometry.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_chfmap_domain_model_geometry',
-                'foreign_field' => 'parent',
-                'foreign_table_field' => 'parent_table',
-                'appearance' => [
-                    'collapseAll' => true,
-                    'expandSingle' => true,
-                    'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink' => true,
-                    'showSynchronizationLink' => true,
-                ],
             ],
         ],
         'feature' => [
@@ -720,8 +698,8 @@ return [
         'titleDescription' => [
             'showitem' => 'title,--linebreak--,description,',
         ],
-        'weightProjectionGeometryBoundingBox' => [
-            'showitem' => 'weight,projection,--linebreak--,geometry,--linebreak--,bounding_box,',
+        'weightProjectionBoundingBox' => [
+            'showitem' => 'weight,projection,--linebreak--,bounding_box,',
         ],
         'featureBoundingBox' => [
             'showitem' => 'feature,--linebreak--,bounding_box,',
@@ -755,7 +733,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
         ],
         'feature' => [
-            'showitem' => 'type,--palette--;;titleDescription,--palette--;;weightProjectionGeometryBoundingBox,label,
+            'showitem' => 'type,--palette--;;titleDescription,--palette--;;weightProjectionBoundingBox,label,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
