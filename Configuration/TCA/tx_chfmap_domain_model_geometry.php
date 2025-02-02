@@ -215,28 +215,6 @@ return [
                 ],
             ],
         ],
-        'coordinate_group' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.multiGeometry.coordinateGroup',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.multiGeometry.coordinateGroup.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_chfmap_domain_model_coordinategroup',
-                'foreign_field' => 'parent',
-                'foreign_table_field' => 'parent_table',
-                'appearance' => [
-                    'collapseAll' => true,
-                    'expandSingle' => true,
-                    'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink' => true,
-                    'showSynchronizationLink' => true,
-                ],
-            ],
-        ],
         'geometry' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -331,9 +309,6 @@ return [
         'coordinatesBoundingBox' => [
             'showitem' => 'coordinates,--linebreak--,bounding_box,',
         ],
-        'coordinateGroupBoundingBox' => [
-            'showitem' => 'coordinate_group,--linebreak--,bounding_box,',
-        ],
         'geometryBoundingBox' => [
             'showitem' => 'geometry,--linebreak--,bounding_box,',
         ],
@@ -346,19 +321,19 @@ return [
             'showitem' => 'type,--palette--;;coordinatesBoundingBox,',
         ],
         'multiPoint' => [
-            'showitem' => 'type,--palette--;;coordinateGroupBoundingBox,',
+            'showitem' => 'type,boundingBox,',
         ],
         'lineString' => [
             'showitem' => 'type,--palette--;;coordinatesBoundingBox,',
         ],
         'multiLineString' => [
-            'showitem' => 'type,--palette--;;coordinateGroupBoundingBox,',
+            'showitem' => 'type,boundingBox,',
         ],
         'polygon' => [
             'showitem' => 'type,--palette--;;coordinatesBoundingBox,',
         ],
         'multiPolygon' => [
-            'showitem' => 'type,--palette--;;coordinateGroupBoundingBox,',
+            'showitem' => 'type,boundingBox,',
         ],
         'geometryCollection' => [
             'showitem' => 'type,--palette--;;geometryBoundingBox,',

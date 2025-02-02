@@ -90,19 +90,6 @@
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
                 <target>Dezimalangabe der Höhe in Metern mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
-            <!-- Object: CoordinateGroup -->
-            <trans-unit id="object.coordinateGroup" resname="object.coordinateGroup" approved="yes">
-                <source>Coordinate group</source>
-                <target>Koordinatengruppe</target>
-            </trans-unit>
-            <trans-unit id="object.coordinateGroup.coordinates" resname="object.coordinateGroup.coordinates" approved="yes">
-                <source>Coordinates</source>
-                <target>Koordinaten</target>
-            </trans-unit>
-            <trans-unit id="object.coordinateGroup.coordinates.description" resname="object.coordinateGroup.coordinates.description" approved="yes">
-                <source>List of coordinates in this group</source>
-                <target>Liste von Koordinaten in dieser Gruppe</target>
-            </trans-unit>
             <!-- Object: AbstractGeometry -->
             <trans-unit id="object.abstractGeometry" resname="object.abstractGeometry" approved="yes">
                 <source>Geometry</source>
@@ -160,15 +147,6 @@
             <trans-unit id="object.singleGeometry.coordinates.description" resname="object.singleGeometry.coordinates.description" approved="yes">
                 <source>List of coordinates in this geometry</source>
                 <target>Liste von Koordinaten in dieser Geometrie</target>
-            </trans-unit>
-            <!-- Object: MultiGeometry -->
-            <trans-unit id="object.multiGeometry.coordinateGroup" resname="object.multiGeometry.coordinateGroup" approved="yes">
-                <source>Coordinate group</source>
-                <target>Koordinatengruppe</target>
-            </trans-unit>
-            <trans-unit id="object.multiGeometry.coordinateGroup.description" resname="object.multiGeometry.coordinateGroup.description" approved="yes">
-                <source>List of coordinate groups in this geometry</source>
-                <target>Liste von Koordinatengruppen in dieser Geometrie</target>
             </trans-unit>
             <!-- Object: GeometryCollection -->
             <trans-unit id="object.geometryCollection.geometry" resname="object.geometryCollection.geometry" approved="yes">

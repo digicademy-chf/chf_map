@@ -18,10 +18,6 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/Extension.svg',
     ],
-    'tx-chfmap-table-coordinate-group' => [
-        'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_map/Resources/Public/Icons/TableCoordinateGroup.svg',
-    ],
     'tx-chfmap-table-coordinates' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/TableCoordinates.svg',

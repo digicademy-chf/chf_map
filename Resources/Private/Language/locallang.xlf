@@ -69,16 +69,6 @@
             <trans-unit id="object.coordinates.altitude.description" resname="object.coordinates.altitude.description">
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
             </trans-unit>
-            <!-- Object: CoordinateGroup -->
-            <trans-unit id="object.coordinateGroup" resname="object.coordinateGroup">
-                <source>Coordinate group</source>
-            </trans-unit>
-            <trans-unit id="object.coordinateGroup.coordinates" resname="object.coordinateGroup.coordinates">
-                <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.coordinateGroup.coordinates.description" resname="object.coordinateGroup.coordinates.description">
-                <source>List of coordinates in this group</source>
-            </trans-unit>
             <!-- Object: AbstractGeometry -->
             <trans-unit id="object.abstractGeometry" resname="object.abstractGeometry">
                 <source>Geometry</source>
@@ -122,13 +112,6 @@
             </trans-unit>
             <trans-unit id="object.singleGeometry.coordinates.description" resname="object.singleGeometry.coordinates.description">
                 <source>List of coordinates in this geometry</source>
-            </trans-unit>
-            <!-- Object: MultiGeometry -->
-            <trans-unit id="object.multiGeometry.coordinateGroup" resname="object.multiGeometry.coordinateGroup">
-                <source>Coordinate group</source>
-            </trans-unit>
-            <trans-unit id="object.multiGeometry.coordinateGroup.description" resname="object.multiGeometry.coordinateGroup.description">
-                <source>List of coordinate groups in this geometry</source>
             </trans-unit>
             <!-- Object: GeometryCollection -->
             <trans-unit id="object.geometryCollection.geometry" resname="object.geometryCollection.geometry">
