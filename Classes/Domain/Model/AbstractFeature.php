@@ -75,17 +75,6 @@ class AbstractFeature extends AbstractBase
     protected string $description = '';
 
     /**
-     * Two sets of coordinates to produce a bounding box
-     * 
-     * @var ?ObjectStorage<Coordinates>
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $boundingBox = null;
-
-    /**
      * Label to group the database record into
      * 
      * @var ?ObjectStorage<LabelTag>
@@ -227,7 +216,6 @@ class AbstractFeature extends AbstractBase
      */
     public function initializeObject(): void
     {
-        $this->boundingBox ??= new ObjectStorage();
         $this->label ??= new ObjectStorage();
         $this->sourceRelation ??= new ObjectStorage();
         $this->linkRelation ??= new ObjectStorage();
@@ -298,55 +286,6 @@ class AbstractFeature extends AbstractBase
     public function setDescription(string $description): void
     {
         $this->description = $description;
-    }
-
-    /**
-     * Get bounding box
-     *
-     * @return ObjectStorage<Coordinates>
-     */
-    public function getBoundingBox(): ?ObjectStorage
-    {
-        return $this->boundingBox;
-    }
-
-    /**
-     * Set bounding box
-     *
-     * @param ObjectStorage<Coordinates> $boundingBox
-     */
-    public function setBoundingBox(ObjectStorage $boundingBox): void
-    {
-        $this->boundingBox = $boundingBox;
-    }
-
-    /**
-     * Add bounding box
-     *
-     * @param Coordinates $boundingBox
-     */
-    public function addBoundingBox(Coordinates $boundingBox): void
-    {
-        $this->boundingBox?->attach($boundingBox);
-    }
-
-    /**
-     * Remove bounding box
-     *
-     * @param Coordinates $boundingBox
-     */
-    public function removeBoundingBox(Coordinates $boundingBox): void
-    {
-        $this->boundingBox?->detach($boundingBox);
-    }
-
-    /**
-     * Remove all bounding boxes
-     */
-    public function removeAllBoundingBox(): void
-    {
-        $boundingBox = clone $this->boundingBox;
-        $this->boundingBox->removeAll($boundingBox);
     }
 
     /**

@@ -127,14 +127,6 @@
                 <source>Brief information about the feature</source>
                 <target>Kurze Erläuterung des Geoobjekts</target>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.boundingBox" resname="object.abstractFeature.boundingBox" approved="yes">
-                <source>Bounding box</source>
-                <target>Rahmen</target>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.boundingBox.description" resname="object.abstractFeature.boundingBox.description" approved="yes">
-                <source>Two sets of coordinates to produce a bounding box</source>
-                <target>Zwei Koordinaten, die einen aufgespannten Rahmen markieren</target>
-            </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfLocation" resname="object.abstractFeature.asGeodataOfLocation" approved="yes">
                 <source>Usage as geodata of a location</source>
                 <target>Verwendung als Geodaten eines Ortes</target>
@@ -176,14 +168,6 @@
                 <target>Liste der Objektgruppen, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <!-- Object: Feature -->
-            <trans-unit id="object.feature.weight" resname="object.feature.weight" approved="yes">
-                <source>Weight</source>
-                <target>Gewichtung</target>
-            </trans-unit>
-            <trans-unit id="object.feature.weight.description" resname="object.feature.weight.description" approved="yes">
-                <source>Number used as the size of the feature, if possible</source>
-                <target>Falls möglich als Größe des Geoobjekts dargestellte Zahl</target>
-            </trans-unit>
             <trans-unit id="object.feature.projection" resname="object.feature.projection" approved="yes">
                 <source>Projection</source>
                 <target>Projektion</target>
@@ -195,19 +179,6 @@
             <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem" approved="yes">
                 <source>World Geodetic System (WGS 84/EPSG 4326)</source>
                 <target>World Geodetic System (WGS 84/EPSG 4326)</target>
-            </trans-unit>
-            <trans-unit id="object.feature.projection.pixels" resname="object.feature.projection.pixels" approved="yes">
-                <source>Pixels</source>
-                <target>Pixel</target>
-            </trans-unit>
-            <!-- Object: FeatureCollection -->
-            <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature" approved="yes">
-                <source>Feature</source>
-                <target>Geoobjekt</target>
-            </trans-unit>
-            <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description" approved="yes">
-                <source>List of features</source>
-                <target>Liste der Geoobjekte</target>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">

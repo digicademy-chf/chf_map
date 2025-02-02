@@ -30,6 +30,5 @@ class AbstractFeatureRepository extends Repository
         'isHighlight' => QueryInterface::ORDER_ASCENDING,
         'title'       => QueryInterface::ORDER_ASCENDING,
         'type'        => QueryInterface::ORDER_ASCENDING,
-        'weight'      => QueryInterface::ORDER_ASCENDING,
     ];
 }

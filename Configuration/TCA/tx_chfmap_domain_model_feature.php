@@ -28,7 +28,7 @@ return [
         'crdate'                   => 'crdate',
         'delete'                   => 'deleted',
         'sortby'                   => 'sorting',
-        'default_sortby'           => 'is_highlight ASC,title ASC,type ASC,weight ASC',
+        'default_sortby'           => 'is_highlight ASC,title ASC,type ASC',
         'versioningWS'             => true,
         'iconfile'                 => 'EXT:chf_map/Resources/Public/Icons/TableFeature.svg',
         'origUid'                  => 't3_origuid',
@@ -38,7 +38,7 @@ return [
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'translationSource'        => 'l10n_source',
         'type'                     => 'type',
-        'searchFields'             => 'type,title,description,weight,projection,uuid,publication_date,revision_date,revision_number,editorial_note,import_origin,import',
+        'searchFields'             => 'type,title,description,projection,uuid,publication_date,revision_date,revision_number,editorial_note,import_origin,import',
         'enablecolumns'            => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
@@ -205,44 +205,6 @@ return [
                 ],
             ],
         ],
-        'bounding_box' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.boundingBox',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.abstractFeature.boundingBox.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_chfmap_domain_model_coordinates',
-                'foreign_field' => 'parent',
-                'foreign_table_field' => 'parent_table',
-                'appearance' => [
-                    'collapseAll' => true,
-                    'expandSingle' => true,
-                    'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink' => true,
-                    'showSynchronizationLink' => true,
-                ],
-                'maxitems' => 2,
-            ],
-        ],
-        'weight' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.weight',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.weight.description',
-            'config' => [
-                'type' => 'number',
-                'size' => 13,
-                'nullable' => true,
-                'default' => null,
-                'range' => [
-                    'lower' => 1,
-                ],
-            ],
-        ],
         'projection' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -256,45 +218,9 @@ return [
                         'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.projection.worldGeodeticSystem',
                         'value' => 'worldGeodeticSystem',
                     ],
-                    [
-                        'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.feature.projection.pixels',
-                        'value' => 'pixels',
-                    ],
                 ],
                 'default' => 'worldGeodeticSystem',
                 'required' => true,
-            ],
-        ],
-        'feature' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.featureCollection.feature',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.featureCollection.feature.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_field' => 'parent',
-                'foreign_table_field' => 'parent_table',
-                'appearance' => [
-                    'collapseAll' => true,
-                    'expandSingle' => true,
-                    'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => true,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink' => true,
-                    'showSynchronizationLink' => true,
-                ],
-                'overrideChildTca' => [
-                    'columns' => [
-                        'type' => [
-                            'config' => [
-                                'default' => 'feature',
-                                'readOnly' => true,
-                            ],
-                        ],
-                    ],
-                ],
             ],
         ],
         'label' => [
@@ -698,12 +624,6 @@ return [
         'titleDescription' => [
             'showitem' => 'title,--linebreak--,description,',
         ],
-        'weightProjectionBoundingBox' => [
-            'showitem' => 'weight,projection,--linebreak--,bounding_box,',
-        ],
-        'featureBoundingBox' => [
-            'showitem' => 'feature,--linebreak--,bounding_box,',
-        ],
         'sourceRelationLinkRelation' => [
             'showitem' => 'source_relation,--linebreak--,link_relation,',
         ],
@@ -725,7 +645,7 @@ return [
     ],
     'types' => [
         '0' => [
-            'showitem' => 'type,--palette--;;titleDescription,bounding_box,label,
+            'showitem' => 'type,--palette--;;titleDescription,label,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
@@ -733,7 +653,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
         ],
         'feature' => [
-            'showitem' => 'type,--palette--;;titleDescription,--palette--;;weightProjectionBoundingBox,label,
+            'showitem' => 'type,--palette--;;titleDescription,projection,label,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
@@ -741,7 +661,7 @@ return [
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_frequency,as_geodata_of_single_object,as_geodata_of_object_group,',
         ],
         'featureCollection' => [
-            'showitem' => 'type,--palette--;;titleDescription,--palette--;;featureBoundingBox,label,
+            'showitem' => 'type,--palette--;;titleDescription,label,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,

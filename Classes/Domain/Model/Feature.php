@@ -9,10 +9,7 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
-use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
 
 defined('TYPO3') or die();
@@ -23,19 +20,6 @@ defined('TYPO3') or die();
 class Feature extends AbstractFeature
 {
     /**
-     * Number used as the size of the feature, if possible
-     * 
-     * @var ?int
-     */
-    #[Validate([
-        'validator' => 'NumberRange',
-        'options' => [
-            'minimum' => 1,
-        ],
-    ])]
-    protected ?int $weight = null;
-
-    /**
      * Type of projection used for geometries in this feature
      * 
      * @var string
@@ -45,7 +29,6 @@ class Feature extends AbstractFeature
         'options'   => [
             'allowed' => [
                 'worldGeodeticSystem',
-                'pixels',
             ],
         ],
     ])]
@@ -63,26 +46,6 @@ class Feature extends AbstractFeature
         parent::__construct($parentResource, $uuid);
 
         $this->setType('feature');
-    }
-
-    /**
-     * Get weight
-     *
-     * @return int
-     */
-    public function getWeight(): int
-    {
-        return $this->weight;
-    }
-
-    /**
-     * Set weight
-     *
-     * @param int $weight
-     */
-    public function setWeight(int $weight): void
-    {
-        $this->weight = $weight;
     }
 
     /**

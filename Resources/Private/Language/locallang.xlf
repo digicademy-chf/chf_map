@@ -97,12 +97,6 @@
             <trans-unit id="object.abstractFeature.description.description" resname="object.abstractFeature.description.description">
                 <source>Brief information about the feature</source>
             </trans-unit>
-            <trans-unit id="object.abstractFeature.boundingBox" resname="object.abstractFeature.boundingBox">
-                <source>Bounding box</source>
-            </trans-unit>
-            <trans-unit id="object.abstractFeature.boundingBox.description" resname="object.abstractFeature.boundingBox.description">
-                <source>Two sets of coordinates to produce a bounding box</source>
-            </trans-unit>
             <trans-unit id="object.abstractFeature.asGeodataOfLocation" resname="object.abstractFeature.asGeodataOfLocation">
                 <source>Usage as geodata of a location</source>
             </trans-unit>
@@ -134,12 +128,6 @@
                 <source>List of object groups that use this feature as geodata</source>
             </trans-unit>
             <!-- Object: Feature -->
-            <trans-unit id="object.feature.weight" resname="object.feature.weight">
-                <source>Weight</source>
-            </trans-unit>
-            <trans-unit id="object.feature.weight.description" resname="object.feature.weight.description">
-                <source>Number used as the size of the feature, if possible</source>
-            </trans-unit>
             <trans-unit id="object.feature.projection" resname="object.feature.projection">
                 <source>Projection</source>
             </trans-unit>
@@ -148,16 +136,6 @@
             </trans-unit>
             <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem">
                 <source>World Geodetic System (WGS 84/EPSG 4326)</source>
-            </trans-unit>
-            <trans-unit id="object.feature.projection.pixels" resname="object.feature.projection.pixels">
-                <source>Pixels</source>
-            </trans-unit>
-            <!-- Object: FeatureCollection -->
-            <trans-unit id="object.featureCollection.feature" resname="object.featureCollection.feature">
-                <source>Feature</source>
-            </trans-unit>
-            <trans-unit id="object.featureCollection.feature.description" resname="object.featureCollection.feature.description">
-                <source>List of features</source>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature">
