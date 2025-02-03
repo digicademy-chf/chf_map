@@ -90,6 +90,91 @@
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
                 <target>Dezimalangabe der Höhe in Metern mit Dezimalpunkt (wenn nötig)</target>
             </trans-unit>
+            <!-- Object: Distribution -->
+            <trans-unit id="object.distribution" resname="object.distribution" approved="yes">
+                <source>Distribution</source>
+                <target>Verteilung</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokens" resname="object.distribution.tokens" approved="yes">
+                <source>Tokens</source>
+                <target>Tokens</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokens.description" resname="object.distribution.tokens.description" approved="yes">
+                <source>Number of occurrences</source>
+                <target>Anzahl der Vorkommen</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokensTotal" resname="object.distribution.tokensTotal" approved="yes">
+                <source>Total tokens</source>
+                <target>Total tokens</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokensTotal.description" resname="object.distribution.tokensTotal.description" approved="yes">
+                <source>Number of occurrences in this area</source>
+                <target>Anzahl der Vorkommen in dieser Region</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType" resname="object.distribution.tokenType" approved="yes">
+                <source>Token type</source>
+                <target>Tokenart</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.description" resname="object.distribution.tokenType.description" approved="yes">
+                <source>Type of occurrences</source>
+                <target>Art der Vorkommen</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.unknown" resname="object.distribution.tokenType.unknown" approved="yes">
+                <source>Unknown</source>
+                <target>Unbekannt</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.population" resname="object.distribution.tokenType.population" approved="yes">
+                <source>Population</source>
+                <target>Einwohnende</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.families" resname="object.distribution.tokenType.families" approved="yes">
+                <source>Families</source>
+                <target>Familien</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.births" resname="object.distribution.tokenType.births" approved="yes">
+                <source>Births</source>
+                <target>Geburten</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.landlines" resname="object.distribution.tokenType.landlines" approved="yes">
+                <source>Landlines</source>
+                <target>Festnetzanschlüsse</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCode" resname="object.distribution.postalCode" approved="yes">
+                <source>Postal code</source>
+                <target>Postleitzahl</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCode.description" resname="object.distribution.postalCode.description" approved="yes">
+                <source>Code of the area</source>
+                <target>Zahl der Region</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCodeSystem" resname="object.distribution.postalCodeSystem" approved="yes">
+                <source>Postal code system</source>
+                <target>Postleitzahlensystem</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCodeSystem.description" resname="object.distribution.postalCodeSystem.description" approved="yes">
+                <source>Country the postal code belongs to</source>
+                <target>Land, zu dem die Postleitzahl gehört</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCodeSystem.germany" resname="object.distribution.postalCodeSystem.germany" approved="yes">
+                <source>Germany</source>
+                <target>Deutschland</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.feature" resname="object.distribution.feature" approved="yes">
+                <source>Feature</source>
+                <target>Geoobjekt</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.feature.description" resname="object.distribution.feature.description" approved="yes">
+                <source>Representation of the area</source>
+                <target>Abbildung der Region</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.coordinates" resname="object.distribution.coordinates" approved="yes">
+                <source>Coordinates</source>
+                <target>Koordinaten</target>
+            </trans-unit>
+            <trans-unit id="object.distribution.coordinates.description" resname="object.distribution.coordinates.description" approved="yes">
+                <source>Point representation of the area</source>
+                <target>Punktverortung der Region</target>
+            </trans-unit>
             <!-- Object: Feature -->
             <trans-unit id="object.feature" resname="object.feature" approved="yes">
                 <source>Feature</source>

@@ -14,3 +14,8 @@ CREATE TABLE tx_chfmap_domain_model_feature_tag_label_mm (
 	fieldname varchar(63) DEFAULT '' NOT NULL,
 	tablenames varchar(63) DEFAULT '' NOT NULL
 );
+
+CREATE TABLE tx_chfmap_domain_model_distribution_feature_feature_mm (
+	fieldname varchar(63) DEFAULT '' NOT NULL,
+	tablenames varchar(63) DEFAULT '' NOT NULL
+);

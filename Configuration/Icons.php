@@ -22,6 +22,10 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/TableCoordinates.svg',
     ],
+    'tx-chfmap-table-distribution' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:chf_map/Resources/Public/Icons/TableDistribution.svg',
+    ],
     'tx-chfmap-table-feature' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_map/Resources/Public/Icons/TableFeature.svg',

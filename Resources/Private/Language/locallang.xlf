@@ -69,6 +69,70 @@
             <trans-unit id="object.coordinates.altitude.description" resname="object.coordinates.altitude.description">
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
             </trans-unit>
+            <!-- Object: Distribution -->
+            <trans-unit id="object.distribution" resname="object.distribution">
+                <source>Distribution</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokens" resname="object.distribution.tokens">
+                <source>Tokens</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokens.description" resname="object.distribution.tokens.description">
+                <source>Number of occurrences</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokensTotal" resname="object.distribution.tokensTotal">
+                <source>Total tokens</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokensTotal.description" resname="object.distribution.tokensTotal.description">
+                <source>Number of occurrences in this area</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType" resname="object.distribution.tokenType">
+                <source>Token type</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.description" resname="object.distribution.tokenType.description">
+                <source>Type of occurrences</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.unknown" resname="object.distribution.tokenType.unknown">
+                <source>Unknown</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.population" resname="object.distribution.tokenType.population">
+                <source>Population</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.families" resname="object.distribution.tokenType.families">
+                <source>Families</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.births" resname="object.distribution.tokenType.births">
+                <source>Births</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.tokenType.landlines" resname="object.distribution.tokenType.landlines">
+                <source>Landlines</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCode" resname="object.distribution.postalCode">
+                <source>Postal code</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCode.description" resname="object.distribution.postalCode.description">
+                <source>Code of the area</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCodeSystem" resname="object.distribution.postalCodeSystem">
+                <source>Postal code system</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCodeSystem.description" resname="object.distribution.postalCodeSystem.description">
+                <source>Country the postal code belongs to</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.postalCodeSystem.germany" resname="object.distribution.postalCodeSystem.germany">
+                <source>Germany</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.feature" resname="object.distribution.feature">
+                <source>Feature</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.feature.description" resname="object.distribution.feature.description">
+                <source>Representation of the area</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.coordinates" resname="object.distribution.coordinates">
+                <source>Coordinates</source>
+            </trans-unit>
+            <trans-unit id="object.distribution.coordinates.description" resname="object.distribution.coordinates.description">
+                <source>Point representation of the area</source>
+            </trans-unit>
             <!-- Object: Feature -->
             <trans-unit id="object.feature" resname="object.feature">
                 <source>Feature</source>
