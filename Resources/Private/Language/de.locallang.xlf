@@ -89,7 +89,7 @@
             </trans-unit>
             <trans-unit id="object.distribution.tokensTotal" resname="object.distribution.tokensTotal" approved="yes">
                 <source>Total tokens</source>
-                <target>Total tokens</target>
+                <target>Tokens insgesamt</target>
             </trans-unit>
             <trans-unit id="object.distribution.tokensTotal.description" resname="object.distribution.tokensTotal.description" approved="yes">
                 <source>Number of occurrences in this area</source>
@@ -129,7 +129,7 @@
             </trans-unit>
             <trans-unit id="object.distribution.postalCode.description" resname="object.distribution.postalCode.description" approved="yes">
                 <source>Code of the area</source>
-                <target>Zahl der Region</target>
+                <target>PLZ der Region</target>
             </trans-unit>
             <trans-unit id="object.distribution.postalCodeSystem" resname="object.distribution.postalCodeSystem" approved="yes">
                 <source>Postal code system</source>

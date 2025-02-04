@@ -29,6 +29,5 @@ class FeatureRepository extends Repository
         'sorting'     => QueryInterface::ORDER_ASCENDING,
         'isHighlight' => QueryInterface::ORDER_ASCENDING,
         'title'       => QueryInterface::ORDER_ASCENDING,
-        'type'        => QueryInterface::ORDER_ASCENDING,
     ];
 }

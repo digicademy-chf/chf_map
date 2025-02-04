@@ -156,7 +156,7 @@ return [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.distribution.tokens',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.frequency.tokens.description',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.distribution.tokens.description',
             'config' => [
                 'type' => 'number',
                 'size' => 13,
@@ -295,7 +295,7 @@ return [
             'showitem' => 'tokens,tokens_total,--linebreak--,token_type,',
         ],
         'postalCodePostalCodeSystem' => [
-            'showitem' => 'postal_code,--linebreak--,postal_code_system,',
+            'showitem' => 'postal_code,postal_code_system,',
         ],
     ],
     'types' => [
