@@ -19,10 +19,6 @@ use Digicademy\CHFBase\Domain\Model\LinkRelation;
 use Digicademy\CHFBase\Domain\Model\Location;
 use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
 use Digicademy\CHFBib\Domain\Model\SourceRelation;
-use Digicademy\CHFLex\Domain\Model\Frequency;
-use Digicademy\CHFMedia\Domain\Model\FileMetadata;
-use Digicademy\CHFObject\Domain\Model\SingleObject;
-use Digicademy\CHFObject\Domain\Model\ObjectGroup;
 use Digicademy\CHFPub\Domain\Model\PublicationRelation;
 
 defined('TYPO3') or die();
@@ -174,36 +170,12 @@ class Feature extends AbstractBase
     protected ?ObjectStorage $asGeodataOfLocation = null;
 
     /**
-     * List of files that use this feature as geodata
+     * List of distributions that use this feature as geodata
      * 
-     * @var ?ObjectStorage<FileMetadata>
+     * @var ?ObjectStorage<Distribution>
      */
     #[Lazy()]
-    protected ?ObjectStorage $asGeodataOfFileMetadata = null;
-
-    /**
-     * List of frequencies that use this feature as geodata
-     * 
-     * @var ?ObjectStorage<Frequency>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $asGeodataOfFrequency = null;
-
-    /**
-     * List of single objects that use this feature as geodata
-     * 
-     * @var ?ObjectStorage<SingleObject>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $asGeodataOfSingleObject = null;
-
-    /**
-     * List of object groups that use this feature as geodata
-     * 
-     * @var ?ObjectStorage<ObjectGroup>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $asGeodataOfObjectGroup = null;
+    protected ?ObjectStorage $asGeodataOfDistribution = null;
 
     /**
      * Construct object
@@ -231,10 +203,7 @@ class Feature extends AbstractBase
         $this->publicationRelation ??= new ObjectStorage();
         $this->parentResource ??= new ObjectStorage();
         $this->asGeodataOfLocation ??= new ObjectStorage();
-        $this->asGeodataOfFileMetadata ??= new ObjectStorage();
-        $this->asGeodataOfFrequency ??= new ObjectStorage();
-        $this->asGeodataOfSingleObject ??= new ObjectStorage();
-        $this->asGeodataOfObjectGroup ??= new ObjectStorage();
+        $this->asGeodataOfDistribution ??= new ObjectStorage();
     }
 
     /**
@@ -672,198 +641,51 @@ class Feature extends AbstractBase
     }
 
     /**
-     * Get as geodata of file metadata
+     * Get as geodata of distribution
      *
-     * @return ObjectStorage<FileMetadata>
+     * @return ObjectStorage<Distribution>
      */
-    public function getAsGeodataOfFileMetadata(): ?ObjectStorage
+    public function getAsGeodataOfDistribution(): ?ObjectStorage
     {
-        return $this->asGeodataOfFileMetadata;
+        return $this->asGeodataOfDistribution;
     }
 
     /**
-     * Set as geodata of file metadata
+     * Set as geodata of distribution
      *
-     * @param ObjectStorage<FileMetadata> $asGeodataOfFileMetadata
+     * @param ObjectStorage<Distribution> $asGeodataOfDistribution
      */
-    public function setAsGeodataOfFileMetadata(ObjectStorage $asGeodataOfFileMetadata): void
+    public function setAsGeodataOfDistribution(ObjectStorage $asGeodataOfDistribution): void
     {
-        $this->asGeodataOfFileMetadata = $asGeodataOfFileMetadata;
+        $this->asGeodataOfDistribution = $asGeodataOfDistribution;
     }
 
     /**
-     * Add as geodata of file metadata
+     * Add as geodata of distribution
      *
-     * @param FileMetadata $asGeodataOfFileMetadata
+     * @param Distribution $asGeodataOfDistribution
      */
-    public function addAsGeodataOfFileMetadata(FileMetadata $asGeodataOfFileMetadata): void
+    public function addAsGeodataOfDistribution(Distribution $asGeodataOfDistribution): void
     {
-        $this->asGeodataOfFileMetadata?->attach($asGeodataOfFileMetadata);
+        $this->asGeodataOfDistribution?->attach($asGeodataOfDistribution);
     }
 
     /**
-     * Remove as geodata of file metadata
+     * Remove as geodata of distribution
      *
-     * @param FileMetadata $asGeodataOfFileMetadata
+     * @param Distribution $asGeodataOfDistribution
      */
-    public function removeAsGeodataOfFileMetadata(FileMetadata $asGeodataOfFileMetadata): void
+    public function removeAsGeodataOfDistribution(Distribution $asGeodataOfDistribution): void
     {
-        $this->asGeodataOfFileMetadata?->detach($asGeodataOfFileMetadata);
+        $this->asGeodataOfDistribution?->detach($asGeodataOfDistribution);
     }
 
     /**
-     * Remove all as geodata of file metadatas
+     * Remove all as geodata of distributions
      */
-    public function removeAllAsGeodataOfFileMetadata(): void
+    public function removeAllAsGeodataOfDistribution(): void
     {
-        $asGeodataOfFileMetadata = clone $this->asGeodataOfFileMetadata;
-        $this->asGeodataOfFileMetadata->removeAll($asGeodataOfFileMetadata);
-    }
-
-    /**
-     * Get as geodata of frequency
-     *
-     * @return ObjectStorage<Frequency>
-     */
-    public function getAsGeodataOfFrequency(): ?ObjectStorage
-    {
-        return $this->asGeodataOfFrequency;
-    }
-
-    /**
-     * Set as geodata of frequency
-     *
-     * @param ObjectStorage<Frequency> $asGeodataOfFrequency
-     */
-    public function setAsGeodataOfFrequency(ObjectStorage $asGeodataOfFrequency): void
-    {
-        $this->asGeodataOfFrequency = $asGeodataOfFrequency;
-    }
-
-    /**
-     * Add as geodata of frequency
-     *
-     * @param Frequency $asGeodataOfFrequency
-     */
-    public function addAsGeodataOfFrequency(Frequency $asGeodataOfFrequency): void
-    {
-        $this->asGeodataOfFrequency?->attach($asGeodataOfFrequency);
-    }
-
-    /**
-     * Remove as geodata of frequency
-     *
-     * @param Frequency $asGeodataOfFrequency
-     */
-    public function removeAsGeodataOfFrequency(Frequency $asGeodataOfFrequency): void
-    {
-        $this->asGeodataOfFrequency?->detach($asGeodataOfFrequency);
-    }
-
-    /**
-     * Remove all as geodata of frequencies
-     */
-    public function removeAllAsGeodataOfFrequency(): void
-    {
-        $asGeodataOfFrequency = clone $this->asGeodataOfFrequency;
-        $this->asGeodataOfFrequency->removeAll($asGeodataOfFrequency);
-    }
-
-    /**
-     * Get as geodata of single object
-     *
-     * @return ObjectStorage<SingleObject>
-     */
-    public function getAsGeodataOfSingleObject(): ?ObjectStorage
-    {
-        return $this->asGeodataOfSingleObject;
-    }
-
-    /**
-     * Set as geodata of single object
-     *
-     * @param ObjectStorage<SingleObject> $asGeodataOfSingleObject
-     */
-    public function setAsGeodataOfSingleObject(ObjectStorage $asGeodataOfSingleObject): void
-    {
-        $this->asGeodataOfSingleObject = $asGeodataOfSingleObject;
-    }
-
-    /**
-     * Add as geodata of single object
-     *
-     * @param SingleObject $asGeodataOfSingleObject
-     */
-    public function addAsGeodataOfSingleObject(SingleObject $asGeodataOfSingleObject): void
-    {
-        $this->asGeodataOfSingleObject?->attach($asGeodataOfSingleObject);
-    }
-
-    /**
-     * Remove as geodata of single object
-     *
-     * @param SingleObject $asGeodataOfSingleObject
-     */
-    public function removeAsGeodataOfSingleObject(SingleObject $asGeodataOfSingleObject): void
-    {
-        $this->asGeodataOfSingleObject?->detach($asGeodataOfSingleObject);
-    }
-
-    /**
-     * Remove all as geodata of single objects
-     */
-    public function removeAllAsGeodataOfSingleObject(): void
-    {
-        $asGeodataOfSingleObject = clone $this->asGeodataOfSingleObject;
-        $this->asGeodataOfSingleObject->removeAll($asGeodataOfSingleObject);
-    }
-
-    /**
-     * Get as geodata of object group
-     *
-     * @return ObjectStorage<ObjectGroup>
-     */
-    public function getAsGeodataOfObjectGroup(): ?ObjectStorage
-    {
-        return $this->asGeodataOfObjectGroup;
-    }
-
-    /**
-     * Set as geodata of object group
-     *
-     * @param ObjectStorage<ObjectGroup> $asGeodataOfObjectGroup
-     */
-    public function setAsGeodataOfObjectGroup(ObjectStorage $asGeodataOfObjectGroup): void
-    {
-        $this->asGeodataOfObjectGroup = $asGeodataOfObjectGroup;
-    }
-
-    /**
-     * Add as geodata of object group
-     *
-     * @param ObjectGroup $asGeodataOfObjectGroup
-     */
-    public function addAsGeodataOfObjectGroup(ObjectGroup $asGeodataOfObjectGroup): void
-    {
-        $this->asGeodataOfObjectGroup?->attach($asGeodataOfObjectGroup);
-    }
-
-    /**
-     * Remove as geodata of object group
-     *
-     * @param ObjectGroup $asGeodataOfObjectGroup
-     */
-    public function removeAsGeodataOfObjectGroup(ObjectGroup $asGeodataOfObjectGroup): void
-    {
-        $this->asGeodataOfObjectGroup?->detach($asGeodataOfObjectGroup);
-    }
-
-    /**
-     * Remove all as geodata of object groups
-     */
-    public function removeAllAsGeodataOfObjectGroup(): void
-    {
-        $asGeodataOfObjectGroup = clone $this->asGeodataOfObjectGroup;
-        $this->asGeodataOfObjectGroup->removeAll($asGeodataOfObjectGroup);
+        $asGeodataOfDistribution = clone $this->asGeodataOfDistribution;
+        $this->asGeodataOfDistribution->removeAll($asGeodataOfDistribution);
     }
 }

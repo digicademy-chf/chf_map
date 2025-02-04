@@ -18,29 +18,27 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add columns 'geodata'
+// Add columns 'distribution'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chflex_domain_model_frequency',
     [
-        'geodata' => [
+        'distribution' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.frequency.geodata',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.frequency.geodata.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.frequency.distribution',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.frequency.distribution.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => '',
-                        'value' => 0,
-                    ],
-                ],
-                'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chflex_domain_model_frequency_feature_geodata_mm',
-                'multiple' => 1,
-                'sortItems' => [
-                    'label' => 'asc',
+                'type' => 'inline',
+                'foreign_table' => 'tx_chfmap_domain_model_distribution',
+                'foreign_field' => 'parent_frequency',
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],

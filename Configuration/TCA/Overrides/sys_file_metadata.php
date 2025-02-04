@@ -18,27 +18,29 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add column 'geodata'
+// Add column 'coordinates'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('sys_file_metadata',
     [
-        'geodata' => [
+        'coordinates' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.fileMetadata.geodata',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.fileMetadata.geodata.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.fileMetadata.coordinates',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.fileMetadata.coordinates.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => '',
-                        'value' => 0,
-                    ],
+                'type' => 'inline',
+                'foreign_table' => 'tx_chfmap_domain_model_coordinates',
+                'foreign_field' => 'parent',
+                'foreign_table_field' => 'parent_table',
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
-                'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfmedia_domain_model_filemetadata_feature_geodata_mm',
-                'multiple' => 1,
             ],
         ],
     ]

@@ -13,8 +13,6 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use Digicademy\CHFBase\Domain\Model\AbstractResource;
-use Digicademy\CHFBase\Domain\Model\Location;
-use Digicademy\CHFObject\Domain\Model\ObjectGroup;
 
 defined('TYPO3') or die();
 
@@ -46,22 +44,6 @@ class MapResource extends AbstractResource
     protected ?ObjectStorage $allTiles = null;
 
     /**
-     * List of locations that use this map as a floor plan
-     * 
-     * @var ?ObjectStorage<Location>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $asFloorPlanOfLocation = null;
-
-    /**
-     * List of object groups that use this map
-     * 
-     * @var ?ObjectStorage<ObjectGroup>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $asFloorPlanOfObjectGroup = null;
-
-    /**
      * Construct object
      *
      * @param string $langCode
@@ -83,8 +65,6 @@ class MapResource extends AbstractResource
     {
         $this->allFeatures ??= new ObjectStorage();
         $this->allTiles ??= new ObjectStorage();
-        $this->asFloorPlanOfLocation ??= new ObjectStorage();
-        $this->asFloorPlanOfObjectGroup ??= new ObjectStorage();
     }
 
     /**
@@ -183,103 +163,5 @@ class MapResource extends AbstractResource
     {
         $allTiles = clone $this->allTiles;
         $this->allTiles->removeAll($allTiles);
-    }
-
-    /**
-     * Get as floor plan of location
-     *
-     * @return ObjectStorage<Location>
-     */
-    public function getAsFloorPlanOfLocation(): ?ObjectStorage
-    {
-        return $this->asFloorPlanOfLocation;
-    }
-
-    /**
-     * Set as floor plan of location
-     *
-     * @param ObjectStorage<Location> $asFloorPlanOfLocation
-     */
-    public function setAsFloorPlanOfLocation(ObjectStorage $asFloorPlanOfLocation): void
-    {
-        $this->asFloorPlanOfLocation = $asFloorPlanOfLocation;
-    }
-
-    /**
-     * Add as floor plan of location
-     *
-     * @param Location $asFloorPlanOfLocation
-     */
-    public function addAsFloorPlanOfLocation(Location $asFloorPlanOfLocation): void
-    {
-        $this->asFloorPlanOfLocation?->attach($asFloorPlanOfLocation);
-    }
-
-    /**
-     * Remove as floor plan of location
-     *
-     * @param Location $asFloorPlanOfLocation
-     */
-    public function removeAsFloorPlanOfLocation(Location $asFloorPlanOfLocation): void
-    {
-        $this->asFloorPlanOfLocation?->detach($asFloorPlanOfLocation);
-    }
-
-    /**
-     * Remove all as floor plan of locations
-     */
-    public function removeAllAsFloorPlanOfLocation(): void
-    {
-        $asFloorPlanOfLocation = clone $this->asFloorPlanOfLocation;
-        $this->asFloorPlanOfLocation->removeAll($asFloorPlanOfLocation);
-    }
-
-    /**
-     * Get as floor plan of object group
-     *
-     * @return ObjectStorage<ObjectGroup>
-     */
-    public function getAsFloorPlanOfObjectGroup(): ?ObjectStorage
-    {
-        return $this->asFloorPlanOfObjectGroup;
-    }
-
-    /**
-     * Set as floor plan of object group
-     *
-     * @param ObjectStorage<ObjectGroup> $asFloorPlanOfObjectGroup
-     */
-    public function setAsFloorPlanOfObjectGroup(ObjectStorage $asFloorPlanOfObjectGroup): void
-    {
-        $this->asFloorPlanOfObjectGroup = $asFloorPlanOfObjectGroup;
-    }
-
-    /**
-     * Add as floor plan of object group
-     *
-     * @param ObjectGroup $asFloorPlanOfObjectGroup
-     */
-    public function addAsFloorPlanOfObjectGroup(ObjectGroup $asFloorPlanOfObjectGroup): void
-    {
-        $this->asFloorPlanOfObjectGroup?->attach($asFloorPlanOfObjectGroup);
-    }
-
-    /**
-     * Remove as floor plan of object group
-     *
-     * @param ObjectGroup $asFloorPlanOfObjectGroup
-     */
-    public function removeAsFloorPlanOfObjectGroup(ObjectGroup $asFloorPlanOfObjectGroup): void
-    {
-        $this->asFloorPlanOfObjectGroup?->detach($asFloorPlanOfObjectGroup);
-    }
-
-    /**
-     * Remove all as floor plan of object groups
-     */
-    public function removeAllAsFloorPlanOfObjectGroup(): void
-    {
-        $asFloorPlanOfObjectGroup = clone $this->asFloorPlanOfObjectGroup;
-        $this->asFloorPlanOfObjectGroup->removeAll($asFloorPlanOfObjectGroup);
     }
 }

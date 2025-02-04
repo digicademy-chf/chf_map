@@ -19,18 +19,6 @@
             <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description">
                 <source>List of all features compiled in this resource</source>
             </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfLocation" resname="object.mapResource.asFloorPlanOfLocation">
-                <source>Usage as floor plan of a location</source>
-            </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfLocation.description" resname="object.mapResource.asFloorPlanOfLocation.description">
-                <source>List of locations that use this map as a floor plan</source>
-            </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup" resname="object.mapResource.asFloorPlanOfObjectGroup">
-                <source>Usage as map of an object group</source>
-            </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup.description" resname="object.mapResource.asFloorPlanOfObjectGroup.description">
-                <source>List of object groups that use this map</source>
-            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile">
                 <source>Tile</source>
@@ -121,10 +109,10 @@
             <trans-unit id="object.distribution.postalCodeSystem.germany" resname="object.distribution.postalCodeSystem.germany">
                 <source>Germany</source>
             </trans-unit>
-            <trans-unit id="object.distribution.feature" resname="object.distribution.feature">
-                <source>Feature</source>
+            <trans-unit id="object.distribution.geodata" resname="object.distribution.geodata">
+                <source>Geodata</source>
             </trans-unit>
-            <trans-unit id="object.distribution.feature.description" resname="object.distribution.feature.description">
+            <trans-unit id="object.distribution.geodata.description" resname="object.distribution.geodata.description">
                 <source>Representation of the area</source>
             </trans-unit>
             <trans-unit id="object.distribution.coordinates" resname="object.distribution.coordinates">
@@ -170,29 +158,11 @@
             <trans-unit id="object.feature.asGeodataOfLocation.description" resname="object.feature.asGeodataOfLocation.description">
                 <source>List of locations that use this feature as geodata</source>
             </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFileMetadata" resname="object.feature.asGeodataOfFileMetadata">
-                <source>Usage as geodata of a file</source>
+            <trans-unit id="object.feature.asGeodataOfDistribution" resname="object.feature.asGeodataOfDistribution">
+                <source>Usage as geodata of a distribution</source>
             </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFileMetadata.description" resname="object.feature.asGeodataOfFileMetadata.description">
-                <source>List of files that use this feature as geodata</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFrequency" resname="object.feature.asGeodataOfFrequency">
-                <source>Usage as geodata of a frequency</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFrequency.description" resname="object.feature.asGeodataOfFrequency.description">
-                <source>List of frequencies that use this feature as geodata</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfSingleObject" resname="object.feature.asGeodataOfSingleObject">
-                <source>Usage as geodata of a single object</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfSingleObject.description" resname="object.feature.asGeodataOfSingleObject.description">
-                <source>List of single objects that use this feature as geodata</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfObjectGroup" resname="object.feature.asGeodataOfObjectGroup">
-                <source>Usage as geodata of an object group</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfObjectGroup.description" resname="object.feature.asGeodataOfObjectGroup.description">
-                <source>List of object groups that use this feature as geodata</source>
+            <trans-unit id="object.feature.asGeodataOfDistribution.description" resname="object.feature.asGeodataOfDistribution.description">
+                <source>List of distributions that use this feature as geodata</source>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature">
@@ -202,6 +172,12 @@
                 <source>List of features that use this label</source>
             </trans-unit>
             <!-- Object: Location -->
+            <trans-unit id="object.location.coordinates" resname="object.location.coordinates">
+                <source>Coordinates</source>
+            </trans-unit>
+            <trans-unit id="object.location.coordinates.description" resname="object.location.coordinates.description">
+                <source>Geolocation of this location</source>
+            </trans-unit>
             <trans-unit id="object.location.geodata" resname="object.location.geodata">
                 <source>Geodata</source>
             </trans-unit>
@@ -215,25 +191,25 @@
                 <source>Map depicting this location</source>
             </trans-unit>
             <!-- Object: Frequency -->
-            <trans-unit id="object.frequency.geodata" resname="object.frequency.geodata">
-                <source>Geodata</source>
+            <trans-unit id="object.frequency.distribution" resname="object.frequency.distribution">
+                <source>Distribution</source>
             </trans-unit>
-            <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description">
-                <source>Feature to use as geodata of this frequency</source>
+            <trans-unit id="object.frequency.distribution.description" resname="object.frequency.distribution.description">
+                <source>Geographic distribution of this frequency</source>
             </trans-unit>
             <!-- Object: FileMetadata -->
-            <trans-unit id="object.fileMetadata.geodata" resname="object.fileMetadata.geodata">
-                <source>Geodata</source>
+            <trans-unit id="object.fileMetadata.coordinates" resname="object.fileMetadata.coordinates">
+                <source>Coordinates</source>
             </trans-unit>
-            <trans-unit id="object.fileMetadata.geodata.description" resname="object.fileMetadata.geodata.description">
-                <source>Feature to use as geodata of this file</source>
+            <trans-unit id="object.fileMetadata.coordinates.description" resname="object.fileMetadata.coordinates.description">
+                <source>Geolocation of this file</source>
             </trans-unit>
             <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.geodata" resname="object.abstractObject.geodata">
-                <source>Geodata</source>
+            <trans-unit id="object.abstractObject.coordinates" resname="object.abstractObject.coordinates">
+                <source>Coordinates</source>
             </trans-unit>
-            <trans-unit id="object.abstractObject.geodata.description" resname="object.abstractObject.geodata.description">
-                <source>Feature to use as geodata of this object (group)</source>
+            <trans-unit id="object.abstractObject.coordinates.description" resname="object.abstractObject.coordinates.description">
+                <source>Geolocation of this object (group)</source>
             </trans-unit>
             <!-- Object: ObjectGroup -->
             <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan">

@@ -18,9 +18,31 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add columns 'geodata' and 'floor_plan'
+// Add columns 'coordinates', 'geodata', and 'floor_plan'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_location',
     [
+        'coordinates' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.coordinates',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.coordinates.description',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_chfmap_domain_model_coordinates',
+                'foreign_field' => 'parent',
+                'foreign_table_field' => 'parent_table',
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
+                ],
+            ],
+        ],
         'geodata' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -44,22 +66,12 @@ defined('TYPO3') or die();
         'floor_plan' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.floorPlan',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.floorPlan.description',
+            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.floorPlan',
+            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.floorPlan.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => '',
-                        'value' => 0,
-                    ],
-                ],
-                'foreign_table' => 'tx_chfbase_domain_model_resource',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
-                'MM' => 'tx_chfbase_domain_model_location_resource_floorplan_mm',
-                'multiple' => 1,
+                'type' => 'file',
+                'allowed' => 'common-media-types',
+                'maxitems' => 1,
             ],
         ],
     ]

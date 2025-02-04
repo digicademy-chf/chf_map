@@ -24,22 +24,6 @@
                 <source>List of all features compiled in this resource</source>
                 <target>Liste aller Geoobjekte, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfLocation" resname="object.mapResource.asFloorPlanOfLocation" approved="yes">
-                <source>Usage as floor plan of a location</source>
-                <target>Verwendung als Grundriss eines Ortes</target>
-            </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfLocation.description" resname="object.mapResource.asFloorPlanOfLocation.description" approved="yes">
-                <source>List of locations that use this map as a floor plan</source>
-                <target>Liste der Orte, die diese Karte als Grundriss verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup" resname="object.mapResource.asFloorPlanOfObjectGroup" approved="yes">
-                <source>Usage as map of an object group</source>
-                <target>Verwendung als Kartenmaterial einer Objektgruppe</target>
-            </trans-unit>
-            <trans-unit id="object.mapResource.asFloorPlanOfObjectGroup.description" resname="object.mapResource.asFloorPlanOfObjectGroup.description" approved="yes">
-                <source>List of object groups that use this map</source>
-                <target>Liste der Objektgruppen, die dieses Kartenmaterial verwenden</target>
-            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile" approved="yes">
                 <source>Tile</source>
@@ -159,11 +143,11 @@
                 <source>Germany</source>
                 <target>Deutschland</target>
             </trans-unit>
-            <trans-unit id="object.distribution.feature" resname="object.distribution.feature" approved="yes">
-                <source>Feature</source>
-                <target>Geoobjekt</target>
+            <trans-unit id="object.distribution.geodata" resname="object.distribution.geodata" approved="yes">
+                <source>Geodata</source>
+                <target>Geodaten</target>
             </trans-unit>
-            <trans-unit id="object.distribution.feature.description" resname="object.distribution.feature.description" approved="yes">
+            <trans-unit id="object.distribution.geodata.description" resname="object.distribution.geodata.description" approved="yes">
                 <source>Representation of the area</source>
                 <target>Abbildung der Region</target>
             </trans-unit>
@@ -224,37 +208,13 @@
                 <source>List of locations that use this feature as geodata</source>
                 <target>Liste der Orte, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFileMetadata" resname="object.feature.asGeodataOfFileMetadata" approved="yes">
-                <source>Usage as geodata of a file</source>
-                <target>Verwendung als Geodaten einer Datei</target>
+            <trans-unit id="object.feature.asGeodataOfDistribution" resname="object.feature.asGeodataOfDistribution" approved="yes">
+                <source>Usage as geodata of a distribution</source>
+                <target>Verwendung als Geodaten einr Verteilung</target>
             </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFileMetadata.description" resname="object.feature.asGeodataOfFileMetadata.description" approved="yes">
-                <source>List of files that use this feature as geodata</source>
-                <target>Liste der Dateien, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFrequency" resname="object.feature.asGeodataOfFrequency" approved="yes">
-                <source>Usage as geodata of a frequency</source>
-                <target>Verwendung als Geodaten einer Häufigkeit</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfFrequency.description" resname="object.feature.asGeodataOfFrequency.description" approved="yes">
-                <source>List of frequencies that use this feature as geodata</source>
-                <target>Liste der Häufigkeiten, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfSingleObject" resname="object.feature.asGeodataOfSingleObject" approved="yes">
-                <source>Usage as geodata of a single object</source>
-                <target>Verwendung als Geodaten eines Einzelobjekts</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfSingleObject.description" resname="object.feature.asGeodataOfSingleObject.description" approved="yes">
-                <source>List of single objects that use this feature as geodata</source>
-                <target>Liste der Einzelobjekte, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfObjectGroup" resname="object.feature.asGeodataOfObjectGroup" approved="yes">
-                <source>Usage as geodata of an object group</source>
-                <target>Verwendung als Geodaten einer Objektgruppe</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfObjectGroup.description" resname="object.feature.asGeodataOfObjectGroup.description" approved="yes">
-                <source>List of object groups that use this feature as geodata</source>
-                <target>Liste der Objektgruppen, die dieses Geoobjekt als Geodaten verwenden</target>
+            <trans-unit id="object.feature.asGeodataOfDistribution.description" resname="object.feature.asGeodataOfDistribution.description" approved="yes">
+                <source>List of distributions that use this feature as geodata</source>
+                <target>Liste der Verteilungen, die dieses Geoobjekt als Geodaten verwenden</target>
             </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">
@@ -266,6 +226,14 @@
                 <target>Liste der Geoobjekte, die dieses Label verwenden</target>
             </trans-unit>
             <!-- Object: Location -->
+            <trans-unit id="object.location.coordinates" resname="object.location.coordinates" approved="yes">
+                <source>Coordinates</source>
+                <target>Koordinaten</target>
+            </trans-unit>
+            <trans-unit id="object.location.coordinates.description" resname="object.location.coordinates.description" approved="yes">
+                <source>Geolocation of this location</source>
+                <target>Geolokation dieses Ortes</target>
+            </trans-unit>
             <trans-unit id="object.location.geodata" resname="object.location.geodata" approved="yes">
                 <source>Geodata</source>
                 <target>Geodaten</target>
@@ -280,34 +248,34 @@
             </trans-unit>
             <trans-unit id="object.location.floorPlan.description" resname="object.location.floorPlan.description" approved="yes">
                 <source>Map depicting this location</source>
-                <target>Kartenmaterial, das diesen Ort darstellt</target>
+                <target>Karte, die diesen Ort darstellt</target>
             </trans-unit>
             <!-- Object: Frequency -->
-            <trans-unit id="object.frequency.geodata" resname="object.frequency.geodata" approved="yes">
-                <source>Geodata</source>
-                <target>Geodaten</target>
+            <trans-unit id="object.frequency.distribution" resname="object.frequency.distribution" approved="yes">
+                <source>Distribution</source>
+                <target>Verteilung</target>
             </trans-unit>
-            <trans-unit id="object.frequency.geodata.description" resname="object.frequency.geodata.description" approved="yes">
-                <source>Feature to use as geodata of this frequency</source>
-                <target>Geoobjekt als Geodaten für diese Häufigkeit</target>
+            <trans-unit id="object.frequency.distribution.description" resname="object.frequency.distribution.description" approved="yes">
+                <source>Geographic distribution of this frequency</source>
+                <target>Geografische Verteilung dieser Häufigkeit</target>
             </trans-unit>
             <!-- Object: FileMetadata -->
-            <trans-unit id="object.fileMetadata.geodata" resname="object.fileMetadata.geodata" approved="yes">
-                <source>Geodata</source>
-                <target>Geodaten</target>
+            <trans-unit id="object.fileMetadata.coordinates" resname="object.fileMetadata.coordinates" approved="yes">
+                <source>Coordinates</source>
+                <target>Koordinaten</target>
             </trans-unit>
-            <trans-unit id="object.fileMetadata.geodata.description" resname="object.fileMetadata.geodata.description" approved="yes">
-                <source>Feature to use as geodata of this file</source>
-                <target>Geoobjekt als Geodaten für diese Datei</target>
+            <trans-unit id="object.fileMetadata.coordinates.description" resname="object.fileMetadata.coordinates.description" approved="yes">
+                <source>Geolocation of this file</source>
+                <target>Geolokation dieser Datei</target>
             </trans-unit>
             <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.geodata" resname="object.abstractObject.geodata" approved="yes">
-                <source>Geodata</source>
-                <target>Geodaten</target>
+            <trans-unit id="object.abstractObject.coordinates" resname="object.abstractObject.coordinates" approved="yes">
+                <source>Coordinates</source>
+                <target>Koordinaten</target>
             </trans-unit>
-            <trans-unit id="object.abstractObject.geodata.description" resname="object.abstractObject.geodata.description" approved="yes">
-                <source>Feature to use as geodata of this object (group)</source>
-                <target>Geoobjekt als Geodaten für dieses Objekt</target>
+            <trans-unit id="object.abstractObject.coordinates.description" resname="object.abstractObject.coordinates.description" approved="yes">
+                <source>Geolocation of this object (group)</source>
+                <target>Geolokation dieses Objekts</target>
             </trans-unit>
             <!-- Object: ObjectGroup -->
             <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan" approved="yes">
@@ -316,7 +284,7 @@
             </trans-unit>
             <trans-unit id="object.objectGroup.floorPlan.description" resname="object.objectGroup.floorPlan.description" approved="yes">
                 <source>Map of this object group</source>
-                <target>Kartenmaterial dieser Objektgruppe</target>
+                <target>Karte dieser Objektgruppe</target>
             </trans-unit>
             <!-- Plugin: Map -->
             <trans-unit id="plugin.map" resname="plugin.map" approved="yes">

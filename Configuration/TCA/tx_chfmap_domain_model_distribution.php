@@ -247,26 +247,6 @@ return [
                 'default' => 0,
             ],
         ],
-        'feature' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.distribution.feature',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.distribution.feature.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => '',
-                        'value' => 0,
-                    ],
-                ],
-                'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfmap_domain_model_distribution_feature_feature_mm',
-                'multiple' => 1,
-            ],
-        ],
         'coordinates' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -289,6 +269,26 @@ return [
                 ],
             ],
         ],
+        'geodata' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.distribution.geodata',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.distribution.geodata.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'label' => '',
+                        'value' => 0,
+                    ],
+                ],
+                'foreign_table' => 'tx_chfmap_domain_model_feature',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
+                'MM' => 'tx_chfmap_domain_model_distribution_feature_geodata_mm',
+                'multiple' => 1,
+            ],
+        ],
     ],
     'palettes' => [
         'tokensTokensTotalTokenType' => [
@@ -301,7 +301,7 @@ return [
     'types' => [
         '0' => [
             'showitem' => '--palette--;;tokensTokensTotalTokenType,--palette--;;postalCodePostalCodeSystem,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,feature,coordinates,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,coordinates,geodata,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,parent_frequency,',
         ],
     ],

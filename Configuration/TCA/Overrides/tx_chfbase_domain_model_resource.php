@@ -26,7 +26,7 @@ defined('TYPO3') or die();
     ]
 );
 
-// Add columns 'all_features', 'all_tiles', 'as_floor_plan_of_location' and 'as_floor_plan_of_object_group'
+// Add columns 'all_features' and 'all_tiles'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_resource',
     [
         'all_features' => [
@@ -73,40 +73,6 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'as_floor_plan_of_location' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfLocation',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfLocation.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfbase_domain_model_location',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfbase_domain_model_location_resource_floorplan_mm',
-                'MM_opposite_field' => 'floor_plan',
-                'multiple' => 1,
-                'size' => 5,
-                'autoSizeMax' => 10,
-            ],
-        ],
-        'as_floor_plan_of_object_group' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfObjectGroup',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.mapResource.asFloorPlanOfObjectGroup.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfobject_domain_model_objectgroup',
-                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_objectgroup}.{#pid}=###CURRENT_PID###',
-                'MM' => 'tx_chfobject_domain_model_objectgroup_resource_floorplan_mm',
-                'MM_opposite_field' => 'floor_plan',
-                'multiple' => 1,
-                'size' => 5,
-                'autoSizeMax' => 10,
-            ],
-        ],
     ]
 );
 
@@ -116,6 +82,5 @@ $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['types'] += ['mapResource' =
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,all_features,all_tiles,all_agents,all_locations,all_periods,all_tags,all_keywords,all_relations,all_file_groups,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;iriUuidSameAs,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImportState,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_floor_plan_of_location,as_floor_plan_of_object_group,',
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImportState,',
 ]];
