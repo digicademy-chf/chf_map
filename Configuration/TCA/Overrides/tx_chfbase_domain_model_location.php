@@ -66,8 +66,8 @@ defined('TYPO3') or die();
         'floor_plan' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.floorPlan',
-            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.floorPlan.description',
+            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.floorPlan',
+            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.location.floorPlan.description',
             'config' => [
                 'type' => 'file',
                 'allowed' => 'common-media-types',

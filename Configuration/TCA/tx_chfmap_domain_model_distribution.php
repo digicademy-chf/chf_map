@@ -174,7 +174,8 @@ return [
             'config' => [
                 'type' => 'number',
                 'size' => 13,
-                'default' => 0,
+                'nullable' => true,
+                'default' => null,
                 'range' => [
                     'lower' => 0,
                 ],

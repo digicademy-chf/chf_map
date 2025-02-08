@@ -559,35 +559,26 @@ return [
         ],
     ],
     'palettes' => [
-        'titleProjectionDescription' => [
-            'showitem' => 'title,projection,--linebreak--,description,',
-        ],
-        'sourceRelationLinkRelation' => [
-            'showitem' => 'source_relation,--linebreak--,link_relation,',
+        'titleProjection' => [
+            'showitem' => 'title,projection,',
         ],
         'isTeaserIsHighlight' => [
             'showitem' => 'is_teaser,is_highlight,',
         ],
-        'iriUuidSameAs' => [
-            'showitem' => 'iri,uuid,--linebreak--,same_as,',
+        'iriUuid' => [
+            'showitem' => 'iri,uuid,',
         ],
-        'publicationDateRevisionDateRevisionNumberEditorialNote' => [
-            'showitem' => 'publication_date,revision_date,revision_number,--linebreak--,editorial_note,',
-        ],
-        'authorshipRelationLicenceRelation' => [
-            'showitem' => 'authorship_relation,--linebreak--,licence_relation,',
-        ],
-        'importOriginImport' => [
-            'showitem' => 'import_origin,--linebreak--,import,',
+        'publicationDateRevisionDateRevisionNumber' => [
+            'showitem' => 'publication_date,revision_date,revision_number,',
         ],
     ],
     'types' => [
         '0' => [
-            'showitem' => '--palette--;;titleProjectionDescription,geo_json,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publicationRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuidSameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,
+            'showitem' => '--palette--;;titleProjection,description,geo_json,label,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,source_relation,link_relation,publicationRelation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlight,parent_resource,--palette--;;iriUuid,same_as,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumber,editorial_note,authorship_relation,licence_relation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,import_origin,import,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.usage,as_geodata_of_location,as_geodata_of_distribution,',
         ],
     ],

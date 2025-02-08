@@ -51,7 +51,7 @@ class Distribution extends AbstractEntity
     /**
      * Number of occurrences in this area
      * 
-     * @var int
+     * @var ?int
      */
     #[Validate([
         'validator' => 'NumberRange',
@@ -59,7 +59,7 @@ class Distribution extends AbstractEntity
             'minimum' => 0,
         ],
     ])]
-    protected int $tokensTotal = 0;
+    protected ?int $tokensTotal = null;
 
     /**
      * Type of occurrences
