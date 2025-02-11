@@ -181,12 +181,13 @@ class Feature extends AbstractBase
      * Construct object
      *
      * @param MapResource $parentResource
+     * @param string $iri
      * @param string $uuid
      * @return Feature
      */
-    public function __construct(MapResource $parentResource, string $uuid)
+    public function __construct(MapResource $parentResource, string $iri, string $uuid)
     {
-        parent::__construct($uuid);
+        parent::__construct($iri, $uuid);
         $this->initializeObject();
 
         $this->addParentResource($parentResource);
