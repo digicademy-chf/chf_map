@@ -221,8 +221,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectTree',
                 'foreign_table' => 'tx_chfbase_domain_model_tag',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_tag}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_tag}.{#type}=\'labelTag\'',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_tag}.{#type}=\'labelTag\'',
                 'MM' => 'tx_chfmap_domain_model_feature_tag_label_mm',
                 'multiple' => 1,
                 'treeConfig' => [
@@ -321,8 +320,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingleBox',
                 'foreign_table' => 'tx_chfbase_domain_model_resource',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#type}=\'mapResource\'',
                 'sortItems' => [
                     'label' => 'asc',
                 ],
@@ -558,7 +556,6 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_chfbase_domain_model_location',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfbase_domain_model_location_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
                 'multiple' => 1,
@@ -575,7 +572,6 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_chfmap_domain_model_distribution',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_distribution}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfmap_domain_model_distribution_feature_geodata_mm',
                 'MM_opposite_field' => 'geodata',
                 'multiple' => 1,

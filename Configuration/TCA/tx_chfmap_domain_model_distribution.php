@@ -93,8 +93,7 @@ return [
                     ],
                 ],
                 'foreign_table' => 'tx_chfmap_domain_model_distribution',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_distribution}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfmap_domain_model_distribution}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_distribution}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
             ],
         ],
@@ -285,7 +284,6 @@ return [
                     ],
                 ],
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfmap_domain_model_distribution_feature_geodata_mm',
                 'multiple' => 1,
             ],

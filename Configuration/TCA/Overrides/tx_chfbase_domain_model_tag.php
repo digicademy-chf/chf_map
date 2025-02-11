@@ -30,7 +30,6 @@ defined('TYPO3') or die();
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'foreign_table_where' => 'AND {#tx_chfmap_domain_model_feature}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfmap_domain_model_feature_tag_label_mm',
                 'MM_opposite_field' => 'label',
                 'multiple' => 1,
