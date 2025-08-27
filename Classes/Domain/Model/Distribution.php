@@ -9,31 +9,27 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
+use Digicademy\CHFBase\Domain\Model\Traits\HiddenTrait;
+use Digicademy\CHFBase\Domain\Model\Traits\ParentResourceTrait;
+use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
+use Digicademy\CHFLex\Domain\Model\Traits\ParentFrequencyTrait;
+use Digicademy\CHFMap\Domain\Model\Traits\GeodataTrait;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-use Digicademy\CHFBase\Domain\Validator\StringOptionsValidator;
-use Digicademy\CHFLex\Domain\Model\Frequency;
 
 defined('TYPO3') or die();
 
 /**
- * Model for Distribution
+ * Model for AbstractDistribution
  */
-class Distribution extends AbstractEntity
+class AbstractDistribution extends AbstractEntity
 {
-    /**
-     * Record visible or not
-     * 
-     * @var bool
-     */
-    #[Validate([
-        'validator' => 'Boolean',
-    ])]
-    protected bool $hidden = true;
+    use HiddenTrait;
+    use ParentResourceTrait;
 
     /**
      * Number of occurrences
@@ -109,14 +105,6 @@ class Distribution extends AbstractEntity
     protected string|null $postalCodeSystem = null;
 
     /**
-     * Representation of the area
-     * 
-     * @var ?ObjectStorage<Feature>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $feature = null;
-
-    /**
      * Point representation of the area
      * 
      * @var ?ObjectStorage<Coordinates>
@@ -126,14 +114,6 @@ class Distribution extends AbstractEntity
         'value' => 'remove',
     ])]
     protected ?ObjectStorage $coordinates = null;
-
-    /**
-     * Frequency that this distribution is part of
-     * 
-     * @var Frequency|LazyLoadingProxy|null
-     */
-    #[Lazy()]
-    protected Frequency|LazyLoadingProxy|null $parentFrequency = null;
 
     /**
      * Construct object
@@ -150,28 +130,8 @@ class Distribution extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->feature ??= new ObjectStorage();
         $this->coordinates ??= new ObjectStorage();
-    }
-
-    /**
-     * Get hidden
-     *
-     * @return bool
-     */
-    public function getHidden(): bool
-    {
-        return $this->hidden;
-    }
-
-    /**
-     * Set hidden
-     *
-     * @param bool $hidden
-     */
-    public function setHidden(bool $hidden): void
-    {
-        $this->hidden = $hidden;
+        $this->parentResource ??= new ObjectStorage();
     }
 
     /**
@@ -275,55 +235,6 @@ class Distribution extends AbstractEntity
     }
 
     /**
-     * Get feature
-     *
-     * @return ObjectStorage<Feature>
-     */
-    public function getFeature(): ?ObjectStorage
-    {
-        return $this->feature;
-    }
-
-    /**
-     * Set feature
-     *
-     * @param ObjectStorage<Feature> $feature
-     */
-    public function setFeature(ObjectStorage $feature): void
-    {
-        $this->feature = $feature;
-    }
-
-    /**
-     * Add feature
-     *
-     * @param Feature $feature
-     */
-    public function addFeature(Feature $feature): void
-    {
-        $this->feature?->attach($feature);
-    }
-
-    /**
-     * Remove feature
-     *
-     * @param Feature $feature
-     */
-    public function removeFeature(Feature $feature): void
-    {
-        $this->feature?->detach($feature);
-    }
-
-    /**
-     * Remove all features
-     */
-    public function removeAllFeature(): void
-    {
-        $feature = clone $this->feature;
-        $this->feature->removeAll($feature);
-    }
-
-    /**
      * Get coordinates
      *
      * @return ObjectStorage<Coordinates>
@@ -371,27 +282,48 @@ class Distribution extends AbstractEntity
         $coordinates = clone $this->coordinates;
         $this->coordinates->removeAll($coordinates);
     }
+}
+
+# If CHF Lex and CHF Map are available
+if (ExtensionManagementUtility::isLoaded('chf_lex') && ExtensionManagementUtility::isLoaded('chf_map')) {
 
     /**
-     * Get parent frequency
-     * 
-     * @return Frequency
+     * Model for Distribution (with geodata and parent-frequency properties)
      */
-    public function getParentFrequency(): Frequency
+    class Distribution extends AbstractDistribution
     {
-        if ($this->parentFrequency instanceof LazyLoadingProxy) {
-            $this->parentFrequency->_loadRealInstance();
-        }
-        return $this->parentFrequency;
+        use GeodataTrait;
+        use ParentFrequencyTrait;
     }
 
+# If only CHF Lex is available
+} elseif (ExtensionManagementUtility::isLoaded('chf_lex')) {
+
     /**
-     * Set parent frequency
-     * 
-     * @param Frequency
+     * Model for Distribution (with parent-frequency property)
      */
-    public function setParentFrequency(Frequency $parentFrequency): void
+    class Distribution extends AbstractDistribution
     {
-        $this->parentFrequency = $parentFrequency;
+        use ParentFrequencyTrait;
     }
+
+# If only CHF Map is available
+} elseif (ExtensionManagementUtility::isLoaded('chf_map')) {
+
+    /**
+     * Model for Distribution (with geodata property)
+     */
+    class Distribution extends AbstractDistribution
+    {
+        use GeodataTrait;
+    }
+
+# If no relevant extensions are available
+} else {
+
+    /**
+     * Model for Distribution
+     */
+    class Distribution extends AbstractDistribution
+    {}
 }

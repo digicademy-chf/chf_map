@@ -1,5 +1,6 @@
 {
     "name": "digicademy/chf_map",
+    "version": "2.0.0",
     "type": "typo3-cms-extension",
     "description": "Geodata and image maps for research data in TYPO3 as part of the CHF",
     "authors": [
@@ -34,9 +35,16 @@
     ],
     "require": {
         "typo3/cms-core": "^13",
+        "typo3/cms-extbase": "^13",
+        "typo3/cms-fluid": "^13",
         "typo3/cms-fluid-styled-content": "^13",
-        "typo3/cms-backend": "^13",
-        "digicademy/chf_base": "@dev"
+        "typo3/cms-rte-ckeditor": "^13",
+        "digicademy/chf_base": "^2"
+    },
+    "suggest": {
+        "digicademy/chf_bib": "Adds source relations",
+        "digicademy/chf_lex": "Includes distributions",
+        "digicademy/chf_pub": "Provides publication relations"
     },
     "autoload": {
         "psr-4": {

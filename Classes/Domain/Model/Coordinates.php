@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
+use Digicademy\CHFBase\Domain\Model\Traits\HiddenTrait;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
@@ -19,15 +20,7 @@ defined('TYPO3') or die();
  */
 class Coordinates extends AbstractEntity
 {
-    /**
-     * Record visible or not
-     * 
-     * @var bool
-     */
-    #[Validate([
-        'validator' => 'Boolean',
-    ])]
-    protected bool $hidden = true;
+    use HiddenTrait;
 
     /**
      * Decimal notation of the longitude with a decimal period (if necessary)
@@ -70,26 +63,6 @@ class Coordinates extends AbstractEntity
     {
         $this->setLongitude($longitude);
         $this->setLongitude($latitude);
-    }
-
-    /**
-     * Get hidden
-     *
-     * @return bool
-     */
-    public function getHidden(): bool
-    {
-        return $this->hidden;
-    }
-
-    /**
-     * Set hidden
-     *
-     * @param bool $hidden
-     */
-    public function setHidden(bool $hidden): void
-    {
-        $this->hidden = $hidden;
     }
 
     /**

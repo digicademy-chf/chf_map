@@ -8,22 +8,6 @@
                 <source>Map</source>
                 <target>Karte</target>
             </trans-unit>
-            <trans-unit id="object.mapResource.allTiles" resname="object.mapResource.allTiles" approved="yes">
-                <source>All tiles</source>
-                <target>Alle Kacheln</target>
-            </trans-unit>
-            <trans-unit id="object.mapResource.allTiles.description" resname="object.mapResource.allTiles.description" approved="yes">
-                <source>List of all tiles compiled in this resource</source>
-                <target>Liste aller Kacheln, die in dieser Ressource verzeichnet sind</target>
-            </trans-unit>
-            <trans-unit id="object.mapResource.allFeatures" resname="object.mapResource.allFeatures" approved="yes">
-                <source>All features</source>
-                <target>Alle Geoobjekte</target>
-            </trans-unit>
-            <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description" approved="yes">
-                <source>List of all features compiled in this resource</source>
-                <target>Liste aller Geoobjekte, die in dieser Ressource verzeichnet sind</target>
-            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile" approved="yes">
                 <source>Tile</source>
@@ -148,8 +132,8 @@
                 <target>Geodaten</target>
             </trans-unit>
             <trans-unit id="object.distribution.geodata.description" resname="object.distribution.geodata.description" approved="yes">
-                <source>Representation of the area</source>
-                <target>Abbildung der Region</target>
+                <source>Feature to represent this distribution</source>
+                <target>Geoobjekt als Repräsentation dieser Verteilung</target>
             </trans-unit>
             <trans-unit id="object.distribution.coordinates" resname="object.distribution.coordinates" approved="yes">
                 <source>Coordinates</source>
@@ -200,31 +184,6 @@
                 <source>JSON data describing the feature</source>
                 <target>JSON-Daten zur Beschreibung des Geoobjekts</target>
             </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfLocation" resname="object.feature.asGeodataOfLocation" approved="yes">
-                <source>Usage as geodata of a location</source>
-                <target>Verwendung als Geodaten eines Ortes</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfLocation.description" resname="object.feature.asGeodataOfLocation.description" approved="yes">
-                <source>List of locations that use this feature as geodata</source>
-                <target>Liste der Orte, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfDistribution" resname="object.feature.asGeodataOfDistribution" approved="yes">
-                <source>Usage as geodata of a distribution</source>
-                <target>Verwendung als Geodaten einr Verteilung</target>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfDistribution.description" resname="object.feature.asGeodataOfDistribution.description" approved="yes">
-                <source>List of distributions that use this feature as geodata</source>
-                <target>Liste der Verteilungen, die dieses Geoobjekt als Geodaten verwenden</target>
-            </trans-unit>
-            <!-- Object: LabelTag -->
-            <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature" approved="yes">
-                <source>Usage as label of a feature</source>
-                <target>Verwendung als Label eines Geoobjekts</target>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description" approved="yes">
-                <source>List of features that use this label</source>
-                <target>Liste der Geoobjekte, die dieses Label verwenden</target>
-            </trans-unit>
             <!-- Object: Location -->
             <trans-unit id="object.location.coordinates" resname="object.location.coordinates" approved="yes">
                 <source>Coordinates</source>
@@ -239,8 +198,8 @@
                 <target>Geodaten</target>
             </trans-unit>
             <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description" approved="yes">
-                <source>Feature to use as geodata of this location</source>
-                <target>Geoobjekt als Geodaten für diesen Ort</target>
+                <source>Feature to represent this location</source>
+                <target>Geoobjekt als Repräsentation dieses Ortes</target>
             </trans-unit>
             <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan" approved="yes">
                 <source>Floor plan</source>

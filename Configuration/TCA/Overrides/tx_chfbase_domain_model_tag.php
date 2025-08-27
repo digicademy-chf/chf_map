@@ -18,24 +18,5 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add column 'as_label_of_feature'
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_tag',
-    [
-        'as_label_of_feature' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.labelTag.asLabelOfFeature',
-            'description' => 'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:object.labelTag.asLabelOfFeature.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_chfmap_domain_model_feature',
-                'MM' => 'tx_chfmap_domain_model_feature_tag_label_mm',
-                'MM_opposite_field' => 'label',
-                'multiple' => 1,
-                'size' => 5,
-                'autoSizeMax' => 10,
-            ],
-        ],
-    ]
-);
+// Add opposite usage info to 'items' column
+$GLOBALS['TCA']['tx_chfbase_domain_model_tag']['columns']['items']['config']['MM_oppositeUsage']['tx_chfmap_domain_model_feature'] = ['label'];

@@ -7,18 +7,6 @@
             <trans-unit id="object.mapResource.type.mapResource" resname="object.mapResource.type.mapResource">
                 <source>Map</source>
             </trans-unit>
-            <trans-unit id="object.mapResource.allTiles" resname="object.mapResource.allTiles">
-                <source>All tiles</source>
-            </trans-unit>
-            <trans-unit id="object.mapResource.allTiles.description" resname="object.mapResource.allTiles.description">
-                <source>List of all tiles compiled in this resource</source>
-            </trans-unit>
-            <trans-unit id="object.mapResource.allFeatures" resname="object.mapResource.allFeatures">
-                <source>All features</source>
-            </trans-unit>
-            <trans-unit id="object.mapResource.allFeatures.description" resname="object.mapResource.allFeatures.description">
-                <source>List of all features compiled in this resource</source>
-            </trans-unit>
             <!-- Object: Tile -->
             <trans-unit id="object.tile" resname="object.tile">
                 <source>Tile</source>
@@ -113,7 +101,7 @@
                 <source>Geodata</source>
             </trans-unit>
             <trans-unit id="object.distribution.geodata.description" resname="object.distribution.geodata.description">
-                <source>Representation of the area</source>
+                <source>Feature to represent this distribution</source>
             </trans-unit>
             <trans-unit id="object.distribution.coordinates" resname="object.distribution.coordinates">
                 <source>Coordinates</source>
@@ -152,25 +140,6 @@
             <trans-unit id="object.feature.geoJson.description" resname="object.feature.geoJson.description">
                 <source>JSON data describing the feature</source>
             </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfLocation" resname="object.feature.asGeodataOfLocation">
-                <source>Usage as geodata of a location</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfLocation.description" resname="object.feature.asGeodataOfLocation.description">
-                <source>List of locations that use this feature as geodata</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfDistribution" resname="object.feature.asGeodataOfDistribution">
-                <source>Usage as geodata of a distribution</source>
-            </trans-unit>
-            <trans-unit id="object.feature.asGeodataOfDistribution.description" resname="object.feature.asGeodataOfDistribution.description">
-                <source>List of distributions that use this feature as geodata</source>
-            </trans-unit>
-            <!-- Object: LabelTag -->
-            <trans-unit id="object.labelTag.asLabelOfFeature" resname="object.labelTag.asLabelOfFeature">
-                <source>Usage as label of a feature</source>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfFeature.description" resname="object.labelTag.asLabelOfFeature.description">
-                <source>List of features that use this label</source>
-            </trans-unit>
             <!-- Object: Location -->
             <trans-unit id="object.location.coordinates" resname="object.location.coordinates">
                 <source>Coordinates</source>
@@ -182,7 +151,7 @@
                 <source>Geodata</source>
             </trans-unit>
             <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description">
-                <source>Feature to use as geodata of this location</source>
+                <source>Feature to represent this location</source>
             </trans-unit>
             <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan">
                 <source>Floor plan</source>

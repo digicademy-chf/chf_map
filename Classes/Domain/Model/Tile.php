@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFMap\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use Digicademy\CHFBase\Domain\Model\Traits\HiddenTrait;
+use Digicademy\CHFBase\Domain\Model\Traits\ParentResourceTrait;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
@@ -21,15 +22,8 @@ defined('TYPO3') or die();
  */
 class Tile extends AbstractEntity
 {
-    /**
-     * Record visible or not
-     * 
-     * @var bool
-     */
-    #[Validate([
-        'validator' => 'Boolean',
-    ])]
-    protected bool $hidden = true;
+    use HiddenTrait;
+    use ParentResourceTrait;
 
     /**
      * Name of the tile layer
@@ -55,26 +49,16 @@ class Tile extends AbstractEntity
     protected string $uri = '';
 
     /**
-     * Resource that this database record is part of
-     * 
-     * @var ?ObjectStorage<MapResource>
-     */
-    #[Lazy()]
-    protected ?ObjectStorage $parentResource = null;
-
-    /**
      * Construct object
      *
      * @param string $title
-     * @param MapResource $parentResource
      * @return Tile
      */
-    public function __construct(string $title, MapResource $parentResource)
+    public function __construct(string $title)
     {
         $this->initializeObject();
 
         $this->setTitle($title);
-        $this->addParentResource($parentResource);
     }
 
     /**
@@ -83,26 +67,6 @@ class Tile extends AbstractEntity
     public function initializeObject(): void
     {
         $this->parentResource ??= new ObjectStorage();
-    }
-
-    /**
-     * Get hidden
-     *
-     * @return bool
-     */
-    public function getHidden(): bool
-    {
-        return $this->hidden;
-    }
-
-    /**
-     * Set hidden
-     *
-     * @param bool $hidden
-     */
-    public function setHidden(bool $hidden): void
-    {
-        $this->hidden = $hidden;
     }
 
     /**
@@ -143,54 +107,5 @@ class Tile extends AbstractEntity
     public function setUri(string $uri): void
     {
         $this->uri = $uri;
-    }
-
-    /**
-     * Get parent resource
-     *
-     * @return ObjectStorage<MapResource>
-     */
-    public function getParentResource(): ?ObjectStorage
-    {
-        return $this->parentResource;
-    }
-
-    /**
-     * Set parent resource
-     *
-     * @param ObjectStorage<MapResource> $parentResource
-     */
-    public function setParentResource(ObjectStorage $parentResource): void
-    {
-        $this->parentResource = $parentResource;
-    }
-
-    /**
-     * Add parent resource
-     *
-     * @param MapResource $parentResource
-     */
-    public function addParentResource(MapResource $parentResource): void
-    {
-        $this->parentResource?->attach($parentResource);
-    }
-
-    /**
-     * Remove parent resource
-     *
-     * @param MapResource $parentResource
-     */
-    public function removeParentResource(MapResource $parentResource): void
-    {
-        $this->parentResource?->detach($parentResource);
-    }
-
-    /**
-     * Remove all parent resources
-     */
-    public function removeAllParentResource(): void
-    {
-        $parentResource = clone $this->parentResource;
-        $this->parentResource->removeAll($parentResource);
     }
 }
