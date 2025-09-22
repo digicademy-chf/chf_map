@@ -102,18 +102,18 @@ class AbstractDistribution extends AbstractEntity
             ],
         ],
     ])]
-    protected string|null $postalCodeSystem = null;
+    protected ?string $postalCodeSystem = null;
 
     /**
      * Point representation of the area
      * 
-     * @var ?ObjectStorage<Coordinates>
+     * @var ObjectStorage<Coordinates>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ?ObjectStorage $coordinates = null;
+    protected ObjectStorage $coordinates;
 
     /**
      * Construct object
@@ -130,8 +130,8 @@ class AbstractDistribution extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->coordinates ??= new ObjectStorage();
-        $this->parentResource ??= new ObjectStorage();
+        $this->coordinates = new ObjectStorage();
+        $this->parentResource = new ObjectStorage();
     }
 
     /**
@@ -239,7 +239,7 @@ class AbstractDistribution extends AbstractEntity
      *
      * @return ObjectStorage<Coordinates>
      */
-    public function getCoordinates(): ?ObjectStorage
+    public function getCoordinates(): ObjectStorage
     {
         return $this->coordinates;
     }
@@ -261,7 +261,7 @@ class AbstractDistribution extends AbstractEntity
      */
     public function addCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates?->attach($coordinates);
+        $this->coordinates->attach($coordinates);
     }
 
     /**
@@ -271,7 +271,7 @@ class AbstractDistribution extends AbstractEntity
      */
     public function removeCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates?->detach($coordinates);
+        $this->coordinates->detach($coordinates);
     }
 
     /**

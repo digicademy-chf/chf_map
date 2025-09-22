@@ -24,20 +24,20 @@ trait CoordinatesTrait
     /**
      * Geolocation of this location or object (group)
      * 
-     * @var ?ObjectStorage<Coordinates>
+     * @var ObjectStorage<Coordinates>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ?ObjectStorage $coordinates = null;
+    protected ObjectStorage $coordinates;
 
     /**
      * Get coordinates
      *
      * @return ObjectStorage<Coordinates>
      */
-    public function getCoordinates(): ?ObjectStorage
+    public function getCoordinates(): ObjectStorage
     {
         return $this->coordinates;
     }
@@ -59,7 +59,7 @@ trait CoordinatesTrait
      */
     public function addCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates?->attach($coordinates);
+        $this->coordinates->attach($coordinates);
     }
 
     /**
@@ -69,7 +69,7 @@ trait CoordinatesTrait
      */
     public function removeCoordinates(Coordinates $coordinates): void
     {
-        $this->coordinates?->detach($coordinates);
+        $this->coordinates->detach($coordinates);
     }
 
     /**

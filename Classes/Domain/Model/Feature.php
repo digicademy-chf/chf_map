@@ -106,9 +106,9 @@ class AbstractFeature extends AbstractBase
      */
     public function initializeObject(): void
     {
-        $this->label ??= new ObjectStorage();
-        $this->linkRelation ??= new ObjectStorage();
-        $this->parentResource ??= new ObjectStorage();
+        $this->label = new ObjectStorage();
+        $this->linkRelation = new ObjectStorage();
+        $this->parentResource = new ObjectStorage();
     }
 
     /**
@@ -208,10 +208,10 @@ if (ExtensionManagementUtility::isLoaded('chf_bib') && ExtensionManagementUtilit
          */
         public function initializeObject(): void
         {
-            $this->label ??= new ObjectStorage();
-            $this->sourceRelation ??= new ObjectStorage();
-            $this->linkRelation ??= new ObjectStorage();
-            $this->publicationRelation ??= new ObjectStorage();
+            $this->label = new ObjectStorage();
+            $this->sourceRelation = new ObjectStorage();
+            $this->linkRelation = new ObjectStorage();
+            $this->publicationRelation = new ObjectStorage();
         }
     }
 
@@ -230,9 +230,9 @@ if (ExtensionManagementUtility::isLoaded('chf_bib') && ExtensionManagementUtilit
          */
         public function initializeObject(): void
         {
-            $this->label ??= new ObjectStorage();
-            $this->sourceRelation ??= new ObjectStorage();
-            $this->linkRelation ??= new ObjectStorage();
+            $this->label = new ObjectStorage();
+            $this->sourceRelation = new ObjectStorage();
+            $this->linkRelation = new ObjectStorage();
         }
     }
 
@@ -251,9 +251,9 @@ if (ExtensionManagementUtility::isLoaded('chf_bib') && ExtensionManagementUtilit
          */
         public function initializeObject(): void
         {
-            $this->label ??= new ObjectStorage();
-            $this->linkRelation ??= new ObjectStorage();
-            $this->publicationRelation ??= new ObjectStorage();
+            $this->label = new ObjectStorage();
+            $this->linkRelation = new ObjectStorage();
+            $this->publicationRelation = new ObjectStorage();
         }
     }
 

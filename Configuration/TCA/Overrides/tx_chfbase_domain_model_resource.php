@@ -36,6 +36,7 @@ $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['types'] += ['mapResource' =
 ]];
 
 // Add opposite usage info to 'items' column
+$GLOBALS['TCA']['tx_chfbase_domain_model_resource']['columns']['items']['config']['allowed'] .= ',tx_chfmap_domain_model_distribution,tx_chfmap_domain_model_feature,tx_chfmap_domain_model_tile';
 $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['columns']['items']['config']['MM_oppositeUsage']['tx_chfmap_domain_model_distribution'] = ['parent_resource'];
 $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['columns']['items']['config']['MM_oppositeUsage']['tx_chfmap_domain_model_feature'] = ['parent_resource'];
 $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['columns']['items']['config']['MM_oppositeUsage']['tx_chfmap_domain_model_tile'] = ['parent_resource'];

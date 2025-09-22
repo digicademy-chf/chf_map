@@ -24,20 +24,20 @@ trait DistributionTrait
     /**
      * Geographic distribution of this frequency
      * 
-     * @var ?ObjectStorage<Distribution>
+     * @var ObjectStorage<Distribution>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ?ObjectStorage $distribution = null;
+    protected ObjectStorage $distribution;
 
     /**
      * Get distribution
      *
      * @return ObjectStorage<Distribution>
      */
-    public function getDistribution(): ?ObjectStorage
+    public function getDistribution(): ObjectStorage
     {
         return $this->distribution;
     }
@@ -59,7 +59,7 @@ trait DistributionTrait
      */
     public function addDistribution(Distribution $distribution): void
     {
-        $this->distribution?->attach($distribution);
+        $this->distribution->attach($distribution);
     }
 
     /**
@@ -69,7 +69,7 @@ trait DistributionTrait
      */
     public function removeDistribution(Distribution $distribution): void
     {
-        $this->distribution?->detach($distribution);
+        $this->distribution->detach($distribution);
     }
 
     /**
