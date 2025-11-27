@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace Digicademy\CHFMap\Domain\Model\Traits;
 
 use Digicademy\CHFMap\Domain\Model\Feature;
-use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Attribute\ORM\Lazy;
 use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 
 defined('TYPO3') or die();

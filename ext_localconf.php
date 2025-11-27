@@ -20,4 +20,5 @@ ExtensionUtility::configurePlugin(
         MapController::class => 'index',
     ],
     [], // None of the actions are non-cacheable
+    null,
 );
