@@ -1,199 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="EXT:chf_map/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_map">
-        <header/>
-        <body>
-            <!-- Object: MapResource -->
-            <trans-unit id="object.mapResource.type.mapResource" resname="object.mapResource.type.mapResource">
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en">
+    <file id="chf_map">
+        <!-- Object: MapResource -->
+        <unit id="object.mapResource.type.mapResource">
+            <segment>
                 <source>Map</source>
-            </trans-unit>
-            <!-- Object: Tile -->
-            <trans-unit id="object.tile" resname="object.tile">
+            </segment>
+        </unit>
+        <!-- Object: Tile -->
+        <unit id="object.tile">
+            <segment>
                 <source>Tile</source>
-            </trans-unit>
-            <trans-unit id="object.tile.title" resname="object.tile.title">
+            </segment>
+        </unit>
+        <unit id="object.tile.title">
+            <segment>
                 <source>Title</source>
-            </trans-unit>
-            <trans-unit id="object.tile.title.description" resname="object.tile.title.description">
+            </segment>
+        </unit>
+        <unit id="object.tile.title.description">
+            <segment>
                 <source>Name of the tile layer</source>
-            </trans-unit>
-            <trans-unit id="object.tile.uri" resname="object.tile.uri">
+            </segment>
+        </unit>
+        <unit id="object.tile.uri">
+            <segment>
                 <source>URI</source>
-            </trans-unit>
-            <trans-unit id="object.tile.uri.description" resname="object.tile.uri.description">
+            </segment>
+        </unit>
+        <unit id="object.tile.uri.description">
+            <segment>
                 <source>External web address of the tile layer, including wildcards</source>
-            </trans-unit>
-            <!-- Object: Coordinates -->
-            <trans-unit id="object.coordinates" resname="object.coordinates">
+            </segment>
+        </unit>
+        <!-- Object: Coordinates -->
+        <unit id="object.coordinates">
+            <segment>
                 <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.coordinates.longitude" resname="object.coordinates.longitude">
+            </segment>
+        </unit>
+        <unit id="object.coordinates.longitude">
+            <segment>
                 <source>Longitude</source>
-            </trans-unit>
-            <trans-unit id="object.coordinates.longitude.description" resname="object.coordinates.longitude.description">
+            </segment>
+        </unit>
+        <unit id="object.coordinates.longitude.description">
+            <segment>
                 <source>Decimal notation of the longitude with a decimal period (if necessary)</source>
-            </trans-unit>
-            <trans-unit id="object.coordinates.latitude" resname="object.coordinates.latitude">
+            </segment>
+        </unit>
+        <unit id="object.coordinates.latitude">
+            <segment>
                 <source>Latitude</source>
-            </trans-unit>
-            <trans-unit id="object.coordinates.latitude.description" resname="object.coordinates.latitude.description">
+            </segment>
+        </unit>
+        <unit id="object.coordinates.latitude.description">
+            <segment>
                 <source>Decimal notation of the latitude with a decimal period (if necessary)</source>
-            </trans-unit>
-            <trans-unit id="object.coordinates.altitude" resname="object.coordinates.altitude">
+            </segment>
+        </unit>
+        <unit id="object.coordinates.altitude">
+            <segment>
                 <source>Altitude</source>
-            </trans-unit>
-            <trans-unit id="object.coordinates.altitude.description" resname="object.coordinates.altitude.description">
+            </segment>
+        </unit>
+        <unit id="object.coordinates.altitude.description">
+            <segment>
                 <source>Decimal notation of the height in meters with a decimal period (if necessary)</source>
-            </trans-unit>
-            <!-- Object: Distribution -->
-            <trans-unit id="object.distribution" resname="object.distribution">
+            </segment>
+        </unit>
+        <!-- Object: Distribution -->
+        <unit id="object.distribution">
+            <segment>
                 <source>Distribution</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokens" resname="object.distribution.tokens">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokens">
+            <segment>
                 <source>Tokens</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokens.description" resname="object.distribution.tokens.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokens.description">
+            <segment>
                 <source>Number of occurrences</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokensTotal" resname="object.distribution.tokensTotal">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokensTotal">
+            <segment>
                 <source>Total tokens</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokensTotal.description" resname="object.distribution.tokensTotal.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokensTotal.description">
+            <segment>
                 <source>Number of occurrences in this area</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType" resname="object.distribution.tokenType">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType">
+            <segment>
                 <source>Token type</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType.description" resname="object.distribution.tokenType.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType.description">
+            <segment>
                 <source>Type of occurrences</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType.unknown" resname="object.distribution.tokenType.unknown">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType.unknown">
+            <segment>
                 <source>Unknown</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType.population" resname="object.distribution.tokenType.population">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType.population">
+            <segment>
                 <source>Population</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType.families" resname="object.distribution.tokenType.families">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType.families">
+            <segment>
                 <source>Families</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType.births" resname="object.distribution.tokenType.births">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType.births">
+            <segment>
                 <source>Births</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.tokenType.landlines" resname="object.distribution.tokenType.landlines">
+            </segment>
+        </unit>
+        <unit id="object.distribution.tokenType.landlines">
+            <segment>
                 <source>Landlines</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.postalCode" resname="object.distribution.postalCode">
+            </segment>
+        </unit>
+        <unit id="object.distribution.postalCode">
+            <segment>
                 <source>Postal code</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.postalCode.description" resname="object.distribution.postalCode.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.postalCode.description">
+            <segment>
                 <source>Code of the area</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.postalCodeSystem" resname="object.distribution.postalCodeSystem">
+            </segment>
+        </unit>
+        <unit id="object.distribution.postalCodeSystem">
+            <segment>
                 <source>Postal code system</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.postalCodeSystem.description" resname="object.distribution.postalCodeSystem.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.postalCodeSystem.description">
+            <segment>
                 <source>Country the postal code belongs to</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.postalCodeSystem.germany" resname="object.distribution.postalCodeSystem.germany">
+            </segment>
+        </unit>
+        <unit id="object.distribution.postalCodeSystem.germany">
+            <segment>
                 <source>Germany</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.geodata" resname="object.distribution.geodata">
+            </segment>
+        </unit>
+        <unit id="object.distribution.geodata">
+            <segment>
                 <source>Geodata</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.geodata.description" resname="object.distribution.geodata.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.geodata.description">
+            <segment>
                 <source>Feature to represent this distribution</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.coordinates" resname="object.distribution.coordinates">
+            </segment>
+        </unit>
+        <unit id="object.distribution.coordinates">
+            <segment>
                 <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.distribution.coordinates.description" resname="object.distribution.coordinates.description">
+            </segment>
+        </unit>
+        <unit id="object.distribution.coordinates.description">
+            <segment>
                 <source>Point representation of the area</source>
-            </trans-unit>
-            <!-- Object: Feature -->
-            <trans-unit id="object.feature" resname="object.feature">
+            </segment>
+        </unit>
+        <!-- Object: Feature -->
+        <unit id="object.feature">
+            <segment>
                 <source>Feature</source>
-            </trans-unit>
-            <trans-unit id="object.feature.title" resname="object.feature.title">
+            </segment>
+        </unit>
+        <unit id="object.feature.title">
+            <segment>
                 <source>Title</source>
-            </trans-unit>
-            <trans-unit id="object.feature.title.description" resname="object.feature.title.description">
+            </segment>
+        </unit>
+        <unit id="object.feature.title.description">
+            <segment>
                 <source>Name of the feature</source>
-            </trans-unit>
-            <trans-unit id="object.feature.projection" resname="object.feature.projection">
+            </segment>
+        </unit>
+        <unit id="object.feature.projection">
+            <segment>
                 <source>Projection</source>
-            </trans-unit>
-            <trans-unit id="object.feature.projection.description" resname="object.feature.projection.description">
+            </segment>
+        </unit>
+        <unit id="object.feature.projection.description">
+            <segment>
                 <source>Type of projection used for geometries in this feature</source>
-            </trans-unit>
-            <trans-unit id="object.feature.projection.worldGeodeticSystem" resname="object.feature.projection.worldGeodeticSystem">
+            </segment>
+        </unit>
+        <unit id="object.feature.projection.worldGeodeticSystem">
+            <segment>
                 <source>World Geodetic System (WGS 84/EPSG 4326)</source>
-            </trans-unit>
-            <trans-unit id="object.feature.description" resname="object.feature.description">
+            </segment>
+        </unit>
+        <unit id="object.feature.description">
+            <segment>
                 <source>Description</source>
-            </trans-unit>
-            <trans-unit id="object.feature.description.description" resname="object.feature.description.description">
+            </segment>
+        </unit>
+        <unit id="object.feature.description.description">
+            <segment>
                 <source>Brief information about the feature</source>
-            </trans-unit>
-            <trans-unit id="object.feature.geoJson" resname="object.feature.geoJson">
+            </segment>
+        </unit>
+        <unit id="object.feature.geoJson">
+            <segment>
                 <source>GeoJSON</source>
-            </trans-unit>
-            <trans-unit id="object.feature.geoJson.description" resname="object.feature.geoJson.description">
+            </segment>
+        </unit>
+        <unit id="object.feature.geoJson.description">
+            <segment>
                 <source>JSON data describing the feature</source>
-            </trans-unit>
-            <!-- Object: Location -->
-            <trans-unit id="object.location.coordinates" resname="object.location.coordinates">
+            </segment>
+        </unit>
+        <!-- Object: Location -->
+        <unit id="object.location.coordinates">
+            <segment>
                 <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.location.coordinates.description" resname="object.location.coordinates.description">
+            </segment>
+        </unit>
+        <unit id="object.location.coordinates.description">
+            <segment>
                 <source>Geolocation of this location</source>
-            </trans-unit>
-            <trans-unit id="object.location.geodata" resname="object.location.geodata">
+            </segment>
+        </unit>
+        <unit id="object.location.geodata">
+            <segment>
                 <source>Geodata</source>
-            </trans-unit>
-            <trans-unit id="object.location.geodata.description" resname="object.location.geodata.description">
+            </segment>
+        </unit>
+        <unit id="object.location.geodata.description">
+            <segment>
                 <source>Feature to represent this location</source>
-            </trans-unit>
-            <trans-unit id="object.location.floorPlan" resname="object.location.floorPlan">
+            </segment>
+        </unit>
+        <unit id="object.location.floorPlan">
+            <segment>
                 <source>Floor plan</source>
-            </trans-unit>
-            <trans-unit id="object.location.floorPlan.description" resname="object.location.floorPlan.description">
+            </segment>
+        </unit>
+        <unit id="object.location.floorPlan.description">
+            <segment>
                 <source>Map depicting this location</source>
-            </trans-unit>
-            <!-- Object: Frequency -->
-            <trans-unit id="object.frequency.distribution" resname="object.frequency.distribution">
+            </segment>
+        </unit>
+        <!-- Object: Frequency -->
+        <unit id="object.frequency.distribution">
+            <segment>
                 <source>Distribution</source>
-            </trans-unit>
-            <trans-unit id="object.frequency.distribution.description" resname="object.frequency.distribution.description">
+            </segment>
+        </unit>
+        <unit id="object.frequency.distribution.description">
+            <segment>
                 <source>Geographic distribution of this frequency</source>
-            </trans-unit>
-            <!-- Object: FileMetadata -->
-            <trans-unit id="object.fileMetadata.coordinates" resname="object.fileMetadata.coordinates">
+            </segment>
+        </unit>
+        <!-- Object: FileMetadata -->
+        <unit id="object.fileMetadata.coordinates">
+            <segment>
                 <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.fileMetadata.coordinates.description" resname="object.fileMetadata.coordinates.description">
+            </segment>
+        </unit>
+        <unit id="object.fileMetadata.coordinates.description">
+            <segment>
                 <source>Geolocation of this file</source>
-            </trans-unit>
-            <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.coordinates" resname="object.abstractObject.coordinates">
+            </segment>
+        </unit>
+        <!-- Object: AbstractObject -->
+        <unit id="object.abstractObject.coordinates">
+            <segment>
                 <source>Coordinates</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.coordinates.description" resname="object.abstractObject.coordinates.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.coordinates.description">
+            <segment>
                 <source>Geolocation of this object (group)</source>
-            </trans-unit>
-            <!-- Object: ObjectGroup -->
-            <trans-unit id="object.objectGroup.floorPlan" resname="object.objectGroup.floorPlan">
+            </segment>
+        </unit>
+        <!-- Object: ObjectGroup -->
+        <unit id="object.objectGroup.floorPlan">
+            <segment>
                 <source>Floor plan</source>
-            </trans-unit>
-            <trans-unit id="object.objectGroup.floorPlan.description" resname="object.objectGroup.floorPlan.description">
+            </segment>
+        </unit>
+        <unit id="object.objectGroup.floorPlan.description">
+            <segment>
                 <source>Map of this object group</source>
-            </trans-unit>
-            <!-- Plugin: Map -->
-            <trans-unit id="plugin.map" resname="plugin.map">
+            </segment>
+        </unit>
+        <!-- Plugin: Map -->
+        <unit id="plugin.map">
+            <segment>
                 <source>Map</source>
-            </trans-unit>
-            <trans-unit id="plugin.map.description" resname="plugin.map.description">
+            </segment>
+        </unit>
+        <unit id="plugin.map.description">
+            <segment>
                 <source>View map features</source>
-            </trans-unit>
-        </body>
+            </segment>
+        </unit>
     </file>
 </xliff>
