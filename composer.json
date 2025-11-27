@@ -2,7 +2,7 @@
     "name": "digicademy/chf_map",
     "version": "2.0.0",
     "type": "typo3-cms-extension",
-    "description": "Geodata and image maps for research data in TYPO3 as part of the CHF",
+    "description": "CHF Map - Geodata and image maps for research data in TYPO3 as part of the CHF",
     "authors": [
         {
             "name": "Jonatan Jalle Steller",
@@ -34,11 +34,11 @@
         "Academic"
     ],
     "require": {
-        "typo3/cms-core": "^13",
-        "typo3/cms-extbase": "^13",
-        "typo3/cms-fluid": "^13",
-        "typo3/cms-fluid-styled-content": "^13",
-        "typo3/cms-rte-ckeditor": "^13",
+        "typo3/cms-core": "^14",
+        "typo3/cms-extbase": "^14",
+        "typo3/cms-fluid": "^14",
+        "typo3/cms-fluid-styled-content": "^14",
+        "typo3/cms-rte-ckeditor": "^14",
         "digicademy/chf_base": "^2"
     },
     "suggest": {

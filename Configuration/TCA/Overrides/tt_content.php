@@ -29,6 +29,7 @@ ExtensionUtility::registerPlugin(
     'tx-chfmap-plugin-map',
     'heritage',
     'LLL:EXT:chf_map/Resources/Private/Language/locallang.xlf:plugin.map.description',
+    'FILE:EXT:chf_map/Configuration/FlexForms/PluginData.xml',
 );
 
 // Add data tab to plugin form
@@ -37,11 +38,4 @@ ExtensionManagementUtility::addToAllTCAtypes(
     '--div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:plugin.generic.data,pi_flexform',
     'chfmap_map',
     'after:subheader',
-);
-
-// Add form for plugin 'Map'
-ExtensionManagementUtility::addPiFlexFormValue(
-    '*',
-    'FILE:EXT:chf_map/Configuration/FlexForms/PluginData.xml',
-    'chfmap_map',
 );
